@@ -3,6 +3,7 @@ use gio::prelude::*;
 mod application;
 mod course;
 mod keyboard_widget;
+mod lesson_view;
 mod main_action_list;
 mod study_room;
 mod window;

@@ -3,11 +3,21 @@ project('mecalin', 'rust',
   meson_version: '>= 0.59.0',
 )
 
+i18n = import('i18n')
+gnome = import('gnome')
+
 cargo = find_program('cargo')
 rustc = find_program('rustc')
 
 gtk4_dep = dependency('gtk4', version: '>= 4.10')
 adwaita_dep = dependency('libadwaita-1', version: '>= 1.5')
+
+gettext_package = meson.project_name()
+localedir = get_option('prefix') / get_option('localedir')
+
+conf = configuration_data()
+conf.set_quoted('LOCALEDIR', localedir)
+conf.set_quoted('GETTEXT_PACKAGE', gettext_package)
 
 cargo_options = ['--manifest-path', meson.project_source_root() / 'Cargo.toml']
 cargo_env = environment()
@@ -32,6 +42,8 @@ cargo_build = custom_target('cargo-build',
   ],
   env: cargo_env,
 )
+
+subdir('po')
 
 # Desktop file
 desktop_file = i18n.merge_file(

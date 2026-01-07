@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="LessonView" parent="GtkBox">
+    <property name="orientation">vertical</property>
+    <property name="spacing">24</property>
+    <property name="margin-top">24</property>
+    <property name="margin-bottom">24</property>
+    <property name="margin-start">24</property>
+    <property name="margin-end">24</property>
+    <child>
+      <object class="GtkLabel" id="lesson_title">
+        <property name="halign">center</property>
+        <property name="text">Lesson 1</property>
+        <style>
+          <class name="title-1"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkLabel" id="lesson_description">
+        <property name="halign">center</property>
+        <property name="wrap">true</property>
+        <property name="justify">center</property>
+        <property name="text">Learn the basic home row keys</property>
+        <style>
+          <class name="body"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkEntry" id="text_entry">
+        <property name="halign">center</property>
+        <property name="width-request">400</property>
+        <property name="placeholder-text">Type here...</property>
+        <style>
+          <class name="large-entry"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkBox" id="keyboard_container">
+        <property name="orientation">vertical</property>
+        <property name="halign">center</property>
+        <property name="valign">center</property>
+      </object>
+    </child>
+  </template>
+</interface>
