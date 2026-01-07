@@ -133,6 +133,7 @@ impl StudyRoom {
             };
 
             if let Some(lesson) = course.get_lesson(current_lesson) {
+                imp.lesson_view_widget.set_course(course.clone());
                 imp.lesson_view_widget.set_lesson(lesson);
                 imp.main_stack.set_visible_child_name("lesson_view");
             }

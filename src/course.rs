@@ -21,6 +21,7 @@ struct LessonsData {
     lessons: Vec<Lesson>,
 }
 
+#[derive(Clone)]
 pub struct Course {
     lessons: Vec<Lesson>,
 }

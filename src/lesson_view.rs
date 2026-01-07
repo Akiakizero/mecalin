@@ -27,6 +27,7 @@ mod imp {
         pub keyboard_widget: std::cell::RefCell<Option<KeyboardWidget>>,
         pub current_lesson: std::cell::RefCell<Option<Lesson>>,
         pub current_step_index: std::cell::Cell<usize>,
+        pub course: std::cell::RefCell<Option<crate::course::Course>>,
     }
 
     #[glib::object_subclass]
@@ -183,37 +184,76 @@ impl LessonView {
         imp.text_view.set_text("");
     }
 
+    pub fn set_course(&self, course: crate::course::Course) {
+        let imp = self.imp();
+        *imp.course.borrow_mut() = Some(course);
+    }
+
     pub fn advance_to_next_step(&self) {
         let imp = self.imp();
-        let current_lesson = imp.current_lesson.borrow();
 
-        if let Some(lesson) = current_lesson.as_ref() {
-            let current_step = imp.current_step_index.get();
-            let next_step = current_step + 1;
-
-            if next_step < lesson.steps.len() {
-                // Move to next step
-                imp.current_step_index.set(next_step);
-                let step = &lesson.steps[next_step];
-                imp.target_text_view.set_text(&step.text);
-                imp.text_view.set_text("");
-
-                // Update keyboard for new step
-                let mut target_keys = std::collections::HashSet::new();
-                for ch in step.text.chars() {
-                    if ch.is_alphabetic() || ch == ' ' {
-                        target_keys.insert(ch.to_lowercase().next().unwrap_or(ch));
-                    }
-                }
-
-                let keyboard_widget = imp.keyboard_widget.borrow();
-                if let Some(keyboard) = keyboard_widget.as_ref() {
-                    keyboard.set_visible_keys(Some(target_keys));
-                }
+        // Get the current lesson info without borrowing
+        let (current_lesson_id, current_step, total_steps) = {
+            let current_lesson = imp.current_lesson.borrow();
+            if let Some(lesson) = current_lesson.as_ref() {
+                (lesson.id, imp.current_step_index.get(), lesson.steps.len())
             } else {
-                // Lesson completed - could emit signal or show completion message
-                imp.target_text_view
-                    .set_text("Lesson completed! Well done!");
+                return;
+            }
+        };
+
+        let next_step = current_step + 1;
+
+        if next_step < total_steps {
+            // Move to next step within current lesson
+            imp.current_step_index.set(next_step);
+
+            let step_text = {
+                let current_lesson = imp.current_lesson.borrow();
+                current_lesson.as_ref().unwrap().steps[next_step]
+                    .text
+                    .clone()
+            };
+
+            imp.target_text_view.set_text(&step_text);
+            imp.text_view.set_text("");
+
+            // Update keyboard for new step
+            let mut target_keys = std::collections::HashSet::new();
+            for ch in step_text.chars() {
+                if ch.is_alphabetic() || ch == ' ' {
+                    target_keys.insert(ch.to_lowercase().next().unwrap_or(ch));
+                }
+            }
+
+            let keyboard_widget = imp.keyboard_widget.borrow();
+            if let Some(keyboard) = keyboard_widget.as_ref() {
+                keyboard.set_visible_keys(Some(target_keys));
+            }
+        } else {
+            // Current lesson completed - try to load next lesson
+            let next_lesson_option = {
+                let course = imp.course.borrow();
+                course
+                    .as_ref()
+                    .and_then(|c| c.get_lesson(current_lesson_id + 1).cloned())
+            };
+
+            if let Some(next_lesson) = next_lesson_option {
+                // Load next lesson
+                self.set_lesson(&next_lesson);
+            } else {
+                // Check if we have a course to determine the message
+                let has_course = imp.course.borrow().is_some();
+                if has_course {
+                    // All lessons completed
+                    imp.target_text_view
+                        .set_text("Course completed! Congratulations!");
+                } else {
+                    // No course set, just show lesson completion
+                    imp.target_text_view
+                        .set_text("Lesson completed! Well done!");
+                }
                 imp.text_view.set_text("");
             }
         }

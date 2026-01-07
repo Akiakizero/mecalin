@@ -34,12 +34,14 @@ mod imp {
             self.setup_text_view();
         }
     }
+
     impl WidgetImpl for TargetTextView {
         fn snapshot(&self, snapshot: &gtk::Snapshot) {
             self.parent_snapshot(snapshot);
             self.draw_cursor(snapshot);
         }
     }
+
     impl BoxImpl for TargetTextView {}
 }
 
