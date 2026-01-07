@@ -113,6 +113,16 @@ impl StudyRoom {
         glib::Object::new()
     }
 
+    pub fn can_go_back(&self) -> bool {
+        let imp = self.imp();
+        imp.main_stack.visible_child_name().as_deref() == Some("lesson_view")
+    }
+
+    pub fn go_back(&self) {
+        let imp = self.imp();
+        imp.main_stack.set_visible_child_name("lesson_list");
+    }
+
     pub fn show_first_lesson(&self) {
         let imp = self.imp();
         if let Some(course) = imp.course.borrow().as_ref() {

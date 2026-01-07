@@ -20,6 +20,8 @@ mod imp {
         #[template_child]
         pub header_bar: TemplateChild<adw::HeaderBar>,
         #[template_child]
+        pub back_button: TemplateChild<gtk::Button>,
+        #[template_child]
         pub main_stack: TemplateChild<gtk::Stack>,
         #[template_child]
         pub main_action_list_widget: TemplateChild<MainActionList>,
@@ -72,6 +74,30 @@ impl MecalinWindow {
     pub fn show_study_room(&self) {
         let imp = self.imp();
         imp.main_stack.set_visible_child_name("study_room");
+        imp.back_button.set_visible(true);
+    }
+
+    pub fn go_back(&self) {
+        let imp = self.imp();
+        let current_page = imp.main_stack.visible_child_name();
+
+        match current_page.as_deref() {
+            Some("study_room") => {
+                // Check if we're in a lesson view within the study room
+                if let Some(study_room) = imp.main_stack.visible_child() {
+                    if let Ok(study_room) = study_room.downcast::<StudyRoom>() {
+                        if study_room.can_go_back() {
+                            study_room.go_back();
+                            return;
+                        }
+                    }
+                }
+                // If we can't go back within study room, go to main menu
+                imp.main_stack.set_visible_child_name("main_menu");
+                imp.back_button.set_visible(false);
+            }
+            _ => {}
+        }
     }
 
     pub fn show_about(&self) {
@@ -109,5 +135,12 @@ impl imp::MecalinWindow {
                 }
                 None
             });
+
+        let window = self.obj().downgrade();
+        self.back_button.connect_clicked(move |_| {
+            if let Some(window) = window.upgrade() {
+                window.go_back();
+            }
+        });
     }
 }
