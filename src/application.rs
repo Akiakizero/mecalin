@@ -38,7 +38,7 @@ glib::wrapper! {
 impl MecalinApplication {
     pub fn new() -> Self {
         glib::Object::builder()
-            .property("application-id", "com.example.mecalin")
+            .property("application-id", "org.gnome.mecalin")
             .build()
     }
 }

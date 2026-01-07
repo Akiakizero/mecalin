@@ -6,7 +6,7 @@ mod imp {
     use super::*;
 
     #[derive(Default, gtk::CompositeTemplate)]
-    #[template(resource = "/com/example/mecalin/ui/window.ui")]
+    #[template(resource = "/org/gnome/mecalin/ui/window.ui")]
     pub struct MecalinWindow {
         #[template_child]
         pub header_bar: TemplateChild<adw::HeaderBar>,
