@@ -8,16 +8,14 @@
       <object class="AdwHeaderBar" id="header_bar"/>
     </child>
     <property name="content">
-      <object class="GtkBox" id="main_box">
-        <property name="orientation">vertical</property>
-        <property name="spacing">12</property>
-        <property name="margin-top">12</property>
-        <property name="margin-bottom">12</property>
-        <property name="margin-start">12</property>
-        <property name="margin-end">12</property>
+      <object class="GtkStack" id="main_stack">
+        <property name="transition-type">slide-left-right</property>
         <child>
-          <object class="GtkLabel" id="welcome_label">
-            <property name="label">Welcome to Mecalin</property>
+          <object class="GtkStackPage">
+            <property name="name">main_menu</property>
+            <property name="child">
+              <object class="MainMenu" id="main_menu_widget"/>
+            </property>
           </object>
         </child>
       </object>

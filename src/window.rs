@@ -2,6 +2,8 @@ use gtk::prelude::*;
 use gtk::subclass::prelude::*;
 use libadwaita as adw;
 
+use crate::main_menu::MainMenu;
+
 mod imp {
     use super::*;
 
@@ -11,9 +13,9 @@ mod imp {
         #[template_child]
         pub header_bar: TemplateChild<adw::HeaderBar>,
         #[template_child]
-        pub main_box: TemplateChild<gtk::Box>,
+        pub main_stack: TemplateChild<gtk::Stack>,
         #[template_child]
-        pub welcome_label: TemplateChild<gtk::Label>,
+        pub main_menu_widget: TemplateChild<MainMenu>,
     }
 
     #[glib::object_subclass]
@@ -23,6 +25,7 @@ mod imp {
         type ParentType = adw::ApplicationWindow;
 
         fn class_init(klass: &mut Self::Class) {
+            MainMenu::ensure_type();
             klass.bind_template();
         }
 
