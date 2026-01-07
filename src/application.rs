@@ -21,6 +21,12 @@ mod imp {
 
     impl ObjectImpl for MecalinApplication {}
     impl ApplicationImpl for MecalinApplication {
+        fn startup(&self) {
+            self.parent_startup();
+            let app = self.obj();
+            app.set_resource_base_path(Some("/org/gnome/mecalin"));
+        }
+
         fn activate(&self) {
             let app = self.obj();
             let window = MecalinWindow::new(app.upcast_ref());
