@@ -26,9 +26,20 @@ mod imp {
         }
     }
 
-    impl ObjectImpl for TextView {}
+    impl ObjectImpl for TextView {
+        fn constructed(&self) {
+            self.parent_constructed();
+            self.setup_text_view();
+        }
+    }
     impl WidgetImpl for TextView {}
     impl BoxImpl for TextView {}
+}
+
+impl imp::TextView {
+    fn setup_text_view(&self) {
+        self.text_view.set_monospace(true);
+    }
 }
 
 glib::wrapper! {
