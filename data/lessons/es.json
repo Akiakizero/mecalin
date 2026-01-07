@@ -1,0 +1,45 @@
+{
+  "lessons": [
+    {
+      "id": 1,
+      "title": "Teclas de la fila central",
+      "description": "Aprende las teclas básicas de la fila central: A, S, D, F, J, K, L",
+      "target_keys": ["a", "s", "d", "f", "j", "k", "l"],
+      "steps": [
+        {
+          "id": 1,
+          "text": "asdf jkl;",
+          "target_keys": ["a", "s", "d", "f", "j", "k", "l"]
+        },
+        {
+          "id": 2,
+          "text": "aaa sss ddd fff jjj kkk lll",
+          "target_keys": ["a", "s", "d", "f", "j", "k", "l"]
+        },
+        {
+          "id": 3,
+          "text": "las dos faldas",
+          "target_keys": ["a", "s", "d", "f", "j", "k", "l"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Teclas de la fila superior",
+      "description": "Aprende las teclas de la fila superior: Q, W, E, R, T, Y, U, I, O, P",
+      "target_keys": ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
+      "steps": [
+        {
+          "id": 1,
+          "text": "qwer tyui op",
+          "target_keys": ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"]
+        },
+        {
+          "id": 2,
+          "text": "que tipo puerto",
+          "target_keys": ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"]
+        }
+      ]
+    }
+  ]
+}

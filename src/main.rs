@@ -1,6 +1,7 @@
 use gio::prelude::*;
 
 mod application;
+mod course;
 mod keyboard_widget;
 mod main_action_list;
 mod study_room;
