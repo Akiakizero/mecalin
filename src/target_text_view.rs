@@ -1,5 +1,6 @@
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
+use std::cell::Cell;
 
 mod imp {
     use super::*;
@@ -9,6 +10,7 @@ mod imp {
     pub struct TargetTextView {
         #[template_child]
         pub text_view: TemplateChild<gtk::TextView>,
+        pub cursor_position: Cell<i32>,
     }
 
     #[glib::object_subclass]
@@ -32,16 +34,50 @@ mod imp {
             self.setup_text_view();
         }
     }
-    impl WidgetImpl for TargetTextView {}
+    impl WidgetImpl for TargetTextView {
+        fn snapshot(&self, snapshot: &gtk::Snapshot) {
+            self.parent_snapshot(snapshot);
+            self.draw_cursor(snapshot);
+        }
+    }
     impl BoxImpl for TargetTextView {}
 }
 
 impl imp::TargetTextView {
     fn setup_text_view(&self) {
-        // Prevent the target text view from being focused
         self.text_view.set_can_focus(false);
-        // Ensure cursor remains visible even when not focused
-        self.text_view.set_cursor_visible(true);
+        self.text_view.set_cursor_visible(false);
+        self.text_view.set_monospace(true);
+    }
+
+    fn draw_cursor(&self, snapshot: &gtk::Snapshot) {
+        let cursor_pos = self.cursor_position.get();
+        let buffer = self.text_view.buffer();
+
+        let mut iter = buffer.start_iter();
+        if iter.forward_chars(cursor_pos) {
+            let rect = self.text_view.iter_location(&iter);
+
+            // Convert text view coordinates to widget coordinates
+            let (x, y) = self.text_view.buffer_to_window_coords(
+                gtk::TextWindowType::Widget,
+                rect.x(),
+                rect.y(),
+            );
+
+            // Get the text view's allocation to offset properly
+            let allocation = self.text_view.allocation();
+            let final_x = allocation.x() + x;
+            let final_y = allocation.y() + y;
+
+            // Get caret color from style context
+            let style_ctx = self.obj().style_context();
+            let color = style_ctx.color();
+
+            let cursor_rect =
+                gtk::graphene::Rect::new(final_x as f32, final_y as f32, 2.0, rect.height() as f32);
+            snapshot.append_color(&color, &cursor_rect);
+        }
     }
 }
 
@@ -67,10 +103,9 @@ impl TargetTextView {
     }
 
     pub fn set_cursor_position(&self, position: i32) {
-        let buffer = self.text_view().buffer();
-        let mut iter = buffer.start_iter();
-        iter.forward_chars(position);
-        buffer.place_cursor(&iter);
+        let imp = self.imp();
+        imp.cursor_position.set(position);
+        self.queue_draw();
     }
 }
 
