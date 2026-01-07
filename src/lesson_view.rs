@@ -4,6 +4,7 @@ use gettextrs::gettext;
 
 use crate::keyboard_widget::KeyboardWidget;
 use crate::course::Lesson;
+use crate::text_view::TextView;
 
 mod imp {
     use super::*;
@@ -16,7 +17,7 @@ mod imp {
         #[template_child]
         pub lesson_description: TemplateChild<gtk::Label>,
         #[template_child]
-        pub text_entry: TemplateChild<gtk::Entry>,
+        pub text_view: TemplateChild<TextView>,
         #[template_child]
         pub keyboard_container: TemplateChild<gtk::Box>,
         
@@ -60,8 +61,9 @@ impl imp::LessonView {
         let keyboard_widget = self.keyboard_widget.borrow();
         if let Some(keyboard) = keyboard_widget.as_ref() {
             let keyboard_clone = keyboard.clone();
-            self.text_entry.connect_changed(move |entry| {
-                let text = entry.text();
+            let buffer = self.text_view.text_view().buffer();
+            buffer.connect_changed(move |buffer| {
+                let text = buffer.text(&buffer.start_iter(), &buffer.end_iter(), false);
                 if let Some(last_char) = text.chars().last() {
                     keyboard_clone.set_current_key(Some(last_char));
                 } else {
@@ -88,6 +90,6 @@ impl LessonView {
         let title = format!("{} {}", gettext("Lesson"), lesson.id);
         imp.lesson_title.set_text(&title);
         imp.lesson_description.set_text(&lesson.description);
-        imp.text_entry.set_text("");
+        imp.text_view.set_text("");
     }
 }

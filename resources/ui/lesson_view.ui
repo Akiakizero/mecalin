@@ -26,13 +26,10 @@
       </object>
     </child>
     <child>
-      <object class="GtkEntry" id="text_entry">
+      <object class="MecalinTextView" id="text_view">
         <property name="halign">center</property>
         <property name="width-request">400</property>
-        <property name="placeholder-text">Type here...</property>
-        <style>
-          <class name="large-entry"/>
-        </style>
+        <property name="height-request">100</property>
       </object>
     </child>
     <child>

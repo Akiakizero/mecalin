@@ -6,6 +6,7 @@ mod keyboard_widget;
 mod lesson_view;
 mod main_action_list;
 mod study_room;
+mod text_view;
 mod window;
 
 use application::MecalinApplication;

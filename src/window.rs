@@ -6,6 +6,7 @@ use libadwaita::subclass::prelude::*;
 use crate::main_action_list::MainActionList;
 use crate::study_room::StudyRoom;
 use crate::lesson_view::LessonView;
+use crate::text_view::TextView;
 
 mod imp {
     use super::*;
@@ -31,6 +32,7 @@ mod imp {
             MainActionList::ensure_type();
             StudyRoom::ensure_type();
             LessonView::ensure_type();
+            TextView::ensure_type();
             klass.bind_template();
         }
 
