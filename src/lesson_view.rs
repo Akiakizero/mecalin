@@ -105,6 +105,19 @@ impl LessonView {
         // Set the first step's text as target text
         if let Some(first_step) = lesson.steps.first() {
             imp.target_text_view.set_text(&first_step.text);
+
+            // Extract unique characters from the lesson text for keyboard display
+            let mut target_keys = std::collections::HashSet::new();
+            for ch in first_step.text.chars() {
+                if ch.is_alphabetic() || ch == ' ' {
+                    target_keys.insert(ch.to_lowercase().next().unwrap_or(ch));
+                }
+            }
+
+            let keyboard_widget = imp.keyboard_widget.borrow();
+            if let Some(keyboard) = keyboard_widget.as_ref() {
+                keyboard.set_visible_keys(Some(target_keys));
+            }
         }
 
         imp.text_view.set_text("");

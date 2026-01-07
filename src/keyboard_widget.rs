@@ -2,7 +2,7 @@ use gtk::prelude::*;
 use gtk::DrawingArea;
 use serde::{Deserialize, Serialize};
 use std::cell::RefCell;
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 use std::rc::Rc;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -71,6 +71,7 @@ pub struct KeyboardWidget {
     drawing_area: DrawingArea,
     current_key: Rc<RefCell<Option<char>>>,
     layout: Rc<RefCell<KeyboardLayout>>,
+    visible_keys: Rc<RefCell<Option<std::collections::HashSet<char>>>>,
 }
 
 impl KeyboardWidget {
@@ -80,17 +81,27 @@ impl KeyboardWidget {
         drawing_area.set_size_request(600, 250);
 
         let current_key = Rc::new(RefCell::new(None));
+        let visible_keys = Rc::new(RefCell::new(None));
         let current_key_clone = current_key.clone();
+        let visible_keys_clone = visible_keys.clone();
         let layout_clone = layout.clone();
 
         drawing_area.set_draw_func(move |_, cr, width, height| {
-            Self::draw_keyboard(cr, width, height, &current_key_clone, &layout_clone);
+            Self::draw_keyboard(
+                cr,
+                width,
+                height,
+                &current_key_clone,
+                &layout_clone,
+                &visible_keys_clone,
+            );
         });
 
         Self {
             drawing_area,
             current_key,
             layout,
+            visible_keys,
         }
     }
 
@@ -103,14 +114,21 @@ impl KeyboardWidget {
         self.drawing_area.queue_draw();
     }
 
+    pub fn set_visible_keys(&self, keys: Option<HashSet<char>>) {
+        *self.visible_keys.borrow_mut() = keys;
+        self.drawing_area.queue_draw();
+    }
+
     fn draw_keyboard(
         cr: &gtk::cairo::Context,
         width: i32,
         _height: i32,
         current_key: &Rc<RefCell<Option<char>>>,
         layout: &Rc<RefCell<KeyboardLayout>>,
+        visible_keys: &Rc<RefCell<Option<HashSet<char>>>>,
     ) {
         let layout_borrowed = layout.borrow();
+        let visible_keys_borrowed = visible_keys.borrow();
 
         let key_width = 40.0;
         let key_height = 40.0;
@@ -153,21 +171,28 @@ impl KeyboardWidget {
                 cr.rectangle(x, y, key_width, key_height);
                 cr.stroke().unwrap();
 
-                cr.set_source_rgb(0.0, 0.0, 0.0);
-                cr.select_font_face(
-                    "Sans",
-                    gtk::cairo::FontSlant::Normal,
-                    gtk::cairo::FontWeight::Normal,
-                );
-                cr.set_font_size(14.0);
+                // Only show text if visible_keys is None or contains this key
+                let should_show_text = visible_keys_borrowed.as_ref().map_or(true, |visible| {
+                    visible.contains(&key_char.to_lowercase().next().unwrap())
+                });
 
-                let text = key_str.to_uppercase();
-                let text_extents = cr.text_extents(&text).unwrap();
-                let text_x = x + (key_width - text_extents.width()) / 2.0;
-                let text_y = y + (key_height + text_extents.height()) / 2.0;
+                if should_show_text {
+                    cr.set_source_rgb(0.0, 0.0, 0.0);
+                    cr.select_font_face(
+                        "Sans",
+                        gtk::cairo::FontSlant::Normal,
+                        gtk::cairo::FontWeight::Normal,
+                    );
+                    cr.set_font_size(14.0);
 
-                cr.move_to(text_x, text_y);
-                cr.show_text(&text).unwrap();
+                    let text = key_str.to_uppercase();
+                    let text_extents = cr.text_extents(&text).unwrap();
+                    let text_x = x + (key_width - text_extents.width()) / 2.0;
+                    let text_y = y + (key_height + text_extents.height()) / 2.0;
+
+                    cr.move_to(text_x, text_y);
+                    cr.show_text(&text).unwrap();
+                }
             }
         }
 
@@ -192,12 +217,19 @@ impl KeyboardWidget {
         cr.rectangle(space_x, space_y, space_width, key_height);
         cr.stroke().unwrap();
 
-        cr.set_source_rgb(0.0, 0.0, 0.0);
-        cr.move_to(
-            space_x + space_width / 2.0 - 20.0,
-            space_y + key_height / 2.0 + 5.0,
-        );
-        cr.show_text("SPACE").unwrap();
+        // Only show SPACE text if visible_keys is None or contains space
+        let should_show_space_text = visible_keys_borrowed
+            .as_ref()
+            .map_or(true, |visible| visible.contains(&' '));
+
+        if should_show_space_text {
+            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.move_to(
+                space_x + space_width / 2.0 - 20.0,
+                space_y + key_height / 2.0 + 5.0,
+            );
+            cr.show_text("SPACE").unwrap();
+        }
     }
 }
 
