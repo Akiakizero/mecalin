@@ -1,0 +1,8 @@
+[package]
+name = "mecalin"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gtk = { version = "0.9", package = "gtk4", features = ["v4_10"] }
+libadwaita = { version = "0.7", package = "libadwaita", features = ["v1_5"] }
