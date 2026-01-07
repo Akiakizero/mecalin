@@ -1,6 +1,6 @@
 # Mecalin
 
-A GTK4 application written in Rust using Adwaita and built with Meson.
+A typing tutor application built with GTK4, Rust, and Adwaita.
 
 ## Quick Start
 
