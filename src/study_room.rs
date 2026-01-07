@@ -1,8 +1,8 @@
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
 
-use crate::lesson_view::LessonView;
 use crate::course::{Course, Lesson};
+use crate::lesson_view::LessonView;
 
 mod imp {
     use super::*;
@@ -16,7 +16,7 @@ mod imp {
         pub main_stack: TemplateChild<gtk::Stack>,
         #[template_child]
         pub lesson_view_widget: TemplateChild<LessonView>,
-        
+
         pub course: std::cell::RefCell<Option<Course>>,
         pub settings: std::cell::RefCell<Option<gio::Settings>>,
     }
@@ -51,11 +51,11 @@ impl imp::StudyRoom {
     fn setup_room(&self) {
         let course = Course::new().unwrap_or_default();
         *self.course.borrow_mut() = Some(course);
-        
+
         // TODO: Enable settings when schema is properly installed
         // let settings = gio::Settings::new("org.gnome.mecalin");
         // *self.settings.borrow_mut() = Some(settings);
-        
+
         let lessons = [
             ("Start Course", "Begin or continue typing lessons"),
             ("Lesson Review", "Review previous lessons"),
@@ -76,7 +76,7 @@ impl imp::StudyRoom {
             let title_label = gtk::Label::new(Some(title));
             title_label.set_halign(gtk::Align::Start);
             title_label.add_css_class("heading");
-            
+
             let subtitle_label = gtk::Label::new(Some(subtitle));
             subtitle_label.set_halign(gtk::Align::Start);
             subtitle_label.add_css_class("dim-label");
@@ -85,7 +85,7 @@ impl imp::StudyRoom {
             vbox.append(&subtitle_label);
             hbox.append(&vbox);
             row.set_child(Some(&hbox));
-            
+
             self.lesson_list.append(&row);
         }
     }
@@ -121,7 +121,7 @@ impl StudyRoom {
             } else {
                 1 // Default to lesson 1 if no settings
             };
-            
+
             if let Some(lesson) = course.get_lesson(current_lesson) {
                 imp.lesson_view_widget.set_lesson(lesson);
                 imp.main_stack.set_visible_child_name("lesson_view");

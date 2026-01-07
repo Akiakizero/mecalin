@@ -1,9 +1,9 @@
+use gettextrs::gettext;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
-use gettextrs::gettext;
 
-use crate::keyboard_widget::KeyboardWidget;
 use crate::course::Lesson;
+use crate::keyboard_widget::KeyboardWidget;
 use crate::text_view::TextView;
 
 mod imp {
@@ -20,7 +20,7 @@ mod imp {
         pub text_view: TemplateChild<TextView>,
         #[template_child]
         pub keyboard_container: TemplateChild<gtk::Box>,
-        
+
         pub keyboard_widget: std::cell::RefCell<Option<KeyboardWidget>>,
     }
 

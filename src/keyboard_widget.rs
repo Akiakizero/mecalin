@@ -2,8 +2,8 @@ use gtk::prelude::*;
 use gtk::DrawingArea;
 use serde::{Deserialize, Serialize};
 use std::cell::RefCell;
-use std::rc::Rc;
 use std::collections::HashMap;
+use std::rc::Rc;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct KeyboardLayout {

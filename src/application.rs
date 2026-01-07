@@ -1,8 +1,8 @@
+use gio::prelude::*;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
 use libadwaita as adw;
 use libadwaita::subclass::prelude::*;
-use gio::prelude::*;
 
 use crate::window::MecalinWindow;
 

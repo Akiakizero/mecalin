@@ -1,14 +1,14 @@
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
 use libadwaita as adw;
-use libadwaita::subclass::prelude::*;
 use libadwaita::prelude::AdwDialogExt;
+use libadwaita::subclass::prelude::*;
 
+use crate::config;
+use crate::lesson_view::LessonView;
 use crate::main_action_list::MainActionList;
 use crate::study_room::StudyRoom;
-use crate::lesson_view::LessonView;
 use crate::text_view::TextView;
-use crate::config;
 
 mod imp {
     use super::*;
@@ -91,19 +91,21 @@ impl MecalinWindow {
 impl imp::MecalinWindow {
     fn setup_signals(&self) {
         let window = self.obj().downgrade();
-        self.main_action_list_widget.connect_local("study-room-selected", false, move |_| {
-            if let Some(window) = window.upgrade() {
-                window.show_study_room();
-            }
-            None
-        });
-        
+        self.main_action_list_widget
+            .connect_local("study-room-selected", false, move |_| {
+                if let Some(window) = window.upgrade() {
+                    window.show_study_room();
+                }
+                None
+            });
+
         let window = self.obj().downgrade();
-        self.main_action_list_widget.connect_local("about-selected", false, move |_| {
-            if let Some(window) = window.upgrade() {
-                window.show_about();
-            }
-            None
-        });
+        self.main_action_list_widget
+            .connect_local("about-selected", false, move |_| {
+                if let Some(window) = window.upgrade() {
+                    window.show_about();
+                }
+                None
+            });
     }
 }

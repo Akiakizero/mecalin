@@ -36,7 +36,9 @@ impl Course {
             _ => include_str!("../data/lessons/us.json"),
         };
         let lessons_data: LessonsData = serde_json::from_str(lessons_json)?;
-        Ok(Self { lessons: lessons_data.lessons })
+        Ok(Self {
+            lessons: lessons_data.lessons,
+        })
     }
 
     pub fn get_lessons(&self) -> &Vec<Lesson> {

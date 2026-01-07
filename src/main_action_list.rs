@@ -37,7 +37,8 @@ mod imp {
         }
 
         fn signals() -> &'static [glib::subclass::Signal] {
-            static SIGNALS: std::sync::OnceLock<Vec<glib::subclass::Signal>> = std::sync::OnceLock::new();
+            static SIGNALS: std::sync::OnceLock<Vec<glib::subclass::Signal>> =
+                std::sync::OnceLock::new();
             SIGNALS.get_or_init(|| {
                 vec![
                     glib::subclass::Signal::builder("study-room-selected").build(),
@@ -72,7 +73,7 @@ impl imp::MainActionList {
             let title_label = gtk::Label::new(Some(title));
             title_label.set_halign(gtk::Align::Start);
             title_label.add_css_class("heading");
-            
+
             let subtitle_label = gtk::Label::new(Some(subtitle));
             subtitle_label.set_halign(gtk::Align::Start);
             subtitle_label.add_css_class("dim-label");
@@ -81,7 +82,7 @@ impl imp::MainActionList {
             vbox.append(&subtitle_label);
             hbox.append(&vbox);
             row.set_child(Some(&hbox));
-            
+
             self.action_list.append(&row);
         }
     }
