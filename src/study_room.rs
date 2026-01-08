@@ -1,5 +1,6 @@
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
+use i18n_format::i18n_fmt;
 
 use crate::course::Course;
 use crate::lesson_view::LessonView;
@@ -57,11 +58,26 @@ impl imp::StudyRoom {
         self.settings.replace(Some(settings));
 
         let lessons = [
-            ("Start Course", "Begin or continue typing lessons"),
-            ("Lesson Review", "Review previous lessons"),
-            ("Speed Test", "Test typing speed and accuracy"),
-            ("Practice Exercises", "Specific typing practice"),
-            ("Student Report", "View progress report"),
+            (
+                i18n_fmt!("Start Course"),
+                i18n_fmt!("Begin or continue typing lessons"),
+            ),
+            (
+                i18n_fmt!("Lesson Review"),
+                i18n_fmt!("Review previous lessons"),
+            ),
+            (
+                i18n_fmt!("Speed Test"),
+                i18n_fmt!("Test typing speed and accuracy"),
+            ),
+            (
+                i18n_fmt!("Practice Exercises"),
+                i18n_fmt!("Specific typing practice"),
+            ),
+            (
+                i18n_fmt!("Student Report"),
+                i18n_fmt!("View progress report"),
+            ),
         ];
 
         for (title, subtitle) in lessons {
@@ -73,11 +89,11 @@ impl imp::StudyRoom {
             hbox.set_margin_end(16);
 
             let vbox = gtk::Box::new(gtk::Orientation::Vertical, 4);
-            let title_label = gtk::Label::new(Some(title));
+            let title_label = gtk::Label::new(Some(&title));
             title_label.set_halign(gtk::Align::Start);
             title_label.add_css_class("heading");
 
-            let subtitle_label = gtk::Label::new(Some(subtitle));
+            let subtitle_label = gtk::Label::new(Some(&subtitle));
             subtitle_label.set_halign(gtk::Align::Start);
             subtitle_label.add_css_class("dim-label");
 
