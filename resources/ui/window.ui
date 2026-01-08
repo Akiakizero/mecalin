@@ -17,6 +17,11 @@
                 </style>
               </object>
             </child>
+            <property name="title-widget">
+              <object class="AdwWindowTitle" id="window_title">
+                <property name="title">Mecalin</property>
+              </object>
+            </property>
           </object>
         </child>
         <property name="content">

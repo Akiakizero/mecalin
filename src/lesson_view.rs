@@ -1,6 +1,5 @@
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
-use i18n_format::i18n_fmt;
 use std::cell::{Cell, RefCell};
 
 use crate::course::Lesson;
@@ -16,8 +15,6 @@ mod imp {
     #[properties(wrapper_type = super::LessonView)]
     pub struct LessonView {
         #[template_child]
-        pub lesson_title: TemplateChild<gtk::Label>,
-        #[template_child]
         pub lesson_description: TemplateChild<gtk::Label>,
         #[template_child]
         pub target_text_view: TemplateChild<TargetTextView>,
@@ -29,7 +26,8 @@ mod imp {
         pub keyboard_widget: RefCell<Option<KeyboardWidget>>,
         #[property(get, set, nullable)]
         pub current_lesson: RefCell<Option<glib::BoxedAnyObject>>,
-        pub current_step_index: Cell<usize>,
+        #[property(get, set)]
+        pub current_step_index: Cell<u32>,
         pub course: RefCell<Option<crate::course::Course>>,
     }
 
@@ -49,6 +47,18 @@ mod imp {
     }
 
     impl ObjectImpl for LessonView {
+        fn properties() -> &'static [glib::ParamSpec] {
+            Self::derived_properties()
+        }
+
+        fn set_property(&self, id: usize, value: &glib::Value, pspec: &glib::ParamSpec) {
+            self.derived_set_property(id, value, pspec)
+        }
+
+        fn property(&self, id: usize, pspec: &glib::ParamSpec) -> glib::Value {
+            self.derived_property(id, pspec)
+        }
+
         fn constructed(&self) {
             self.parent_constructed();
             self.setup_keyboard();
@@ -159,14 +169,12 @@ impl LessonView {
 
     pub fn set_lesson(&self, lesson: &Lesson) {
         self.set_current_lesson(Some(glib::BoxedAnyObject::new(lesson.clone())));
-        
+
         let imp = self.imp();
-        let title = i18n_fmt! { i18n_fmt("Lesson {}", lesson.id) };
-        imp.lesson_title.set_text(&title);
         imp.lesson_description.set_text(&lesson.description);
 
         // Reset step index
-        imp.current_step_index.set(0);
+        self.set_current_step_index(0);
 
         // Set the first step's text as target text
         if let Some(first_step) = lesson.steps.first() {
@@ -202,7 +210,11 @@ impl LessonView {
             let current_lesson_boxed = imp.current_lesson.borrow();
             if let Some(boxed) = current_lesson_boxed.as_ref() {
                 if let Ok(lesson) = boxed.try_borrow::<Lesson>() {
-                    (lesson.id, imp.current_step_index.get(), lesson.steps.len())
+                    (
+                        lesson.id,
+                        self.current_step_index() as usize,
+                        lesson.steps.len(),
+                    )
                 } else {
                     return;
                 }
@@ -215,7 +227,7 @@ impl LessonView {
 
         if next_step < total_steps {
             // Move to next step within current lesson
-            imp.current_step_index.set(next_step);
+            self.set_current_step_index(next_step as u32);
 
             let step_text = {
                 let current_lesson_boxed = imp.current_lesson.borrow();

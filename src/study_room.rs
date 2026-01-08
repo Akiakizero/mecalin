@@ -1,7 +1,7 @@
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
 
-use crate::course::{Course, Lesson};
+use crate::course::Course;
 use crate::lesson_view::LessonView;
 
 mod imp {
@@ -138,5 +138,9 @@ impl StudyRoom {
                 imp.main_stack.set_visible_child_name("lesson_view");
             }
         }
+    }
+
+    pub fn lesson_view(&self) -> &LessonView {
+        &self.imp().lesson_view_widget
     }
 }

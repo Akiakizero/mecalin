@@ -1,10 +1,12 @@
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
+use i18n_format::i18n_fmt;
 use libadwaita as adw;
 use libadwaita::prelude::AdwDialogExt;
 use libadwaita::subclass::prelude::*;
 
 use crate::config;
+use crate::course::Lesson;
 use crate::lesson_view::LessonView;
 use crate::main_action_list::MainActionList;
 use crate::study_room::StudyRoom;
@@ -19,6 +21,8 @@ mod imp {
     pub struct MecalinWindow {
         #[template_child]
         pub header_bar: TemplateChild<adw::HeaderBar>,
+        #[template_child]
+        pub window_title: TemplateChild<adw::WindowTitle>,
         #[template_child]
         pub back_button: TemplateChild<gtk::Button>,
         #[template_child]
@@ -75,6 +79,7 @@ impl MecalinWindow {
         let imp = self.imp();
         imp.main_stack.set_visible_child_name("study_room");
         imp.back_button.set_visible(true);
+        self.setup_lesson_view_signals();
     }
 
     pub fn go_back(&self) {
@@ -95,6 +100,8 @@ impl MecalinWindow {
                 // If we can't go back within study room, go to main menu
                 imp.main_stack.set_visible_child_name("main_menu");
                 imp.back_button.set_visible(false);
+                imp.window_title.set_title("Mecalin");
+                imp.window_title.set_subtitle("");
             }
             _ => {}
         }
@@ -113,6 +120,56 @@ impl MecalinWindow {
             .build();
 
         about.present(Some(self));
+    }
+
+    pub fn set_title(&self, title: &str) {
+        let imp = self.imp();
+        imp.window_title.set_title(title);
+    }
+
+    pub fn set_subtitle(&self, subtitle: &str) {
+        let imp = self.imp();
+        imp.window_title.set_subtitle(subtitle);
+    }
+
+    fn setup_lesson_view_signals(&self) {
+        let imp = self.imp();
+        if let Some(study_room) = imp.main_stack.child_by_name("study_room") {
+            if let Ok(study_room) = study_room.downcast::<StudyRoom>() {
+                let lesson_view = study_room.lesson_view();
+
+                let window = self.downgrade();
+                lesson_view.connect_notify_local(Some("current-lesson"), move |lesson_view, _| {
+                    if let Some(window) = window.upgrade() {
+                        window.update_title_from_lesson_view(lesson_view);
+                    }
+                });
+
+                let window = self.downgrade();
+                lesson_view.connect_notify_local(
+                    Some("current-step-index"),
+                    move |lesson_view, _| {
+                        if let Some(window) = window.upgrade() {
+                            window.update_title_from_lesson_view(lesson_view);
+                        }
+                    },
+                );
+            }
+        }
+    }
+
+    fn update_title_from_lesson_view(&self, lesson_view: &LessonView) {
+        if let Some(lesson_boxed) = lesson_view.current_lesson() {
+            if let Ok(lesson) = lesson_boxed.try_borrow::<Lesson>() {
+                let title = i18n_fmt! { i18n_fmt("Lesson {}", lesson.id) };
+                self.set_title(&title);
+
+                let current_step = lesson_view.current_step_index() as usize;
+                let total_steps = lesson.steps.len();
+                let subtitle = i18n_fmt! { i18n_fmt("Step {}/{}", current_step + 1, total_steps) };
+                self.set_subtitle(&subtitle);
+            }
+        }
     }
 }
 
