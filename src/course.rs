@@ -22,7 +22,8 @@ struct LessonsData {
     lessons: Vec<Lesson>,
 }
 
-#[derive(Clone)]
+#[derive(Debug, Clone, glib::Boxed)]
+#[boxed_type(name = "Course")]
 pub struct Course {
     lessons: Vec<Lesson>,
 }
