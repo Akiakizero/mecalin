@@ -3,6 +3,7 @@ use gtk::subclass::prelude::*;
 
 use crate::course::Course;
 use crate::lesson_view::LessonView;
+use crate::window::MecalinWindow;
 
 mod imp {
     use super::*;
@@ -121,6 +122,15 @@ impl StudyRoom {
     pub fn go_back(&self) {
         let imp = self.imp();
         imp.main_stack.set_visible_child_name("lesson_list");
+
+        // Reset window title when going back to lesson list
+        if let Some(window) = self
+            .root()
+            .and_then(|root| root.downcast::<MecalinWindow>().ok())
+        {
+            window.set_title("Mecalin");
+            window.set_subtitle("");
+        }
     }
 
     pub fn show_first_lesson(&self) {
