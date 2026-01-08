@@ -95,7 +95,7 @@ impl imp::StudyRoom {
         self.lesson_list.connect_row_activated(move |_, row| {
             if row.index() == 0 {
                 if let Some(study_room) = obj.upgrade() {
-                    study_room.show_first_lesson();
+                    study_room.show_lesson_view();
                 }
             }
         });
@@ -127,7 +127,7 @@ impl StudyRoom {
             .set_current_lesson(None::<glib::BoxedAnyObject>);
     }
 
-    pub fn show_first_lesson(&self) {
+    pub fn show_lesson_view(&self) {
         let imp = self.imp();
         if let Some(course) = imp.course.borrow().as_ref() {
             let current_lesson = if let Some(settings) = imp.settings.borrow().as_ref() {
