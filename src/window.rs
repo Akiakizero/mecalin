@@ -168,6 +168,10 @@ impl MecalinWindow {
                 let subtitle = i18n_fmt! { i18n_fmt("Lesson {}: Step {}/{}", lesson.id, current_step + 1, total_steps) };
                 self.set_subtitle(&subtitle);
             }
+        } else {
+            // No lesson selected, reset to default title
+            self.set_title("Mecalin");
+            self.set_subtitle("");
         }
     }
 }
