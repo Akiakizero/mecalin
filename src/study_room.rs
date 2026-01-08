@@ -1,6 +1,6 @@
+use gettextrs::gettext;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
-use i18n_format::i18n_fmt;
 
 use crate::course::Course;
 use crate::lesson_view::LessonView;
@@ -59,25 +59,19 @@ impl imp::StudyRoom {
 
         let lessons = [
             (
-                i18n_fmt!("Start Course"),
-                i18n_fmt!("Begin or continue typing lessons"),
+                gettext("Start Course"),
+                gettext("Begin or continue typing lessons"),
+            ),
+            (gettext("Lesson Review"), gettext("Review previous lessons")),
+            (
+                gettext("Speed Test"),
+                gettext("Test typing speed and accuracy"),
             ),
             (
-                i18n_fmt!("Lesson Review"),
-                i18n_fmt!("Review previous lessons"),
+                gettext("Practice Exercises"),
+                gettext("Specific typing practice"),
             ),
-            (
-                i18n_fmt!("Speed Test"),
-                i18n_fmt!("Test typing speed and accuracy"),
-            ),
-            (
-                i18n_fmt!("Practice Exercises"),
-                i18n_fmt!("Specific typing practice"),
-            ),
-            (
-                i18n_fmt!("Student Report"),
-                i18n_fmt!("View progress report"),
-            ),
+            (gettext("Student Report"), gettext("View progress report")),
         ];
 
         for (title, subtitle) in lessons {
