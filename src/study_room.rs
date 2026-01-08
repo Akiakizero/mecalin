@@ -57,7 +57,7 @@ impl imp::StudyRoom {
         let settings = gio::Settings::new("org.gnome.mecalin");
         self.settings.replace(Some(settings));
 
-        let lessons = [
+        let menu_items = [
             (
                 gettext("Start Course"),
                 gettext("Begin or continue typing lessons"),
@@ -74,7 +74,7 @@ impl imp::StudyRoom {
             (gettext("Student Report"), gettext("View progress report")),
         ];
 
-        for (title, subtitle) in lessons {
+        for (title, subtitle) in menu_items {
             let row = gtk::ListBoxRow::new();
             let hbox = gtk::Box::new(gtk::Orientation::Horizontal, 12);
             hbox.set_margin_top(16);
