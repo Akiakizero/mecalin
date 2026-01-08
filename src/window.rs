@@ -161,12 +161,11 @@ impl MecalinWindow {
     fn update_title_from_lesson_view(&self, lesson_view: &LessonView) {
         if let Some(lesson_boxed) = lesson_view.current_lesson() {
             if let Ok(lesson) = lesson_boxed.try_borrow::<Lesson>() {
-                let title = i18n_fmt! { i18n_fmt("Lesson {}", lesson.id) };
-                self.set_title(&title);
+                self.set_title("Course");
 
                 let current_step = lesson_view.current_step_index() as usize;
                 let total_steps = lesson.steps.len();
-                let subtitle = i18n_fmt! { i18n_fmt("Step {}/{}", current_step + 1, total_steps) };
+                let subtitle = i18n_fmt! { i18n_fmt("Lesson {}: Step {}/{}", lesson.id, current_step + 1, total_steps) };
                 self.set_subtitle(&subtitle);
             }
         }
