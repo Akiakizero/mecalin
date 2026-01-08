@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 pub struct LessonStep {
     pub id: u32,
     pub text: String,
-    pub description: String,
+    pub description: Option<String>,
     pub target_keys: Vec<String>,
 }
 
