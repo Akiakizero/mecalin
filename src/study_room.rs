@@ -43,6 +43,7 @@ mod imp {
             self.setup_signals();
         }
     }
+
     impl WidgetImpl for StudyRoom {}
     impl BoxImpl for StudyRoom {}
 }
@@ -50,11 +51,10 @@ mod imp {
 impl imp::StudyRoom {
     fn setup_room(&self) {
         let course = Course::new().unwrap_or_default();
-        *self.course.borrow_mut() = Some(course);
+        self.course.replace(Some(course));
 
-        // TODO: Enable settings when schema is properly installed
-        // let settings = gio::Settings::new("org.gnome.mecalin");
-        // *self.settings.borrow_mut() = Some(settings);
+        let settings = gio::Settings::new("org.gnome.mecalin");
+        self.settings.replace(Some(settings));
 
         let lessons = [
             ("Start Course", "Begin or continue typing lessons"),
