@@ -241,6 +241,13 @@ impl LessonView {
                     imp.continue_button.set_visible(false);
                     imp.text_container.set_visible(true);
                     imp.target_text_view.set_text(&first_step.text);
+
+                    // Show step description if available
+                    if let Some(description) = &first_step.description {
+                        imp.step_description.set_visible(true);
+                        imp.step_description.set_text(description);
+                    }
+
                     self.update_repetition_label();
 
                     // Focus the text view for immediate typing
@@ -284,8 +291,13 @@ impl LessonView {
                         imp.continue_button.set_visible(true);
                         imp.text_container.set_visible(false);
                     } else {
-                        // Regular step - hide description and button, show text views
-                        imp.step_description.set_visible(false);
+                        // Regular step - show description if available, show text views
+                        if let Some(description) = &step.description {
+                            imp.step_description.set_visible(true);
+                            imp.step_description.set_text(description);
+                        } else {
+                            imp.step_description.set_visible(false);
+                        }
                         imp.continue_button.set_visible(false);
                         imp.text_container.set_visible(true);
                         imp.target_text_view.set_text(&step.text);
