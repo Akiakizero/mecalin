@@ -76,7 +76,10 @@ pub struct KeyboardWidget {
 
 impl KeyboardWidget {
     pub fn new() -> Self {
-        let layout = Rc::new(RefCell::new(KeyboardLayout::default()));
+        let layout_code = crate::utils::language_from_locale();
+        let layout = Rc::new(RefCell::new(
+            KeyboardLayout::load_from_json(layout_code).unwrap_or_default(),
+        ));
         let drawing_area = DrawingArea::new();
         drawing_area.set_size_request(600, 250);
 

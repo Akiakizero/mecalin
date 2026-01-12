@@ -51,7 +51,8 @@ mod imp {
 
 impl imp::StudyRoom {
     fn setup_room(&self) {
-        let course = Course::new().unwrap_or_default();
+        let language = crate::utils::language_from_locale();
+        let course = Course::new_with_language(language).unwrap_or_default();
         self.course.replace(Some(course));
 
         let settings = gio::Settings::new("org.gnome.mecalin");

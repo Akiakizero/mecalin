@@ -9,6 +9,7 @@ mod main_action_list;
 mod study_room;
 mod target_text_view;
 mod text_view;
+mod utils;
 mod window;
 
 use application::MecalinApplication;

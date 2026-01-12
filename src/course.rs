@@ -40,10 +40,6 @@ pub struct Course {
 }
 
 impl Course {
-    pub fn new() -> Result<Self, Box<dyn std::error::Error>> {
-        Self::new_with_language("us")
-    }
-
     pub fn new_with_language(language: &str) -> Result<Self, Box<dyn std::error::Error>> {
         let lessons_json = match language {
             "es" => include_str!("../data/lessons/es.json"),
@@ -72,6 +68,7 @@ impl Course {
 
 impl Default for Course {
     fn default() -> Self {
-        Self::new().unwrap_or_else(|_| Self { lessons: vec![] })
+        let language = crate::utils::language_from_locale();
+        Self::new_with_language(language).unwrap_or_else(|_| Self { lessons: vec![] })
     }
 }
