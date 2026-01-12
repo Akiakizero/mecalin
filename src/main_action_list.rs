@@ -55,7 +55,6 @@ impl imp::MainActionList {
     fn setup_actions(&self) {
         let actions = [
             ("Study room", "Learn typing fundamentals"),
-            ("Student control", "Manage student progress"),
             ("Skill game", "Practice with games"),
             ("Videos", "Watch typing tutorials"),
             ("About", "Application information"),
