@@ -55,7 +55,7 @@ impl imp::MainActionList {
     fn setup_actions(&self) {
         let actions = [
             ("Study room", "Learn typing fundamentals"),
-            ("Skill game", "Practice with games"),
+            // TODO: ("Skill game", "Practice with games"),
             ("About", "Application information"),
         ];
 
