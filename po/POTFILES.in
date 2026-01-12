@@ -1,1 +1,7 @@
-# Translation files will go here
+data/org.gnome.mecalin.desktop.in
+resources/ui/lesson_view.ui
+resources/ui/study_room.ui
+resources/ui/window.ui
+src/main_action_list.rs
+src/study_room.rs
+src/window.rs
