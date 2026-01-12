@@ -2,7 +2,7 @@ use gtk::prelude::*;
 use gtk::DrawingArea;
 use serde::{Deserialize, Serialize};
 use std::cell::RefCell;
-use std::collections::{HashMap, HashSet};
+use std::collections::HashSet;
 use std::rc::Rc;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -79,7 +79,7 @@ impl KeyboardWidget {
             KeyboardLayout::load_from_json(layout_code).unwrap_or_default(),
         ));
         let drawing_area = DrawingArea::new();
-        drawing_area.set_size_request(600, 250);
+        drawing_area.set_size_request(800, 300);
 
         let current_key = Rc::new(RefCell::new(None));
         let visible_keys = Rc::new(RefCell::new(None));
@@ -135,7 +135,14 @@ impl KeyboardWidget {
         let key_spacing = 5.0;
         let row_spacing = 5.0;
 
-        let start_x = (width as f64 - (12.0 * (key_width + key_spacing) - key_spacing)) / 2.0;
+        let max_keys_in_row = layout_borrowed
+            .keys
+            .iter()
+            .map(|row| row.len())
+            .max()
+            .unwrap_or(12);
+        let total_width = max_keys_in_row as f64 * (key_width + key_spacing) - key_spacing;
+        let start_x = (width as f64 - total_width) / 2.0;
         let start_y = 20.0;
 
         let current = current_key.borrow();
