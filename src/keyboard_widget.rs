@@ -199,30 +199,45 @@ impl KeyboardWidget {
                         gtk::cairo::FontSlant::Normal,
                         gtk::cairo::FontWeight::Normal,
                     );
-                    cr.set_font_size(10.0);
 
                     // Draw base character (bottom left)
-                    let base_text = &key_info.base;
-                    cr.move_to(x + 5.0, y + key_height - 5.0);
-                    cr.show_text(base_text).unwrap();
+                    let base_text = if key_info.base.chars().next().unwrap().is_alphabetic() {
+                        key_info.base.to_uppercase()
+                    } else {
+                        key_info.base.clone()
+                    };
 
-                    // Draw shift character (top left) - skip for alphabetic keys
-                    if let Some(shift_text) = &key_info.shift {
-                        if !key_info.base.chars().next().unwrap().is_alphabetic() {
+                    // Use larger font for alphabetic keys (show only uppercase, centered)
+                    let is_alphabetic = key_info.base.chars().next().unwrap().is_alphabetic();
+
+                    if is_alphabetic {
+                        cr.set_font_size(18.0);
+                        let text_extents = cr.text_extents(&base_text).unwrap();
+                        let text_x = x + (key_width - text_extents.width()) / 2.0;
+                        let text_y = y + (key_height + text_extents.height()) / 2.0;
+                        cr.move_to(text_x, text_y);
+                        cr.show_text(&base_text).unwrap();
+                    } else {
+                        cr.set_font_size(10.0);
+                        cr.move_to(x + 5.0, y + key_height - 5.0);
+                        cr.show_text(&base_text).unwrap();
+
+                        // Draw shift character (top left)
+                        if let Some(shift_text) = &key_info.shift {
                             cr.move_to(x + 5.0, y + 15.0);
                             cr.show_text(shift_text).unwrap();
                         }
-                    }
 
-                    // Draw altgr character (bottom right)
-                    if let Some(altgr_text) = &key_info.altgr {
-                        if !altgr_text.is_empty() {
-                            let text_extents = cr.text_extents(altgr_text).unwrap();
-                            cr.move_to(
-                                x + key_width - text_extents.width() - 5.0,
-                                y + key_height - 5.0,
-                            );
-                            cr.show_text(altgr_text).unwrap();
+                        // Draw altgr character (bottom right)
+                        if let Some(altgr_text) = &key_info.altgr {
+                            if !altgr_text.is_empty() {
+                                let text_extents = cr.text_extents(altgr_text).unwrap();
+                                cr.move_to(
+                                    x + key_width - text_extents.width() - 5.0,
+                                    y + key_height - 5.0,
+                                );
+                                cr.show_text(altgr_text).unwrap();
+                            }
                         }
                     }
                 }
