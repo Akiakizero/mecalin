@@ -375,36 +375,7 @@ impl LessonView {
 
         if next_step < total_steps {
             // Move to next step within current lesson
-            self.set_current_step_index(next_step as u32);
-
-            let step_text = {
-                let current_lesson_boxed = imp.current_lesson.borrow();
-                if let Some(boxed) = current_lesson_boxed.as_ref() {
-                    if let Ok(lesson) = boxed.try_borrow::<Lesson>() {
-                        lesson.steps[next_step].text.clone()
-                    } else {
-                        return;
-                    }
-                } else {
-                    return;
-                }
-            };
-
-            imp.target_text_view.set_text(&step_text);
-            imp.text_view.set_text("");
-
-            // Update keyboard for new step
-            let mut target_keys = std::collections::HashSet::new();
-            for ch in step_text.chars() {
-                if ch.is_alphabetic() || ch == ' ' {
-                    target_keys.insert(ch.to_lowercase().next().unwrap_or(ch));
-                }
-            }
-
-            let keyboard_widget = imp.keyboard_widget.borrow();
-            if let Some(keyboard) = keyboard_widget.as_ref() {
-                keyboard.set_visible_keys(Some(target_keys));
-            }
+            self.load_step(next_step as u32);
         } else {
             // Current lesson completed - try to load next lesson
             let next_lesson_option = {
