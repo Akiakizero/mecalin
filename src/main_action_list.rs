@@ -1,3 +1,4 @@
+use gettextrs::gettext;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
 
@@ -54,9 +55,12 @@ mod imp {
 impl imp::MainActionList {
     fn setup_actions(&self) {
         let actions = [
-            ("Study room", "Learn typing fundamentals"),
-            // TODO: ("Skill game", "Practice with games"),
-            ("About", "Application information"),
+            (
+                &gettext("Study room"),
+                &gettext("Learn typing fundamentals"),
+            ),
+            // TODO: (&gettext("Skill game"), &gettext("Practice with games")),
+            (&gettext("About"), &gettext("Application information")),
         ];
 
         for (title, subtitle) in actions {

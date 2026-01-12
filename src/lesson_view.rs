@@ -1,3 +1,4 @@
+use gettextrs::gettext;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
 use i18n_format::i18n_fmt;
@@ -403,7 +404,7 @@ impl LessonView {
             } else {
                 // All lessons completed
                 imp.lesson_description
-                    .set_text("Course completed! Congratulations!");
+                    .set_text(&gettext("Course completed! Congratulations!"));
                 imp.step_description.set_visible(false);
                 imp.continue_button.set_visible(false);
                 imp.text_container.set_visible(false);
@@ -452,11 +453,11 @@ impl LessonView {
                 if has_course {
                     // All lessons completed
                     imp.target_text_view
-                        .set_text("Course completed! Congratulations!");
+                        .set_text(&gettext("Course completed! Congratulations!"));
                 } else {
                     // No course set, just show lesson completion
                     imp.target_text_view
-                        .set_text("Lesson completed! Well done!");
+                        .set_text(&gettext("Lesson completed! Well done!"));
                 }
                 imp.text_view.set_text("");
             }
