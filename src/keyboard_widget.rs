@@ -223,7 +223,7 @@ impl KeyboardWidget {
                         cr.move_to(text_x, text_y);
                         cr.show_text(&base_text).unwrap();
                     } else {
-                        cr.set_font_size(10.0);
+                        cr.set_font_size(20.0);
                         cr.move_to(x + 5.0, y + key_height - 5.0);
                         cr.show_text(&base_text).unwrap();
 
