@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y libgtk-4-dev libadwaita-1-dev meson ninja-build gettext
+        sudo apt-get install -y libgtk-4-dev libadwaita-1-dev meson ninja-build gettext desktop-file-utils
     
     - name: Setup Rust
       uses: actions-rs/toolchain@v1
