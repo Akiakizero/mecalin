@@ -113,7 +113,7 @@ impl MecalinWindow {
             .website("https://github.com/nacho/mecalin")
             .issue_url("https://github.com/nacho/mecalin/issues")
             .copyright("© 2026 Ignacio Casal Quinteiro")
-            .license_type(gtk::License::Gpl20)
+            .license_type(gtk::License::Gpl30)
             .build();
 
         about.present(Some(self));
