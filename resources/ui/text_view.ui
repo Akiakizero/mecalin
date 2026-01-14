@@ -7,5 +7,7 @@
     <property name="margin-start">12</property>
     <property name="margin-end">12</property>
     <property name="vexpand">true</property>
+    <property name="pixels-above-lines">6</property>
+    <property name="pixels-below-lines">6</property>
   </template>
 </interface>
