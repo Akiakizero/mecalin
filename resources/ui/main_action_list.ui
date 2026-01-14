@@ -8,15 +8,22 @@
     <property name="margin-start">24</property>
     <property name="margin-end">24</property>
     <child>
-      <object class="GtkScrolledWindow">
+      <object class="GtkBox">
+        <property name="halign">center</property>
         <property name="vexpand">true</property>
-        <property name="hscrollbar-policy">never</property>
+        <property name="width-request">600</property>
         <child>
-          <object class="GtkListBox" id="action_list">
-            <property name="selection-mode">single</property>
-            <style>
-              <class name="boxed-list"/>
-            </style>
+          <object class="GtkScrolledWindow">
+            <property name="hexpand">true</property>
+            <property name="hscrollbar-policy">never</property>
+            <child>
+              <object class="GtkListBox" id="action_list">
+                <property name="selection-mode">single</property>
+                <style>
+                  <class name="boxed-list"/>
+                </style>
+              </object>
+            </child>
           </object>
         </child>
       </object>
