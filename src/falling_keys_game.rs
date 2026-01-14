@@ -10,7 +10,7 @@ const KEYS: &[char] = &[
 ];
 
 #[derive(Clone)]
-struct FallingKey {
+pub(crate) struct FallingKey {
     key: char,
     x: f64,
     y: f64,
@@ -31,7 +31,7 @@ mod imp {
 
         pub drawing_area: RefCell<Option<DrawingArea>>,
         pub keyboard_widget: RefCell<Option<crate::keyboard_widget::KeyboardWidget>>,
-        pub falling_keys: Rc<RefCell<Vec<FallingKey>>>,
+        pub(crate) falling_keys: Rc<RefCell<Vec<FallingKey>>>,
         pub score: RefCell<u32>,
         pub difficulty: RefCell<u32>,
         pub speed: RefCell<f64>,
@@ -251,7 +251,7 @@ impl FallingKeysGame {
             imp.score_label.set_text(&format!("Score: {}", *score));
 
             // Increase difficulty every 10 points
-            if *score % 10 == 0 {
+            if (*score).is_multiple_of(10) {
                 let mut difficulty = imp.difficulty.borrow_mut();
                 *difficulty += 1;
                 imp.difficulty_label
