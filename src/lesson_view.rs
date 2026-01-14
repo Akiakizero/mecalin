@@ -204,7 +204,7 @@ impl LessonView {
         glib::Object::new()
     }
 
-    pub fn load_course_and_lesson(&self) {
+    fn load_course_and_lesson(&self) {
         let language = crate::utils::language_from_locale();
         let course = crate::course::Course::new_with_language(language).unwrap_or_default();
 
@@ -224,7 +224,7 @@ impl LessonView {
         }
     }
 
-    pub fn set_lesson(&self, lesson: &Lesson) {
+    fn set_lesson(&self, lesson: &Lesson) {
         self.set_current_lesson(Some(glib::BoxedAnyObject::new(lesson.clone())));
 
         // Save current lesson to settings
@@ -293,7 +293,7 @@ impl LessonView {
         imp.text_view.buffer().set_text("");
     }
 
-    pub fn load_step(&self, step_index: u32) {
+    fn load_step(&self, step_index: u32) {
         self.set_current_step_index(step_index);
 
         let imp = self.imp();
@@ -346,18 +346,18 @@ impl LessonView {
         }
     }
 
-    pub fn set_course(&self, course: crate::course::Course) {
+    fn set_course(&self, course: crate::course::Course) {
         let imp = self.imp();
         *imp.course.borrow_mut() = Some(course);
     }
 
-    pub fn reset_repetition_count(&self) {
+    fn reset_repetition_count(&self) {
         let imp = self.imp();
         imp.current_repetition.set(0);
         self.update_repetition_label();
     }
 
-    pub fn update_repetition_label(&self) {
+    fn update_repetition_label(&self) {
         let imp = self.imp();
         let current_repetition = imp.current_repetition.get();
 
@@ -374,7 +374,7 @@ impl LessonView {
         }
     }
 
-    pub fn handle_step_completion(&self) {
+    fn handle_step_completion(&self) {
         let imp = self.imp();
         let current_repetition = imp.current_repetition.get() + 1;
         imp.current_repetition.set(current_repetition);
@@ -401,7 +401,7 @@ impl LessonView {
         }
     }
 
-    pub fn advance_to_next_step(&self) {
+    fn advance_to_next_step(&self) {
         let imp = self.imp();
 
         // Check if this is an introduction lesson
