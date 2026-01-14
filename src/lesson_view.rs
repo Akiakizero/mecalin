@@ -79,7 +79,12 @@ mod imp {
         }
     }
 
-    impl WidgetImpl for LessonView {}
+    impl WidgetImpl for LessonView {
+        fn grab_focus(&self) -> bool {
+            self.text_view.grab_focus()
+        }
+    }
+
     impl BoxImpl for LessonView {}
 }
 

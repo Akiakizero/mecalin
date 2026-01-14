@@ -80,14 +80,16 @@ impl MecalinWindow {
 
     pub fn show_lessons(&self) {
         let imp = self.imp();
+        imp.main_stack.set_visible_child_name("lessons");
+        imp.back_button.set_visible(true);
+
         if let Some(lesson_view) = imp.main_stack.child_by_name("lessons") {
+            lesson_view.grab_focus();
+
             if let Ok(lesson_view) = lesson_view.downcast::<LessonView>() {
                 self.update_title_from_lesson_view(&lesson_view);
             }
         }
-
-        imp.main_stack.set_visible_child_name("lessons");
-        imp.back_button.set_visible(true);
     }
 
     pub fn show_game(&self) {
