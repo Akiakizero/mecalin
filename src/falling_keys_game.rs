@@ -100,7 +100,6 @@ impl FallingKeysGame {
         });
 
         imp.game_area.set_child(Some(&drawing_area));
-        imp.drawing_area.replace(Some(drawing_area.clone()));
 
         // Create keyboard widget
         let keyboard = crate::keyboard_widget::KeyboardWidget::new();
@@ -280,6 +279,9 @@ impl FallingKeysGame {
         *imp.game_over.borrow_mut() = true;
 
         // Hide game area and show results
+        if let Some(child) = imp.game_area.child() {
+            child.set_visible(false);
+        }
         if let Some(drawing_area) = imp.drawing_area.borrow().as_ref() {
             drawing_area.set_visible(false);
         }
@@ -357,6 +359,9 @@ impl FallingKeysGame {
         }
 
         // Show game elements
+        if let Some(child) = imp.game_area.child() {
+            child.set_visible(true);
+        }
         if let Some(drawing_area) = imp.drawing_area.borrow().as_ref() {
             drawing_area.set_visible(true);
             drawing_area.grab_focus();
