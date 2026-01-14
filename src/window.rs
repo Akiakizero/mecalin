@@ -176,6 +176,9 @@ impl MecalinWindow {
                         }
                     },
                 );
+
+                // Update title immediately
+                self.update_title_from_lesson_view(&lesson_view);
             }
         }
     }
