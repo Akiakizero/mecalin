@@ -122,23 +122,7 @@ impl MecalinWindow {
 
         if let Some(page_name) = current_page.as_deref() {
             match page_name {
-                "study_room" => {
-                    // Check if we're in a lesson view within the study room
-                    if let Some(study_room) = imp.main_stack.visible_child() {
-                        if let Ok(study_room) = study_room.downcast::<StudyRoom>() {
-                            if study_room.can_go_back() {
-                                study_room.go_back();
-                                return;
-                            }
-                        }
-                    }
-                    // If we can't go back within study room, go to main menu
-                    imp.main_stack.set_visible_child_name("main_menu");
-                    imp.back_button.set_visible(false);
-                    imp.window_title.set_title("Mecalin");
-                    imp.window_title.set_subtitle("");
-                }
-                "game" | "lanes_game" => {
+                "study_room" | "game" | "lanes_game" => {
                     imp.main_stack.set_visible_child_name("main_menu");
                     imp.back_button.set_visible(false);
                     imp.window_title.set_title("Mecalin");
