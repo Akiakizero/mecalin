@@ -326,6 +326,11 @@ impl ScrollingLanesGame {
         let imp = self.imp();
         *imp.game_over.borrow_mut() = true;
 
+        // Hide lanes
+        if let Some(child) = imp.game_area.first_child() {
+            child.set_visible(false);
+        }
+
         let score = *imp.score.borrow();
         let level = *imp.difficulty.borrow();
 
@@ -386,6 +391,11 @@ impl ScrollingLanesGame {
             if child.type_() == gtk::Box::static_type() {
                 imp.game_area.remove(&child);
             }
+        }
+
+        // Show lanes
+        if let Some(child) = imp.game_area.first_child() {
+            child.set_visible(true);
         }
 
         self.grab_focus();
