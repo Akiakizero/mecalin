@@ -57,6 +57,7 @@ mod imp {
         fn constructed(&self) {
             self.parent_constructed();
             self.setup_signals();
+            self.obj().setup_lesson_view_signals();
         }
     }
     impl WidgetImpl for MecalinWindow {}
@@ -79,9 +80,14 @@ impl MecalinWindow {
 
     pub fn show_lessons(&self) {
         let imp = self.imp();
+        if let Some(lesson_view) = imp.main_stack.child_by_name("lessons") {
+            if let Ok(lesson_view) = lesson_view.downcast::<LessonView>() {
+                self.update_title_from_lesson_view(&lesson_view);
+            }
+        }
+
         imp.main_stack.set_visible_child_name("lessons");
         imp.back_button.set_visible(true);
-        self.setup_lesson_view_signals();
     }
 
     pub fn show_game(&self) {
@@ -171,9 +177,6 @@ impl MecalinWindow {
                         }
                     },
                 );
-
-                // Update title immediately
-                self.update_title_from_lesson_view(&lesson_view);
             }
         }
     }
