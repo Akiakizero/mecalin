@@ -31,7 +31,7 @@ mod imp {
 
         pub lanes: Rc<RefCell<Vec<DrawingArea>>>,
         pub(crate) lane_texts: Rc<RefCell<Vec<Vec<ScrollingText>>>>,
-        pub current_lane: RefCell<usize>,
+        pub current_lane: Rc<RefCell<usize>>,
         pub score: RefCell<u32>,
         pub difficulty: RefCell<u32>,
         pub speed: RefCell<f64>,
@@ -97,8 +97,10 @@ impl ScrollingLanesGame {
             let texts = imp.lane_texts.clone();
 
             lane.set_draw_func(move |_, cr, width, _height| {
+                let current = *current_lane.borrow();
+
                 // Background
-                if *current_lane.borrow() == lane_index {
+                if current == lane_index {
                     cr.set_source_rgb(0.2, 0.3, 0.4);
                 } else {
                     cr.set_source_rgb(0.1, 0.1, 0.1);
@@ -140,7 +142,14 @@ impl ScrollingLanesGame {
 
         self.set_can_focus(true);
         self.set_focusable(true);
-        self.grab_focus();
+
+        // Grab focus after widget is realized
+        let obj = self.downgrade();
+        self.connect_realize(move |_| {
+            if let Some(obj) = obj.upgrade() {
+                obj.grab_focus();
+            }
+        });
 
         // Start game loop
         self.start_game_loop();
@@ -230,44 +239,63 @@ impl ScrollingLanesGame {
 
     fn handle_key_press(&self, key: gtk::gdk::Key) {
         let imp = self.imp();
-        let mut current = imp.current_lane.borrow_mut();
+        let key_name = key.name();
 
-        match key {
-            gtk::gdk::Key::Up => {
+        if key_name.as_deref() == Some("Up") {
+            {
+                let mut current = imp.current_lane.borrow_mut();
                 if *current > 0 {
                     *current -= 1;
                 }
             }
-            gtk::gdk::Key::Down => {
+            // Redraw all lanes
+            for lane in imp.lanes.borrow().iter() {
+                lane.queue_draw();
+            }
+        } else if key_name.as_deref() == Some("Down") {
+            {
+                let mut current = imp.current_lane.borrow_mut();
                 if *current < 3 {
                     *current += 1;
                 }
             }
-            _ => {
-                // Type to clear text in current lane
-                if let Some(c) = key.to_unicode() {
-                    self.handle_typing(c);
-                }
+            // Redraw all lanes
+            for lane in imp.lanes.borrow().iter() {
+                lane.queue_draw();
             }
-        }
-
-        // Redraw all lanes
-        for lane in imp.lanes.borrow().iter() {
-            lane.queue_draw();
+        } else if let Some(c) = key.to_unicode() {
+            // Type to clear text in current lane
+            self.handle_typing(c);
+            // Redraw all lanes
+            for lane in imp.lanes.borrow().iter() {
+                lane.queue_draw();
+            }
         }
     }
 
     fn handle_typing(&self, c: char) {
         let imp = self.imp();
         let current_lane = *imp.current_lane.borrow();
-        let mut texts = imp.lane_texts.borrow_mut();
 
-        if let Some(lane_texts) = texts.get_mut(current_lane) {
-            // Find leftmost text that starts with this character
-            if let Some(pos) = lane_texts.iter().position(|t| t.text.starts_with(c)) {
-                lane_texts.remove(pos);
+        let (found, score_changed) = {
+            let mut texts = imp.lane_texts.borrow_mut();
 
-                let mut score = imp.score.borrow_mut();
+            if let Some(lane_texts) = texts.get_mut(current_lane) {
+                // Find leftmost text that starts with this character
+                if let Some(pos) = lane_texts.iter().position(|t| t.text.starts_with(c)) {
+                    lane_texts.remove(pos);
+                    (true, true)
+                } else {
+                    (false, true)
+                }
+            } else {
+                (false, false)
+            }
+        };
+
+        if score_changed {
+            let mut score = imp.score.borrow_mut();
+            if found {
                 *score += 1;
                 imp.score_label.set_text(&format!("Score: {}", *score));
 
@@ -279,12 +307,9 @@ impl ScrollingLanesGame {
                     let mut speed = imp.speed.borrow_mut();
                     *speed += 0.5;
                 }
-            } else {
-                let mut score = imp.score.borrow_mut();
-                if *score > 0 {
-                    *score -= 1;
-                    imp.score_label.set_text(&format!("Score: {}", *score));
-                }
+            } else if *score > 0 {
+                *score -= 1;
+                imp.score_label.set_text(&format!("Score: {}", *score));
             }
         }
     }
@@ -377,6 +402,14 @@ impl ScrollingLanesGame {
         for lane in imp.lanes.borrow().iter() {
             lane.queue_draw();
         }
+
+        // Ensure focus
+        glib::idle_add_local_once({
+            let obj = self.clone();
+            move || {
+                obj.grab_focus();
+            }
+        });
 
         self.start_game_loop();
     }
