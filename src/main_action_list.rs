@@ -44,6 +44,7 @@ mod imp {
                 vec![
                     glib::subclass::Signal::builder("study-room-selected").build(),
                     glib::subclass::Signal::builder("game-selected").build(),
+                    glib::subclass::Signal::builder("lanes-game-selected").build(),
                     glib::subclass::Signal::builder("about-selected").build(),
                 ]
             })
@@ -63,6 +64,10 @@ impl imp::MainActionList {
             (
                 &gettext("Falling Keys"),
                 &gettext("Practice with a fun game"),
+            ),
+            (
+                &gettext("Scrolling Lanes"),
+                &gettext("Type fast in multiple lanes"),
             ),
             (&gettext("About"), &gettext("Application information")),
         ];
@@ -100,7 +105,8 @@ impl imp::MainActionList {
                 match row.index() {
                     0 => obj.emit_by_name::<()>("study-room-selected", &[]),
                     1 => obj.emit_by_name::<()>("game-selected", &[]),
-                    2 => obj.emit_by_name::<()>("about-selected", &[]),
+                    2 => obj.emit_by_name::<()>("lanes-game-selected", &[]),
+                    3 => obj.emit_by_name::<()>("about-selected", &[]),
                     _ => {}
                 }
             }

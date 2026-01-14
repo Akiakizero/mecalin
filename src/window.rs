@@ -10,6 +10,7 @@ use crate::course::Lesson;
 use crate::falling_keys_game::FallingKeysGame;
 use crate::lesson_view::LessonView;
 use crate::main_action_list::MainActionList;
+use crate::scrolling_lanes_game::ScrollingLanesGame;
 use crate::study_room::StudyRoom;
 use crate::target_text_view::TargetTextView;
 use crate::text_view::TextView;
@@ -45,6 +46,7 @@ mod imp {
             TextView::ensure_type();
             TargetTextView::ensure_type();
             FallingKeysGame::ensure_type();
+            ScrollingLanesGame::ensure_type();
             klass.bind_template();
         }
 
@@ -99,6 +101,21 @@ impl MecalinWindow {
         }
     }
 
+    pub fn show_lanes_game(&self) {
+        let imp = self.imp();
+        imp.main_stack.set_visible_child_name("lanes_game");
+        imp.back_button.set_visible(true);
+        imp.window_title.set_title("Scrolling Lanes");
+        imp.window_title.set_subtitle("");
+
+        // Reset game when showing
+        if let Some(game) = imp.main_stack.child_by_name("lanes_game") {
+            if let Ok(game) = game.downcast::<ScrollingLanesGame>() {
+                game.reset();
+            }
+        }
+    }
+
     pub fn go_back(&self) {
         let imp = self.imp();
         let current_page = imp.main_stack.visible_child_name();
@@ -121,7 +138,7 @@ impl MecalinWindow {
                     imp.window_title.set_title("Mecalin");
                     imp.window_title.set_subtitle("");
                 }
-                "game" => {
+                "game" | "lanes_game" => {
                     imp.main_stack.set_visible_child_name("main_menu");
                     imp.back_button.set_visible(false);
                     imp.window_title.set_title("Mecalin");
@@ -256,6 +273,15 @@ impl imp::MecalinWindow {
             .connect_local("game-selected", false, move |_| {
                 if let Some(window) = window.upgrade() {
                     window.show_game();
+                }
+                None
+            });
+
+        let window = self.obj().downgrade();
+        self.main_action_list_widget
+            .connect_local("lanes-game-selected", false, move |_| {
+                if let Some(window) = window.upgrade() {
+                    window.show_lanes_game();
                 }
                 None
             });

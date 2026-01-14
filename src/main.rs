@@ -7,6 +7,7 @@ mod falling_keys_game;
 mod keyboard_widget;
 mod lesson_view;
 mod main_action_list;
+mod scrolling_lanes_game;
 mod study_room;
 mod target_text_view;
 mod text_view;

@@ -51,6 +51,14 @@
                 </property>
               </object>
             </child>
+            <child>
+              <object class="GtkStackPage">
+                <property name="name">lanes_game</property>
+                <property name="child">
+                  <object class="ScrollingLanesGame" id="scrolling_lanes_game_widget"/>
+                </property>
+              </object>
+            </child>
           </object>
         </property>
       </object>
