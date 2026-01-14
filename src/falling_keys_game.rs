@@ -201,6 +201,17 @@ impl FallingKeysGame {
 
     fn handle_key_press(&self, key: char) {
         let imp = self.imp();
+
+        // Highlight key on keyboard
+        if let Some(keyboard) = imp.keyboard_widget.borrow().as_ref() {
+            keyboard.set_current_key(Some(key));
+
+            let keyboard_clone = keyboard.clone();
+            glib::timeout_add_local_once(std::time::Duration::from_millis(100), move || {
+                keyboard_clone.set_current_key(None);
+            });
+        }
+
         let mut keys = imp.falling_keys.borrow_mut();
 
         if let Some(pos) = keys.iter().position(|k| k.key == key) {
