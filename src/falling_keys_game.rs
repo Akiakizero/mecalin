@@ -189,8 +189,8 @@ impl FallingKeysGame {
                 key.y += speed;
             }
 
-            // Check for game over
-            if keys.iter().any(|k| k.y > height - 320.0) {
+            // Check for game over - key reached bottom of view
+            if keys.iter().any(|k| k.y > height) {
                 *imp.game_over.borrow_mut() = true;
                 self.show_game_over();
             }
