@@ -20,8 +20,8 @@ mod imp {
 
         fn class_init(klass: &mut Self::Class) {
             klass.bind_template();
-            klass.install_action("action.study-room", None, |obj, _, _| {
-                obj.emit_by_name::<()>("study-room-selected", &[]);
+            klass.install_action("action.lessons", None, |obj, _, _| {
+                obj.emit_by_name::<()>("lessons-selected", &[]);
             });
         }
 
@@ -42,7 +42,7 @@ mod imp {
                 std::sync::OnceLock::new();
             SIGNALS.get_or_init(|| {
                 vec![
-                    glib::subclass::Signal::builder("study-room-selected").build(),
+                    glib::subclass::Signal::builder("lessons-selected").build(),
                     glib::subclass::Signal::builder("game-selected").build(),
                     glib::subclass::Signal::builder("lanes-game-selected").build(),
                     glib::subclass::Signal::builder("about-selected").build(),
@@ -100,7 +100,7 @@ impl imp::MainActionList {
         self.action_list.connect_row_activated(move |_, row| {
             if let Some(obj) = obj.upgrade() {
                 match row.index() {
-                    0 => obj.emit_by_name::<()>("study-room-selected", &[]),
+                    0 => obj.emit_by_name::<()>("lessons-selected", &[]),
                     1 => obj.emit_by_name::<()>("game-selected", &[]),
                     2 => obj.emit_by_name::<()>("lanes-game-selected", &[]),
                     3 => obj.emit_by_name::<()>("about-selected", &[]),

@@ -77,7 +77,7 @@ impl MecalinWindow {
         glib::Object::builder().property("application", app).build()
     }
 
-    pub fn show_study_room(&self) {
+    pub fn show_lessons(&self) {
         let imp = self.imp();
         imp.main_stack.set_visible_child_name("lessons");
         imp.back_button.set_visible(true);
@@ -244,9 +244,9 @@ impl imp::MecalinWindow {
     fn setup_signals(&self) {
         let window = self.obj().downgrade();
         self.main_action_list_widget
-            .connect_local("study-room-selected", false, move |_| {
+            .connect_local("lessons-selected", false, move |_| {
                 if let Some(window) = window.upgrade() {
-                    window.show_study_room();
+                    window.show_lessons();
                 }
                 None
             });
