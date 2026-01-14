@@ -2,7 +2,11 @@
 
 A typing tutor application built with GTK4, Rust, and Adwaita.
 
-## Quick Start
+## Installation
+
+Available on [Flathub](https://flathub.org/apps/io.github.nacho.mecalin)
+
+### Building from Source
 
 ```bash
 # Development
