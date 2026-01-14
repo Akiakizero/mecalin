@@ -790,6 +790,121 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 5,
+      "title": "First part of bottom row",
+      "description": "Learn part of the bottom row: Z, /, X, ., C, ,",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "We're going to start with the bottom row. You already know the method and this fifth lesson will be very easy for you.",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "z/",
+          "description": "Press 'z' with the pinky finger of your left hand and the '/' key with your right hand",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "zzz /// z/z /z/",
+          "description": "Press 'z' with the pinky finger of your left hand and the '/' key with your right hand",
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "x.",
+          "description": "Press the 'x' key with the ring finger of your left hand and the '.' key with your right hand",
+          "repetitions": 1
+        },
+        {
+          "id": 4,
+          "text": "xxx ... x.x .x.",
+          "description": "Press the 'x' key with the ring finger of your left hand and the '.' key with your right hand",
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "zx./ /.xz",
+          "description": "After each keystroke on the bottom row, your fingers should return to their key on the home row",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "c,",
+          "description": "Press the 'c' key with the middle finger of your left hand and the ',' key with your right hand",
+          "repetitions": 1
+        },
+        {
+          "id": 7,
+          "text": "ccc ,,, c,c ,c,",
+          "description": "Press the 'c' key with the middle finger of your left hand and the ',' key with your right hand",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "zxc cxz /., ,./",
+          "description": "Your fingers move, not your hands",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "z/x.c, ,c.x/z",
+          "description": "Your fingers move, not your hands",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "zzxxcc ,,..//",
+          "description": "Your thumbs should be on the spacebar",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "//..,, ccxxzz",
+          "description": "Your thumbs should be on the spacebar",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "z, .x c/",
+          "description": "Don't forget that the spacebar is pressed with the thumb of the hand opposite to the last key pressed",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": ",z x. /c",
+          "description": "Don't forget that the spacebar is pressed with the thumb of the hand opposite to the last key pressed",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": "cc,, // zz",
+          "description": "Are you placing your fingers back in position after each keystroke?",
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "z x c , . /",
+          "description": "Are you placing your fingers back in position after each keystroke?",
+          "repetitions": 2
+        },
+        {
+          "id": 16,
+          "text": "/ . , c x z",
+          "description": "Read all the explanations and tips that appear in the lessons",
+          "repetitions": 2
+        },
+        {
+          "id": 17,
+          "text": "",
+          "description": "Congratulations! You have finished the fifth lesson",
+          "introduction": true
+        }
+      ]
     }
   ]
 }
