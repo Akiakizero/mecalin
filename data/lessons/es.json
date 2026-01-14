@@ -790,6 +790,121 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 5,
+      "title": "Primera parte de la fila inferior",
+      "description": "Aprende parte de la fila inferior: Z, -, X, ., C, ,",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Vamos a comenzar con la línea inferior. Ya conoce el método y le será muy fácil esta quinta lección.",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "z-",
+          "description": "Pulse 'z' con el dedo meñique de la mano izquierda y la tecla '-' con el de la mano derecha",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "zzz --- z-z -z-",
+          "description": "Pulse 'z' con el dedo meñique de la mano izquierda y la tecla '-' con el de la mano derecha",
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "x.",
+          "description": "Pulse la tecla 'x' con el dedo anular de la mano izquierda y la tecla '.' con el de la mano derecha",
+          "repetitions": 1
+        },
+        {
+          "id": 4,
+          "text": "xxx ... x.x .x.",
+          "description": "Pulse la tecla 'x' con el dedo anular de la mano izquierda y la tecla '.' con el de la mano derecha",
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "zx.- -.xz",
+          "description": "Después de cada pulsación en la fila inferior los dedos deben volver a su tecla de la lína base",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "c,",
+          "description": "Pulse la tecla 'c' con el dedo corazón de la mano izquierda y la tecla ',' con el de la mano derecha",
+          "repetitions": 1
+        },
+        {
+          "id": 7,
+          "text": "ccc ,,, c,c ,c,",
+          "description": "Pulse la tecla 'c' con el dedo corazón de la mano izquierda y la tecla ',' con el de la mano derecha",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "zxc cxz -., ,.-",
+          "description": "Los dedos son los que se desplazan no las manos",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "z-x.c, ,c.x-z",
+          "description": "Los dedos son los que se desplazan no las manos",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "zzxxcc ,,..--",
+          "description": "Los pulgares deben estar sobre la barra espaciadora",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "--..,, ccxxzz",
+          "description": "Los pulgares deben estar sobre la barra espaciadora",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "z, .x c-",
+          "description": "No olvide que la barra espaciadora se pulsa con el dedo pulgar de la mano contaria a la última tecla pulsada",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": ",z x. -c",
+          "description": "No olvide que la barra espaciadora se pulsa con el dedo pulgar de la mano contaria a la última tecla pulsada",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": "cc,, -- zz",
+          "description": "¿Está colocando los dedos en su sitio después de cada pulsación?",
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "z x c , . -",
+          "description": "¿Está colocando los dedos en su sitio después de cada pulsación?",
+          "repetitions": 2
+        },
+        {
+          "id": 16,
+          "text": "- . , c x z",
+          "description": "Lea todas las explicaciones y consejos que aparecen en las lecciones",
+          "repetitions": 2
+        },
+        {
+          "id": 17,
+          "text": "",
+          "description": "¡Enhorabuena! Ha acabado la quinta lección",
+          "introduction": true
+        }
+      ]
     }
   ]
 }
