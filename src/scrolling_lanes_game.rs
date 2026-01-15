@@ -84,6 +84,26 @@ impl ScrollingLanesGame {
         lanes_container.set_vexpand(true);
         lanes_container.set_hexpand(true);
 
+        // Query colors once before creating lanes
+        #[allow(deprecated)]
+        let get_color = |widget: &DrawingArea, class_name: &str| -> (f64, f64, f64) {
+            widget.add_css_class(class_name);
+            let style_context = widget.style_context();
+            let color = style_context.color();
+            widget.remove_css_class(class_name);
+            (
+                color.red() as f64,
+                color.green() as f64,
+                color.blue() as f64,
+            )
+        };
+
+        // Create a temporary widget to query colors
+        let temp_widget = DrawingArea::new();
+        let bg_color = get_color(&temp_widget, "lane-background");
+        let current_color = get_color(&temp_widget, "lane-current");
+        let text_color = get_color(&temp_widget, "lane-text");
+
         let mut lanes = Vec::new();
         let lane_texts = vec![Vec::new(), Vec::new(), Vec::new(), Vec::new()];
 
@@ -97,34 +117,20 @@ impl ScrollingLanesGame {
             let current_lane = imp.current_lane.clone();
             let texts = imp.lane_texts.clone();
 
-            lane.set_draw_func(move |widget, cr, width, _height| {
-                // Helper function to get color from CSS class
-                #[allow(deprecated)]
-                let get_color = |class_name: &str| -> (f64, f64, f64) {
-                    widget.add_css_class(class_name);
-                    let style_context = widget.style_context();
-                    let color = style_context.color();
-                    widget.remove_css_class(class_name);
-                    (
-                        color.red() as f64,
-                        color.green() as f64,
-                        color.blue() as f64,
-                    )
-                };
-
+            lane.set_draw_func(move |_widget, cr, width, _height| {
                 let current = *current_lane.borrow();
 
                 // Background
                 let (r, g, b) = if current == lane_index {
-                    get_color("lane-current")
+                    current_color
                 } else {
-                    get_color("lane-background")
+                    bg_color
                 };
                 cr.set_source_rgb(r, g, b);
                 cr.paint().unwrap();
 
                 // Draw texts
-                let (tr, tg, tb) = get_color("lane-text");
+                let (tr, tg, tb) = text_color;
                 cr.set_source_rgb(tr, tg, tb);
                 cr.set_font_size(20.0);
 
