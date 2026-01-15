@@ -905,6 +905,355 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 6,
+      "title": "Fila inferior",
+      "description": "Aprende toda la fila inferior: Z, -, X, ., C, ,, V, M, B, N",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Con esta lección completaremos la línea inferior. Después deberá hacer unos ejercicios con todas las teclas que conoce",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "v",
+          "description": "Pulse la tecla 'v' con el dedo índice de la mano izquierda",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "m",
+          "description": "A continuación la tecla 'm' con el dedo índice de la mano derecha",
+          "repetitions": 1
+        },
+        {
+          "id": 3,
+          "text": "vvv mmm vmv mvm",
+          "description": "A continuación la tecla 'm' con el dedo índice de la mano derecha",
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "bn",
+          "description": "Ahora con los mismos dedos pulse con la izquierda la tecla 'b' y con la derecha la tecla 'n'",
+          "repetitions": 1
+        },
+        {
+          "id": 5,
+          "text": "bbb nnn bnb nbn",
+          "description": "Ahora con los mismos dedos pulse con la izquierda la tecla 'b' y con la derecha la tecla 'n'",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "zxcvbnm,.-",
+          "description": "Unos ejercicios con toda la línea",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "-.,mnbvcxz",
+          "description": "Unos ejercicios con toda la línea",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "z- x. c, vm bn",
+          "description": "No olvide todos los hábitos que debe haber adquirido en las lecciones anteriores. De cualquier manera se los iremos recordando en esta lección",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "-z .x ,c mv nb",
+          "description": "No olvide todos los hábitos que debe haber adquirido en las lecciones anteriores. De cualquier manera se los iremos recordando en esta lección",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "bn vm c, x. z-",
+          "description": "No olvide que la barra espaciadora se pulsa con el dedo pulgar de la mano contraria a la última tecla pulsada",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "nb mv ,c .x -z",
+          "description": "No olvide que la barra espaciadora se pulsa con el dedo pulgar de la mano contraria a la última tecla pulsada",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "znxmc,v.b-",
+          "description": "La espalda debe estar recta y las piernas sin cruzar",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "-b.v,cmxnz",
+          "description": "La espalda debe estar recta y las piernas sin cruzar",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": ";",
+          "description": "Quedan sólo tres teclas de esta línea, para las cuales hay que pulsar la tecla SHIFT (mayúsculas) con el dedo meñique de la mano izquierda. Pulse a continuación ';' con el dedo corazón de la mano derecha",
+          "repetitions": 1
+        },
+        {
+          "id": 15,
+          "text": ":_",
+          "description": "Sin soltar la tecla SHIFT pulse la tecla ':' con el dedo índice y la tecla '_' con el dedo meñique",
+          "repetitions": 1
+        },
+        {
+          "id": 16,
+          "text": ";:_:_; __:;",
+          "description": "Sin soltar la tecla SHIFT pulse la tecla ':' con el dedo índice y la tecla '_' con el dedo meñique",
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "zxcvb -.,mn",
+          "description": "Ahora unos ejercicios de repaso con las tres líneas completas",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "bvcxz nm,.-",
+          "description": "Ahora unos ejercicios de repaso con las tres líneas completas",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "azxcvbv",
+          "description": "La pulsación en la línea inferior se hace desplazando el dedo correspondiente y volviéndolo a su posición en la línea base",
+          "repetitions": 3
+        },
+        {
+          "id": 20,
+          "text": "ñ-.,mnm",
+          "description": "La pulsación en la línea inferior se hace desplazando el dedo correspondiente y volviéndolo a su posición en la línea base",
+          "repetitions": 3
+        },
+        {
+          "id": 21,
+          "text": "asdcxza",
+          "description": "Mantenga los pulgares sobre la barra espaciadora",
+          "repetitions": 3
+        },
+        {
+          "id": 22,
+          "text": "ñlk,.-ñ",
+          "description": "Mantenga los pulgares sobre la barra espaciadora",
+          "repetitions": 3
+        },
+        {
+          "id": 23,
+          "text": "azxcvbv ñ-.,mnm",
+          "description": "Las manos deben rozar levemente las teclas de la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "asdcxza ñlk,.-ñ",
+          "description": "Las manos deben rozar levemente las teclas de la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": "bvcxza",
+          "description": "No se impaciente. No importa que lo haga despacio. Lo importante es que lo haga bien y correctamente. La velocidad ya vendrá sola",
+          "repetitions": 3
+        },
+        {
+          "id": 26,
+          "text": "nm,.-ñ",
+          "description": "No se impaciente. No importa que lo haga despacio. Lo importante es que lo haga bien y correctamente. La velocidad ya vendrá sola",
+          "repetitions": 3
+        },
+        {
+          "id": 27,
+          "text": "azxcvbgfdsa",
+          "description": "No se impaciente. No importa que lo haga despacio. Lo importante es que lo haga bien y correctamente. La velocidad ya vendrá sola",
+          "repetitions": 3
+        },
+        {
+          "id": 28,
+          "text": ";-.,mnhjklñ;",
+          "description": "No se impaciente. No importa que lo haga despacio. Lo importante es que lo haga bien y correctamente. La velocidad ya vendrá sola",
+          "repetitions": 3
+        },
+        {
+          "id": 29,
+          "text": "azxcvbgfdsa ;-.,mnhjklñ;",
+          "description": "Recuerde que cada pulsación se hace con el dedo correspondiente",
+          "repetitions": 2
+        },
+        {
+          "id": 30,
+          "text": "azqhny sxwjmu dcek,i fvrl.o gbtñ-p ;`",
+          "description": "Recuerde que cada pulsación se hace con el dedo correspondiente",
+          "repetitions": 2
+        },
+        {
+          "id": 31,
+          "text": "qazwsx edcrfv tgbyhn ujmik, ol.pñ-;`",
+          "description": "Recuerde que cada pulsación se hace con el dedo correspondiente",
+          "repetitions": 2
+        },
+        {
+          "id": 32,
+          "text": "bravo pueblo",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 33,
+          "text": "hacienda comenzar",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 34,
+          "text": "sobrepasa empresa",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 35,
+          "text": "velocidad nuevos",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 36,
+          "text": "juncos flacos",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 37,
+          "text": "especie modelo",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 38,
+          "text": "cuadrado circulo",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 39,
+          "text": "siempre factura",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 40,
+          "text": "frente parcela",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 41,
+          "text": "teclado nuestro",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 42,
+          "text": "cantante señala",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 43,
+          "text": "tanto gentil",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 44,
+          "text": "ventaja acuerdo",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 45,
+          "text": "notario amigo",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 46,
+          "text": "aprender infeliz",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 47,
+          "text": "sonoras mucho",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 48,
+          "text": "ordenador sencillo",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 49,
+          "text": "inclinada hombre",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 50,
+          "text": "pasamontañas",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 51,
+          "text": "antonio bosque",
+          "description": "Ahora algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 52,
+          "text": "después balcón",
+          "description": "Algunas palabras con tilde. Pulse la tilde y después la letra correspondiente",
+          "repetitions": 2
+        },
+        {
+          "id": 53,
+          "text": "será esdrújula",
+          "description": "Algunas palabras con tilde. Pulse la tilde y después la letra correspondiente",
+          "repetitions": 2
+        },
+        {
+          "id": 54,
+          "text": "señoría aguijón",
+          "description": "Algunas palabras con tilde. Pulse la tilde y después la letra correspondiente",
+          "repetitions": 2
+        },
+        {
+          "id": 55,
+          "text": "lección más",
+          "description": "Algunas palabras con tilde. Pulse la tilde y después la letra correspondiente",
+          "repetitions": 2
+        },
+        {
+          "id": 56,
+          "text": "",
+          "description": "¡Enhorabuena! Ha acabado la sexta lección",
+          "introduction": true
+        }
+      ]
     }
   ]
 }
