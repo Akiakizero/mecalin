@@ -905,6 +905,331 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 6,
+      "title": "Bottom row",
+      "description": "Learn the entire bottom row: Z, /, X, ., C, ,, V, M, B, N",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "With this lesson we will complete the bottom row. Then you should do some exercises with all the keys you know",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "v",
+          "description": "Press the 'v' key with the index finger of your left hand",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "m",
+          "description": "Now press the 'm' key with the index finger of your right hand",
+          "repetitions": 1
+        },
+        {
+          "id": 3,
+          "text": "vvv mmm vmv mvm",
+          "description": "Now press the 'm' key with the index finger of your right hand",
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "bn",
+          "description": "Now with the same fingers press the 'b' key with your left hand and the 'n' key with your right hand",
+          "repetitions": 1
+        },
+        {
+          "id": 5,
+          "text": "bbb nnn bnb nbn",
+          "description": "Now with the same fingers press the 'b' key with your left hand and the 'n' key with your right hand",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "zxcvbnm,./",
+          "description": "Some exercises with the entire row",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "/.,mnbvcxz",
+          "description": "Some exercises with the entire row",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "z/ x. c, vm bn",
+          "description": "Don't forget all the habits you should have acquired in previous lessons. We will remind you of them throughout this lesson",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "/z .x ,c mv nb",
+          "description": "Don't forget all the habits you should have acquired in previous lessons. We will remind you of them throughout this lesson",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "bn vm c, x. z/",
+          "description": "Don't forget that the spacebar is pressed with the thumb of the hand opposite to the last key pressed",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "nb mv ,c .x /z",
+          "description": "Don't forget that the spacebar is pressed with the thumb of the hand opposite to the last key pressed",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "znxmc,v.b/",
+          "description": "Your back should be straight and your legs uncrossed",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "/b.v,cmxnz",
+          "description": "Your back should be straight and your legs uncrossed",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": ":",
+          "description": "There are only three keys left in this row, for which you need to press the SHIFT key with the pinky finger of your left hand. Then press ':' with the middle finger of your right hand",
+          "repetitions": 1
+        },
+        {
+          "id": 15,
+          "text": "<_",
+          "description": "Without releasing the SHIFT key, press the '<' key with the index finger and the '_' key with the pinky finger",
+          "repetitions": 1
+        },
+        {
+          "id": 16,
+          "text": ":<_:_: __:<",
+          "description": "Without releasing the SHIFT key, press the '<' key with the index finger and the '_' key with the pinky finger",
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "zxcvb /.,mn",
+          "description": "Now some review exercises with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "bvcxz nm,./",
+          "description": "Now some review exercises with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "azxcvbv",
+          "description": "Pressing keys on the bottom row is done by moving the corresponding finger and returning it to its position on the home row",
+          "repetitions": 3
+        },
+        {
+          "id": 20,
+          "text": ";/.,mnm",
+          "description": "Pressing keys on the bottom row is done by moving the corresponding finger and returning it to its position on the home row",
+          "repetitions": 3
+        },
+        {
+          "id": 21,
+          "text": "asdcxza",
+          "description": "Keep your thumbs on the spacebar",
+          "repetitions": 3
+        },
+        {
+          "id": 22,
+          "text": ";lk,./;",
+          "description": "Keep your thumbs on the spacebar",
+          "repetitions": 3
+        },
+        {
+          "id": 23,
+          "text": "azxcvbv ;/.,mnm",
+          "description": "Your hands should lightly touch the keys on the home row",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "asdcxza ;lk,./;",
+          "description": "Your hands should lightly touch the keys on the home row",
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": "bvcxza",
+          "description": "Don't be impatient. It doesn't matter if you do it slowly. What's important is that you do it well and correctly. Speed will come on its own",
+          "repetitions": 3
+        },
+        {
+          "id": 26,
+          "text": "nm,./;",
+          "description": "Don't be impatient. It doesn't matter if you do it slowly. What's important is that you do it well and correctly. Speed will come on its own",
+          "repetitions": 3
+        },
+        {
+          "id": 27,
+          "text": "azxcvbgfdsa",
+          "description": "Don't be impatient. It doesn't matter if you do it slowly. What's important is that you do it well and correctly. Speed will come on its own",
+          "repetitions": 3
+        },
+        {
+          "id": 28,
+          "text": ":/.,mnhjkl;:",
+          "description": "Don't be impatient. It doesn't matter if you do it slowly. What's important is that you do it well and correctly. Speed will come on its own",
+          "repetitions": 3
+        },
+        {
+          "id": 29,
+          "text": "azxcvbgfdsa :/.,mnhjkl;:",
+          "description": "Remember that each keystroke is made with the corresponding finger",
+          "repetitions": 2
+        },
+        {
+          "id": 30,
+          "text": "azqhny sxwjmu dcek,i fvrl.o gbt;/p :'",
+          "description": "Remember that each keystroke is made with the corresponding finger",
+          "repetitions": 2
+        },
+        {
+          "id": 31,
+          "text": "qazwsx edcrfv tgbyhn ujmik, ol.p;/:'",
+          "description": "Remember that each keystroke is made with the corresponding finger",
+          "repetitions": 2
+        },
+        {
+          "id": 32,
+          "text": "brave people",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 33,
+          "text": "treasury begin",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 34,
+          "text": "surpass company",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 35,
+          "text": "velocity newest",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 36,
+          "text": "rushes skinny",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 37,
+          "text": "species model",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 38,
+          "text": "square circle",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 39,
+          "text": "always invoice",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 40,
+          "text": "front parcel",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 41,
+          "text": "keyboard ours",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 42,
+          "text": "singer points",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 43,
+          "text": "much gentle",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 44,
+          "text": "advantage agreement",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 45,
+          "text": "notary friend",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 46,
+          "text": "learn unhappy",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 47,
+          "text": "sonorous much",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 48,
+          "text": "computer simple",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 49,
+          "text": "inclined man",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 50,
+          "text": "balaclava",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 51,
+          "text": "anthony forest",
+          "description": "Now some words with all three rows",
+          "repetitions": 2
+        },
+        {
+          "id": 52,
+          "text": "",
+          "description": "Congratulations! You have finished the sixth lesson",
+          "introduction": true
+        }
+      ]
     }
   ]
 }
