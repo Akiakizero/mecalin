@@ -905,6 +905,331 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 6,
+      "title": "Riga inferiore",
+      "description": "Impara tutta la riga inferiore: Z, -, X, ., C, ,, V, M, B, N",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Con questa lezione completeremo la riga inferiore. Poi dovrai fare alcuni esercizi con tutti i tasti che conosci",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "v",
+          "description": "Premi il tasto 'v' con il dito indice della mano sinistra",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "m",
+          "description": "Ora premi il tasto 'm' con il dito indice della mano destra",
+          "repetitions": 1
+        },
+        {
+          "id": 3,
+          "text": "vvv mmm vmv mvm",
+          "description": "Ora premi il tasto 'm' con il dito indice della mano destra",
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "bn",
+          "description": "Ora con le stesse dita premi il tasto 'b' con la sinistra e il tasto 'n' con la destra",
+          "repetitions": 1
+        },
+        {
+          "id": 5,
+          "text": "bbb nnn bnb nbn",
+          "description": "Ora con le stesse dita premi il tasto 'b' con la sinistra e il tasto 'n' con la destra",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "zxcvbnm,.-",
+          "description": "Alcuni esercizi con tutta la riga",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "-.,mnbvcxz",
+          "description": "Alcuni esercizi con tutta la riga",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "z- x. c, vm bn",
+          "description": "Non dimenticare tutte le abitudini che dovresti aver acquisito nelle lezioni precedenti. Te le ricorderemo durante questa lezione",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "-z .x ,c mv nb",
+          "description": "Non dimenticare tutte le abitudini che dovresti aver acquisito nelle lezioni precedenti. Te le ricorderemo durante questa lezione",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "bn vm c, x. z-",
+          "description": "Non dimenticare che la barra spaziatrice si preme con il dito pollice della mano opposta all'ultimo tasto premuto",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "nb mv ,c .x -z",
+          "description": "Non dimenticare che la barra spaziatrice si preme con il dito pollice della mano opposta all'ultimo tasto premuto",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "znxmc,v.b-",
+          "description": "La schiena deve essere dritta e le gambe non incrociate",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "-b.v,cmxnz",
+          "description": "La schiena deve essere dritta e le gambe non incrociate",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": ";",
+          "description": "Rimangono solo tre tasti di questa riga, per i quali devi premere il tasto SHIFT (maiuscole) con il dito mignolo della mano sinistra. Poi premi ';' con il dito medio della mano destra",
+          "repetitions": 1
+        },
+        {
+          "id": 15,
+          "text": ":_",
+          "description": "Senza rilasciare il tasto SHIFT premi il tasto ':' con il dito indice e il tasto '_' con il dito mignolo",
+          "repetitions": 1
+        },
+        {
+          "id": 16,
+          "text": ";:_:_; __:;",
+          "description": "Senza rilasciare il tasto SHIFT premi il tasto ':' con il dito indice e il tasto '_' con il dito mignolo",
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "zxcvb -.,mn",
+          "description": "Ora alcuni esercizi di ripasso con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "bvcxz nm,.-",
+          "description": "Ora alcuni esercizi di ripasso con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "azxcvbv",
+          "description": "La pressione sulla riga inferiore si fa spostando il dito corrispondente e riportandolo alla sua posizione sulla riga base",
+          "repetitions": 3
+        },
+        {
+          "id": 20,
+          "text": "ò-.,mnm",
+          "description": "La pressione sulla riga inferiore si fa spostando il dito corrispondente e riportandolo alla sua posizione sulla riga base",
+          "repetitions": 3
+        },
+        {
+          "id": 21,
+          "text": "asdcxza",
+          "description": "Mantieni i pollici sulla barra spaziatrice",
+          "repetitions": 3
+        },
+        {
+          "id": 22,
+          "text": "òlk,.-ò",
+          "description": "Mantieni i pollici sulla barra spaziatrice",
+          "repetitions": 3
+        },
+        {
+          "id": 23,
+          "text": "azxcvbv ò-.,mnm",
+          "description": "Le mani devono sfiorare leggermente i tasti della riga base",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "asdcxza òlk,.-ò",
+          "description": "Le mani devono sfiorare leggermente i tasti della riga base",
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": "bvcxza",
+          "description": "Non essere impaziente. Non importa se lo fai lentamente. L'importante è che lo fai bene e correttamente. La velocità arriverà da sola",
+          "repetitions": 3
+        },
+        {
+          "id": 26,
+          "text": "nm,.-ò",
+          "description": "Non essere impaziente. Non importa se lo fai lentamente. L'importante è che lo fai bene e correttamente. La velocità arriverà da sola",
+          "repetitions": 3
+        },
+        {
+          "id": 27,
+          "text": "azxcvbgfdsa",
+          "description": "Non essere impaziente. Non importa se lo fai lentamente. L'importante è che lo fai bene e correttamente. La velocità arriverà da sola",
+          "repetitions": 3
+        },
+        {
+          "id": 28,
+          "text": ";-.,mnhjklò;",
+          "description": "Non essere impaziente. Non importa se lo fai lentamente. L'importante è che lo fai bene e correttamente. La velocità arriverà da sola",
+          "repetitions": 3
+        },
+        {
+          "id": 29,
+          "text": "azxcvbgfdsa ;-.,mnhjklò;",
+          "description": "Ricorda che ogni pressione si fa con il dito corrispondente",
+          "repetitions": 2
+        },
+        {
+          "id": 30,
+          "text": "azqhny sxwjmu dcek,i fvrl.o gbtò-p ;'",
+          "description": "Ricorda che ogni pressione si fa con il dito corrispondente",
+          "repetitions": 2
+        },
+        {
+          "id": 31,
+          "text": "qazwsx edcrfv tgbyhn ujmik, ol.pò-;'",
+          "description": "Ricorda che ogni pressione si fa con il dito corrispondente",
+          "repetitions": 2
+        },
+        {
+          "id": 32,
+          "text": "bravo popolo",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 33,
+          "text": "azienda cominciare",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 34,
+          "text": "supera azienda",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 35,
+          "text": "velocita nuovi",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 36,
+          "text": "giunchi magri",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 37,
+          "text": "specie modello",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 38,
+          "text": "quadrato cerchio",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 39,
+          "text": "sempre fattura",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 40,
+          "text": "fronte parcella",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 41,
+          "text": "tastiera nostro",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 42,
+          "text": "cantante segnala",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 43,
+          "text": "tanto gentile",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 44,
+          "text": "vantaggio accordo",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 45,
+          "text": "notaio amico",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 46,
+          "text": "imparare infelice",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 47,
+          "text": "sonore molto",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 48,
+          "text": "computer semplice",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 49,
+          "text": "inclinata uomo",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 50,
+          "text": "passamontagna",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 51,
+          "text": "antonio bosco",
+          "description": "Ora alcune parole con tutte e tre le righe",
+          "repetitions": 2
+        },
+        {
+          "id": 52,
+          "text": "",
+          "description": "Congratulazioni! Hai completato la sesta lezione",
+          "introduction": true
+        }
+      ]
     }
   ]
 }
