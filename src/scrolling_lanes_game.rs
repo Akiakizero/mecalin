@@ -97,19 +97,35 @@ impl ScrollingLanesGame {
             let current_lane = imp.current_lane.clone();
             let texts = imp.lane_texts.clone();
 
-            lane.set_draw_func(move |_, cr, width, _height| {
+            lane.set_draw_func(move |widget, cr, width, _height| {
+                // Helper function to get color from CSS class
+                #[allow(deprecated)]
+                let get_color = |class_name: &str| -> (f64, f64, f64) {
+                    widget.add_css_class(class_name);
+                    let style_context = widget.style_context();
+                    let color = style_context.color();
+                    widget.remove_css_class(class_name);
+                    (
+                        color.red() as f64,
+                        color.green() as f64,
+                        color.blue() as f64,
+                    )
+                };
+
                 let current = *current_lane.borrow();
 
                 // Background
-                if current == lane_index {
-                    cr.set_source_rgb(0.2, 0.3, 0.4);
+                let (r, g, b) = if current == lane_index {
+                    get_color("lane-current")
                 } else {
-                    cr.set_source_rgb(0.1, 0.1, 0.1);
-                }
+                    get_color("lane-background")
+                };
+                cr.set_source_rgb(r, g, b);
                 cr.paint().unwrap();
 
                 // Draw texts
-                cr.set_source_rgb(1.0, 1.0, 1.0);
+                let (tr, tg, tb) = get_color("lane-text");
+                cr.set_source_rgb(tr, tg, tb);
                 cr.set_font_size(20.0);
 
                 if let Ok(all_texts) = texts.try_borrow() {

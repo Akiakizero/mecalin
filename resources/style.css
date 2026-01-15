@@ -15,3 +15,17 @@
 .keyboard-border {
   color: @borders;
 }
+
+/* Scrolling lanes game color styles */
+
+.lane-background {
+  color: @view_bg_color;
+}
+
+.lane-current {
+  color: @accent_bg_color;
+}
+
+.lane-text {
+  color: @view_fg_color;
+}
