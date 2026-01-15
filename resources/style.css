@@ -1,0 +1,17 @@
+/* Keyboard widget color styles */
+
+.keyboard-key {
+  color: @card_bg_color;
+}
+
+.keyboard-key-current {
+  color: @accent_bg_color;
+}
+
+.keyboard-modifier {
+  color: mix(@card_bg_color, @window_bg_color, 0.5);
+}
+
+.keyboard-border {
+  color: @borders;
+}

@@ -103,8 +103,9 @@ impl KeyboardWidget {
         let visible_keys_clone = visible_keys.clone();
         let layout_clone = layout.clone();
 
-        drawing_area.set_draw_func(move |_, cr, width, height| {
+        drawing_area.set_draw_func(move |widget, cr, width, height| {
             Self::draw_keyboard(
+                widget,
                 cr,
                 width,
                 height,
@@ -168,6 +169,7 @@ impl KeyboardWidget {
     }
 
     fn draw_keyboard(
+        widget: &gtk::DrawingArea,
         cr: &gtk::cairo::Context,
         width: i32,
         _height: i32,
@@ -182,6 +184,20 @@ impl KeyboardWidget {
         let key_height = 50.0;
         let key_spacing = 5.0;
         let row_spacing = 5.0;
+
+        // Helper function to get color from CSS class
+        #[allow(deprecated)]
+        let get_color = |class_name: &str| -> (f64, f64, f64) {
+            widget.add_css_class(class_name);
+            let style_context = widget.style_context();
+            let color = style_context.color();
+            widget.remove_css_class(class_name);
+            (
+                color.red() as f64,
+                color.green() as f64,
+                color.blue() as f64,
+            )
+        };
 
         // Reserve space for left modifiers (widest is 2.0 * key_width for shift)
         let left_margin = key_width * 2.5;
@@ -233,16 +249,18 @@ impl KeyboardWidget {
                     }
                 });
 
-                if is_current {
-                    cr.set_source_rgb(0.29, 0.565, 0.886);
+                let (r, g, b) = if is_current {
+                    get_color("keyboard-key-current")
                 } else {
-                    cr.set_source_rgb(0.9, 0.9, 0.9);
-                }
+                    get_color("keyboard-key")
+                };
+                cr.set_source_rgb(r, g, b);
 
                 cr.rectangle(x, y, key_width, key_height);
                 cr.fill().unwrap();
 
-                cr.set_source_rgb(0.5, 0.5, 0.5);
+                let (br, bg, bb) = get_color("keyboard-border");
+                cr.set_source_rgb(br, bg, bb);
                 cr.set_line_width(1.0);
                 cr.rectangle(x, y, key_width, key_height);
                 cr.stroke().unwrap();
@@ -310,16 +328,18 @@ impl KeyboardWidget {
 
         let is_space_current = current.is_some_and(|c| c == ' ');
 
-        if is_space_current {
-            cr.set_source_rgb(0.29, 0.565, 0.886);
+        let (r, g, b) = if is_space_current {
+            get_color("keyboard-key-current")
         } else {
-            cr.set_source_rgb(0.9, 0.9, 0.9);
-        }
+            get_color("keyboard-key")
+        };
+        cr.set_source_rgb(r, g, b);
 
         cr.rectangle(space_x, space_y, space_width, key_height);
         cr.fill().unwrap();
 
-        cr.set_source_rgb(0.5, 0.5, 0.5);
+        let (br, bg, bb) = get_color("keyboard-border");
+        cr.set_source_rgb(br, bg, bb);
         cr.set_line_width(1.0);
         cr.rectangle(space_x, space_y, space_width, key_height);
         cr.stroke().unwrap();
@@ -354,10 +374,12 @@ impl KeyboardWidget {
             let tab_x = start_x + row_offsets[1] - tab_width - key_spacing;
             let tab_y = start_y + (key_height + row_spacing);
 
-            cr.set_source_rgb(0.85, 0.85, 0.85);
+            let (r, g, b) = get_color("keyboard-modifier");
+            cr.set_source_rgb(r, g, b);
             cr.rectangle(tab_x, tab_y, tab_width, key_height);
             cr.fill().unwrap();
-            cr.set_source_rgb(0.5, 0.5, 0.5);
+            let (br, bg, bb) = get_color("keyboard-border");
+            cr.set_source_rgb(br, bg, bb);
             cr.set_line_width(1.0);
             cr.rectangle(tab_x, tab_y, tab_width, key_height);
             cr.stroke().unwrap();
@@ -374,10 +396,12 @@ impl KeyboardWidget {
             let caps_x = start_x + row_offsets[2] - caps_width - key_spacing;
             let caps_y = start_y + 2.0 * (key_height + row_spacing);
 
-            cr.set_source_rgb(0.85, 0.85, 0.85);
+            let (r, g, b) = get_color("keyboard-modifier");
+            cr.set_source_rgb(r, g, b);
             cr.rectangle(caps_x, caps_y, caps_width, key_height);
             cr.fill().unwrap();
-            cr.set_source_rgb(0.5, 0.5, 0.5);
+            let (br, bg, bb) = get_color("keyboard-border");
+            cr.set_source_rgb(br, bg, bb);
             cr.set_line_width(1.0);
             cr.rectangle(caps_x, caps_y, caps_width, key_height);
             cr.stroke().unwrap();
@@ -394,10 +418,12 @@ impl KeyboardWidget {
             let shift_x = start_x + row_offsets[3] - shift_width - key_spacing;
             let shift_y = start_y + 3.0 * (key_height + row_spacing);
 
-            cr.set_source_rgb(0.85, 0.85, 0.85);
+            let (r, g, b) = get_color("keyboard-modifier");
+            cr.set_source_rgb(r, g, b);
             cr.rectangle(shift_x, shift_y, shift_width, key_height);
             cr.fill().unwrap();
-            cr.set_source_rgb(0.5, 0.5, 0.5);
+            let (br, bg, bb) = get_color("keyboard-border");
+            cr.set_source_rgb(br, bg, bb);
             cr.set_line_width(1.0);
             cr.rectangle(shift_x, shift_y, shift_width, key_height);
             cr.stroke().unwrap();
@@ -414,10 +440,12 @@ impl KeyboardWidget {
             let ctrl_x = start_x + row_offsets[3] - key_width * 2.25 - key_spacing;
             let ctrl_y = start_y + 4.0 * (key_height + row_spacing);
 
-            cr.set_source_rgb(0.85, 0.85, 0.85);
+            let (r, g, b) = get_color("keyboard-modifier");
+            cr.set_source_rgb(r, g, b);
             cr.rectangle(ctrl_x, ctrl_y, ctrl_width, key_height);
             cr.fill().unwrap();
-            cr.set_source_rgb(0.5, 0.5, 0.5);
+            let (br, bg, bb) = get_color("keyboard-border");
+            cr.set_source_rgb(br, bg, bb);
             cr.set_line_width(1.0);
             cr.rectangle(ctrl_x, ctrl_y, ctrl_width, key_height);
             cr.stroke().unwrap();
@@ -437,10 +465,12 @@ impl KeyboardWidget {
                 + key_spacing;
             let alt_y = start_y + 4.0 * (key_height + row_spacing);
 
-            cr.set_source_rgb(0.85, 0.85, 0.85);
+            let (r, g, b) = get_color("keyboard-modifier");
+            cr.set_source_rgb(r, g, b);
             cr.rectangle(alt_x, alt_y, alt_width, key_height);
             cr.fill().unwrap();
-            cr.set_source_rgb(0.5, 0.5, 0.5);
+            let (br, bg, bb) = get_color("keyboard-border");
+            cr.set_source_rgb(br, bg, bb);
             cr.set_line_width(1.0);
             cr.rectangle(alt_x, alt_y, alt_width, key_height);
             cr.stroke().unwrap();
@@ -458,10 +488,12 @@ impl KeyboardWidget {
             let bs_x = start_x + row_offsets[0] + row_0_keys as f64 * (key_width + key_spacing);
             let bs_y = start_y;
 
-            cr.set_source_rgb(0.85, 0.85, 0.85);
+            let (r, g, b) = get_color("keyboard-modifier");
+            cr.set_source_rgb(r, g, b);
             cr.rectangle(bs_x, bs_y, bs_width, key_height);
             cr.fill().unwrap();
-            cr.set_source_rgb(0.5, 0.5, 0.5);
+            let (br, bg, bb) = get_color("keyboard-border");
+            cr.set_source_rgb(br, bg, bb);
             cr.set_line_width(1.0);
             cr.rectangle(bs_x, bs_y, bs_width, key_height);
             cr.stroke().unwrap();
@@ -480,10 +512,12 @@ impl KeyboardWidget {
             let enter_y = start_y + (key_height + row_spacing);
             let enter_height = key_height * 2.0 + row_spacing;
 
-            cr.set_source_rgb(0.85, 0.85, 0.85);
+            let (r, g, b) = get_color("keyboard-modifier");
+            cr.set_source_rgb(r, g, b);
             cr.rectangle(enter_x, enter_y, enter_width, enter_height);
             cr.fill().unwrap();
-            cr.set_source_rgb(0.5, 0.5, 0.5);
+            let (br, bg, bb) = get_color("keyboard-border");
+            cr.set_source_rgb(br, bg, bb);
             cr.set_line_width(1.0);
             cr.rectangle(enter_x, enter_y, enter_width, enter_height);
             cr.stroke().unwrap();
@@ -501,10 +535,12 @@ impl KeyboardWidget {
             let shift_x = start_x + row_offsets[3] + row_3_keys as f64 * (key_width + key_spacing);
             let shift_y = start_y + 3.0 * (key_height + row_spacing);
 
-            cr.set_source_rgb(0.85, 0.85, 0.85);
+            let (r, g, b) = get_color("keyboard-modifier");
+            cr.set_source_rgb(r, g, b);
             cr.rectangle(shift_x, shift_y, shift_width, key_height);
             cr.fill().unwrap();
-            cr.set_source_rgb(0.5, 0.5, 0.5);
+            let (br, bg, bb) = get_color("keyboard-border");
+            cr.set_source_rgb(br, bg, bb);
             cr.set_line_width(1.0);
             cr.rectangle(shift_x, shift_y, shift_width, key_height);
             cr.stroke().unwrap();
@@ -527,10 +563,12 @@ impl KeyboardWidget {
             let ctrl_x = shift_end - ctrl_width;
             let ctrl_y = start_y + 4.0 * (key_height + row_spacing);
 
-            cr.set_source_rgb(0.85, 0.85, 0.85);
+            let (r, g, b) = get_color("keyboard-modifier");
+            cr.set_source_rgb(r, g, b);
             cr.rectangle(ctrl_x, ctrl_y, ctrl_width, key_height);
             cr.fill().unwrap();
-            cr.set_source_rgb(0.5, 0.5, 0.5);
+            let (br, bg, bb) = get_color("keyboard-border");
+            cr.set_source_rgb(br, bg, bb);
             cr.set_line_width(1.0);
             cr.rectangle(ctrl_x, ctrl_y, ctrl_width, key_height);
             cr.stroke().unwrap();
@@ -547,10 +585,12 @@ impl KeyboardWidget {
             let alt_x = space_x + space_width + key_spacing;
             let alt_y = start_y + 4.0 * (key_height + row_spacing);
 
-            cr.set_source_rgb(0.85, 0.85, 0.85);
+            let (r, g, b) = get_color("keyboard-modifier");
+            cr.set_source_rgb(r, g, b);
             cr.rectangle(alt_x, alt_y, alt_width, key_height);
             cr.fill().unwrap();
-            cr.set_source_rgb(0.5, 0.5, 0.5);
+            let (br, bg, bb) = get_color("keyboard-border");
+            cr.set_source_rgb(br, bg, bb);
             cr.set_line_width(1.0);
             cr.rectangle(alt_x, alt_y, alt_width, key_height);
             cr.stroke().unwrap();

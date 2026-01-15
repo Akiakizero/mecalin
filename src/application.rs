@@ -25,6 +25,15 @@ mod imp {
             self.parent_startup();
             let app = self.obj();
             app.set_resource_base_path(Some("/io/github/nacho/mecalin"));
+
+            // Load CSS
+            let provider = gtk::CssProvider::new();
+            provider.load_from_resource("/io/github/nacho/mecalin/style.css");
+            gtk::style_context_add_provider_for_display(
+                &gtk::gdk::Display::default().expect("Could not connect to a display"),
+                &provider,
+                gtk::STYLE_PROVIDER_PRIORITY_APPLICATION,
+            );
         }
 
         fn activate(&self) {
