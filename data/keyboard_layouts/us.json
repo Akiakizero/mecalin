@@ -44,6 +44,7 @@
       {"base": "\\", "shift": "|", "altgr": "¬", "finger": "right_pinky"}
     ],
     [
+      {"base": "<", "shift": ">", "altgr": "", "finger": "left_pinky"},
       {"base": "z", "shift": "Z", "altgr": "æ", "finger": "left_pinky"},
       {"base": "x", "shift": "X", "altgr": "×", "finger": "left_ring"},
       {"base": "c", "shift": "C", "altgr": "©", "finger": "left_middle"},
@@ -56,5 +57,17 @@
       {"base": "/", "shift": "?", "altgr": "¿", "finger": "right_pinky"}
     ]
   ],
-  "space": {"base": " ", "finger": "both_thumbs"}
+  "space": {"base": " ", "finger": "both_thumbs"},
+  "modifiers": {
+    "tab": {"label": "Tab", "finger": "left_pinky"},
+    "caps_lock": {"label": "Caps", "finger": "left_pinky"},
+    "shift_left": {"label": "Shift", "finger": "left_pinky"},
+    "shift_right": {"label": "Shift", "finger": "right_pinky"},
+    "ctrl_left": {"label": "Ctrl", "finger": "left_pinky"},
+    "ctrl_right": {"label": "Ctrl", "finger": "right_pinky"},
+    "alt_left": {"label": "Alt", "finger": "left_thumb"},
+    "alt_right": {"label": "Alt", "finger": "right_thumb"},
+    "enter": {"label": "Enter", "finger": "right_pinky"},
+    "backspace": {"label": "Backspace", "finger": "right_pinky"}
+  }
 }

@@ -44,6 +44,7 @@
       {"base": "ç", "shift": "Ç", "altgr": "}", "finger": "right_pinky"}
     ],
     [
+      {"base": "<", "shift": ">", "altgr": "", "finger": "left_pinky"},
       {"base": "z", "shift": "Z", "altgr": "", "finger": "left_pinky"},
       {"base": "x", "shift": "X", "altgr": "", "finger": "left_ring"},
       {"base": "c", "shift": "C", "altgr": "", "finger": "left_middle"},
@@ -56,5 +57,17 @@
       {"base": "-", "shift": "_", "altgr": "", "finger": "right_pinky"}
     ]
   ],
-  "space": {"base": " ", "finger": "both_thumbs"}
+  "space": {"base": " ", "finger": "both_thumbs"},
+  "modifiers": {
+    "tab": {"label": "Tab", "finger": "left_pinky"},
+    "caps_lock": {"label": "Bloq Mayús", "finger": "left_pinky"},
+    "shift_left": {"label": "Mayús", "finger": "left_pinky"},
+    "shift_right": {"label": "Mayús", "finger": "right_pinky"},
+    "ctrl_left": {"label": "Ctrl", "finger": "left_pinky"},
+    "ctrl_right": {"label": "Ctrl", "finger": "right_pinky"},
+    "alt_left": {"label": "Alt", "finger": "left_thumb"},
+    "alt_right": {"label": "Alt Gr", "finger": "right_thumb"},
+    "enter": {"label": "Intro", "finger": "right_pinky"},
+    "backspace": {"label": "Retroceso", "finger": "right_pinky"}
+  }
 }

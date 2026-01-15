@@ -44,6 +44,7 @@
       {"base": "ù", "shift": "§", "altgr": "¶", "finger": "right_pinky"}
     ],
     [
+      {"base": "<", "shift": ">", "altgr": "", "finger": "left_pinky"},
       {"base": "z", "shift": "Z", "altgr": "«", "finger": "left_pinky"},
       {"base": "x", "shift": "X", "altgr": "»", "finger": "left_ring"},
       {"base": "c", "shift": "C", "altgr": "©", "finger": "left_middle"},
@@ -51,10 +52,22 @@
       {"base": "b", "shift": "B", "altgr": "ß", "finger": "left_index"},
       {"base": "n", "shift": "N", "altgr": "ñ", "finger": "right_index"},
       {"base": "m", "shift": "M", "altgr": "µ", "finger": "right_index"},
-      {"base": ",", "shift": ";", "altgr": "<", "finger": "right_middle"},
-      {"base": ".", "shift": ":", "altgr": ">", "finger": "right_ring"},
+      {"base": ",", "shift": ";", "altgr": "", "finger": "right_middle"},
+      {"base": ".", "shift": ":", "altgr": "", "finger": "right_ring"},
       {"base": "-", "shift": "_", "altgr": "–", "finger": "right_pinky"}
     ]
   ],
-  "space": {"base": " ", "finger": "both_thumbs"}
+  "space": {"base": " ", "finger": "both_thumbs"},
+  "modifiers": {
+    "tab": {"label": "Tab", "finger": "left_pinky"},
+    "caps_lock": {"label": "Bloc Maiusc", "finger": "left_pinky"},
+    "shift_left": {"label": "Maiusc", "finger": "left_pinky"},
+    "shift_right": {"label": "Maiusc", "finger": "right_pinky"},
+    "ctrl_left": {"label": "Ctrl", "finger": "left_pinky"},
+    "ctrl_right": {"label": "Ctrl", "finger": "right_pinky"},
+    "alt_left": {"label": "Alt", "finger": "left_thumb"},
+    "alt_right": {"label": "Alt Gr", "finger": "right_thumb"},
+    "enter": {"label": "Invio", "finger": "right_pinky"},
+    "backspace": {"label": "Backspace", "finger": "right_pinky"}
+  }
 }

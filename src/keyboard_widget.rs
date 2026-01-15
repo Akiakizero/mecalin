@@ -3,6 +3,7 @@ use gtk::prelude::*;
 use gtk::DrawingArea;
 use serde::{Deserialize, Serialize};
 use std::cell::RefCell;
+use std::collections::HashMap;
 use std::collections::HashSet;
 use std::rc::Rc;
 
@@ -15,10 +16,18 @@ pub struct KeyInfo {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ModifierKey {
+    pub label: String,
+    pub finger: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct KeyboardLayout {
     pub name: String,
     pub keys: Vec<Vec<KeyInfo>>,
     pub space: KeyInfo,
+    #[serde(default)]
+    pub modifiers: HashMap<String, ModifierKey>,
 }
 
 impl KeyboardLayout {
@@ -63,6 +72,7 @@ impl Default for KeyboardLayout {
                 altgr: None,
                 finger: "both_thumbs".to_string(),
             },
+            modifiers: HashMap::new(),
         })
     }
 }
@@ -83,7 +93,7 @@ impl KeyboardWidget {
             KeyboardLayout::load_from_json(layout_code).unwrap_or_default(),
         ));
         let drawing_area = DrawingArea::new();
-        drawing_area.set_size_request(800, 300);
+        drawing_area.set_size_request(1000, 350);
 
         let current_key = Rc::new(RefCell::new(None));
         let visible_keys = Rc::new(RefCell::new(None));
@@ -173,14 +183,20 @@ impl KeyboardWidget {
         let key_spacing = 5.0;
         let row_spacing = 5.0;
 
+        // Reserve space for left modifiers (widest is 2.0 * key_width for shift)
+        let left_margin = key_width * 2.5;
+        // Reserve space for right modifiers
+        let right_margin = key_width * 2.0;
+
         let max_keys_in_row = layout_borrowed
             .keys
             .iter()
             .map(|row| row.len())
             .max()
             .unwrap_or(12);
-        let total_width = max_keys_in_row as f64 * (key_width + key_spacing) - key_spacing;
-        let start_x = (width as f64 - total_width) / 2.0;
+        let keyboard_width = max_keys_in_row as f64 * (key_width + key_spacing) - key_spacing;
+        let total_width = left_margin + keyboard_width + right_margin;
+        let start_x = (width as f64 - total_width) / 2.0 + left_margin;
         let start_y = 20.0;
 
         let current = current_key.borrow();
@@ -314,11 +330,235 @@ impl KeyboardWidget {
 
         if should_show_space_text {
             cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_font_size(11.0);
             cr.move_to(
                 space_x + space_width / 2.0 - 20.0,
                 space_y + key_height / 2.0 + 5.0,
             );
             cr.show_text("SPACE").unwrap();
+        }
+
+        // Draw modifier keys
+        // Calculate row end positions accounting for offsets
+        let row_offsets = [
+            0.0,
+            key_width * 0.5,
+            key_width * 0.75,
+            key_width * 1.25,
+            0.0,
+        ];
+
+        // Tab (left of QWERTY row)
+        if let Some(tab) = layout_borrowed.modifiers.get("tab") {
+            let tab_width = key_width * 1.5;
+            let tab_x = start_x + row_offsets[1] - tab_width - key_spacing;
+            let tab_y = start_y + (key_height + row_spacing);
+
+            cr.set_source_rgb(0.85, 0.85, 0.85);
+            cr.rectangle(tab_x, tab_y, tab_width, key_height);
+            cr.fill().unwrap();
+            cr.set_source_rgb(0.5, 0.5, 0.5);
+            cr.set_line_width(1.0);
+            cr.rectangle(tab_x, tab_y, tab_width, key_height);
+            cr.stroke().unwrap();
+
+            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_font_size(11.0);
+            cr.move_to(tab_x + 10.0, tab_y + key_height / 2.0 + 5.0);
+            cr.show_text(&tab.label).unwrap();
+        }
+
+        // Caps Lock (left of home row)
+        if let Some(caps) = layout_borrowed.modifiers.get("caps_lock") {
+            let caps_width = key_width * 1.75;
+            let caps_x = start_x + row_offsets[2] - caps_width - key_spacing;
+            let caps_y = start_y + 2.0 * (key_height + row_spacing);
+
+            cr.set_source_rgb(0.85, 0.85, 0.85);
+            cr.rectangle(caps_x, caps_y, caps_width, key_height);
+            cr.fill().unwrap();
+            cr.set_source_rgb(0.5, 0.5, 0.5);
+            cr.set_line_width(1.0);
+            cr.rectangle(caps_x, caps_y, caps_width, key_height);
+            cr.stroke().unwrap();
+
+            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_font_size(10.0);
+            cr.move_to(caps_x + 8.0, caps_y + key_height / 2.0 + 5.0);
+            cr.show_text(&caps.label).unwrap();
+        }
+
+        // Left Shift (left of bottom letter row, before < key)
+        if let Some(shift_l) = layout_borrowed.modifiers.get("shift_left") {
+            let shift_width = key_width * 2.25;
+            let shift_x = start_x + row_offsets[3] - shift_width - key_spacing;
+            let shift_y = start_y + 3.0 * (key_height + row_spacing);
+
+            cr.set_source_rgb(0.85, 0.85, 0.85);
+            cr.rectangle(shift_x, shift_y, shift_width, key_height);
+            cr.fill().unwrap();
+            cr.set_source_rgb(0.5, 0.5, 0.5);
+            cr.set_line_width(1.0);
+            cr.rectangle(shift_x, shift_y, shift_width, key_height);
+            cr.stroke().unwrap();
+
+            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_font_size(11.0);
+            cr.move_to(shift_x + 10.0, shift_y + key_height / 2.0 + 5.0);
+            cr.show_text(&shift_l.label).unwrap();
+        }
+
+        // Left Ctrl (bottom left, aligned with left shift)
+        if let Some(ctrl_l) = layout_borrowed.modifiers.get("ctrl_left") {
+            let ctrl_width = key_width * 1.5;
+            let ctrl_x = start_x + row_offsets[3] - key_width * 2.25 - key_spacing;
+            let ctrl_y = start_y + 4.0 * (key_height + row_spacing);
+
+            cr.set_source_rgb(0.85, 0.85, 0.85);
+            cr.rectangle(ctrl_x, ctrl_y, ctrl_width, key_height);
+            cr.fill().unwrap();
+            cr.set_source_rgb(0.5, 0.5, 0.5);
+            cr.set_line_width(1.0);
+            cr.rectangle(ctrl_x, ctrl_y, ctrl_width, key_height);
+            cr.stroke().unwrap();
+
+            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_font_size(11.0);
+            cr.move_to(ctrl_x + 10.0, ctrl_y + key_height / 2.0 + 5.0);
+            cr.show_text(&ctrl_l.label).unwrap();
+        }
+
+        // Left Alt (bottom, after left ctrl)
+        if let Some(alt_l) = layout_borrowed.modifiers.get("alt_left") {
+            let ctrl_width = key_width * 1.5;
+            let alt_width = key_width * 1.3;
+            let alt_x = start_x + row_offsets[3] - key_width * 2.25 - key_spacing
+                + ctrl_width
+                + key_spacing;
+            let alt_y = start_y + 4.0 * (key_height + row_spacing);
+
+            cr.set_source_rgb(0.85, 0.85, 0.85);
+            cr.rectangle(alt_x, alt_y, alt_width, key_height);
+            cr.fill().unwrap();
+            cr.set_source_rgb(0.5, 0.5, 0.5);
+            cr.set_line_width(1.0);
+            cr.rectangle(alt_x, alt_y, alt_width, key_height);
+            cr.stroke().unwrap();
+
+            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_font_size(11.0);
+            cr.move_to(alt_x + 10.0, alt_y + key_height / 2.0 + 5.0);
+            cr.show_text(&alt_l.label).unwrap();
+        }
+
+        // Backspace (right of number row)
+        if let Some(backspace) = layout_borrowed.modifiers.get("backspace") {
+            let row_0_keys = layout_borrowed.keys.first().map(|r| r.len()).unwrap_or(12);
+            let bs_width = key_width * 2.0;
+            let bs_x = start_x + row_offsets[0] + row_0_keys as f64 * (key_width + key_spacing);
+            let bs_y = start_y;
+
+            cr.set_source_rgb(0.85, 0.85, 0.85);
+            cr.rectangle(bs_x, bs_y, bs_width, key_height);
+            cr.fill().unwrap();
+            cr.set_source_rgb(0.5, 0.5, 0.5);
+            cr.set_line_width(1.0);
+            cr.rectangle(bs_x, bs_y, bs_width, key_height);
+            cr.stroke().unwrap();
+
+            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_font_size(11.0);
+            cr.move_to(bs_x + 10.0, bs_y + key_height / 2.0 + 5.0);
+            cr.show_text(&backspace.label).unwrap();
+        }
+
+        // Enter (right of home row, spans 2 rows)
+        if let Some(enter) = layout_borrowed.modifiers.get("enter") {
+            let row_2_keys = layout_borrowed.keys.get(2).map(|r| r.len()).unwrap_or(12);
+            let enter_width = key_width * 2.1;
+            let enter_x = start_x + row_offsets[2] + row_2_keys as f64 * (key_width + key_spacing);
+            let enter_y = start_y + (key_height + row_spacing);
+            let enter_height = key_height * 2.0 + row_spacing;
+
+            cr.set_source_rgb(0.85, 0.85, 0.85);
+            cr.rectangle(enter_x, enter_y, enter_width, enter_height);
+            cr.fill().unwrap();
+            cr.set_source_rgb(0.5, 0.5, 0.5);
+            cr.set_line_width(1.0);
+            cr.rectangle(enter_x, enter_y, enter_width, enter_height);
+            cr.stroke().unwrap();
+
+            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_font_size(11.0);
+            cr.move_to(enter_x + 15.0, enter_y + enter_height / 2.0 + 5.0);
+            cr.show_text(&enter.label).unwrap();
+        }
+
+        // Right Shift (right of bottom letter row)
+        if let Some(shift_r) = layout_borrowed.modifiers.get("shift_right") {
+            let row_3_keys = layout_borrowed.keys.get(3).map(|r| r.len()).unwrap_or(10);
+            let shift_width = key_width * 2.75;
+            let shift_x = start_x + row_offsets[3] + row_3_keys as f64 * (key_width + key_spacing);
+            let shift_y = start_y + 3.0 * (key_height + row_spacing);
+
+            cr.set_source_rgb(0.85, 0.85, 0.85);
+            cr.rectangle(shift_x, shift_y, shift_width, key_height);
+            cr.fill().unwrap();
+            cr.set_source_rgb(0.5, 0.5, 0.5);
+            cr.set_line_width(1.0);
+            cr.rectangle(shift_x, shift_y, shift_width, key_height);
+            cr.stroke().unwrap();
+
+            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_font_size(11.0);
+            cr.move_to(shift_x + 20.0, shift_y + key_height / 2.0 + 5.0);
+            cr.show_text(&shift_r.label).unwrap();
+        }
+
+        // Right Ctrl (bottom right, right edge aligned with right shift)
+        if let Some(ctrl_r) = layout_borrowed.modifiers.get("ctrl_right") {
+            let row_3_keys = layout_borrowed.keys.get(3).map(|r| r.len()).unwrap_or(10);
+            let shift_width = key_width * 2.75;
+            let ctrl_width = key_width * 1.5;
+            let shift_end = start_x
+                + row_offsets[3]
+                + row_3_keys as f64 * (key_width + key_spacing)
+                + shift_width;
+            let ctrl_x = shift_end - ctrl_width;
+            let ctrl_y = start_y + 4.0 * (key_height + row_spacing);
+
+            cr.set_source_rgb(0.85, 0.85, 0.85);
+            cr.rectangle(ctrl_x, ctrl_y, ctrl_width, key_height);
+            cr.fill().unwrap();
+            cr.set_source_rgb(0.5, 0.5, 0.5);
+            cr.set_line_width(1.0);
+            cr.rectangle(ctrl_x, ctrl_y, ctrl_width, key_height);
+            cr.stroke().unwrap();
+
+            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_font_size(11.0);
+            cr.move_to(ctrl_x + 10.0, ctrl_y + key_height / 2.0 + 5.0);
+            cr.show_text(&ctrl_r.label).unwrap();
+        }
+
+        // Right Alt (bottom, right after space bar)
+        if let Some(alt_r) = layout_borrowed.modifiers.get("alt_right") {
+            let alt_width = key_width * 1.3;
+            let alt_x = space_x + space_width + key_spacing;
+            let alt_y = start_y + 4.0 * (key_height + row_spacing);
+
+            cr.set_source_rgb(0.85, 0.85, 0.85);
+            cr.rectangle(alt_x, alt_y, alt_width, key_height);
+            cr.fill().unwrap();
+            cr.set_source_rgb(0.5, 0.5, 0.5);
+            cr.set_line_width(1.0);
+            cr.rectangle(alt_x, alt_y, alt_width, key_height);
+            cr.stroke().unwrap();
+
+            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_font_size(10.0);
+            cr.move_to(alt_x + 5.0, alt_y + key_height / 2.0 + 5.0);
+            cr.show_text(&alt_r.label).unwrap();
         }
     }
 }
