@@ -41,6 +41,8 @@ mod imp {
         pub current_repetition: Cell<u32>,
         pub course: RefCell<Option<crate::course::Course>>,
         pub has_mistake: Cell<bool>,
+        pub composition_in_progress: Cell<bool>,
+        pub pending_dead_key: RefCell<Option<char>>,
     }
 
     #[glib::object_subclass]
@@ -105,6 +107,31 @@ impl imp::LessonView {
             }
         });
 
+        // Track composition state for dead keys
+        let lesson_view_weak = self.obj().downgrade();
+        self.text_view.connect_preedit_changed(move |_, preedit| {
+            if let Some(lesson_view) = lesson_view_weak.upgrade() {
+                let imp = lesson_view.imp();
+                let is_composing = !preedit.is_empty();
+                imp.composition_in_progress.set(is_composing);
+
+                // If composition started, store the dead key
+                if is_composing && preedit.len() == 1 {
+                    if let Some(dead_key) = preedit.chars().next() {
+                        *imp.pending_dead_key.borrow_mut() = Some(dead_key);
+
+                        // Advance keyboard sequence to show next character
+                        if let Some(keyboard) = imp.keyboard_widget.borrow().as_ref() {
+                            keyboard.advance_sequence();
+                        }
+                    }
+                } else if !is_composing {
+                    // Composition ended, clear pending dead key
+                    *imp.pending_dead_key.borrow_mut() = None;
+                }
+            }
+        });
+
         let keyboard_widget = self.keyboard_widget.borrow();
         if let Some(keyboard) = keyboard_widget.as_ref() {
             let keyboard_clone = keyboard.clone();
@@ -129,31 +156,43 @@ impl imp::LessonView {
 
                 // Check if the new text would match target text
                 if !target_str.starts_with(&new_text) {
-                    // Find the last space position or go to beginning
-                    let last_space_pos = current_str.rfind(' ').map(|pos| pos + 1).unwrap_or(0);
+                    // Check if this is a composed character that matches
+                    let inserted_char = text.chars().next();
+                    let is_valid_composition = if let Some(ch) = inserted_char {
+                        // Check if this composed character matches the target
+                        let cursor_pos = current_str.chars().count();
+                        target_str.chars().nth(cursor_pos) == Some(ch)
+                    } else {
+                        false
+                    };
 
-                    // Mark as mistake if:
-                    // - Not at the beginning (last_space_pos > 0), OR
-                    // - At the beginning but on a repetition after the first (current_repetition > 0)
-                    if let Some(lesson_view) = lesson_view_clone.upgrade() {
-                        let imp = lesson_view.imp();
-                        if last_space_pos > 0 || imp.current_repetition.get() > 0 {
-                            imp.has_mistake.set(true);
+                    if !is_valid_composition {
+                        // Find the last space position or go to beginning
+                        let last_space_pos = current_str.rfind(' ').map(|pos| pos + 1).unwrap_or(0);
+
+                        // Mark as mistake if:
+                        // - Not at the beginning (last_space_pos > 0), OR
+                        // - At the beginning but on a repetition after the first (current_repetition > 0)
+                        if let Some(lesson_view) = lesson_view_clone.upgrade() {
+                            let imp = lesson_view.imp();
+                            if last_space_pos > 0 || imp.current_repetition.get() > 0 {
+                                imp.has_mistake.set(true);
+                            }
                         }
+
+                        // Reset to last space position
+                        let corrected_text = &current_str[..last_space_pos];
+
+                        glib::idle_add_local_once({
+                            let buffer = buffer.clone();
+                            let corrected_text = corrected_text.to_string();
+                            move || {
+                                buffer.set_text(&corrected_text);
+                                let end_iter = buffer.end_iter();
+                                buffer.place_cursor(&end_iter);
+                            }
+                        });
                     }
-
-                    // Reset to last space position
-                    let corrected_text = &current_str[..last_space_pos];
-
-                    glib::idle_add_local_once({
-                        let buffer = buffer.clone();
-                        let corrected_text = corrected_text.to_string();
-                        move || {
-                            buffer.set_text(&corrected_text);
-                            let end_iter = buffer.end_iter();
-                            buffer.place_cursor(&end_iter);
-                        }
-                    });
                 }
             });
 

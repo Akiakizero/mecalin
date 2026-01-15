@@ -27,7 +27,6 @@ mod imp {
         fn constructed(&self) {
             self.parent_constructed();
             self.obj().set_monospace(true);
-            self.obj().set_input_hints(gtk::InputHints::NONE);
         }
     }
 

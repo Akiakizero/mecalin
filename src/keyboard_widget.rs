@@ -1,3 +1,4 @@
+use glib::Unichar;
 use gtk::prelude::*;
 use gtk::DrawingArea;
 use serde::{Deserialize, Serialize};
@@ -71,6 +72,8 @@ pub struct KeyboardWidget {
     drawing_area: DrawingArea,
     current_key: Rc<RefCell<Option<char>>>,
     visible_keys: Rc<RefCell<Option<std::collections::HashSet<char>>>>,
+    current_key_sequence: Rc<RefCell<Vec<char>>>,
+    sequence_index: Rc<RefCell<usize>>,
 }
 
 impl KeyboardWidget {
@@ -84,6 +87,8 @@ impl KeyboardWidget {
 
         let current_key = Rc::new(RefCell::new(None));
         let visible_keys = Rc::new(RefCell::new(None));
+        let current_key_sequence = Rc::new(RefCell::new(Vec::new()));
+        let sequence_index = Rc::new(RefCell::new(0));
         let current_key_clone = current_key.clone();
         let visible_keys_clone = visible_keys.clone();
         let layout_clone = layout.clone();
@@ -103,6 +108,8 @@ impl KeyboardWidget {
             drawing_area,
             current_key,
             visible_keys,
+            current_key_sequence,
+            sequence_index,
         }
     }
 
@@ -111,8 +118,38 @@ impl KeyboardWidget {
     }
 
     pub fn set_current_key(&self, key: Option<char>) {
-        *self.current_key.borrow_mut() = key;
+        // Check if this is a composed character that needs decomposition
+        if let Some(ch) = key {
+            if let glib::CharacterDecomposition::Pair(dead_key, base_char) = ch.decompose() {
+                // This is a composed character - set up sequence
+                *self.current_key_sequence.borrow_mut() = vec![dead_key, base_char];
+                *self.sequence_index.borrow_mut() = 0;
+                *self.current_key.borrow_mut() = Some(dead_key);
+            } else {
+                // Regular character - no sequence
+                *self.current_key_sequence.borrow_mut() = Vec::new();
+                *self.sequence_index.borrow_mut() = 0;
+                *self.current_key.borrow_mut() = key;
+            }
+        } else {
+            // No key - clear everything
+            *self.current_key_sequence.borrow_mut() = Vec::new();
+            *self.sequence_index.borrow_mut() = 0;
+            *self.current_key.borrow_mut() = None;
+        }
+
         self.drawing_area.queue_draw();
+    }
+
+    pub fn advance_sequence(&self) {
+        let sequence = self.current_key_sequence.borrow();
+        let mut index = self.sequence_index.borrow_mut();
+
+        if !sequence.is_empty() && *index < sequence.len() - 1 {
+            *index += 1;
+            *self.current_key.borrow_mut() = Some(sequence[*index]);
+            self.drawing_area.queue_draw();
+        }
     }
 
     pub fn set_visible_keys(&self, keys: Option<HashSet<char>>) {
