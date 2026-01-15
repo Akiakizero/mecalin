@@ -2,6 +2,8 @@
 
 A typing tutor application built with GTK4, Rust, and Adwaita.
 
+Based on [Mecawin](https://archive.org/details/mecawin), a classic typing tutor for Windows.
+
 ## Installation
 
 Available on [Flathub](https://flathub.org/apps/io.github.nacho.mecalin)
