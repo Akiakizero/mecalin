@@ -235,6 +235,9 @@ impl KeyboardWidget {
             )
         };
 
+        let modifier_text_color = get_color("keyboard-modifier-text");
+        let key_text_color = get_color("keyboard-key-text");
+
         // Reserve space for left modifiers (widest is 2.0 * key_width for shift)
         let left_margin = key_width * 2.5;
         // Reserve space for right modifiers
@@ -306,7 +309,7 @@ impl KeyboardWidget {
                 });
 
                 if should_show_text {
-                    cr.set_source_rgb(0.0, 0.0, 0.0);
+                    cr.set_source_rgb(key_text_color.0, key_text_color.1, key_text_color.2);
                     cr.select_font_face(
                         "Sans",
                         gtk::cairo::FontSlant::Normal,
@@ -386,7 +389,7 @@ impl KeyboardWidget {
 
         if should_show_space_text {
             let space_label = layout_borrowed.space.label.as_deref().unwrap_or("SPACE");
-            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_source_rgb(key_text_color.0, key_text_color.1, key_text_color.2);
             cr.set_font_size(11.0);
             let text_extents = cr.text_extents(space_label).unwrap();
             cr.move_to(
@@ -422,7 +425,11 @@ impl KeyboardWidget {
             cr.rectangle(tab_x, tab_y, tab_width, key_height);
             cr.stroke().unwrap();
 
-            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_source_rgb(
+                modifier_text_color.0,
+                modifier_text_color.1,
+                modifier_text_color.2,
+            );
             cr.set_font_size(11.0);
             cr.move_to(tab_x + 10.0, tab_y + key_height / 2.0 + 5.0);
             cr.show_text(&tab.label).unwrap();
@@ -444,7 +451,11 @@ impl KeyboardWidget {
             cr.rectangle(caps_x, caps_y, caps_width, key_height);
             cr.stroke().unwrap();
 
-            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_source_rgb(
+                modifier_text_color.0,
+                modifier_text_color.1,
+                modifier_text_color.2,
+            );
             cr.set_font_size(10.0);
             cr.move_to(caps_x + 8.0, caps_y + key_height / 2.0 + 5.0);
             cr.show_text(&caps.label).unwrap();
@@ -466,7 +477,11 @@ impl KeyboardWidget {
             cr.rectangle(shift_x, shift_y, shift_width, key_height);
             cr.stroke().unwrap();
 
-            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_source_rgb(
+                modifier_text_color.0,
+                modifier_text_color.1,
+                modifier_text_color.2,
+            );
             cr.set_font_size(11.0);
             cr.move_to(shift_x + 10.0, shift_y + key_height / 2.0 + 5.0);
             cr.show_text(&shift_l.label).unwrap();
@@ -488,7 +503,11 @@ impl KeyboardWidget {
             cr.rectangle(ctrl_x, ctrl_y, ctrl_width, key_height);
             cr.stroke().unwrap();
 
-            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_source_rgb(
+                modifier_text_color.0,
+                modifier_text_color.1,
+                modifier_text_color.2,
+            );
             cr.set_font_size(11.0);
             cr.move_to(ctrl_x + 10.0, ctrl_y + key_height / 2.0 + 5.0);
             cr.show_text(&ctrl_l.label).unwrap();
@@ -513,7 +532,11 @@ impl KeyboardWidget {
             cr.rectangle(alt_x, alt_y, alt_width, key_height);
             cr.stroke().unwrap();
 
-            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_source_rgb(
+                modifier_text_color.0,
+                modifier_text_color.1,
+                modifier_text_color.2,
+            );
             cr.set_font_size(11.0);
             cr.move_to(alt_x + 10.0, alt_y + key_height / 2.0 + 5.0);
             cr.show_text(&alt_l.label).unwrap();
@@ -536,7 +559,11 @@ impl KeyboardWidget {
             cr.rectangle(bs_x, bs_y, bs_width, key_height);
             cr.stroke().unwrap();
 
-            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_source_rgb(
+                modifier_text_color.0,
+                modifier_text_color.1,
+                modifier_text_color.2,
+            );
             cr.set_font_size(11.0);
             cr.move_to(bs_x + 10.0, bs_y + key_height / 2.0 + 5.0);
             cr.show_text(&backspace.label).unwrap();
@@ -560,7 +587,11 @@ impl KeyboardWidget {
             cr.rectangle(enter_x, enter_y, enter_width, enter_height);
             cr.stroke().unwrap();
 
-            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_source_rgb(
+                modifier_text_color.0,
+                modifier_text_color.1,
+                modifier_text_color.2,
+            );
             cr.set_font_size(11.0);
             cr.move_to(enter_x + 15.0, enter_y + enter_height / 2.0 + 5.0);
             cr.show_text(&enter.label).unwrap();
@@ -583,7 +614,11 @@ impl KeyboardWidget {
             cr.rectangle(shift_x, shift_y, shift_width, key_height);
             cr.stroke().unwrap();
 
-            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_source_rgb(
+                modifier_text_color.0,
+                modifier_text_color.1,
+                modifier_text_color.2,
+            );
             cr.set_font_size(11.0);
             cr.move_to(shift_x + 20.0, shift_y + key_height / 2.0 + 5.0);
             cr.show_text(&shift_r.label).unwrap();
@@ -611,7 +646,11 @@ impl KeyboardWidget {
             cr.rectangle(ctrl_x, ctrl_y, ctrl_width, key_height);
             cr.stroke().unwrap();
 
-            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_source_rgb(
+                modifier_text_color.0,
+                modifier_text_color.1,
+                modifier_text_color.2,
+            );
             cr.set_font_size(11.0);
             cr.move_to(ctrl_x + 10.0, ctrl_y + key_height / 2.0 + 5.0);
             cr.show_text(&ctrl_r.label).unwrap();
@@ -633,7 +672,11 @@ impl KeyboardWidget {
             cr.rectangle(alt_x, alt_y, alt_width, key_height);
             cr.stroke().unwrap();
 
-            cr.set_source_rgb(0.0, 0.0, 0.0);
+            cr.set_source_rgb(
+                modifier_text_color.0,
+                modifier_text_color.1,
+                modifier_text_color.2,
+            );
             cr.set_font_size(10.0);
             cr.move_to(alt_x + 5.0, alt_y + key_height / 2.0 + 5.0);
             cr.show_text(&alt_r.label).unwrap();

@@ -4,12 +4,20 @@
   color: @card_bg_color;
 }
 
+.keyboard-key-text {
+  color: @window_fg_color;
+}
+
 .keyboard-key-current {
   color: @accent_bg_color;
 }
 
 .keyboard-modifier {
   color: mix(@card_bg_color, @window_bg_color, 0.5);
+}
+
+.keyboard-modifier-text {
+  color: @window_fg_color;
 }
 
 .keyboard-border {
