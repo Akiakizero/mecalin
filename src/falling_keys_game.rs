@@ -96,11 +96,9 @@ impl FallingKeysGame {
         imp.keyboard_widget.replace(Some(keyboard));
 
         // Query text color from CSS
-        #[allow(deprecated)]
         let get_color = |widget: &DrawingArea, class_name: &str| -> (f64, f64, f64) {
             widget.add_css_class(class_name);
-            let style_context = widget.style_context();
-            let color = style_context.color();
+            let color = widget.color();
             widget.remove_css_class(class_name);
             (
                 color.red() as f64,

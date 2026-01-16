@@ -85,11 +85,9 @@ impl ScrollingLanesGame {
         lanes_container.set_hexpand(true);
 
         // Query colors once before creating lanes
-        #[allow(deprecated)]
         let get_color = |widget: &DrawingArea, class_name: &str| -> (f64, f64, f64) {
             widget.add_css_class(class_name);
-            let style_context = widget.style_context();
-            let color = style_context.color();
+            let color = widget.color();
             widget.remove_css_class(class_name);
             (
                 color.red() as f64,

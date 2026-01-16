@@ -224,11 +224,9 @@ impl KeyboardWidget {
         let row_spacing = 5.0;
 
         // Helper function to get color from CSS class
-        #[allow(deprecated)]
         let get_color = |class_name: &str| -> (f64, f64, f64) {
             widget.add_css_class(class_name);
-            let style_context = widget.style_context();
-            let color = style_context.color();
+            let color = widget.color();
             widget.remove_css_class(class_name);
             (
                 color.red() as f64,
