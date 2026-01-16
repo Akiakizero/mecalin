@@ -1,5 +1,4 @@
 mod application;
-mod config;
 mod course;
 mod falling_keys_game;
 mod keyboard_widget;
@@ -8,6 +7,10 @@ mod main_action_list;
 mod scrolling_lanes_game;
 mod target_text_view;
 mod text_view;
+
+mod config {
+    include!(concat!(env!("OUT_DIR"), "/config.rs"));
+}
 mod utils;
 mod window;
 

@@ -24,22 +24,13 @@ conf.set('GETTEXT_PACKAGE', gettext_package)
 conf.set('VERSION', meson.project_version())
 conf.set('APPLICATION_ID', application_id)
 
-configure_file(
-  input: 'src/config.rs.in',
-  output: 'config.rs',
-  configuration: conf,
-)
-
-# Copy the config.rs output to the source directory.
-run_command(
-  'cp',
-  meson.project_build_root() / 'config.rs',
-  meson.project_source_root() / 'src' / 'config.rs',
-  check: true,
-)
-
 cargo_options = ['--manifest-path', meson.project_source_root() / 'Cargo.toml']
 cargo_env = environment()
+cargo_env.set('VERSION', meson.project_version())
+cargo_env.set('APPLICATION_ID', application_id)
+cargo_env.set('GETTEXT_PACKAGE', gettext_package)
+cargo_env.set('DATADIR', datadir)
+cargo_env.set('LOCALEDIR', localedir)
 
 if get_option('buildtype') == 'release'
   cargo_options += ['--release']

@@ -596,6 +596,7 @@ dependencies = [
  "i18n-format",
  "libadwaita",
  "rand",
+ "regex",
  "serde",
  "serde_json",
 ]

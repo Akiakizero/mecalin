@@ -17,3 +17,4 @@ anyhow = "1.0"
 
 [build-dependencies]
 glib-build-tools = "0.20"
+regex = "1.11"

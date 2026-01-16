@@ -4,4 +4,3 @@ build-dir/
 builddir/
 .builddir/
 build/
-src/config.rs
