@@ -29,3 +29,9 @@
 .lane-text {
   color: @view_fg_color;
 }
+
+/* Falling keys game color styles */
+
+.falling-key-text {
+  color: @view_fg_color;
+}

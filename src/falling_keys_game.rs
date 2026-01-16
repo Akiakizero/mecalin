@@ -86,20 +86,6 @@ impl FallingKeysGame {
         drawing_area.set_can_focus(true);
         drawing_area.set_focusable(true);
 
-        let falling_keys = imp.falling_keys.clone();
-        drawing_area.set_draw_func(move |_, cr, _width, _height| {
-            cr.set_source_rgb(0.0, 0.0, 0.0);
-            cr.paint().unwrap();
-
-            cr.set_source_rgb(1.0, 1.0, 1.0);
-            cr.set_font_size(24.0);
-
-            for key in falling_keys.borrow().iter() {
-                cr.move_to(key.x, key.y);
-                cr.show_text(&key.key.to_string()).unwrap();
-            }
-        });
-
         imp.game_area.set_child(Some(&drawing_area));
 
         // Create keyboard widget
@@ -108,6 +94,23 @@ impl FallingKeysGame {
         keyboard.widget().set_valign(gtk::Align::End);
         keyboard.widget().set_margin_bottom(20);
         imp.keyboard_widget.replace(Some(keyboard));
+
+        // Query text color from CSS
+        #[allow(deprecated)]
+        let get_color = |widget: &DrawingArea, class_name: &str| -> (f64, f64, f64) {
+            widget.add_css_class(class_name);
+            let style_context = widget.style_context();
+            let color = style_context.color();
+            widget.remove_css_class(class_name);
+            (
+                color.red() as f64,
+                color.green() as f64,
+                color.blue() as f64,
+            )
+        };
+
+        let temp_widget = DrawingArea::new();
+        let text_color = get_color(&temp_widget, "falling-key-text");
 
         // Add falling keys overlay on top of keyboard
         let keys_overlay = DrawingArea::new();
@@ -118,7 +121,8 @@ impl FallingKeysGame {
 
         let falling_keys_clone = imp.falling_keys.clone();
         keys_overlay.set_draw_func(move |_, cr, _width, _height| {
-            cr.set_source_rgb(1.0, 1.0, 1.0);
+            let (r, g, b) = text_color;
+            cr.set_source_rgb(r, g, b);
             cr.set_font_size(24.0);
 
             for key in falling_keys_clone.borrow().iter() {
