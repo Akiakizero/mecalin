@@ -57,7 +57,7 @@
       {"base": "-", "shift": "_", "altgr": "–", "finger": "right_pinky"}
     ]
   ],
-  "space": {"base": " ", "finger": "both_thumbs"},
+  "space": {"base": " ", "label": "SPAZIO", "finger": "both_thumbs"},
   "modifiers": {
     "tab": {"label": "Tab", "finger": "left_pinky"},
     "caps_lock": {"label": "Bloc Maiusc", "finger": "left_pinky"},

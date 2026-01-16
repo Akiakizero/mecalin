@@ -10,6 +10,8 @@ use std::rc::Rc;
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct KeyInfo {
     pub base: String,
+    #[serde(default)]
+    pub label: Option<String>,
     pub shift: Option<String>,
     pub altgr: Option<String>,
     pub finger: String,
@@ -49,18 +51,21 @@ impl Default for KeyboardLayout {
             keys: vec![vec![
                 KeyInfo {
                     base: "q".to_string(),
+                    label: None,
                     shift: Some("Q".to_string()),
                     altgr: None,
                     finger: "left_pinky".to_string(),
                 },
                 KeyInfo {
                     base: "w".to_string(),
+                    label: None,
                     shift: Some("W".to_string()),
                     altgr: None,
                     finger: "left_ring".to_string(),
                 },
                 KeyInfo {
                     base: "e".to_string(),
+                    label: None,
                     shift: Some("E".to_string()),
                     altgr: None,
                     finger: "left_middle".to_string(),
@@ -68,6 +73,7 @@ impl Default for KeyboardLayout {
             ]],
             space: KeyInfo {
                 base: " ".to_string(),
+                label: Some("SPACE".to_string()),
                 shift: None,
                 altgr: None,
                 finger: "both_thumbs".to_string(),
@@ -349,13 +355,15 @@ impl KeyboardWidget {
             .is_none_or(|visible| visible.contains(&' '));
 
         if should_show_space_text {
+            let space_label = layout_borrowed.space.label.as_deref().unwrap_or("SPACE");
             cr.set_source_rgb(0.0, 0.0, 0.0);
             cr.set_font_size(11.0);
+            let text_extents = cr.text_extents(space_label).unwrap();
             cr.move_to(
-                space_x + space_width / 2.0 - 20.0,
+                space_x + (space_width - text_extents.width()) / 2.0,
                 space_y + key_height / 2.0 + 5.0,
             );
-            cr.show_text("SPACE").unwrap();
+            cr.show_text(space_label).unwrap();
         }
 
         // Draw modifier keys

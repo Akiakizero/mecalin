@@ -57,7 +57,7 @@
       {"base": "/", "shift": "?", "altgr": "¿", "finger": "right_pinky"}
     ]
   ],
-  "space": {"base": " ", "finger": "both_thumbs"},
+  "space": {"base": " ", "label": "SPACE", "finger": "both_thumbs"},
   "modifiers": {
     "tab": {"label": "Tab", "finger": "left_pinky"},
     "caps_lock": {"label": "Caps", "finger": "left_pinky"},
