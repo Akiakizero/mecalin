@@ -14,10 +14,12 @@ adwaita_dep = dependency('libadwaita-1', version: '>= 1.5')
 
 gettext_package = meson.project_name()
 localedir = get_option('prefix') / get_option('localedir')
+datadir = get_option('prefix') / get_option('datadir')
 application_id = 'io.github.nacho.mecalin'
 
 conf = configuration_data()
 conf.set('LOCALEDIR', localedir)
+conf.set('DATADIR', datadir)
 conf.set('GETTEXT_PACKAGE', gettext_package)
 conf.set('VERSION', meson.project_version())
 conf.set('APPLICATION_ID', application_id)
