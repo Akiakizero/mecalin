@@ -13,7 +13,14 @@ fn generate_config() {
     let re = Regex::new(r"@(\w+)@").unwrap();
     let content = re
         .replace_all(&template, |captures: &regex::Captures| {
-            env::var(&captures[1]).unwrap_or_default()
+            let var_name = &captures[1];
+            env::var(var_name).unwrap_or_else(|_| match var_name {
+                "VERSION" => "0.3.0".to_string(),
+                "APPLICATION_ID" => "io.github.nacho.mecalin".to_string(),
+                "GETTEXT_PACKAGE" => "mecalin".to_string(),
+                "DATADIR" => "/usr/share".to_string(),
+                _ => String::new(),
+            })
         })
         .into_owned();
 

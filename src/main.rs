@@ -17,12 +17,9 @@ mod window;
 use anyhow::Result;
 use gettextrs::{bind_textdomain_codeset, bindtextdomain, setlocale, textdomain, LocaleCategory};
 use gio::prelude::*;
-use glib::warn;
 use std::path::PathBuf;
 
 use application::MecalinApplication;
-
-const G_LOG_DOMAIN: &str = "Mecalin";
 
 fn run_application() -> Result<()> {
     setlocale(LocaleCategory::LcAll, "");
@@ -42,6 +39,6 @@ fn run_application() -> Result<()> {
 
 fn main() {
     if let Err(e) = run_application() {
-        warn!("Application initialization failed: {e}");
+        eprintln!("Application initialization failed: {e}");
     }
 }
