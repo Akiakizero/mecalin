@@ -1,11 +1,3 @@
-use anyhow::Result;
-use gettextrs::{bind_textdomain_codeset, bindtextdomain, setlocale, textdomain, LocaleCategory};
-use gio::prelude::*;
-use glib::warn;
-use std::path::PathBuf;
-
-const G_LOG_DOMAIN: &str = "Mecalin";
-
 mod application;
 mod config;
 mod course;
@@ -19,7 +11,15 @@ mod text_view;
 mod utils;
 mod window;
 
+use anyhow::Result;
+use gettextrs::{bind_textdomain_codeset, bindtextdomain, setlocale, textdomain, LocaleCategory};
+use gio::prelude::*;
+use glib::warn;
+use std::path::PathBuf;
+
 use application::MecalinApplication;
+
+const G_LOG_DOMAIN: &str = "Mecalin";
 
 fn run_application() -> Result<()> {
     setlocale(LocaleCategory::LcAll, "");
