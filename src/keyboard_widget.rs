@@ -83,6 +83,38 @@ impl Default for KeyboardLayout {
     }
 }
 
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_load_from_json_us() {
+        let layout = KeyboardLayout::load_from_json("us").unwrap();
+        assert_eq!(layout.name, "US QWERTY");
+        assert!(!layout.keys.is_empty());
+    }
+
+    #[test]
+    fn test_load_from_json_es() {
+        let layout = KeyboardLayout::load_from_json("es").unwrap();
+        assert_eq!(layout.name, "Spanish QWERTY");
+        assert!(!layout.keys.is_empty());
+    }
+
+    #[test]
+    fn test_load_from_json_it() {
+        let layout = KeyboardLayout::load_from_json("it").unwrap();
+        assert_eq!(layout.name, "Italian QWERTY");
+        assert!(!layout.keys.is_empty());
+    }
+
+    #[test]
+    fn test_load_from_json_invalid() {
+        let result = KeyboardLayout::load_from_json("invalid");
+        assert!(result.is_err());
+    }
+}
+
 #[derive(Debug, Clone)]
 pub struct KeyboardWidget {
     drawing_area: DrawingArea,
