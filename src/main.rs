@@ -36,7 +36,9 @@ fn main() {
         warn!("Failed to set text domain: {}", e);
     }
 
-    gio::resources_register_include!("resources.gresource").expect("Failed to register resources");
+    if let Err(e) = gio::resources_register_include!("resources.gresource") {
+        warn!("Failed to register resources: {}", e);
+    }
 
     let app = MecalinApplication::new();
     app.run();
