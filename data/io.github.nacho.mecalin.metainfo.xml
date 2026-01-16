@@ -3,7 +3,10 @@
   <id>io.github.nacho.mecalin</id>
   
   <name>Mecalin</name>
+  
   <summary>A typing tutor application</summary>
+  <summary xml:lang="es">Una aplicación para aprender mecanografía</summary>
+  <summary xml:lang="it">Un'applicazione per imparare a digitare</summary>
   
   <developer_name>Ignacio Casal Quinteiro</developer_name>
   
@@ -18,6 +21,28 @@
     <p>
       Features include structured lessons, keyboard layout visualization, and progress tracking to help you
       become a more efficient typist.
+    </p>
+  </description>
+  
+  <description xml:lang="es">
+    <p>
+      Mecalin es una aplicación moderna para aprender mecanografía que te ayuda a aprender y mejorar tus habilidades de escritura táctil.
+      Proporciona una interfaz limpia e intuitiva para practicar mecanografía.
+    </p>
+    <p>
+      Las características incluyen lecciones estructuradas, visualización del diseño del teclado y seguimiento del progreso para ayudarte
+      a convertirte en un mecanógrafo más eficiente.
+    </p>
+  </description>
+  
+  <description xml:lang="it">
+    <p>
+      Mecalin è un'applicazione moderna per imparare a digitare che ti aiuta ad apprendere e migliorare le tue abilità di dattilografia.
+      Fornisce un'interfaccia pulita e intuitiva per esercitarsi nella digitazione.
+    </p>
+    <p>
+      Le funzionalità includono lezioni strutturate, visualizzazione del layout della tastiera e monitoraggio dei progressi per aiutarti
+      a diventare un dattilografo più efficiente.
     </p>
   </description>
   
