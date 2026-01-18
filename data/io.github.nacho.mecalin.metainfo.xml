@@ -78,6 +78,17 @@
   </screenshots>
   
   <releases>
+    <release version="0.4.0" date="2026-01-18">
+      <description>
+        <ul>
+          <li>Improved keyboard widget theming and text contrast</li>
+          <li>Use CSS colors throughout the application for better theme support</li>
+          <li>Added unit tests for core logic functions</li>
+          <li>Added Spanish and Italian translations</li>
+          <li>Fixed typos in Spanish lessons</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.4" date="2026-01-13" />
   </releases>
 </component>
