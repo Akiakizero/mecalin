@@ -1,15 +1,19 @@
 /* Keyboard widget color styles */
 
 .keyboard-key {
-  color: @card_bg_color;
+  color: @view_bg_color;
 }
 
 .keyboard-key-text {
-  color: @window_fg_color;
+  color: @view_fg_color;
 }
 
 .keyboard-key-current {
   color: @accent_bg_color;
+}
+
+.keyboard-key-current-text {
+  color: @accent_fg_color;
 }
 
 .keyboard-modifier {

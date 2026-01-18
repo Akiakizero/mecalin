@@ -237,6 +237,10 @@ impl KeyboardWidget {
 
         let modifier_text_color = get_color("keyboard-modifier-text");
         let key_text_color = get_color("keyboard-key-text");
+        let key_color = get_color("keyboard-key");
+        let key_current_text_color = get_color("keyboard-key-current-text");
+        let key_current_color = get_color("keyboard-key-current");
+        let key_border_color = get_color("keyboard-border");
 
         // Reserve space for left modifiers (widest is 2.0 * key_width for shift)
         let left_margin = key_width * 2.5;
@@ -289,17 +293,16 @@ impl KeyboardWidget {
                 });
 
                 let (r, g, b) = if is_current {
-                    get_color("keyboard-key-current")
+                    key_current_color
                 } else {
-                    get_color("keyboard-key")
+                    key_color
                 };
                 cr.set_source_rgb(r, g, b);
 
                 cr.rectangle(x, y, key_width, key_height);
                 cr.fill().unwrap();
 
-                let (br, bg, bb) = get_color("keyboard-border");
-                cr.set_source_rgb(br, bg, bb);
+                cr.set_source_rgb(key_border_color.0, key_border_color.1, key_border_color.2);
                 cr.set_line_width(1.0);
                 cr.rectangle(x, y, key_width, key_height);
                 cr.stroke().unwrap();
@@ -309,7 +312,12 @@ impl KeyboardWidget {
                 });
 
                 if should_show_text {
-                    cr.set_source_rgb(key_text_color.0, key_text_color.1, key_text_color.2);
+                    let (r, g, b) = if is_current {
+                        key_current_text_color
+                    } else {
+                        key_text_color
+                    };
+                    cr.set_source_rgb(r, g, b);
                     cr.select_font_face(
                         "Sans",
                         gtk::cairo::FontSlant::Normal,
@@ -368,17 +376,16 @@ impl KeyboardWidget {
         let is_space_current = current.is_some_and(|c| c == ' ');
 
         let (r, g, b) = if is_space_current {
-            get_color("keyboard-key-current")
+            key_current_color
         } else {
-            get_color("keyboard-key")
+            key_color
         };
         cr.set_source_rgb(r, g, b);
 
         cr.rectangle(space_x, space_y, space_width, key_height);
         cr.fill().unwrap();
 
-        let (br, bg, bb) = get_color("keyboard-border");
-        cr.set_source_rgb(br, bg, bb);
+        cr.set_source_rgb(key_border_color.0, key_border_color.1, key_border_color.2);
         cr.set_line_width(1.0);
         cr.rectangle(space_x, space_y, space_width, key_height);
         cr.stroke().unwrap();
