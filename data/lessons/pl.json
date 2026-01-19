@@ -1,0 +1,1115 @@
+{
+  "lessons": [
+    {
+      "id": 0,
+      "title": "Witaj w Mecalin",
+      "description": "Witaj w Mecalin, Twoim tutorze nauki pisania! Ten kurs nauczy Cię pisać krok po kroku. Zaczniesz od głównego rzędu klawiszy i stopniowo nauczysz się wszystkich klawiszy na klawiaturze. Nie spiesz się, ćwicz regularnie, a szybko staniesz się ekspertem w pisaniu",
+      "steps": [],
+      "introduction": true
+    },
+    {
+      "id": 1,
+      "title": "Pierwsza część rzędu podstawowego",
+      "description": "Naucz się części rzędu podstawowego: A, S, D, K, L, ;",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Tu zaczyna się pierwsza lekcja. Zwróć uwagę na błędy, aby ich nie powtarzać. W tej lekcji nauczysz się klawiszy a, s, d, k, l, ;",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "a",
+          "description": "Naciśnij klawisz 'a' małym palcem lewej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": ";",
+          "description": "Nie zapomnij umieścić palców nad linią podstawową, a kciuki nad klawiszem spacji. Musisz przyzwyczaić się do przyjmowania prawidłowej pozycji we wszystkich sesjach. Naciśnij klawisz ';' małym palcem prawej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 3,
+          "text": "sl",
+          "description": "Patrz na ekran, a nie na klawiaturę. Naciśnij klawisz 's' palcem serdecznym lewej ręki i klawisz 'l' prawej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 4,
+          "text": "aaa ;;; a;a ;a;",
+          "description": "Teraz wykonamy kilka ćwiczeń z tymi 4 literami we właściwej kolejności. Jeśli w linii wystąpi błąd, trzeba ją powtórzyć. Nie niecierpliw się, jeśli nie wyjdzie za pierwszym razem. Pamiętaj o naciskaniu klawisza spacji między słowami",
+          "repetitions": 1
+        },
+        {
+          "id": 5,
+          "text": "sss lll sls lsl",
+          "description": "Teraz wykonamy kilka ćwiczeń z tymi 4 literami we właściwej kolejności. Jeśli w linii wystąpi błąd, trzeba ją powtórzyć. Nie niecierpliw się, jeśli nie wyjdzie za pierwszym razem. Pamiętaj o naciskaniu klawisza spacji między słowami",
+          "repetitions": 1
+        },
+        {
+          "id": 6,
+          "text": "a;sl ;als",
+          "description": "Teraz wykonamy kilka ćwiczeń z tymi 4 literami we właściwej kolejności. Jeśli w linii wystąpi błąd, trzeba ją powtórzyć. Nie niecierpliw się, jeśli nie wyjdzie za pierwszym razem. Pamiętaj o naciskaniu klawisza spacji między słowami",
+          "repetitions": 1
+        },
+        {
+          "id": 7,
+          "text": "sl;a lsa;",
+          "description": "Teraz wykonamy kilka ćwiczeń z tymi 4 literami we właściwej kolejności. Jeśli w linii wystąpi błąd, trzeba ją powtórzyć. Nie niecierpliw się, jeśli nie wyjdzie za pierwszym razem. Pamiętaj o naciskaniu klawisza spacji między słowami",
+          "repetitions": 1
+        },
+        {
+          "id": 8,
+          "text": "dk",
+          "description": "Teraz dodamy dwa klawisze dla palców środkowych; lewą ręką klawisz 'd', a prawą 'k'",
+          "repetitions": 1
+        },
+        {
+          "id": 9,
+          "text": "ddd kkk dkd kdk",
+          "description": "Nie zapomnij, że klawisz spacji naciska się kciukiem ręki przeciwnej do ostatnio naciśniętego klawisza",
+          "repetitions": 1
+        },
+        {
+          "id": 10,
+          "text": "asd dsa kl; ;lk",
+          "description": "Nie zapomnij, że klawisz spacji naciska się kciukiem ręki przeciwnej do ostatnio naciśniętego klawisza",
+          "repetitions": 1
+        },
+        {
+          "id": 11,
+          "text": "adk; sdkl",
+          "description": "Palce muszą wracać do swojej pozycji po naciśnięciu każdego klawisza",
+          "repetitions": 1
+        },
+        {
+          "id": 12,
+          "text": "da;k dslk",
+          "description": "Palce muszą wracać do swojej pozycji po naciśnięciu każdego klawisza",
+          "repetitions": 1
+        },
+        {
+          "id": 13,
+          "text": "ad;k dak;",
+          "description": "Palce muszą wracać do swojej pozycji po naciśnięciu każdego klawisza",
+          "repetitions": 1
+        },
+        {
+          "id": 14,
+          "text": "lksd klds",
+          "description": "Naciskaj klawisze właściwymi palcami, nawet jeśli teraz wydaje się to wolniejsze",
+          "repetitions": 1
+        },
+        {
+          "id": 15,
+          "text": "a;sldk ;alskd",
+          "description": "Naciskaj klawisze właściwymi palcami, nawet jeśli teraz wydaje się to wolniejsze",
+          "repetitions": 1
+        },
+        {
+          "id": 16,
+          "text": "asdkl; ;lkdsa",
+          "description": "Teraz ćwiczenia trzeba powtórzyć 2 razy bez błędów, aby przejść do następnego",
+          "repetitions": 2
+        },
+        {
+          "id": 17,
+          "text": "a;sldk kdls;a",
+          "description": "Teraz ćwiczenia trzeba powtórzyć 2 razy bez błędów, aby przejść do następnego",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "dksla; ;alskd",
+          "description": "Nie niecierpliw się. Nie spiesz się",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "",
+          "description": "Ukończyłeś pierwszą lekcję i wykonałeś pierwsze ćwiczenia",
+          "introduction": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Rząd podstawowy",
+      "description": "Naucz się klawiszy rzędu podstawowego: A, S, D, F, G, H, J, K, L, ;",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Tu zaczyna się druga lekcja. Nauczymy się reszty linii podstawowej i wykonamy serię ćwiczeń. Pamiętaj, aby nie patrzeć na klawiaturę, tylko na ekran komputera",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "f",
+          "description": "Naciśnij klawisz 'f' palcem wskazującym lewej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "fj",
+          "description": "Naciśnij klawisz 'f' palcem wskazującym lewej ręki i klawisz 'j' prawej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 3,
+          "text": "fff jjj fjf jfj",
+          "description": "Musisz wykonać każde ćwiczenie dwa razy bez błędów, aby przejść do następnego",
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "asdf ;lkj",
+          "description": "Musisz wykonać każde ćwiczenie dwa razy bez błędów, aby przejść do następnego",
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "fdsa jkl;",
+          "description": "Kontroluj pozycję palców po każdym naciśnięciu",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "afj; ljsf fdjk",
+          "description": "Kontroluj pozycję palców po każdym naciśnięciu",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "f;ja djkf jslf",
+          "description": "Czy naciskasz klawisz spacji odpowiednim kciukiem?",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "a;sldkfj ;alskdjf",
+          "description": "Czy naciskasz klawisz spacji odpowiednim kciukiem?",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "jfkdls;a fjdksla;",
+          "description": "Nie patrz na klawiaturę, tylko na ekran komputera",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "gh",
+          "description": "Dwa kolejne klawisze dla tych samych palców. Palcem wskazującym lewej ręki klawisz 'g', a prawej 'h'",
+          "repetitions": 1
+        },
+        {
+          "id": 11,
+          "text": "ggg hhh ghg hgh",
+          "description": "Pamiętaj o utrzymaniu prawidłowej postawy. Plecy proste, ręce nad linią podstawową, a kciuki nad klawiszem spacji. Kontynuuj więcej ćwiczeń...",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "gjfh hfjg gkhd dhkg",
+          "description": "Pamiętaj o utrzymaniu prawidłowej postawy. Plecy proste, ręce nad linią podstawową, a kciuki nad klawiszem spacji. Kontynuuj więcej ćwiczeń...",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "a;sldkfjgh hgjfkdls;a",
+          "description": "Przesuwaj tylko palce wskazujące, nie całą dłoń",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": "ghfjdksla; ;alskdjfhg",
+          "description": "Przesuwaj tylko palce wskazujące, nie całą dłoń",
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "'",
+          "description": "Kolejny klawisz w tej linii to \"'\". Naciska się go małym palcem prawej ręki, tak jak klawisz ';', ale pamiętaj, aby nie przesuwać ręki, tylko palec",
+          "repetitions": 1
+        },
+        {
+          "id": 16,
+          "text": "a;' sl' dk' fj' gh'",
+          "description": "Kolejny klawisz w tej linii to \"'\". Naciska się go małym palcem prawej ręki, tak jak klawisz ';', ale pamiętaj, aby nie przesuwać ręki, tylko palec",
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": ";a' ls' kd' jf' hg'",
+          "description": "Kolejny klawisz w tej linii to \"'\". Naciska się go małym palcem prawej ręki, tak jak klawisz ';', ale pamiętaj, aby nie przesuwać ręki, tylko palec",
+          "repetitions": 1
+        },
+        {
+          "id": 18,
+          "text": "\\",
+          "description": "Kolejny klawisz w tej linii podstawowej to '\\'. Naciska się go małym palcem prawej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 19,
+          "text": "';a 'ls\\ 'kd 'jf 'hg",
+          "description": "Palce muszą wracać do linii podstawowej po naciśnięciu każdego klawisza",
+          "repetitions": 1
+        },
+        {
+          "id": 20,
+          "text": "'a; 'sl 'dk 'fj 'gh\\",
+          "description": "Palce muszą wracać do linii podstawowej po naciśnięciu każdego klawisza",
+          "repetitions": 1
+        },
+        {
+          "id": 21,
+          "text": "as ;l l; sa",
+          "description": "A teraz ćwiczenia powtórkowe z dwóch pierwszych lekcji",
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "adgjl' ;khfs",
+          "description": "A teraz ćwiczenia powtórkowe z dwóch pierwszych lekcji",
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "sfhk; 'ljgda",
+          "description": "Nie zapominaj o wszystkich wskazówkach, które podajemy w trakcie lekcji",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "sla; ;asl agh;",
+          "description": "Nie zapominaj o wszystkich wskazówkach, które podajemy w trakcie lekcji",
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": "f;ja\\ aj;f\\ gjhf",
+          "description": "Czy kciuki są w swojej pozycji?",
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "asdfghjkl;'\\ ';lkjhgfdsa\\",
+          "description": "Pamiętaj o trzymaniu rąk w zrelaksowanej pozycji",
+          "repetitions": 2
+        },
+        {
+          "id": 27,
+          "text": "asdsa ';lkl;'",
+          "description": "Pamiętaj o trzymaniu rąk w zrelaksowanej pozycji",
+          "repetitions": 2
+        },
+        {
+          "id": 28,
+          "text": "",
+          "description": "Gratulacje! Ukończyłeś drugą lekcję",
+          "introduction": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Pierwsza część rzędu górnego",
+      "description": "Naucz się klawiszy rzędu górnego: Q, W, E, I, O, P",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Tu zaczyna się trzecia lekcja. Zaczniemy od rzędu górnego, który znajduje się nad linią podstawową",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "qp",
+          "description": "Naciśnij klawisz 'q' małym palcem lewej ręki i 'p' małym palcem prawej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "qqq ppp qpq pqp",
+          "description": "Wpisz dwa razy poprawnie",
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "wo",
+          "description": "Teraz naciśnij klawisz 'w' palcem serdecznym lewej ręki i 'o' prawej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 4,
+          "text": "www ooo wow owo",
+          "description": "Teraz naciśnij klawisz 'w' palcem serdecznym lewej ręki i 'o' prawej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 5,
+          "text": "qwop powq",
+          "description": "A teraz ćwiczenia z czterema pierwszymi klawiszami tej linii",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "qpwo pqow",
+          "description": "A teraz ćwiczenia z czterema pierwszymi klawiszami tej linii",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "wopq qpow",
+          "description": "Powinieneś już automatycznie przyjmować prawidłową postawę",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "owqp pqwo",
+          "description": "Powinieneś już automatycznie przyjmować prawidłową postawę",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "ei",
+          "description": "Dwa kolejne klawisze dla palców środkowych. Lewą ręką klawisz 'e', a prawą klawisz 'i'",
+          "repetitions": 1
+        },
+        {
+          "id": 10,
+          "text": "eee iii eie iei",
+          "description": "Dwa kolejne klawisze dla palców środkowych. Lewą ręką klawisz 'e', a prawą klawisz 'i'",
+          "repetitions": 1
+        },
+        {
+          "id": 11,
+          "text": "qwe ewq iop poi",
+          "description": "Nie zapominaj o pozycji kciuków nad klawiszem spacji i reszty palców nad linią podstawową",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "qpwoei ieowpq",
+          "description": "Nie zapominaj o pozycji kciuków nad klawiszem spacji i reszty palców nad linią podstawową",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "qiepow wopeiq",
+          "description": "Nie przesuwaj całej ręki, tylko palce, które mają naciskać",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": "eiwoqp pqowie",
+          "description": "Nie przesuwaj całej ręki, tylko palce, które mają naciskać",
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "qw ew io po pq ow ie",
+          "description": "Nie zapominaj, że klawisz spacji naciska się kciukiem ręki przeciwnej do ostatnio naciśniętego klawisza",
+          "repetitions": 2
+        },
+        {
+          "id": 16,
+          "text": "ei wo qp op oi we wq",
+          "description": "Nie zapominaj, że klawisz spacji naciska się kciukiem ręki przeciwnej do ostatnio naciśniętego klawisza",
+          "repetitions": 2
+        },
+        {
+          "id": 17,
+          "text": "qiwoep epwoqi",
+          "description": "Nie patrz na klawiaturę. Patrz tylko na ekran",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "peowiq iqowpe",
+          "description": "Nie patrz na klawiaturę. Patrz tylko na ekran",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "qweiop poiewq",
+          "description": "Nie spiesz się. Nie pędź. Prędkość przyjdzie we właściwym czasie. Teraz skup się na poprawnym wykonywaniu ćwiczeń",
+          "repetitions": 2
+        },
+        {
+          "id": 20,
+          "text": "pq wo ie wo pq",
+          "description": "Nie spiesz się. Nie pędź. Prędkość przyjdzie we właściwym czasie. Teraz skup się na poprawnym wykonywaniu ćwiczeń",
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "",
+          "description": "Gratulacje! Ukończyłeś trzecią lekcję",
+          "introduction": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Rząd górny",
+      "description": "Naucz się klawiszy rzędu górnego: Q, W, E, R, T, Y, U, I, O, P",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "W tej lekcji nauczymy się reszty rzędu górnego i wykonamy ćwiczenia z dwoma rzędami, które już znasz",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "ru",
+          "description": "Naciśnij klawisz 'r' palcem wskazującym lewej ręki i klawisz 'u' prawej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "rrr uuu rur uru",
+          "description": "Naciśnij klawisz 'r' palcem wskazującym lewej ręki i klawisz 'u' prawej ręki",
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "qpwoeiru",
+          "description": "A teraz z pozostałymi klawiszami, które już znasz w tym rzędzie",
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "pqowieur",
+          "description": "A teraz z pozostałymi klawiszami, które już znasz w tym rzędzie",
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "rq up rw uo re ui",
+          "description": "A teraz z pozostałymi klawiszami, które już znasz w tym rzędzie",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "iu er ou wr pu qr",
+          "description": "Upewnij się, że naciskasz właściwymi palcami",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "t",
+          "description": "Palcem wskazującym lewej ręki naciśnij klawisz 't'",
+          "repetitions": 1
+        },
+        {
+          "id": 8,
+          "text": "y",
+          "description": "Palcem wskazującym prawej ręki naciśnij klawisz 'y'",
+          "repetitions": 1
+        },
+        {
+          "id": 9,
+          "text": "qwertyuiop poiuytrewq",
+          "description": "Teraz kilka ćwiczeń",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "qpwo eiru tyru",
+          "description": "Upewnij się, że naciskasz klawisze właściwymi palcami",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "ytur ieow pqow",
+          "description": "Nie zapominaj o nieprzesuwaniu rąk, tylko palców",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "ptqy orwu ieei",
+          "description": "Po każdym naciśnięciu palce muszą wrócić do właściwej pozycji",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "[",
+          "description": "Małym palcem prawej ręki naciśnij klawisz '['",
+          "repetitions": 1
+        },
+        {
+          "id": 14,
+          "text": "]",
+          "description": "Tym samym palcem naciśnij klawisz ']'",
+          "repetitions": 1
+        },
+        {
+          "id": 15,
+          "text": "{",
+          "description": "Teraz użyjemy klawisza SHIFT. Naciśnij SHIFT małym palcem lewej ręki i klawisz '{' małym palcem prawej",
+          "repetitions": 1
+        },
+        {
+          "id": 16,
+          "text": "}",
+          "description": "Pamiętaj, że klawisz SHIFT naciska się ręką przeciwną do tej, która naciska główny klawisz. Małymi palcami naciśnij teraz klawisz '}'",
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "qpq; ;qpa",
+          "description": "Teraz znasz dwa pełne rzędy. Następne ćwiczenia to powtórka z czterech lekcji. Zacznijmy od małych palców",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "slwo owls swol",
+          "description": "Palcami serdecznymi",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "deki edik eidk",
+          "description": "Palcami środkowymi",
+          "repetitions": 2
+        },
+        {
+          "id": 20,
+          "text": "frju rfuj rufj",
+          "description": "Palcami wskazującymi",
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "qwert poiuy",
+          "description": "I wszystkimi razem...",
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "trewq yuiop",
+          "description": "I wszystkimi razem...",
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "aqwedsa",
+          "description": "Naciskaj każdy klawisz właściwym palcem",
+          "repetitions": 3
+        },
+        {
+          "id": 24,
+          "text": ";[]poikl;",
+          "description": "Naciskaj każdy klawisz właściwym palcem",
+          "repetitions": 3
+        },
+        {
+          "id": 25,
+          "text": "park droga",
+          "description": "Teraz będziemy tworzyć słowa",
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "uderza dlaczego",
+          "description": "Teraz będziemy tworzyć słowa",
+          "repetitions": 2
+        },
+        {
+          "id": 27,
+          "text": "ekspert jubiler",
+          "description": "Pamiętaj, że pozycja rąk jest wygięta i lekko dotyka klawiszy rzędu podstawowego",
+          "repetitions": 2
+        },
+        {
+          "id": 28,
+          "text": "opłuca palec",
+          "description": "Pamiętaj, że pozycja rąk jest wygięta i lekko dotyka klawiszy rzędu podstawowego",
+          "repetitions": 2
+        },
+        {
+          "id": 29,
+          "text": "piłka trzy",
+          "description": "Kciuki muszą być nad klawiszem spacji",
+          "repetitions": 2
+        },
+        {
+          "id": 30,
+          "text": "pożądany domniemany",
+          "description": "Nie patrz na klawiaturę",
+          "repetitions": 2
+        },
+        {
+          "id": 31,
+          "text": "odizolowany uciekł",
+          "description": "Nie patrz na klawiaturę",
+          "repetitions": 2
+        },
+        {
+          "id": 32,
+          "text": "kuźnia podążać",
+          "description": "Na tym etapie kursu powinieneś już mieć prawidłowe nawyki. Jeśli nie, warto powtórzyć lekcję dla początkujących",
+          "repetitions": 2
+        },
+        {
+          "id": 33,
+          "text": "truskawka kochany",
+          "description": "Na tym etapie kursu powinieneś już mieć prawidłowe nawyki. Jeśli nie, warto powtórzyć lekcję dla początkujących",
+          "repetitions": 2
+        },
+        {
+          "id": 34,
+          "text": "",
+          "description": "Gratulacje! Ukończyłeś czwartą lekcję",
+          "introduction": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Pierwsza część rzędu dolnego",
+      "description": "Naucz się części rzędu dolnego: Z, /, X, ., C, ,",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Zaczniemy od rzędu dolnego. Znasz już metodę i ta piąta lekcja będzie bardzo łatwa",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "z/",
+          "description": "Naciśnij 'z' małym palcem lewej ręki i klawisz '/' prawej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "zzz /// z/z /z/",
+          "description": "Naciśnij 'z' małym palcem lewej ręki i klawisz '/' prawej ręki",
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "x.",
+          "description": "Naciśnij klawisz 'x' palcem serdecznym lewej ręki i klawisz '.' prawej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 4,
+          "text": "xxx ... x.x .x.",
+          "description": "Naciśnij klawisz 'x' palcem serdecznym lewej ręki i klawisz '.' prawej ręki",
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "zx./ /.xz",
+          "description": "Po każdym naciśnięciu w rzędzie dolnym palce muszą wrócić do klawisza w rzędzie podstawowym",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "c,",
+          "description": "Naciśnij klawisz 'c' palcem środkowym lewej ręki i klawisz ',' prawej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 7,
+          "text": "ccc ,,, c,c ,c,",
+          "description": "Naciśnij klawisz 'c' palcem środkowym lewej ręki i klawisz ',' prawej ręki",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "zxc cxz /.., ,./",
+          "description": "To palce się przesuwają, nie ręce",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "z/x.c, ,c.x/z",
+          "description": "To palce się przesuwają, nie ręce",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "zzxxcc ,,..//",
+          "description": "Kciuki muszą być nad klawiszem spacji",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "//..,, ccxxzz",
+          "description": "Kciuki muszą być nad klawiszem spacji",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "z, .x c/",
+          "description": "Nie zapominaj, że klawisz spacji naciska się kciukiem ręki przeciwnej do ostatnio naciśniętego klawisza",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": ",z x. /c",
+          "description": "Nie zapominaj, że klawisz spacji naciska się kciukiem ręki przeciwnej do ostatnio naciśniętego klawisza",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": "cc,, // zz",
+          "description": "Czy ustawiasz palce na swoim miejscu po każdym naciśnięciu?",
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "z x c , . /",
+          "description": "Czy ustawiasz palce na swoim miejscu po każdym naciśnięciu?",
+          "repetitions": 2
+        },
+        {
+          "id": 16,
+          "text": "/ . , c x z",
+          "description": "Przeczytaj wszystkie wyjaśnienia i wskazówki, które pojawiają się w lekcjach",
+          "repetitions": 2
+        },
+        {
+          "id": 17,
+          "text": "",
+          "description": "Gratulacje! Ukończyłeś piątą lekcję",
+          "introduction": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Rząd dolny",
+      "description": "Naucz się całego rzędu dolnego: Z, /, X, ., C, ,, V, M, B, N",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Tą lekcją ukończymy rząd dolny. Następnie wykonasz ćwiczenia ze wszystkimi klawiszami, które znasz",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "v",
+          "description": "Naciśnij klawisz 'v' palcem wskazującym lewej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "m",
+          "description": "Następnie klawisz 'm' palcem wskazującym prawej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 3,
+          "text": "vvv mmm vmv mvm",
+          "description": "Następnie klawisz 'm' palcem wskazującym prawej ręki",
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "bn",
+          "description": "Teraz tymi samymi palcami naciśnij lewą ręką klawisz 'b', a prawą klawisz 'n'",
+          "repetitions": 1
+        },
+        {
+          "id": 5,
+          "text": "bbb nnn bnb nbn",
+          "description": "Teraz tymi samymi palcami naciśnij lewą ręką klawisz 'b', a prawą klawisz 'n'",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "zxcvbnm,./",
+          "description": "Kilka ćwiczeń z całym rzędem",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "/.,mnbvcxz",
+          "description": "Kilka ćwiczeń z całym rzędem",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "z/ x. c, vm bn",
+          "description": "Nie zapominaj o wszystkich nawykach, które powinieneś był nabyć w poprzednich lekcjach. Będziemy ci je przypominać w tej lekcji",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "/z .x ,c mv nb",
+          "description": "Nie zapominaj o wszystkich nawykach, które powinieneś był nabyć w poprzednich lekcjach. Będziemy ci je przypominać w tej lekcji",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "bn vm c, x. z/",
+          "description": "Nie zapominaj, że klawisz spacji naciska się kciukiem ręki przeciwnej do ostatnio naciśniętego klawisza",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "nb mv ,c .x /z",
+          "description": "Nie zapominaj, że klawisz spacji naciska się kciukiem ręki przeciwnej do ostatnio naciśniętego klawisza",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "znxmc,v.b/",
+          "description": "Plecy muszą być proste, a nogi nieskrzyżowane",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "/b.v,cmxnz",
+          "description": "Plecy muszą być proste, a nogi nieskrzyżowane",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": "<",
+          "description": "Zostały tylko trzy klawisze w tym rzędzie. Dla '<' naciśnij małym palcem lewej ręki",
+          "repetitions": 1
+        },
+        {
+          "id": 15,
+          "text": ">?",
+          "description": "Przytrzymując klawisz SHIFT naciśnij klawisz '>' palcem środkowym i klawisz '?' małym palcem",
+          "repetitions": 1
+        },
+        {
+          "id": 16,
+          "text": "<>?> <?>",
+          "description": "Przytrzymując klawisz SHIFT naciśnij klawisz '>' palcem środkowym i klawisz '?' małym palcem",
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "zxcvb /.,mn",
+          "description": "Teraz ćwiczenia powtórkowe z trzech pełnych rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "bvcxz nm,./",
+          "description": "Teraz ćwiczenia powtórkowe z trzech pełnych rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "azxcvbv",
+          "description": "Naciśnięcie w rzędzie dolnym wykonuje się przesuwając odpowiedni palec i wracając nim do pozycji w rzędzie podstawowym",
+          "repetitions": 3
+        },
+        {
+          "id": 20,
+          "text": ";/.,mnm",
+          "description": "Naciśnięcie w rzędzie dolnym wykonuje się przesuwając odpowiedni palec i wracając nim do pozycji w rzędzie podstawowym",
+          "repetitions": 3
+        },
+        {
+          "id": 21,
+          "text": "asdcxza",
+          "description": "Trzymaj kciuki nad klawiszem spacji",
+          "repetitions": 3
+        },
+        {
+          "id": 22,
+          "text": ";lk,./;",
+          "description": "Trzymaj kciuki nad klawiszem spacji",
+          "repetitions": 3
+        },
+        {
+          "id": 23,
+          "text": "azxcvbv ;/.,mnm",
+          "description": "Ręce muszą lekko dotykać klawiszy rzędu podstawowego",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "asdcxza ;lk,./;",
+          "description": "Ręce muszą lekko dotykać klawiszy rzędu podstawowego",
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": "bvcxza",
+          "description": "Nie niecierpliw się. Nie ma znaczenia, że robisz to wolno. Ważne jest, żebyś robił to dobrze i poprawnie. Prędkość przyjdzie sama",
+          "repetitions": 3
+        },
+        {
+          "id": 26,
+          "text": "nm,./;",
+          "description": "Nie niecierpliw się. Nie ma znaczenia, że robisz to wolno. Ważne jest, żebyś robił to dobrze i poprawnie. Prędkość przyjdzie sama",
+          "repetitions": 3
+        },
+        {
+          "id": 27,
+          "text": "azxcvbgfdsa",
+          "description": "Nie niecierpliw się. Nie ma znaczenia, że robisz to wolno. Ważne jest, żebyś robił to dobrze i poprawnie. Prędkość przyjdzie sama",
+          "repetitions": 3
+        },
+        {
+          "id": 28,
+          "text": "</.,mnhjkl;</",
+          "description": "Nie niecierpliw się. Nie ma znaczenia, że robisz to wolno. Ważne jest, żebyś robił to dobrze i poprawnie. Prędkość przyjdzie sama",
+          "repetitions": 3
+        },
+        {
+          "id": 29,
+          "text": "azxcvbgfdsa </.,mnhjkl;</",
+          "description": "Pamiętaj, że każde naciśnięcie wykonuje się odpowiednim palcem",
+          "repetitions": 2
+        },
+        {
+          "id": 30,
+          "text": "azqhny sxwjmu dcek,i fvrl.o gbt;/p <[",
+          "description": "Pamiętaj, że każde naciśnięcie wykonuje się odpowiednim palcem",
+          "repetitions": 2
+        },
+        {
+          "id": 31,
+          "text": "qazwsx edcrfv tgbyhn ujmik, ol.p;/<[",
+          "description": "Pamiętaj, że każde naciśnięcie wykonuje się odpowiednim palcem",
+          "repetitions": 2
+        },
+        {
+          "id": 32,
+          "text": "brawo ludzie",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 33,
+          "text": "majątek zacząć",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 34,
+          "text": "przekracza firma",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 35,
+          "text": "prędkość nowe",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 36,
+          "text": "sitowie chudy",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 37,
+          "text": "gatunek wzór",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 38,
+          "text": "kwadrat okrąg",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 39,
+          "text": "zawsze faktura",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 40,
+          "text": "przód działka",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 41,
+          "text": "klawiatura nasz",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 42,
+          "text": "piosenkarz wskazuje",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 43,
+          "text": "tyle uprzejmy",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 44,
+          "text": "korzyść zgoda",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 45,
+          "text": "notariusz przyjaciel",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 46,
+          "text": "uczyć nieszczęśliwy",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 47,
+          "text": "dźwięczne dużo",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 48,
+          "text": "komputer prosty",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 49,
+          "text": "pochylona człowiek",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 50,
+          "text": "kominiarka",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 51,
+          "text": "antoni las",
+          "description": "Teraz kilka słów z trzech rzędów",
+          "repetitions": 2
+        },
+        {
+          "id": 52,
+          "text": "",
+          "description": "Gratulacje! Ukończyłeś szóstą lekcję",
+          "introduction": true
+        }
+      ]
+    }
+  ]
+}
