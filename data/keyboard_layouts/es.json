@@ -2,6 +2,7 @@
   "name": "Spanish QWERTY",
   "keys": [
     [
+      {"base": "º", "shift": "ª", "altgr": "\\", "finger": "left_pinky"},
       {"base": "1", "shift": "!", "altgr": "|", "finger": "left_pinky"},
       {"base": "2", "shift": "\"", "altgr": "@", "finger": "left_ring"},
       {"base": "3", "shift": "·", "altgr": "#", "finger": "left_middle"},

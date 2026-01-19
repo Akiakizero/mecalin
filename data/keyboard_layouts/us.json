@@ -2,6 +2,7 @@
   "name": "US QWERTY",
   "keys": [
     [
+      {"base": "`", "shift": "~", "altgr": "", "finger": "left_pinky"},
       {"base": "1", "shift": "!", "altgr": "¡", "finger": "left_pinky"},
       {"base": "2", "shift": "@", "altgr": "²", "finger": "left_ring"},
       {"base": "3", "shift": "#", "altgr": "³", "finger": "left_middle"},
