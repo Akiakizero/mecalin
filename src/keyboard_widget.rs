@@ -506,7 +506,7 @@ impl KeyboardWidget {
                 cr,
                 x,
                 y1,
-                key_width * 2.1,
+                key_width * 1.75,
                 enter_height,
                 None,
                 Some(&enter.label),
@@ -573,7 +573,7 @@ impl KeyboardWidget {
                 cr,
                 x,
                 y3,
-                key_width * 2.25,
+                key_width * 1.25,
                 key_height,
                 None,
                 Some(&shift_l.label),
@@ -585,7 +585,7 @@ impl KeyboardWidget {
                 key_current_text_color,
                 key_border_color,
             );
-            x += key_width * 2.25 + key_spacing;
+            x += key_width * 1.25 + key_spacing;
         }
         if let Some(row) = layout_borrowed.keys.get(3) {
             for key_info in row {
@@ -614,7 +614,7 @@ impl KeyboardWidget {
                 cr,
                 x,
                 y3,
-                key_width * 2.75,
+                key_width * 3.0,
                 key_height,
                 None,
                 Some(&shift_r.label),
