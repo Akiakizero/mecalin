@@ -55,16 +55,16 @@
                 <property name="width-request">400</property>
               </object>
             </child>
-          </object>
-        </child>
-        <child>
-          <object class="GtkLabel" id="repetition_label">
-            <property name="halign">start</property>
-            <property name="valign">center</property>
-            <style>
-              <class name="title-4"/>
-              <class name="accent"/>
-            </style>
+            <child>
+              <object class="GtkLabel" id="repetition_label">
+                <property name="halign">center</property>
+                <property name="valign">center</property>
+                <style>
+                  <class name="title-4"/>
+                  <class name="accent"/>
+                </style>
+              </object>
+            </child>
           </object>
         </child>
       </object>
