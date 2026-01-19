@@ -39,6 +39,11 @@ meson compile -C builddir
 - Follow GNOME application structure guidelines
 - Use Adwaita design patterns for consistent UX
 
+## Icon Design
+- Application icon: `io.github.nacho.mecalin.svg`
+- **MUST follow GNOME HIG palette**: https://developer.gnome.org/hig/reference/palette.html
+- Use only colors from the official GNOME palette (Light 1-5, Dark 1-5, Blue, Green, Yellow, Orange, Red, Purple, Brown)
+
 ## Dependencies Management
 - Core dependencies: GTK4, libadwaita, Rust toolchain, Meson
 - Keep dependencies minimal and well-justified
