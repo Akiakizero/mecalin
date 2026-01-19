@@ -131,7 +131,62 @@ impl KeyboardWidget {
             KeyboardLayout::load_from_json(layout_code).unwrap_or_default(),
         ));
         let drawing_area = DrawingArea::new();
-        drawing_area.set_size_request(1000, 350);
+
+        // Calculate keyboard dimensions
+        let key_width = 50.0;
+        let key_height = 50.0;
+        let key_spacing = 5.0;
+        let row_spacing = 5.0;
+
+        // Calculate width for each row and find the maximum
+        let layout_borrowed = layout.borrow();
+
+        // Row 0: number keys + backspace
+        let row0_keys = layout_borrowed.keys.first().map(|r| r.len()).unwrap_or(12);
+        let row0_width =
+            row0_keys as f64 * (key_width + key_spacing) + key_spacing + key_width * 2.0;
+
+        // Row 1: Tab + QWERTY + Enter
+        let row1_keys = layout_borrowed.keys.get(1).map(|r| r.len()).unwrap_or(12);
+        let row1_width = key_width * 1.5
+            + key_spacing
+            + row1_keys as f64 * (key_width + key_spacing)
+            + key_spacing
+            + key_width * 2.1;
+
+        // Row 2: Caps + home row (Enter already counted in row 1)
+        let row2_keys = layout_borrowed.keys.get(2).map(|r| r.len()).unwrap_or(12);
+        let row2_width =
+            key_width * 1.75 + key_spacing + row2_keys as f64 * (key_width + key_spacing);
+
+        // Row 3: Left Shift + bottom row + Right Shift
+        let row3_keys = layout_borrowed.keys.get(3).map(|r| r.len()).unwrap_or(11);
+        let row3_width = key_width * 2.25
+            + key_spacing
+            + row3_keys as f64 * (key_width + key_spacing)
+            + key_spacing
+            + key_width * 2.75;
+
+        // Row 4: Ctrl + Alt + Space + Alt + Ctrl
+        let row4_width = key_width * 1.5
+            + key_spacing
+            + key_width * 1.3
+            + key_spacing
+            + key_width * 6.0
+            + key_spacing
+            + key_width * 1.3
+            + key_spacing
+            + key_width * 1.5;
+
+        let keyboard_width = row0_width
+            .max(row1_width)
+            .max(row2_width)
+            .max(row3_width)
+            .max(row4_width) as i32;
+        let keyboard_height = (5.0 * key_height + 4.0 * row_spacing) as i32;
+        drop(layout_borrowed);
+
+        drawing_area.set_size_request(keyboard_width, keyboard_height);
 
         let current_key = Rc::new(RefCell::new(None));
         let visible_keys = Rc::new(RefCell::new(None));
