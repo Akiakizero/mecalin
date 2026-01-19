@@ -1,54 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-  <!-- Typewriter body -->
-  <rect x="16" y="48" width="96" height="64" rx="8" fill="#3d3846" stroke="#5e5c64" stroke-width="2"/>
-  
   <!-- Paper -->
-  <rect x="24" y="16" width="80" height="40" rx="2" fill="#ffffff" stroke="#deddda" stroke-width="1"/>
+  <rect x="32" y="24" width="64" height="32" rx="3" fill="#ffffff" stroke="#c0bfbc" stroke-width="2"/>
+  
+  <!-- Typed text lines -->
+  <line x1="40" y1="34" x2="72" y2="34" stroke="#5e5c64" stroke-width="2" stroke-linecap="round"/>
+  <line x1="40" y1="42" x2="80" y2="42" stroke="#5e5c64" stroke-width="2" stroke-linecap="round"/>
+  <line x1="40" y1="50" x2="64" y2="50" stroke="#5e5c64" stroke-width="2" stroke-linecap="round"/>
   
   <!-- Paper roller -->
-  <rect x="20" y="44" width="88" height="8" rx="4" fill="#77767b"/>
+  <rect x="24" y="52" width="80" height="10" rx="5" fill="#77767b"/>
+  <rect x="24" y="62" width="80" height="3" rx="1.5" fill="#5e5c64"/>
   
-  <!-- Keyboard keys -->
-  <g fill="#deddda" stroke="#c0bfbc" stroke-width="1">
-    <!-- Top row -->
-    <rect x="24" y="60" width="8" height="8" rx="1"/>
-    <rect x="36" y="60" width="8" height="8" rx="1"/>
-    <rect x="48" y="60" width="8" height="8" rx="1"/>
-    <rect x="60" y="60" width="8" height="8" rx="1"/>
-    <rect x="72" y="60" width="8" height="8" rx="1"/>
-    <rect x="84" y="60" width="8" height="8" rx="1"/>
-    <rect x="96" y="60" width="8" height="8" rx="1"/>
-    
-    <!-- Middle row -->
-    <rect x="28" y="72" width="8" height="8" rx="1"/>
-    <rect x="40" y="72" width="8" height="8" rx="1"/>
-    <rect x="52" y="72" width="8" height="8" rx="1"/>
-    <rect x="64" y="72" width="8" height="8" rx="1"/>
-    <rect x="76" y="72" width="8" height="8" rx="1"/>
-    <rect x="88" y="72" width="8" height="8" rx="1"/>
-    <rect x="100" y="72" width="8" height="8" rx="1"/>
-    
-    <!-- Bottom row -->
-    <rect x="32" y="84" width="8" height="8" rx="1"/>
-    <rect x="44" y="84" width="8" height="8" rx="1"/>
-    <rect x="56" y="84" width="8" height="8" rx="1"/>
-    <rect x="68" y="84" width="8" height="8" rx="1"/>
-    <rect x="80" y="84" width="8" height="8" rx="1"/>
-    <rect x="92" y="84" width="8" height="8" rx="1"/>
-    
-    <!-- Space bar -->
-    <rect x="40" y="96" width="48" height="8" rx="1"/>
-  </g>
+  <!-- Typewriter body -->
+  <rect x="8" y="62" width="114" height="60" rx="6" fill="#62a0ea"/>
   
-  <!-- Type bars -->
-  <g stroke="#5e5c64" stroke-width="1" fill="none">
-    <line x1="64" y1="32" x2="60" y2="44"/>
-    <line x1="68" y1="32" x2="64" y2="44"/>
-    <line x1="72" y1="32" x2="68" y2="44"/>
-  </g>
+  <!-- Keyboard keys - Row 1 -->
+  <rect x="16" y="74" width="12" height="10" rx="1.5" fill="#f6f5f4"/>
+  <rect x="16" y="84" width="12" height="1" fill="#deddda"/>
   
-  <!-- Text on paper -->
-  <text x="32" y="28" font-family="monospace" font-size="8" fill="#3d3846">mecalin</text>
-  <text x="32" y="38" font-family="monospace" font-size="6" fill="#77767b">typing tutor</text>
+  <rect x="32" y="74" width="12" height="10" rx="1.5" fill="#f6f5f4"/>
+  <rect x="32" y="84" width="12" height="1" fill="#deddda"/>
+  
+  <rect x="48" y="74" width="12" height="10" rx="1.5" fill="#f6f5f4"/>
+  <rect x="48" y="84" width="12" height="1" fill="#deddda"/>
+  
+  <rect x="64" y="74" width="12" height="10" rx="1.5" fill="#f6f5f4"/>
+  <rect x="64" y="84" width="12" height="1" fill="#deddda"/>
+  
+  <rect x="80" y="74" width="12" height="10" rx="1.5" fill="#f6f5f4"/>
+  <rect x="80" y="84" width="12" height="1" fill="#deddda"/>
+  
+  <rect x="96" y="74" width="12" height="10" rx="1.5" fill="#f6f5f4"/>
+  <rect x="96" y="84" width="12" height="1" fill="#deddda"/>
+  
+  <!-- Keyboard keys - Row 2 -->
+  <rect x="22" y="88" width="12" height="10" rx="1.5" fill="#f6f5f4"/>
+  <rect x="22" y="98" width="12" height="1" fill="#deddda"/>
+  
+  <rect x="38" y="88" width="12" height="10" rx="1.5" fill="#f6f5f4"/>
+  <rect x="38" y="98" width="12" height="1" fill="#deddda"/>
+  
+  <rect x="54" y="88" width="12" height="10" rx="1.5" fill="#f6f5f4"/>
+  <rect x="54" y="98" width="12" height="1" fill="#deddda"/>
+  
+  <rect x="70" y="88" width="12" height="10" rx="1.5" fill="#f6f5f4"/>
+  <rect x="70" y="98" width="12" height="1" fill="#deddda"/>
+  
+  <rect x="86" y="88" width="12" height="10" rx="1.5" fill="#f6f5f4"/>
+  <rect x="86" y="98" width="12" height="1" fill="#deddda"/>
+  
+  <rect x="102" y="88" width="12" height="10" rx="1.5" fill="#f6f5f4"/>
+  <rect x="102" y="98" width="12" height="1" fill="#deddda"/>
+  
+  <!-- Space bar -->
+  <rect x="42" y="102" width="44" height="8" rx="1.5" fill="#f6f5f4"/>
+  <rect x="42" y="110" width="44" height="1" fill="#deddda"/>
 </svg>
