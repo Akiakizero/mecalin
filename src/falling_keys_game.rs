@@ -91,6 +91,7 @@ impl FallingKeysGame {
         // Create keyboard widget
         let keyboard = crate::keyboard_widget::KeyboardWidget::new();
         imp.game_area.add_overlay(keyboard.widget());
+        keyboard.widget().set_halign(gtk::Align::Center);
         keyboard.widget().set_valign(gtk::Align::End);
         keyboard.widget().set_margin_bottom(20);
         imp.keyboard_widget.replace(Some(keyboard));
