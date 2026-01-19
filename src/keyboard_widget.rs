@@ -141,12 +141,10 @@ impl KeyboardWidget {
         let visible_keys_clone = visible_keys.clone();
         let layout_clone = layout.clone();
 
-        drawing_area.set_draw_func(move |widget, cr, width, height| {
+        drawing_area.set_draw_func(move |widget, cr, _width, _height| {
             Self::draw_keyboard(
                 widget,
                 cr,
-                width,
-                height,
                 &current_key_clone,
                 &layout_clone,
                 &visible_keys_clone,
@@ -206,11 +204,99 @@ impl KeyboardWidget {
         self.drawing_area.queue_draw();
     }
 
+    #[allow(clippy::too_many_arguments)]
+    fn draw_single_key(
+        cr: &gtk::cairo::Context,
+        x: f64,
+        y: f64,
+        width: f64,
+        height: f64,
+        key_info: Option<&KeyInfo>,
+        label: Option<&str>,
+        is_current: bool,
+        should_show_text: bool,
+        key_color: (f64, f64, f64),
+        key_current_color: (f64, f64, f64),
+        key_text_color: (f64, f64, f64),
+        key_current_text_color: (f64, f64, f64),
+        key_border_color: (f64, f64, f64),
+    ) {
+        let (r, g, b) = if is_current {
+            key_current_color
+        } else {
+            key_color
+        };
+        cr.set_source_rgb(r, g, b);
+        cr.rectangle(x, y, width, height);
+        cr.fill().unwrap();
+
+        cr.set_source_rgb(key_border_color.0, key_border_color.1, key_border_color.2);
+        cr.set_line_width(1.0);
+        cr.rectangle(x, y, width, height);
+        cr.stroke().unwrap();
+
+        if should_show_text {
+            let (r, g, b) = if is_current {
+                key_current_text_color
+            } else {
+                key_text_color
+            };
+            cr.set_source_rgb(r, g, b);
+            cr.select_font_face(
+                "Sans",
+                gtk::cairo::FontSlant::Normal,
+                gtk::cairo::FontWeight::Normal,
+            );
+
+            if let Some(label_text) = label {
+                cr.set_font_size(11.0);
+                let text_extents = cr.text_extents(label_text).unwrap();
+                cr.move_to(
+                    x + (width - text_extents.width()) / 2.0,
+                    y + height / 2.0 + 5.0,
+                );
+                cr.show_text(label_text).unwrap();
+            } else if let Some(key) = key_info {
+                let base_text = if key.base.chars().next().unwrap().is_alphabetic() {
+                    key.base.to_uppercase()
+                } else {
+                    key.base.clone()
+                };
+                let is_alphabetic = key.base.chars().next().unwrap().is_alphabetic();
+
+                if is_alphabetic {
+                    cr.set_font_size(18.0);
+                    let text_extents = cr.text_extents(&base_text).unwrap();
+                    cr.move_to(
+                        x + (width - text_extents.width()) / 2.0,
+                        y + (height + text_extents.height()) / 2.0,
+                    );
+                    cr.show_text(&base_text).unwrap();
+                } else {
+                    cr.set_font_size(20.0);
+                    cr.move_to(x + 5.0, y + height - 5.0);
+                    cr.show_text(&base_text).unwrap();
+
+                    if let Some(shift_text) = &key.shift {
+                        cr.move_to(x + 5.0, y + 15.0);
+                        cr.show_text(shift_text).unwrap();
+                    }
+
+                    if let Some(altgr_text) = &key.altgr {
+                        if !altgr_text.is_empty() {
+                            let text_extents = cr.text_extents(altgr_text).unwrap();
+                            cr.move_to(x + width - text_extents.width() - 5.0, y + height - 5.0);
+                            cr.show_text(altgr_text).unwrap();
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     fn draw_keyboard(
         widget: &gtk::DrawingArea,
         cr: &gtk::cairo::Context,
-        width: i32,
-        _height: i32,
         current_key: &Rc<RefCell<Option<char>>>,
         layout: &Rc<RefCell<KeyboardLayout>>,
         visible_keys: &Rc<RefCell<Option<HashSet<char>>>>,
@@ -223,7 +309,6 @@ impl KeyboardWidget {
         let key_spacing = 5.0;
         let row_spacing = 5.0;
 
-        // Helper function to get color from CSS class
         let get_color = |class_name: &str| -> (f64, f64, f64) {
             widget.add_css_class(class_name);
             let color = widget.color();
@@ -235,6 +320,7 @@ impl KeyboardWidget {
             )
         };
 
+        let modifier_color = get_color("keyboard-modifier");
         let modifier_text_color = get_color("keyboard-modifier-text");
         let key_text_color = get_color("keyboard-key-text");
         let key_color = get_color("keyboard-key");
@@ -242,451 +328,347 @@ impl KeyboardWidget {
         let key_current_color = get_color("keyboard-key-current");
         let key_border_color = get_color("keyboard-border");
 
-        // Reserve space for left modifiers (widest is 2.0 * key_width for shift)
-        let left_margin = key_width * 2.5;
-        // Reserve space for right modifiers
-        let right_margin = key_width * 2.0;
-
-        let max_keys_in_row = layout_borrowed
-            .keys
-            .iter()
-            .map(|row| row.len())
-            .max()
-            .unwrap_or(12);
-        let keyboard_width = max_keys_in_row as f64 * (key_width + key_spacing) - key_spacing;
-        let total_width = left_margin + keyboard_width + right_margin;
-        let start_x = (width as f64 - total_width) / 2.0 + left_margin;
-        let start_y = 20.0;
-
         let current = current_key.borrow();
 
-        for (row_idx, row) in layout_borrowed.keys.iter().enumerate() {
-            let row_offset = match row_idx {
-                1 => key_width * 0.5,
-                2 => key_width * 0.75,
-                3 => key_width * 1.25,
-                _ => 0.0,
-            };
-
-            for (key_idx, key_info) in row.iter().enumerate() {
-                let key_char = key_info.base.chars().next().unwrap_or(' ');
-                let x = start_x + row_offset + key_idx as f64 * (key_width + key_spacing);
-                let y = start_y + row_idx as f64 * (key_height + row_spacing);
-
-                let is_current = current.is_some_and(|c| {
-                    if c == ' ' {
-                        // Space character should only match space, not other keys
-                        false
-                    } else {
-                        let c_lower = c.to_lowercase().next().unwrap();
-                        let base_lower = key_char.to_lowercase().next().unwrap();
-                        c_lower == base_lower
-                            || key_info
-                                .shift
-                                .as_ref()
-                                .is_some_and(|s| s.chars().next().unwrap_or(' ') == c)
-                            || key_info
-                                .altgr
-                                .as_ref()
-                                .is_some_and(|a| a.chars().next().unwrap_or(' ') == c)
-                    }
-                });
-
-                let (r, g, b) = if is_current {
-                    key_current_color
+        let is_key_current = |key_info: &KeyInfo| -> bool {
+            let key_char = key_info.base.chars().next().unwrap_or(' ');
+            current.is_some_and(|c| {
+                if c == ' ' {
+                    false
                 } else {
-                    key_color
-                };
-                cr.set_source_rgb(r, g, b);
-
-                cr.rectangle(x, y, key_width, key_height);
-                cr.fill().unwrap();
-
-                cr.set_source_rgb(key_border_color.0, key_border_color.1, key_border_color.2);
-                cr.set_line_width(1.0);
-                cr.rectangle(x, y, key_width, key_height);
-                cr.stroke().unwrap();
-
-                let should_show_text = visible_keys_borrowed.as_ref().is_none_or(|visible| {
-                    visible.contains(&key_char.to_lowercase().next().unwrap())
-                });
-
-                if should_show_text {
-                    let (r, g, b) = if is_current {
-                        key_current_text_color
-                    } else {
-                        key_text_color
-                    };
-                    cr.set_source_rgb(r, g, b);
-                    cr.select_font_face(
-                        "Sans",
-                        gtk::cairo::FontSlant::Normal,
-                        gtk::cairo::FontWeight::Normal,
-                    );
-
-                    // Draw base character (bottom left)
-                    let base_text = if key_info.base.chars().next().unwrap().is_alphabetic() {
-                        key_info.base.to_uppercase()
-                    } else {
-                        key_info.base.clone()
-                    };
-
-                    // Use larger font for alphabetic keys (show only uppercase, centered)
-                    let is_alphabetic = key_info.base.chars().next().unwrap().is_alphabetic();
-
-                    if is_alphabetic {
-                        cr.set_font_size(18.0);
-                        let text_extents = cr.text_extents(&base_text).unwrap();
-                        let text_x = x + (key_width - text_extents.width()) / 2.0;
-                        let text_y = y + (key_height + text_extents.height()) / 2.0;
-                        cr.move_to(text_x, text_y);
-                        cr.show_text(&base_text).unwrap();
-                    } else {
-                        cr.set_font_size(20.0);
-                        cr.move_to(x + 5.0, y + key_height - 5.0);
-                        cr.show_text(&base_text).unwrap();
-
-                        // Draw shift character (top left)
-                        if let Some(shift_text) = &key_info.shift {
-                            cr.move_to(x + 5.0, y + 15.0);
-                            cr.show_text(shift_text).unwrap();
-                        }
-
-                        // Draw altgr character (bottom right)
-                        if let Some(altgr_text) = &key_info.altgr {
-                            if !altgr_text.is_empty() {
-                                let text_extents = cr.text_extents(altgr_text).unwrap();
-                                cr.move_to(
-                                    x + key_width - text_extents.width() - 5.0,
-                                    y + key_height - 5.0,
-                                );
-                                cr.show_text(altgr_text).unwrap();
-                            }
-                        }
-                    }
+                    let c_lower = c.to_lowercase().next().unwrap();
+                    let base_lower = key_char.to_lowercase().next().unwrap();
+                    c_lower == base_lower
+                        || key_info
+                            .shift
+                            .as_ref()
+                            .is_some_and(|s| s.chars().next().unwrap_or(' ') == c)
+                        || key_info
+                            .altgr
+                            .as_ref()
+                            .is_some_and(|a| a.chars().next().unwrap_or(' ') == c)
                 }
+            })
+        };
+
+        let should_show_key = |key_char: char| -> bool {
+            visible_keys_borrowed
+                .as_ref()
+                .is_none_or(|visible| visible.contains(&key_char.to_lowercase().next().unwrap()))
+        };
+
+        // Row 0: Number row + Backspace
+        let mut x = 0.0;
+        let y = 0.0;
+        if let Some(row) = layout_borrowed.keys.first() {
+            for key_info in row {
+                let key_char = key_info.base.chars().next().unwrap_or(' ');
+                Self::draw_single_key(
+                    cr,
+                    x,
+                    y,
+                    key_width,
+                    key_height,
+                    Some(key_info),
+                    None,
+                    is_key_current(key_info),
+                    should_show_key(key_char),
+                    key_color,
+                    key_current_color,
+                    key_text_color,
+                    key_current_text_color,
+                    key_border_color,
+                );
+                x += key_width + key_spacing;
+            }
+            if let Some(backspace) = layout_borrowed.modifiers.get("backspace") {
+                Self::draw_single_key(
+                    cr,
+                    x,
+                    y,
+                    key_width * 2.0,
+                    key_height,
+                    None,
+                    Some(&backspace.label),
+                    false,
+                    true,
+                    modifier_color,
+                    key_current_color,
+                    modifier_text_color,
+                    key_current_text_color,
+                    key_border_color,
+                );
             }
         }
 
-        // Space bar
-        let space_x = start_x + key_width * 2.0;
-        let space_y = start_y + 4.0 * (key_height + row_spacing);
-        let space_width = key_width * 6.0;
-
-        let is_space_current = current.is_some_and(|c| c == ' ');
-
-        let (r, g, b) = if is_space_current {
-            key_current_color
-        } else {
-            key_color
-        };
-        cr.set_source_rgb(r, g, b);
-
-        cr.rectangle(space_x, space_y, space_width, key_height);
-        cr.fill().unwrap();
-
-        cr.set_source_rgb(key_border_color.0, key_border_color.1, key_border_color.2);
-        cr.set_line_width(1.0);
-        cr.rectangle(space_x, space_y, space_width, key_height);
-        cr.stroke().unwrap();
-
-        let should_show_space_text = visible_keys_borrowed
-            .as_ref()
-            .is_none_or(|visible| visible.contains(&' '));
-
-        if should_show_space_text {
-            let space_label = layout_borrowed.space.label.as_deref().unwrap_or("SPACE");
-            cr.set_source_rgb(key_text_color.0, key_text_color.1, key_text_color.2);
-            cr.set_font_size(11.0);
-            let text_extents = cr.text_extents(space_label).unwrap();
-            cr.move_to(
-                space_x + (space_width - text_extents.width()) / 2.0,
-                space_y + key_height / 2.0 + 5.0,
-            );
-            cr.show_text(space_label).unwrap();
-        }
-
-        // Draw modifier keys
-        // Calculate row end positions accounting for offsets
-        let row_offsets = [
-            0.0,
-            key_width * 0.5,
-            key_width * 0.75,
-            key_width * 1.25,
-            0.0,
-        ];
-
-        // Tab (left of QWERTY row)
+        // Row 1: Tab + QWERTY row + Enter (spans to row 2)
+        x = 0.0;
+        let y1 = y + key_height + row_spacing;
         if let Some(tab) = layout_borrowed.modifiers.get("tab") {
-            let tab_width = key_width * 1.5;
-            let tab_x = start_x + row_offsets[1] - tab_width - key_spacing;
-            let tab_y = start_y + (key_height + row_spacing);
-
-            let (r, g, b) = get_color("keyboard-modifier");
-            cr.set_source_rgb(r, g, b);
-            cr.rectangle(tab_x, tab_y, tab_width, key_height);
-            cr.fill().unwrap();
-            let (br, bg, bb) = get_color("keyboard-border");
-            cr.set_source_rgb(br, bg, bb);
-            cr.set_line_width(1.0);
-            cr.rectangle(tab_x, tab_y, tab_width, key_height);
-            cr.stroke().unwrap();
-
-            cr.set_source_rgb(
-                modifier_text_color.0,
-                modifier_text_color.1,
-                modifier_text_color.2,
+            Self::draw_single_key(
+                cr,
+                x,
+                y1,
+                key_width * 1.5,
+                key_height,
+                None,
+                Some(&tab.label),
+                false,
+                true,
+                modifier_color,
+                key_current_color,
+                modifier_text_color,
+                key_current_text_color,
+                key_border_color,
             );
-            cr.set_font_size(11.0);
-            cr.move_to(tab_x + 10.0, tab_y + key_height / 2.0 + 5.0);
-            cr.show_text(&tab.label).unwrap();
+            x += key_width * 1.5 + key_spacing;
         }
-
-        // Caps Lock (left of home row)
-        if let Some(caps) = layout_borrowed.modifiers.get("caps_lock") {
-            let caps_width = key_width * 1.75;
-            let caps_x = start_x + row_offsets[2] - caps_width - key_spacing;
-            let caps_y = start_y + 2.0 * (key_height + row_spacing);
-
-            let (r, g, b) = get_color("keyboard-modifier");
-            cr.set_source_rgb(r, g, b);
-            cr.rectangle(caps_x, caps_y, caps_width, key_height);
-            cr.fill().unwrap();
-            let (br, bg, bb) = get_color("keyboard-border");
-            cr.set_source_rgb(br, bg, bb);
-            cr.set_line_width(1.0);
-            cr.rectangle(caps_x, caps_y, caps_width, key_height);
-            cr.stroke().unwrap();
-
-            cr.set_source_rgb(
-                modifier_text_color.0,
-                modifier_text_color.1,
-                modifier_text_color.2,
-            );
-            cr.set_font_size(10.0);
-            cr.move_to(caps_x + 8.0, caps_y + key_height / 2.0 + 5.0);
-            cr.show_text(&caps.label).unwrap();
+        if let Some(row) = layout_borrowed.keys.get(1) {
+            for key_info in row {
+                let key_char = key_info.base.chars().next().unwrap_or(' ');
+                Self::draw_single_key(
+                    cr,
+                    x,
+                    y1,
+                    key_width,
+                    key_height,
+                    Some(key_info),
+                    None,
+                    is_key_current(key_info),
+                    should_show_key(key_char),
+                    key_color,
+                    key_current_color,
+                    key_text_color,
+                    key_current_text_color,
+                    key_border_color,
+                );
+                x += key_width + key_spacing;
+            }
         }
-
-        // Left Shift (left of bottom letter row, before < key)
-        if let Some(shift_l) = layout_borrowed.modifiers.get("shift_left") {
-            let shift_width = key_width * 2.25;
-            let shift_x = start_x + row_offsets[3] - shift_width - key_spacing;
-            let shift_y = start_y + 3.0 * (key_height + row_spacing);
-
-            let (r, g, b) = get_color("keyboard-modifier");
-            cr.set_source_rgb(r, g, b);
-            cr.rectangle(shift_x, shift_y, shift_width, key_height);
-            cr.fill().unwrap();
-            let (br, bg, bb) = get_color("keyboard-border");
-            cr.set_source_rgb(br, bg, bb);
-            cr.set_line_width(1.0);
-            cr.rectangle(shift_x, shift_y, shift_width, key_height);
-            cr.stroke().unwrap();
-
-            cr.set_source_rgb(
-                modifier_text_color.0,
-                modifier_text_color.1,
-                modifier_text_color.2,
-            );
-            cr.set_font_size(11.0);
-            cr.move_to(shift_x + 10.0, shift_y + key_height / 2.0 + 5.0);
-            cr.show_text(&shift_l.label).unwrap();
-        }
-
-        // Left Ctrl (bottom left, aligned with left shift)
-        if let Some(ctrl_l) = layout_borrowed.modifiers.get("ctrl_left") {
-            let ctrl_width = key_width * 1.5;
-            let ctrl_x = start_x + row_offsets[3] - key_width * 2.25 - key_spacing;
-            let ctrl_y = start_y + 4.0 * (key_height + row_spacing);
-
-            let (r, g, b) = get_color("keyboard-modifier");
-            cr.set_source_rgb(r, g, b);
-            cr.rectangle(ctrl_x, ctrl_y, ctrl_width, key_height);
-            cr.fill().unwrap();
-            let (br, bg, bb) = get_color("keyboard-border");
-            cr.set_source_rgb(br, bg, bb);
-            cr.set_line_width(1.0);
-            cr.rectangle(ctrl_x, ctrl_y, ctrl_width, key_height);
-            cr.stroke().unwrap();
-
-            cr.set_source_rgb(
-                modifier_text_color.0,
-                modifier_text_color.1,
-                modifier_text_color.2,
-            );
-            cr.set_font_size(11.0);
-            cr.move_to(ctrl_x + 10.0, ctrl_y + key_height / 2.0 + 5.0);
-            cr.show_text(&ctrl_l.label).unwrap();
-        }
-
-        // Left Alt (bottom, after left ctrl)
-        if let Some(alt_l) = layout_borrowed.modifiers.get("alt_left") {
-            let ctrl_width = key_width * 1.5;
-            let alt_width = key_width * 1.3;
-            let alt_x = start_x + row_offsets[3] - key_width * 2.25 - key_spacing
-                + ctrl_width
-                + key_spacing;
-            let alt_y = start_y + 4.0 * (key_height + row_spacing);
-
-            let (r, g, b) = get_color("keyboard-modifier");
-            cr.set_source_rgb(r, g, b);
-            cr.rectangle(alt_x, alt_y, alt_width, key_height);
-            cr.fill().unwrap();
-            let (br, bg, bb) = get_color("keyboard-border");
-            cr.set_source_rgb(br, bg, bb);
-            cr.set_line_width(1.0);
-            cr.rectangle(alt_x, alt_y, alt_width, key_height);
-            cr.stroke().unwrap();
-
-            cr.set_source_rgb(
-                modifier_text_color.0,
-                modifier_text_color.1,
-                modifier_text_color.2,
-            );
-            cr.set_font_size(11.0);
-            cr.move_to(alt_x + 10.0, alt_y + key_height / 2.0 + 5.0);
-            cr.show_text(&alt_l.label).unwrap();
-        }
-
-        // Backspace (right of number row)
-        if let Some(backspace) = layout_borrowed.modifiers.get("backspace") {
-            let row_0_keys = layout_borrowed.keys.first().map(|r| r.len()).unwrap_or(12);
-            let bs_width = key_width * 2.0;
-            let bs_x = start_x + row_offsets[0] + row_0_keys as f64 * (key_width + key_spacing);
-            let bs_y = start_y;
-
-            let (r, g, b) = get_color("keyboard-modifier");
-            cr.set_source_rgb(r, g, b);
-            cr.rectangle(bs_x, bs_y, bs_width, key_height);
-            cr.fill().unwrap();
-            let (br, bg, bb) = get_color("keyboard-border");
-            cr.set_source_rgb(br, bg, bb);
-            cr.set_line_width(1.0);
-            cr.rectangle(bs_x, bs_y, bs_width, key_height);
-            cr.stroke().unwrap();
-
-            cr.set_source_rgb(
-                modifier_text_color.0,
-                modifier_text_color.1,
-                modifier_text_color.2,
-            );
-            cr.set_font_size(11.0);
-            cr.move_to(bs_x + 10.0, bs_y + key_height / 2.0 + 5.0);
-            cr.show_text(&backspace.label).unwrap();
-        }
-
-        // Enter (right of home row, spans 2 rows)
         if let Some(enter) = layout_borrowed.modifiers.get("enter") {
-            let row_2_keys = layout_borrowed.keys.get(2).map(|r| r.len()).unwrap_or(12);
-            let enter_width = key_width * 2.1;
-            let enter_x = start_x + row_offsets[2] + row_2_keys as f64 * (key_width + key_spacing);
-            let enter_y = start_y + (key_height + row_spacing);
             let enter_height = key_height * 2.0 + row_spacing;
-
-            let (r, g, b) = get_color("keyboard-modifier");
-            cr.set_source_rgb(r, g, b);
-            cr.rectangle(enter_x, enter_y, enter_width, enter_height);
-            cr.fill().unwrap();
-            let (br, bg, bb) = get_color("keyboard-border");
-            cr.set_source_rgb(br, bg, bb);
-            cr.set_line_width(1.0);
-            cr.rectangle(enter_x, enter_y, enter_width, enter_height);
-            cr.stroke().unwrap();
-
-            cr.set_source_rgb(
-                modifier_text_color.0,
-                modifier_text_color.1,
-                modifier_text_color.2,
+            Self::draw_single_key(
+                cr,
+                x,
+                y1,
+                key_width * 2.1,
+                enter_height,
+                None,
+                Some(&enter.label),
+                false,
+                true,
+                modifier_color,
+                key_current_color,
+                modifier_text_color,
+                key_current_text_color,
+                key_border_color,
             );
-            cr.set_font_size(11.0);
-            cr.move_to(enter_x + 15.0, enter_y + enter_height / 2.0 + 5.0);
-            cr.show_text(&enter.label).unwrap();
         }
 
-        // Right Shift (right of bottom letter row)
+        // Row 2: Caps Lock + Home row (Enter already drawn)
+        x = 0.0;
+        let y2 = y1 + key_height + row_spacing;
+        if let Some(caps) = layout_borrowed.modifiers.get("caps_lock") {
+            Self::draw_single_key(
+                cr,
+                x,
+                y2,
+                key_width * 1.75,
+                key_height,
+                None,
+                Some(&caps.label),
+                false,
+                true,
+                modifier_color,
+                key_current_color,
+                modifier_text_color,
+                key_current_text_color,
+                key_border_color,
+            );
+            x += key_width * 1.75 + key_spacing;
+        }
+        if let Some(row) = layout_borrowed.keys.get(2) {
+            for key_info in row {
+                let key_char = key_info.base.chars().next().unwrap_or(' ');
+                Self::draw_single_key(
+                    cr,
+                    x,
+                    y2,
+                    key_width,
+                    key_height,
+                    Some(key_info),
+                    None,
+                    is_key_current(key_info),
+                    should_show_key(key_char),
+                    key_color,
+                    key_current_color,
+                    key_text_color,
+                    key_current_text_color,
+                    key_border_color,
+                );
+                x += key_width + key_spacing;
+            }
+        }
+
+        // Row 3: Left Shift + Bottom row + Right Shift
+        x = 0.0;
+        let y3 = y2 + key_height + row_spacing;
+        if let Some(shift_l) = layout_borrowed.modifiers.get("shift_left") {
+            Self::draw_single_key(
+                cr,
+                x,
+                y3,
+                key_width * 2.25,
+                key_height,
+                None,
+                Some(&shift_l.label),
+                false,
+                true,
+                modifier_color,
+                key_current_color,
+                modifier_text_color,
+                key_current_text_color,
+                key_border_color,
+            );
+            x += key_width * 2.25 + key_spacing;
+        }
+        if let Some(row) = layout_borrowed.keys.get(3) {
+            for key_info in row {
+                let key_char = key_info.base.chars().next().unwrap_or(' ');
+                Self::draw_single_key(
+                    cr,
+                    x,
+                    y3,
+                    key_width,
+                    key_height,
+                    Some(key_info),
+                    None,
+                    is_key_current(key_info),
+                    should_show_key(key_char),
+                    key_color,
+                    key_current_color,
+                    key_text_color,
+                    key_current_text_color,
+                    key_border_color,
+                );
+                x += key_width + key_spacing;
+            }
+        }
         if let Some(shift_r) = layout_borrowed.modifiers.get("shift_right") {
-            let row_3_keys = layout_borrowed.keys.get(3).map(|r| r.len()).unwrap_or(10);
-            let shift_width = key_width * 2.75;
-            let shift_x = start_x + row_offsets[3] + row_3_keys as f64 * (key_width + key_spacing);
-            let shift_y = start_y + 3.0 * (key_height + row_spacing);
-
-            let (r, g, b) = get_color("keyboard-modifier");
-            cr.set_source_rgb(r, g, b);
-            cr.rectangle(shift_x, shift_y, shift_width, key_height);
-            cr.fill().unwrap();
-            let (br, bg, bb) = get_color("keyboard-border");
-            cr.set_source_rgb(br, bg, bb);
-            cr.set_line_width(1.0);
-            cr.rectangle(shift_x, shift_y, shift_width, key_height);
-            cr.stroke().unwrap();
-
-            cr.set_source_rgb(
-                modifier_text_color.0,
-                modifier_text_color.1,
-                modifier_text_color.2,
+            Self::draw_single_key(
+                cr,
+                x,
+                y3,
+                key_width * 2.75,
+                key_height,
+                None,
+                Some(&shift_r.label),
+                false,
+                true,
+                modifier_color,
+                key_current_color,
+                modifier_text_color,
+                key_current_text_color,
+                key_border_color,
             );
-            cr.set_font_size(11.0);
-            cr.move_to(shift_x + 20.0, shift_y + key_height / 2.0 + 5.0);
-            cr.show_text(&shift_r.label).unwrap();
         }
 
-        // Right Ctrl (bottom right, right edge aligned with right shift)
-        if let Some(ctrl_r) = layout_borrowed.modifiers.get("ctrl_right") {
-            let row_3_keys = layout_borrowed.keys.get(3).map(|r| r.len()).unwrap_or(10);
-            let shift_width = key_width * 2.75;
-            let ctrl_width = key_width * 1.5;
-            let shift_end = start_x
-                + row_offsets[3]
-                + row_3_keys as f64 * (key_width + key_spacing)
-                + shift_width;
-            let ctrl_x = shift_end - ctrl_width;
-            let ctrl_y = start_y + 4.0 * (key_height + row_spacing);
-
-            let (r, g, b) = get_color("keyboard-modifier");
-            cr.set_source_rgb(r, g, b);
-            cr.rectangle(ctrl_x, ctrl_y, ctrl_width, key_height);
-            cr.fill().unwrap();
-            let (br, bg, bb) = get_color("keyboard-border");
-            cr.set_source_rgb(br, bg, bb);
-            cr.set_line_width(1.0);
-            cr.rectangle(ctrl_x, ctrl_y, ctrl_width, key_height);
-            cr.stroke().unwrap();
-
-            cr.set_source_rgb(
-                modifier_text_color.0,
-                modifier_text_color.1,
-                modifier_text_color.2,
+        // Row 4: Ctrl + Alt + Space + Alt + Ctrl
+        x = 0.0;
+        let y4 = y3 + key_height + row_spacing;
+        if let Some(ctrl_l) = layout_borrowed.modifiers.get("ctrl_left") {
+            Self::draw_single_key(
+                cr,
+                x,
+                y4,
+                key_width * 1.5,
+                key_height,
+                None,
+                Some(&ctrl_l.label),
+                false,
+                true,
+                modifier_color,
+                key_current_color,
+                modifier_text_color,
+                key_current_text_color,
+                key_border_color,
             );
-            cr.set_font_size(11.0);
-            cr.move_to(ctrl_x + 10.0, ctrl_y + key_height / 2.0 + 5.0);
-            cr.show_text(&ctrl_r.label).unwrap();
+            x += key_width * 1.5 + key_spacing;
         }
-
-        // Right Alt (bottom, right after space bar)
+        if let Some(alt_l) = layout_borrowed.modifiers.get("alt_left") {
+            Self::draw_single_key(
+                cr,
+                x,
+                y4,
+                key_width * 1.3,
+                key_height,
+                None,
+                Some(&alt_l.label),
+                false,
+                true,
+                modifier_color,
+                key_current_color,
+                modifier_text_color,
+                key_current_text_color,
+                key_border_color,
+            );
+            x += key_width * 1.3 + key_spacing;
+        }
+        let is_space_current = current.is_some_and(|c| c == ' ');
+        let space_label = layout_borrowed.space.label.as_deref().unwrap_or("SPACE");
+        Self::draw_single_key(
+            cr,
+            x,
+            y4,
+            key_width * 6.0,
+            key_height,
+            None,
+            Some(space_label),
+            is_space_current,
+            should_show_key(' '),
+            key_color,
+            key_current_color,
+            key_text_color,
+            key_current_text_color,
+            key_border_color,
+        );
+        x += key_width * 6.0 + key_spacing;
         if let Some(alt_r) = layout_borrowed.modifiers.get("alt_right") {
-            let alt_width = key_width * 1.3;
-            let alt_x = space_x + space_width + key_spacing;
-            let alt_y = start_y + 4.0 * (key_height + row_spacing);
-
-            let (r, g, b) = get_color("keyboard-modifier");
-            cr.set_source_rgb(r, g, b);
-            cr.rectangle(alt_x, alt_y, alt_width, key_height);
-            cr.fill().unwrap();
-            let (br, bg, bb) = get_color("keyboard-border");
-            cr.set_source_rgb(br, bg, bb);
-            cr.set_line_width(1.0);
-            cr.rectangle(alt_x, alt_y, alt_width, key_height);
-            cr.stroke().unwrap();
-
-            cr.set_source_rgb(
-                modifier_text_color.0,
-                modifier_text_color.1,
-                modifier_text_color.2,
+            Self::draw_single_key(
+                cr,
+                x,
+                y4,
+                key_width * 1.3,
+                key_height,
+                None,
+                Some(&alt_r.label),
+                false,
+                true,
+                modifier_color,
+                key_current_color,
+                modifier_text_color,
+                key_current_text_color,
+                key_border_color,
             );
-            cr.set_font_size(10.0);
-            cr.move_to(alt_x + 5.0, alt_y + key_height / 2.0 + 5.0);
-            cr.show_text(&alt_r.label).unwrap();
+            x += key_width * 1.3 + key_spacing;
+        }
+        if let Some(ctrl_r) = layout_borrowed.modifiers.get("ctrl_right") {
+            Self::draw_single_key(
+                cr,
+                x,
+                y4,
+                key_width * 1.5,
+                key_height,
+                None,
+                Some(&ctrl_r.label),
+                false,
+                true,
+                modifier_color,
+                key_current_color,
+                modifier_text_color,
+                key_current_text_color,
+                key_border_color,
+            );
         }
     }
 }
