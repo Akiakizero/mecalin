@@ -991,7 +991,7 @@
         },
         {
           "id": 33,
-          "text": "majątek zacząć",
+          "text": "mienie zaczyna",
           "description": "Teraz kilka słów z trzech rzędów",
           "repetitions": 2
         },
@@ -1003,7 +1003,7 @@
         },
         {
           "id": 35,
-          "text": "prędkość nowe",
+          "text": "szybko nowe",
           "description": "Teraz kilka słów z trzech rzędów",
           "repetitions": 2
         },
@@ -1015,13 +1015,13 @@
         },
         {
           "id": 37,
-          "text": "gatunek wzór",
+          "text": "gatunek model",
           "description": "Teraz kilka słów z trzech rzędów",
           "repetitions": 2
         },
         {
           "id": 38,
-          "text": "kwadrat okrąg",
+          "text": "kwadrat okruh",
           "description": "Teraz kilka słów z trzech rzędów",
           "repetitions": 2
         },
@@ -1033,7 +1033,7 @@
         },
         {
           "id": 40,
-          "text": "przód działka",
+          "text": "front parcela",
           "description": "Teraz kilka słów z trzech rzędów",
           "repetitions": 2
         },
@@ -1057,7 +1057,7 @@
         },
         {
           "id": 44,
-          "text": "korzyść zgoda",
+          "text": "zysk zgoda",
           "description": "Teraz kilka słów z trzech rzędów",
           "repetitions": 2
         },
@@ -1069,13 +1069,13 @@
         },
         {
           "id": 46,
-          "text": "uczyć nieszczęśliwy",
+          "text": "studiuje smutny",
           "description": "Teraz kilka słów z trzech rzędów",
           "repetitions": 2
         },
         {
           "id": 47,
-          "text": "dźwięczne dużo",
+          "text": "glosne bardzo",
           "description": "Teraz kilka słów z trzech rzędów",
           "repetitions": 2
         },
@@ -1087,7 +1087,7 @@
         },
         {
           "id": 49,
-          "text": "pochylona człowiek",
+          "text": "pochylona osoba",
           "description": "Teraz kilka słów z trzech rzędów",
           "repetitions": 2
         },
