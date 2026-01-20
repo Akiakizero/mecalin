@@ -14,6 +14,11 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   
+  <branding>
+    <color type="primary" scheme_preference="light">#3584e4</color>
+    <color type="primary" scheme_preference="dark">#1c71d8</color>
+  </branding>
+  
   <description>
     <p>
       Mecalin is a modern typing tutor application that helps you learn and improve your touch typing skills.
