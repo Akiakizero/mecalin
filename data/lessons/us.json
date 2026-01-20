@@ -1230,6 +1230,349 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 7,
+      "title": "Number row",
+      "description": "Learn the number row",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "In this lesson we will use the number row.",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "12",
+          "repetitions": 1,
+          "description": "With the left hand we will press the first two numbers |1| and |2|, pressing 1 with the pinky finger and 2 with the ring finger"
+        },
+        {
+          "id": 2,
+          "text": "345",
+          "repetitions": 1,
+          "description": "The |3| is pressed with the middle finger, and the |4| and |5| with the index finger"
+        },
+        {
+          "id": 3,
+          "text": "12345",
+          "repetitions": 1,
+          "description": "The |3| is pressed with the middle finger, and the |4| and |5| with the index finger"
+        },
+        {
+          "id": 4,
+          "text": "54321",
+          "repetitions": 1,
+          "description": "The |3| is pressed with the middle finger, and the |4| and |5| with the index finger"
+        },
+        {
+          "id": 5,
+          "text": "12345 54321",
+          "repetitions": 2,
+          "description": "The |3| is pressed with the middle finger, and the |4| and |5| with the index finger"
+        },
+        {
+          "id": 6,
+          "text": "09",
+          "repetitions": 1,
+          "description": "Now we will practice with the fingers of the right hand, we will press |0| and |9| with the pinky and ring fingers respectively"
+        },
+        {
+          "id": 7,
+          "text": "876",
+          "repetitions": 1,
+          "description": "We will press |8| with the middle finger and |7| and |6| with the index finger"
+        },
+        {
+          "id": 8,
+          "text": "09876",
+          "repetitions": 1,
+          "description": "We will press |8| with the middle finger and |7| and |6| with the index finger"
+        },
+        {
+          "id": 9,
+          "text": "67890",
+          "repetitions": 1,
+          "description": "We will press |8| with the middle finger and |7| and |6| with the index finger"
+        },
+        {
+          "id": 10,
+          "text": "09876 67890",
+          "repetitions": 2,
+          "description": "We will press |8| with the middle finger and |7| and |6| with the index finger"
+        },
+        {
+          "id": 11,
+          "text": "1234567890",
+          "repetitions": 1,
+          "description": "Now we will use both hands, remembering that each index finger is used for two numbers"
+        },
+        {
+          "id": 12,
+          "text": "0987654321",
+          "repetitions": 1,
+          "description": "Now we will use both hands, remembering that each index finger is used for two numbers"
+        },
+        {
+          "id": 13,
+          "text": "1234567890",
+          "repetitions": 2,
+          "description": "Now we will use both hands, remembering that each index finger is used for two numbers"
+        },
+        {
+          "id": 14,
+          "text": "0987654321",
+          "repetitions": 2,
+          "description": "Now we will use both hands, remembering that each index finger is used for two numbers"
+        },
+        {
+          "id": 15,
+          "text": "135 680",
+          "repetitions": 2,
+          "description": "Remember that the finger position should be on the home row"
+        },
+        {
+          "id": 16,
+          "text": "24 79",
+          "repetitions": 2,
+          "description": "Remember that the finger position should be on the home row"
+        },
+        {
+          "id": 17,
+          "text": "135680",
+          "repetitions": 2,
+          "description": "Remember that the finger position should be on the home row"
+        },
+        {
+          "id": 18,
+          "text": "103856",
+          "repetitions": 2,
+          "description": "Remember that the finger position should be on the home row"
+        },
+        {
+          "id": 19,
+          "text": "258017",
+          "repetitions": 2,
+          "description": "Remember that the finger position should be on the home row"
+        },
+        {
+          "id": 20,
+          "text": "5647382910",
+          "repetitions": 2,
+          "description": "Remember that the finger position should be on the home row"
+        },
+        {
+          "id": 21,
+          "text": "0192837465",
+          "repetitions": 2,
+          "description": "Remember that the finger position should be on the home row"
+        },
+        {
+          "id": 22,
+          "text": "6574839201",
+          "repetitions": 2,
+          "description": "Remember that the finger position should be on the home row"
+        },
+        {
+          "id": 23,
+          "text": "1029384756",
+          "repetitions": 2,
+          "description": "Remember that the finger position should be on the home row"
+        },
+        {
+          "id": 24,
+          "text": "35689247",
+          "repetitions": 2,
+          "description": "Remember that the finger position should be on the home row"
+        },
+        {
+          "id": 25,
+          "text": "74298653",
+          "repetitions": 2,
+          "description": "Remember that the finger position should be on the home row"
+        },
+        {
+          "id": 26,
+          "text": "1092387456",
+          "repetitions": 2,
+          "description": "Remember that the finger position should be on the home row"
+        },
+        {
+          "id": 27,
+          "text": "6547832901",
+          "repetitions": 2,
+          "description": "Remember that the finger position should be on the home row"
+        },
+        {
+          "id": 28,
+          "text": "a1s2d3f4g5",
+          "repetitions": 2,
+          "description": "Let's mix letters with numbers"
+        },
+        {
+          "id": 29,
+          "text": ";0l9k8j7h6",
+          "repetitions": 2,
+          "description": "Let's mix letters with numbers"
+        },
+        {
+          "id": 30,
+          "text": "as123df45g ;l098kj76h",
+          "repetitions": 2,
+          "description": "Let's mix letters with numbers"
+        },
+        {
+          "id": 31,
+          "text": "a;10sl29",
+          "repetitions": 2,
+          "description": "Let's mix letters with numbers"
+        },
+        {
+          "id": 32,
+          "text": "dk38 83kd",
+          "repetitions": 2,
+          "description": "Let's mix letters with numbers"
+        },
+        {
+          "id": 33,
+          "text": "jf47 hg65",
+          "repetitions": 2,
+          "description": "Let's mix letters with numbers"
+        },
+        {
+          "id": 34,
+          "text": "56gh 74fj",
+          "repetitions": 2,
+          "description": "Let's mix letters with numbers"
+        },
+        {
+          "id": 35,
+          "text": "1qaz 0p;-",
+          "repetitions": 2,
+          "description": "Now we will press only with the pinky fingers"
+        },
+        {
+          "id": 36,
+          "text": "zaq1 -;p0",
+          "repetitions": 2,
+          "description": "Now we will press only with the pinky fingers"
+        },
+        {
+          "id": 37,
+          "text": "-z;apq01 01pq;a-z",
+          "repetitions": 2,
+          "description": "Now we will press only with the pinky fingers"
+        },
+        {
+          "id": 38,
+          "text": "0zpa;q-1 -1;qpa0z",
+          "repetitions": 2,
+          "description": "Now we will press only with the pinky fingers"
+        },
+        {
+          "id": 39,
+          "text": "2wsx 9ol.",
+          "repetitions": 2,
+          "description": "Now with the ring fingers of both hands"
+        },
+        {
+          "id": 40,
+          "text": ".lo9 xsw2",
+          "repetitions": 2,
+          "description": "Now with the ring fingers of both hands"
+        },
+        {
+          "id": 41,
+          "text": "9xoslw.2 2.wlsox9",
+          "repetitions": 2,
+          "description": "Now with the ring fingers of both hands"
+        },
+        {
+          "id": 42,
+          "text": ".xlsow92 29woslx.",
+          "repetitions": 2,
+          "description": "Now with the ring fingers of both hands"
+        },
+        {
+          "id": 43,
+          "text": "3edc 8ik,",
+          "repetitions": 2,
+          "description": "Now we will press with the middle fingers of both hands"
+        },
+        {
+          "id": 44,
+          "text": ",ki8 cde3",
+          "repetitions": 2,
+          "description": "Now we will press with the middle fingers of both hands"
+        },
+        {
+          "id": 45,
+          "text": "8cidke,3 3,ekdic8",
+          "repetitions": 2,
+          "description": "Now we will press with the middle fingers of both hands"
+        },
+        {
+          "id": 46,
+          "text": ",ckdie83 38eidkc,",
+          "repetitions": 2,
+          "description": "Now we will press with the middle fingers of both hands"
+        },
+        {
+          "id": 47,
+          "text": "4rfv 7ujm",
+          "repetitions": 2,
+          "description": "The index fingers are now in play"
+        },
+        {
+          "id": 48,
+          "text": "5tgb 6yhn",
+          "repetitions": 2,
+          "description": "The index fingers are now in play"
+        },
+        {
+          "id": 49,
+          "text": "mju7 vfr4",
+          "repetitions": 2,
+          "description": "The index fingers are now in play"
+        },
+        {
+          "id": 50,
+          "text": "nhy6 bgt5",
+          "repetitions": 2,
+          "description": "The index fingers are now in play"
+        },
+        {
+          "id": 51,
+          "text": "7vufjrm4 m4jruf7v",
+          "repetitions": 2,
+          "description": "Don't look at the keyboard and maintain the correct position"
+        },
+        {
+          "id": 52,
+          "text": "mvjfur74 74urjfmv",
+          "repetitions": 2,
+          "description": "Don't look at the keyboard and maintain the correct position"
+        },
+        {
+          "id": 53,
+          "text": "6byghtn5 n6htyg6b",
+          "repetitions": 2,
+          "description": "Don't look at the keyboard and maintain the correct position"
+        },
+        {
+          "id": 54,
+          "text": "nbhgyt65 56tyghbn",
+          "repetitions": 2,
+          "description": "Don't look at the keyboard and maintain the correct position"
+        },
+        {
+          "id": 55,
+          "text": "",
+          "description": "Congratulations! You have completed the seventh lesson",
+          "introduction": true
+        }
+      ]
     }
   ]
 }

@@ -1230,6 +1230,349 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 7,
+      "title": "Riga dei numeri",
+      "description": "Impara la riga dei numeri",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "In questa lezione useremo la riga dei numeri.",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "12",
+          "repetitions": 1,
+          "description": "Con la mano sinistra premeremo i primi due numeri |1| e |2|, premendo 1 con il mignolo e 2 con l'anulare"
+        },
+        {
+          "id": 2,
+          "text": "345",
+          "repetitions": 1,
+          "description": "Il |3| si preme con il medio, e il |4| e il |5| con l'indice"
+        },
+        {
+          "id": 3,
+          "text": "12345",
+          "repetitions": 1,
+          "description": "Il |3| si preme con il medio, e il |4| e il |5| con l'indice"
+        },
+        {
+          "id": 4,
+          "text": "54321",
+          "repetitions": 1,
+          "description": "Il |3| si preme con il medio, e il |4| e il |5| con l'indice"
+        },
+        {
+          "id": 5,
+          "text": "12345 54321",
+          "repetitions": 2,
+          "description": "Il |3| si preme con il medio, e il |4| e il |5| con l'indice"
+        },
+        {
+          "id": 6,
+          "text": "09",
+          "repetitions": 1,
+          "description": "Ora praticheremo con le dita della mano destra, premeremo |0| e |9| con il mignolo e l'anulare rispettivamente"
+        },
+        {
+          "id": 7,
+          "text": "876",
+          "repetitions": 1,
+          "description": "Premeremo |8| con il medio e |7| e |6| con l'indice"
+        },
+        {
+          "id": 8,
+          "text": "09876",
+          "repetitions": 1,
+          "description": "Premeremo |8| con il medio e |7| e |6| con l'indice"
+        },
+        {
+          "id": 9,
+          "text": "67890",
+          "repetitions": 1,
+          "description": "Premeremo |8| con il medio e |7| e |6| con l'indice"
+        },
+        {
+          "id": 10,
+          "text": "09876 67890",
+          "repetitions": 2,
+          "description": "Premeremo |8| con il medio e |7| e |6| con l'indice"
+        },
+        {
+          "id": 11,
+          "text": "1234567890",
+          "repetitions": 1,
+          "description": "Ora useremo entrambe le mani, ricordando che ogni dito indice serve per due numeri"
+        },
+        {
+          "id": 12,
+          "text": "0987654321",
+          "repetitions": 1,
+          "description": "Ora useremo entrambe le mani, ricordando che ogni dito indice serve per due numeri"
+        },
+        {
+          "id": 13,
+          "text": "1234567890",
+          "repetitions": 2,
+          "description": "Ora useremo entrambe le mani, ricordando che ogni dito indice serve per due numeri"
+        },
+        {
+          "id": 14,
+          "text": "0987654321",
+          "repetitions": 2,
+          "description": "Ora useremo entrambe le mani, ricordando che ogni dito indice serve per due numeri"
+        },
+        {
+          "id": 15,
+          "text": "135 680",
+          "repetitions": 2,
+          "description": "Ricorda che la posizione delle dita deve essere sulla riga base"
+        },
+        {
+          "id": 16,
+          "text": "24 79",
+          "repetitions": 2,
+          "description": "Ricorda che la posizione delle dita deve essere sulla riga base"
+        },
+        {
+          "id": 17,
+          "text": "135680",
+          "repetitions": 2,
+          "description": "Ricorda che la posizione delle dita deve essere sulla riga base"
+        },
+        {
+          "id": 18,
+          "text": "103856",
+          "repetitions": 2,
+          "description": "Ricorda che la posizione delle dita deve essere sulla riga base"
+        },
+        {
+          "id": 19,
+          "text": "258017",
+          "repetitions": 2,
+          "description": "Ricorda che la posizione delle dita deve essere sulla riga base"
+        },
+        {
+          "id": 20,
+          "text": "5647382910",
+          "repetitions": 2,
+          "description": "Ricorda che la posizione delle dita deve essere sulla riga base"
+        },
+        {
+          "id": 21,
+          "text": "0192837465",
+          "repetitions": 2,
+          "description": "Ricorda che la posizione delle dita deve essere sulla riga base"
+        },
+        {
+          "id": 22,
+          "text": "6574839201",
+          "repetitions": 2,
+          "description": "Ricorda che la posizione delle dita deve essere sulla riga base"
+        },
+        {
+          "id": 23,
+          "text": "1029384756",
+          "repetitions": 2,
+          "description": "Ricorda che la posizione delle dita deve essere sulla riga base"
+        },
+        {
+          "id": 24,
+          "text": "35689247",
+          "repetitions": 2,
+          "description": "Ricorda che la posizione delle dita deve essere sulla riga base"
+        },
+        {
+          "id": 25,
+          "text": "74298653",
+          "repetitions": 2,
+          "description": "Ricorda che la posizione delle dita deve essere sulla riga base"
+        },
+        {
+          "id": 26,
+          "text": "1092387456",
+          "repetitions": 2,
+          "description": "Ricorda che la posizione delle dita deve essere sulla riga base"
+        },
+        {
+          "id": 27,
+          "text": "6547832901",
+          "repetitions": 2,
+          "description": "Ricorda che la posizione delle dita deve essere sulla riga base"
+        },
+        {
+          "id": 28,
+          "text": "a1s2d3f4g5",
+          "repetitions": 2,
+          "description": "Mescoliamo lettere con numeri"
+        },
+        {
+          "id": 29,
+          "text": ";0l9k8j7h6",
+          "repetitions": 2,
+          "description": "Mescoliamo lettere con numeri"
+        },
+        {
+          "id": 30,
+          "text": "as123df45g ;l098kj76h",
+          "repetitions": 2,
+          "description": "Mescoliamo lettere con numeri"
+        },
+        {
+          "id": 31,
+          "text": "a;10sl29",
+          "repetitions": 2,
+          "description": "Mescoliamo lettere con numeri"
+        },
+        {
+          "id": 32,
+          "text": "dk38 83kd",
+          "repetitions": 2,
+          "description": "Mescoliamo lettere con numeri"
+        },
+        {
+          "id": 33,
+          "text": "jf47 hg65",
+          "repetitions": 2,
+          "description": "Mescoliamo lettere con numeri"
+        },
+        {
+          "id": 34,
+          "text": "56gh 74fj",
+          "repetitions": 2,
+          "description": "Mescoliamo lettere con numeri"
+        },
+        {
+          "id": 35,
+          "text": "1qaz 0p;-",
+          "repetitions": 2,
+          "description": "Ora premeremo solo con i mignoli"
+        },
+        {
+          "id": 36,
+          "text": "zaq1 -;p0",
+          "repetitions": 2,
+          "description": "Ora premeremo solo con i mignoli"
+        },
+        {
+          "id": 37,
+          "text": "-z;apq01 01pq;a-z",
+          "repetitions": 2,
+          "description": "Ora premeremo solo con i mignoli"
+        },
+        {
+          "id": 38,
+          "text": "0zpa;q-1 -1;qpa0z",
+          "repetitions": 2,
+          "description": "Ora premeremo solo con i mignoli"
+        },
+        {
+          "id": 39,
+          "text": "2wsx 9ol.",
+          "repetitions": 2,
+          "description": "Ora con gli anulari di entrambe le mani"
+        },
+        {
+          "id": 40,
+          "text": ".lo9 xsw2",
+          "repetitions": 2,
+          "description": "Ora con gli anulari di entrambe le mani"
+        },
+        {
+          "id": 41,
+          "text": "9xoslw.2 2.wlsox9",
+          "repetitions": 2,
+          "description": "Ora con gli anulari di entrambe le mani"
+        },
+        {
+          "id": 42,
+          "text": ".xlsow92 29woslx.",
+          "repetitions": 2,
+          "description": "Ora con gli anulari di entrambe le mani"
+        },
+        {
+          "id": 43,
+          "text": "3edc 8ik,",
+          "repetitions": 2,
+          "description": "Ora premeremo con i medi di entrambe le mani"
+        },
+        {
+          "id": 44,
+          "text": ",ki8 cde3",
+          "repetitions": 2,
+          "description": "Ora premeremo con i medi di entrambe le mani"
+        },
+        {
+          "id": 45,
+          "text": "8cidke,3 3,ekdic8",
+          "repetitions": 2,
+          "description": "Ora premeremo con i medi di entrambe le mani"
+        },
+        {
+          "id": 46,
+          "text": ",ckdie83 38eidkc,",
+          "repetitions": 2,
+          "description": "Ora premeremo con i medi di entrambe le mani"
+        },
+        {
+          "id": 47,
+          "text": "4rfv 7ujm",
+          "repetitions": 2,
+          "description": "Gli indici sono ora in gioco"
+        },
+        {
+          "id": 48,
+          "text": "5tgb 6yhn",
+          "repetitions": 2,
+          "description": "Gli indici sono ora in gioco"
+        },
+        {
+          "id": 49,
+          "text": "mju7 vfr4",
+          "repetitions": 2,
+          "description": "Gli indici sono ora in gioco"
+        },
+        {
+          "id": 50,
+          "text": "nhy6 bgt5",
+          "repetitions": 2,
+          "description": "Gli indici sono ora in gioco"
+        },
+        {
+          "id": 51,
+          "text": "7vufjrm4 m4jruf7v",
+          "repetitions": 2,
+          "description": "Non guardare la tastiera e mantieni la posizione corretta"
+        },
+        {
+          "id": 52,
+          "text": "mvjfur74 74urjfmv",
+          "repetitions": 2,
+          "description": "Non guardare la tastiera e mantieni la posizione corretta"
+        },
+        {
+          "id": 53,
+          "text": "6byghtn5 n6htyg6b",
+          "repetitions": 2,
+          "description": "Non guardare la tastiera e mantieni la posizione corretta"
+        },
+        {
+          "id": 54,
+          "text": "nbhgyt65 56tyghbn",
+          "repetitions": 2,
+          "description": "Non guardare la tastiera e mantieni la posizione corretta"
+        },
+        {
+          "id": 55,
+          "text": "",
+          "description": "Congratulazioni! Hai completato la settima lezione",
+          "introduction": true
+        }
+      ]
     }
   ]
 }

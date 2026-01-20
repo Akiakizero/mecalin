@@ -1110,6 +1110,349 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 7,
+      "title": "Rząd cyfr",
+      "description": "Naucz się rzędu cyfr",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "W tej lekcji będziemy używać rzędu cyfr.",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "12",
+          "repetitions": 1,
+          "description": "Lewą ręką naciśniemy pierwsze dwie cyfry |1| i |2|, naciskając 1 małym palcem i 2 palcem serdecznym"
+        },
+        {
+          "id": 2,
+          "text": "345",
+          "repetitions": 1,
+          "description": "|3| naciska się środkowym palcem, a |4| i |5| palcem wskazującym"
+        },
+        {
+          "id": 3,
+          "text": "12345",
+          "repetitions": 1,
+          "description": "|3| naciska się środkowym palcem, a |4| i |5| palcem wskazującym"
+        },
+        {
+          "id": 4,
+          "text": "54321",
+          "repetitions": 1,
+          "description": "|3| naciska się środkowym palcem, a |4| i |5| palcem wskazującym"
+        },
+        {
+          "id": 5,
+          "text": "12345 54321",
+          "repetitions": 2,
+          "description": "|3| naciska się środkowym palcem, a |4| i |5| palcem wskazującym"
+        },
+        {
+          "id": 6,
+          "text": "09",
+          "repetitions": 1,
+          "description": "Teraz będziemy ćwiczyć palcami prawej ręki, naciśniemy |0| i |9| odpowiednio małym i serdecznym palcem"
+        },
+        {
+          "id": 7,
+          "text": "876",
+          "repetitions": 1,
+          "description": "Naciśniemy |8| środkowym palcem i |7| i |6| palcem wskazującym"
+        },
+        {
+          "id": 8,
+          "text": "09876",
+          "repetitions": 1,
+          "description": "Naciśniemy |8| środkowym palcem i |7| i |6| palcem wskazującym"
+        },
+        {
+          "id": 9,
+          "text": "67890",
+          "repetitions": 1,
+          "description": "Naciśniemy |8| środkowym palcem i |7| i |6| palcem wskazującym"
+        },
+        {
+          "id": 10,
+          "text": "09876 67890",
+          "repetitions": 2,
+          "description": "Naciśniemy |8| środkowym palcem i |7| i |6| palcem wskazującym"
+        },
+        {
+          "id": 11,
+          "text": "1234567890",
+          "repetitions": 1,
+          "description": "Teraz użyjemy obu rąk, pamiętając, że każdy palec wskazujący służy do dwóch cyfr"
+        },
+        {
+          "id": 12,
+          "text": "0987654321",
+          "repetitions": 1,
+          "description": "Teraz użyjemy obu rąk, pamiętając, że każdy palec wskazujący służy do dwóch cyfr"
+        },
+        {
+          "id": 13,
+          "text": "1234567890",
+          "repetitions": 2,
+          "description": "Teraz użyjemy obu rąk, pamiętając, że każdy palec wskazujący służy do dwóch cyfr"
+        },
+        {
+          "id": 14,
+          "text": "0987654321",
+          "repetitions": 2,
+          "description": "Teraz użyjemy obu rąk, pamiętając, że każdy palec wskazujący służy do dwóch cyfr"
+        },
+        {
+          "id": 15,
+          "text": "135 680",
+          "repetitions": 2,
+          "description": "Pamiętaj, że pozycja palców powinna być na rzędzie podstawowym"
+        },
+        {
+          "id": 16,
+          "text": "24 79",
+          "repetitions": 2,
+          "description": "Pamiętaj, że pozycja palców powinna być na rzędzie podstawowym"
+        },
+        {
+          "id": 17,
+          "text": "135680",
+          "repetitions": 2,
+          "description": "Pamiętaj, że pozycja palców powinna być na rzędzie podstawowym"
+        },
+        {
+          "id": 18,
+          "text": "103856",
+          "repetitions": 2,
+          "description": "Pamiętaj, że pozycja palców powinna być na rzędzie podstawowym"
+        },
+        {
+          "id": 19,
+          "text": "258017",
+          "repetitions": 2,
+          "description": "Pamiętaj, że pozycja palców powinna być na rzędzie podstawowym"
+        },
+        {
+          "id": 20,
+          "text": "5647382910",
+          "repetitions": 2,
+          "description": "Pamiętaj, że pozycja palców powinna być na rzędzie podstawowym"
+        },
+        {
+          "id": 21,
+          "text": "0192837465",
+          "repetitions": 2,
+          "description": "Pamiętaj, że pozycja palców powinna być na rzędzie podstawowym"
+        },
+        {
+          "id": 22,
+          "text": "6574839201",
+          "repetitions": 2,
+          "description": "Pamiętaj, że pozycja palców powinna być na rzędzie podstawowym"
+        },
+        {
+          "id": 23,
+          "text": "1029384756",
+          "repetitions": 2,
+          "description": "Pamiętaj, że pozycja palców powinna być na rzędzie podstawowym"
+        },
+        {
+          "id": 24,
+          "text": "35689247",
+          "repetitions": 2,
+          "description": "Pamiętaj, że pozycja palców powinna być na rzędzie podstawowym"
+        },
+        {
+          "id": 25,
+          "text": "74298653",
+          "repetitions": 2,
+          "description": "Pamiętaj, że pozycja palców powinna być na rzędzie podstawowym"
+        },
+        {
+          "id": 26,
+          "text": "1092387456",
+          "repetitions": 2,
+          "description": "Pamiętaj, że pozycja palców powinna być na rzędzie podstawowym"
+        },
+        {
+          "id": 27,
+          "text": "6547832901",
+          "repetitions": 2,
+          "description": "Pamiętaj, że pozycja palców powinna być na rzędzie podstawowym"
+        },
+        {
+          "id": 28,
+          "text": "a1s2d3f4g5",
+          "repetitions": 2,
+          "description": "Mieszajmy litery z cyframi"
+        },
+        {
+          "id": 29,
+          "text": ";0l9k8j7h6",
+          "repetitions": 2,
+          "description": "Mieszajmy litery z cyframi"
+        },
+        {
+          "id": 30,
+          "text": "as123df45g ;l098kj76h",
+          "repetitions": 2,
+          "description": "Mieszajmy litery z cyframi"
+        },
+        {
+          "id": 31,
+          "text": "a;10sl29",
+          "repetitions": 2,
+          "description": "Mieszajmy litery z cyframi"
+        },
+        {
+          "id": 32,
+          "text": "dk38 83kd",
+          "repetitions": 2,
+          "description": "Mieszajmy litery z cyframi"
+        },
+        {
+          "id": 33,
+          "text": "jf47 hg65",
+          "repetitions": 2,
+          "description": "Mieszajmy litery z cyframi"
+        },
+        {
+          "id": 34,
+          "text": "56gh 74fj",
+          "repetitions": 2,
+          "description": "Mieszajmy litery z cyframi"
+        },
+        {
+          "id": 35,
+          "text": "1qaz 0p;-",
+          "repetitions": 2,
+          "description": "Teraz będziemy naciskać tylko małymi palcami"
+        },
+        {
+          "id": 36,
+          "text": "zaq1 -;p0",
+          "repetitions": 2,
+          "description": "Teraz będziemy naciskać tylko małymi palcami"
+        },
+        {
+          "id": 37,
+          "text": "-z;apq01 01pq;a-z",
+          "repetitions": 2,
+          "description": "Teraz będziemy naciskać tylko małymi palcami"
+        },
+        {
+          "id": 38,
+          "text": "0zpa;q-1 -1;qpa0z",
+          "repetitions": 2,
+          "description": "Teraz będziemy naciskać tylko małymi palcami"
+        },
+        {
+          "id": 39,
+          "text": "2wsx 9ol.",
+          "repetitions": 2,
+          "description": "Teraz palcami serdecznymi obu rąk"
+        },
+        {
+          "id": 40,
+          "text": ".lo9 xsw2",
+          "repetitions": 2,
+          "description": "Teraz palcami serdecznymi obu rąk"
+        },
+        {
+          "id": 41,
+          "text": "9xoslw.2 2.wlsox9",
+          "repetitions": 2,
+          "description": "Teraz palcami serdecznymi obu rąk"
+        },
+        {
+          "id": 42,
+          "text": ".xlsow92 29woslx.",
+          "repetitions": 2,
+          "description": "Teraz palcami serdecznymi obu rąk"
+        },
+        {
+          "id": 43,
+          "text": "3edc 8ik,",
+          "repetitions": 2,
+          "description": "Teraz będziemy naciskać środkowymi palcami obu rąk"
+        },
+        {
+          "id": 44,
+          "text": ",ki8 cde3",
+          "repetitions": 2,
+          "description": "Teraz będziemy naciskać środkowymi palcami obu rąk"
+        },
+        {
+          "id": 45,
+          "text": "8cidke,3 3,ekdic8",
+          "repetitions": 2,
+          "description": "Teraz będziemy naciskać środkowymi palcami obu rąk"
+        },
+        {
+          "id": 46,
+          "text": ",ckdie83 38eidkc,",
+          "repetitions": 2,
+          "description": "Teraz będziemy naciskać środkowymi palcami obu rąk"
+        },
+        {
+          "id": 47,
+          "text": "4rfv 7ujm",
+          "repetitions": 2,
+          "description": "Palce wskazujące wchodzą teraz do gry"
+        },
+        {
+          "id": 48,
+          "text": "5tgb 6yhn",
+          "repetitions": 2,
+          "description": "Palce wskazujące wchodzą teraz do gry"
+        },
+        {
+          "id": 49,
+          "text": "mju7 vfr4",
+          "repetitions": 2,
+          "description": "Palce wskazujące wchodzą teraz do gry"
+        },
+        {
+          "id": 50,
+          "text": "nhy6 bgt5",
+          "repetitions": 2,
+          "description": "Palce wskazujące wchodzą teraz do gry"
+        },
+        {
+          "id": 51,
+          "text": "7vufjrm4 m4jruf7v",
+          "repetitions": 2,
+          "description": "Nie patrz na klawiaturę i utrzymuj prawidłową pozycję"
+        },
+        {
+          "id": 52,
+          "text": "mvjfur74 74urjfmv",
+          "repetitions": 2,
+          "description": "Nie patrz na klawiaturę i utrzymuj prawidłową pozycję"
+        },
+        {
+          "id": 53,
+          "text": "6byghtn5 n6htyg6b",
+          "repetitions": 2,
+          "description": "Nie patrz na klawiaturę i utrzymuj prawidłową pozycję"
+        },
+        {
+          "id": 54,
+          "text": "nbhgyt65 56tyghbn",
+          "repetitions": 2,
+          "description": "Nie patrz na klawiaturę i utrzymuj prawidłową pozycję"
+        },
+        {
+          "id": 55,
+          "text": "",
+          "description": "Gratulacje! Ukończyłeś siódmą lekcję",
+          "introduction": true
+        }
+      ]
     }
   ]
 }
