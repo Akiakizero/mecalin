@@ -38,6 +38,7 @@ impl KeyboardLayout {
             "us" => include_str!("../data/keyboard_layouts/us.json"),
             "es" => include_str!("../data/keyboard_layouts/es.json"),
             "it" => include_str!("../data/keyboard_layouts/it.json"),
+            "pl" => include_str!("../data/keyboard_layouts/pl.json"),
             _ => return Err(format!("Unsupported layout: {}", layout_code).into()),
         };
         Ok(serde_json::from_str(json_data)?)
@@ -105,6 +106,13 @@ mod tests {
     fn test_load_from_json_it() {
         let layout = KeyboardLayout::load_from_json("it").unwrap();
         assert_eq!(layout.name, "Italian QWERTY");
+        assert!(!layout.keys.is_empty());
+    }
+
+    #[test]
+    fn test_load_from_json_pl() {
+        let layout = KeyboardLayout::load_from_json("pl").unwrap();
+        assert_eq!(layout.name, "Polish QWERTY");
         assert!(!layout.keys.is_empty());
     }
 
