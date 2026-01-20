@@ -4,6 +4,8 @@ pub fn language_from_locale() -> &'static str {
         "es"
     } else if locale.starts_with("it") {
         "it"
+    } else if locale.starts_with("pl") {
+        "pl"
     } else {
         "us"
     }
@@ -35,6 +37,12 @@ mod tests {
     fn test_language_from_locale_default() {
         std::env::set_var("LANG", "xx_YY.UTF-8");
         assert_eq!(language_from_locale(), "us");
+    }
+
+    #[test]
+    fn test_language_from_locale_polish() {
+        std::env::set_var("LANG", "pl_PL.UTF-8");
+        assert_eq!(language_from_locale(), "pl");
     }
 
     #[test]
