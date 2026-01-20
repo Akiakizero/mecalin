@@ -151,29 +151,38 @@ impl KeyboardWidget {
 
         // Row 0: number keys + backspace
         let row0_keys = layout_borrowed.keys.first().map(|r| r.len()).unwrap_or(12);
-        let row0_width =
-            row0_keys as f64 * (key_width + key_spacing) + key_spacing + key_width * 2.0;
+        let row0_width = row0_keys as f64 * key_width
+            + (row0_keys - 1) as f64 * key_spacing
+            + key_spacing
+            + key_width * 2.0;
 
         // Row 1: Tab + QWERTY + Enter
         let row1_keys = layout_borrowed.keys.get(1).map(|r| r.len()).unwrap_or(12);
         let row1_width = key_width * 1.5
             + key_spacing
-            + row1_keys as f64 * (key_width + key_spacing)
+            + row1_keys as f64 * key_width
+            + (row1_keys - 1) as f64 * key_spacing
             + key_spacing
-            + key_width * 2.1;
+            + key_width * 1.75;
 
-        // Row 2: Caps + home row (Enter already counted in row 1)
+        // Row 2: Caps + home row + Enter - overlap
+        // The last key in row2 overlaps with Enter position, so we subtract two spacings
         let row2_keys = layout_borrowed.keys.get(2).map(|r| r.len()).unwrap_or(12);
-        let row2_width =
-            key_width * 1.75 + key_spacing + row2_keys as f64 * (key_width + key_spacing);
+        let row2_width = key_width * 1.75
+            + key_spacing
+            + row2_keys as f64 * key_width
+            + row2_keys as f64 * key_spacing
+            + key_width * 1.75
+            - key_spacing * 2.0;
 
         // Row 3: Left Shift + bottom row + Right Shift
         let row3_keys = layout_borrowed.keys.get(3).map(|r| r.len()).unwrap_or(11);
-        let row3_width = key_width * 2.25
+        let row3_width = key_width * 1.25
             + key_spacing
-            + row3_keys as f64 * (key_width + key_spacing)
+            + row3_keys as f64 * key_width
+            + (row3_keys - 1) as f64 * key_spacing
             + key_spacing
-            + key_width * 2.75;
+            + key_width * 3.0;
 
         // Row 4: Ctrl + Alt + Space + Alt + Ctrl
         let row4_width = key_width * 1.5
