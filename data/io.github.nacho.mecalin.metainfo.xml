@@ -7,6 +7,7 @@
   <summary>Learn touch typing</summary>
   <summary xml:lang="es">Aprende mecanografía</summary>
   <summary xml:lang="it">Impara a digitare</summary>
+  <summary xml:lang="pl">Naucz się pisać bezwzrokowo</summary>
   
   <developer_name>Ignacio Casal Quinteiro</developer_name>
   
@@ -26,6 +27,10 @@
       Mecalin è un'applicazione moderna per imparare a digitare che ti aiuta ad apprendere e migliorare le tue abilità di dattilografia.
       Fornisce un'interfaccia pulita e intuitiva per esercitarsi nella digitazione.
     </p>
+    <p xml:lang="pl">
+      Mecalin to nowoczesna aplikacja do nauki pisania, która pomaga nauczyć się i poprawić umiejętności pisania bezwzrokowego.
+      Zapewnia przejrzysty i intuicyjny interfejs do ćwiczenia pisania.
+    </p>
     <p>
       Features include structured lessons, keyboard layout visualization, and progress tracking to help you
       become a more efficient typist.
@@ -37,6 +42,10 @@
     <p xml:lang="it">
       Le funzionalità includono lezioni strutturate, visualizzazione del layout della tastiera e monitoraggio dei progressi per aiutarti
       a diventare un dattilografo più efficiente.
+    </p>
+    <p xml:lang="pl">
+      Funkcje obejmują uporządkowane lekcje, wizualizację układu klawiatury i śledzenie postępów, aby pomóc Ci
+      stać się bardziej wydajnym maszynistą.
     </p>
   </description>
   
