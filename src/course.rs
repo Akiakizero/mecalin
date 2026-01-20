@@ -42,6 +42,7 @@ impl Course {
         let lessons_json = match language {
             "es" => include_str!("../data/lessons/es.json"),
             "it" => include_str!("../data/lessons/it.json"),
+            "pl" => include_str!("../data/lessons/pl.json"),
             _ => include_str!("../data/lessons/us.json"),
         };
         let lessons_data: LessonsData = serde_json::from_str(lessons_json)?;
