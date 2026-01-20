@@ -86,6 +86,20 @@
   </screenshots>
   
   <releases>
+    <release version="0.5.0" date="2026-01-20">
+      <description>
+        <ul>
+          <li>Added Polish language support (keyboard layout, lessons, and translations)</li>
+          <li>Added number row lesson (lesson 7) to all languages</li>
+          <li>Added missing first keys to keyboard layouts (º, \, `)</li>
+          <li>Improved lesson view UI layout</li>
+          <li>Centered keyboard widget in falling keys game</li>
+          <li>Adjusted keyboard key widths for better visual balance</li>
+          <li>Fixed keyboard widget width calculation</li>
+          <li>Refactored keyboard rendering to row-by-row approach</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.4.0" date="2026-01-18">
       <description>
         <ul>
