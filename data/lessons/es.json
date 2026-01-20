@@ -1254,6 +1254,349 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 7,
+      "title": "Fila de números",
+      "description": "Aprende la fila de números",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "En esta lección vamos a utilizar la línea de números.",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "12",
+          "description": "Con la mano izquierda vamos a pulsar los dos primeros número |1| y |2|, pulsando con el dedo meñique el 1 y con el dedo anular el 2",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "345",
+          "description": "Con el dedo corazón se pulsa el |3|, y con el dedo índice el |4| y el |5|",
+          "repetitions": 1
+        },
+        {
+          "id": 3,
+          "text": "12345",
+          "description": "Con el dedo corazón se pulsa el |3|, y con el dedo índice el |4| y el |5|",
+          "repetitions": 1
+        },
+        {
+          "id": 4,
+          "text": "54321",
+          "description": "Con el dedo corazón se pulsa el |3|, y con el dedo índice el |4| y el |5|",
+          "repetitions": 1
+        },
+        {
+          "id": 5,
+          "text": "12345 54321",
+          "description": "Con el dedo corazón se pulsa el |3|, y con el dedo índice el |4| y el |5|",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "09",
+          "description": "Ahora vamos a practicar con los dedos de la mano derecha, vamos a pulsar el |0| y el |9| con los dedos meñique y anular respectivamente",
+          "repetitions": 1
+        },
+        {
+          "id": 7,
+          "text": "876",
+          "description": "Con el dedo corazón pulsaremos el |8| y con el índice el |7| y el |6|",
+          "repetitions": 1
+        },
+        {
+          "id": 8,
+          "text": "09876",
+          "description": "Con el dedo corazón pulsaremos el |8| y con el índice el |7| y el |6|",
+          "repetitions": 1
+        },
+        {
+          "id": 9,
+          "text": "67890",
+          "description": "Con el dedo corazón pulsaremos el |8| y con el índice el |7| y el |6|",
+          "repetitions": 1
+        },
+        {
+          "id": 10,
+          "text": "09876 67890",
+          "description": "Con el dedo corazón pulsaremos el |8| y con el índice el |7| y el |6|",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "1234567890",
+          "description": "Ahora utilizaremos ambas manos, recordando que cada dedo índice sirve para dos números",
+          "repetitions": 1
+        },
+        {
+          "id": 12,
+          "text": "0987654321",
+          "description": "Ahora utilizaremos ambas manos, recordando que cada dedo índice sirve para dos números",
+          "repetitions": 1
+        },
+        {
+          "id": 13,
+          "text": "1234567890",
+          "description": "Ahora utilizaremos ambas manos, recordando que cada dedo índice sirve para dos números",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": "0987654321",
+          "description": "Ahora utilizaremos ambas manos, recordando que cada dedo índice sirve para dos números",
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "135 680",
+          "description": "Recuerde que la posición de los dedos debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 16,
+          "text": "24 79",
+          "description": "Recuerde que la posición de los dedos debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 17,
+          "text": "135680",
+          "description": "Recuerde que la posición de los dedos debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "103856",
+          "description": "Recuerde que la posición de los dedos debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "258017",
+          "description": "Recuerde que la posición de los dedos debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 20,
+          "text": "5647382910",
+          "description": "Recuerde que la posición de los dedos debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "0192837465",
+          "description": "Recuerde que la posición de los dedos debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "6574839201",
+          "description": "Recuerde que la posición de los dedos debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "1029384756",
+          "description": "Recuerde que la posición de los dedos debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "35689247",
+          "description": "Recuerde que la posición de los dedos debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": "74298653",
+          "description": "Recuerde que la posición de los dedos debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "1092387456",
+          "description": "Recuerde que la posición de los dedos debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 27,
+          "text": "6547832901",
+          "description": "Recuerde que la posición de los dedos debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 28,
+          "text": "a1s2d3f4g5",
+          "description": "Vamos a mezclar letras con números",
+          "repetitions": 2
+        },
+        {
+          "id": 29,
+          "text": "ñ0l9k8j7h6",
+          "description": "Vamos a mezclar letras con números",
+          "repetitions": 2
+        },
+        {
+          "id": 30,
+          "text": "as123df45g ñl098kj76h",
+          "description": "Vamos a mezclar letras con números",
+          "repetitions": 2
+        },
+        {
+          "id": 31,
+          "text": "añ10sl29",
+          "description": "Vamos a mezclar letras con números",
+          "repetitions": 2
+        },
+        {
+          "id": 32,
+          "text": "dk38 83kd",
+          "description": "Vamos a mezclar letras con números",
+          "repetitions": 2
+        },
+        {
+          "id": 33,
+          "text": "jf47 hg65",
+          "description": "Vamos a mezclar letras con números",
+          "repetitions": 2
+        },
+        {
+          "id": 34,
+          "text": "56gh 74fj",
+          "description": "Vamos a mezclar letras con números",
+          "repetitions": 2
+        },
+        {
+          "id": 35,
+          "text": "1qaz 0pñ-",
+          "description": "Ahora pulsaremos sólo con los dedos meñiques",
+          "repetitions": 2
+        },
+        {
+          "id": 36,
+          "text": "zaq1 -ñp0",
+          "description": "Ahora pulsaremos sólo con los dedos meñiques",
+          "repetitions": 2
+        },
+        {
+          "id": 37,
+          "text": "-zñapq01 01pqña-z",
+          "description": "Ahora pulsaremos sólo con los dedos meñiques",
+          "repetitions": 2
+        },
+        {
+          "id": 38,
+          "text": "0zpañq-1 -1ñqpa0z",
+          "description": "Ahora pulsaremos sólo con los dedos meñiques",
+          "repetitions": 2
+        },
+        {
+          "id": 39,
+          "text": "2wsx 9ol.",
+          "description": "Ahora con los dedos anulares de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 40,
+          "text": ".lo9 xsw2",
+          "description": "Ahora con los dedos anulares de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 41,
+          "text": "9xoslw.2 2.wlsox9",
+          "description": "Ahora con los dedos anulares de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 42,
+          "text": ".xlsow92 29woslx.",
+          "description": "Ahora con los dedos anulares de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 43,
+          "text": "3edc 8ik,",
+          "description": "Ahora pulsaremos con los dedos corazón de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 44,
+          "text": ",ki8 cde3",
+          "description": "Ahora pulsaremos con los dedos corazón de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 45,
+          "text": "8cidke,3 3,ekdic8",
+          "description": "Ahora pulsaremos con los dedos corazón de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 46,
+          "text": ",ckdie83 38eidkc,",
+          "description": "Ahora pulsaremos con los dedos corazón de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 47,
+          "text": "4rfv 7ujm",
+          "description": "Los índices son los que ahora entran en juego",
+          "repetitions": 2
+        },
+        {
+          "id": 48,
+          "text": "5tgb 6yhn",
+          "description": "Los índices son los que ahora entran en juego",
+          "repetitions": 2
+        },
+        {
+          "id": 49,
+          "text": "mju7 vfr4",
+          "description": "Los índices son los que ahora entran en juego",
+          "repetitions": 2
+        },
+        {
+          "id": 50,
+          "text": "nhy6 bgt5",
+          "description": "Los índices son los que ahora entran en juego",
+          "repetitions": 2
+        },
+        {
+          "id": 51,
+          "text": "7vufjrm4 m4jruf7v",
+          "description": "No mire el teclado y manténgase en la posición correcta",
+          "repetitions": 2
+        },
+        {
+          "id": 52,
+          "text": "mvjfur74 74urjfmv",
+          "description": "No mire el teclado y manténgase en la posición correcta",
+          "repetitions": 2
+        },
+        {
+          "id": 53,
+          "text": "6byghtn5 n6htyg6b",
+          "description": "No mire el teclado y manténgase en la posición correcta",
+          "repetitions": 2
+        },
+        {
+          "id": 54,
+          "text": "nbhgyt65 56tyghbn",
+          "description": "No mire el teclado y manténgase en la posición correcta",
+          "repetitions": 2
+        },
+        {
+          "id": 55,
+          "text": "",
+          "description": "¡Enhorabuena! Ha acabado la séptima lección",
+          "introduction": true
+        }
+      ]
     }
   ]
 }
