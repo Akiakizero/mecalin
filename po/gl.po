@@ -1,0 +1,80 @@
+# Galician translations for mecalin package.
+# Copyright (C) 2026 THE mecalin'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the mecalin package.
+# qignacio <qignacio@amazon.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mecalin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-14 15:32+0100\n"
+"PO-Revision-Date: 2026-01-21 09:22+0100\n"
+"Last-Translator: qignacio <qignacio@amazon.com>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: data/io.github.nacho.mecalin.desktop.in:3
+msgid "Mecalin"
+msgstr "Mecalin"
+
+#: data/io.github.nacho.mecalin.desktop.in:4
+msgid "Learn how to type"
+msgstr "Aprende a escribir"
+
+#: resources/ui/lesson_view.ui:87
+msgid "Continue"
+msgstr "Continuar"
+
+#: src/falling_keys_game.rs:252 src/falling_keys_game.rs:274
+#: src/falling_keys_game.rs:388 src/scrolling_lanes_game.rs:309
+#: src/scrolling_lanes_game.rs:323 src/scrolling_lanes_game.rs:422
+msgid "Score: {}"
+msgstr "Puntuación: {}"
+
+#: src/falling_keys_game.rs:259 src/falling_keys_game.rs:390
+#: src/scrolling_lanes_game.rs:315 src/scrolling_lanes_game.rs:424
+msgid "Level: {}"
+msgstr "Nivel: {}"
+
+#: src/main_action_list.rs:60
+msgid "Lessons"
+msgstr "Leccións"
+
+#: src/main_action_list.rs:60
+msgid "Learn typing fundamentals"
+msgstr "Aprende os fundamentos de mecanografía"
+
+#: src/main_action_list.rs:62 src/window.rs:100
+msgid "Falling Keys"
+msgstr "Teclas que caen"
+
+#: src/main_action_list.rs:63
+msgid "Practice with a fun game"
+msgstr "Practica cun xogo divertido"
+
+#: src/main_action_list.rs:66 src/window.rs:115
+msgid "Scrolling Lanes"
+msgstr "Carrís desprazables"
+
+#: src/main_action_list.rs:67
+msgid "Type fast in multiple lanes"
+msgstr "Escribe rápido en múltiples carrís"
+
+#: src/main_action_list.rs:69
+msgid "About"
+msgstr "Acerca de"
+
+#: src/main_action_list.rs:69
+msgid "Application information"
+msgstr "Información da aplicación"
+
+#: src/window.rs:193
+msgid "Lesson {}"
+msgstr "Lección {}"
+
+#: src/window.rs:198
+msgid "Lesson {}: Step {}/{}"
+msgstr "Lección {}: Paso {}/{}"
