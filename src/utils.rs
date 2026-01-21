@@ -2,6 +2,8 @@ pub fn language_from_locale() -> &'static str {
     let locale = std::env::var("LANG").unwrap_or_else(|_| "en_US".to_string());
     if locale.starts_with("es") {
         "es"
+    } else if locale.starts_with("gl") {
+        "gl"
     } else if locale.starts_with("it") {
         "it"
     } else if locale.starts_with("pl") {
@@ -51,6 +53,13 @@ mod tests {
         let _lock = TEST_MUTEX.lock().unwrap();
         std::env::set_var("LANG", "pl_PL.UTF-8");
         assert_eq!(language_from_locale(), "pl");
+    }
+
+    #[test]
+    fn test_language_from_locale_galician() {
+        let _lock = TEST_MUTEX.lock().unwrap();
+        std::env::set_var("LANG", "gl_ES.UTF-8");
+        assert_eq!(language_from_locale(), "gl");
     }
 
     #[test]
