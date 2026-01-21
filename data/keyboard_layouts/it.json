@@ -66,6 +66,8 @@
     "shift_right": {"label": "Maiusc", "finger": "right_pinky"},
     "ctrl_left": {"label": "Ctrl", "finger": "left_pinky"},
     "ctrl_right": {"label": "Ctrl", "finger": "right_pinky"},
+    "super_left": {"label": "Super", "finger": "left_thumb"},
+    "super_right": {"label": "Super", "finger": "right_thumb"},
     "alt_left": {"label": "Alt", "finger": "left_thumb"},
     "alt_right": {"label": "Alt Gr", "finger": "right_thumb"},
     "enter": {"label": "Invio", "finger": "right_pinky"},

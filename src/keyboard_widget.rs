@@ -185,14 +185,18 @@ impl KeyboardWidget {
             + key_spacing
             + key_width * 3.0;
 
-        // Row 4: Ctrl + Alt + Space + Alt + Ctrl
+        // Row 4: Ctrl + Super + Alt + Space + Alt + Super + Ctrl
         let row4_width = key_width * 1.5
+            + key_spacing
+            + key_width * 1.2
             + key_spacing
             + key_width * 1.3
             + key_spacing
             + key_width * 6.0
             + key_spacing
             + key_width * 1.3
+            + key_spacing
+            + key_width * 1.2
             + key_spacing
             + key_width * 1.5;
 
@@ -646,7 +650,7 @@ impl KeyboardWidget {
             );
         }
 
-        // Row 4: Ctrl + Alt + Space + Alt + Ctrl
+        // Row 4: Ctrl + Super + Alt + Space + Alt + Super + Ctrl
         x = 0.0;
         let y4 = y3 + key_height + row_spacing;
         if let Some(ctrl_l) = layout_borrowed.modifiers.get("ctrl_left") {
@@ -667,6 +671,25 @@ impl KeyboardWidget {
                 key_border_color,
             );
             x += key_width * 1.5 + key_spacing;
+        }
+        if let Some(super_l) = layout_borrowed.modifiers.get("super_left") {
+            Self::draw_single_key(
+                cr,
+                x,
+                y4,
+                key_width * 1.2,
+                key_height,
+                None,
+                Some(&super_l.label),
+                false,
+                true,
+                modifier_color,
+                key_current_color,
+                modifier_text_color,
+                key_current_text_color,
+                key_border_color,
+            );
+            x += key_width * 1.2 + key_spacing;
         }
         if let Some(alt_l) = layout_borrowed.modifiers.get("alt_left") {
             Self::draw_single_key(
@@ -724,6 +747,25 @@ impl KeyboardWidget {
                 key_border_color,
             );
             x += key_width * 1.3 + key_spacing;
+        }
+        if let Some(super_r) = layout_borrowed.modifiers.get("super_right") {
+            Self::draw_single_key(
+                cr,
+                x,
+                y4,
+                key_width * 1.2,
+                key_height,
+                None,
+                Some(&super_r.label),
+                false,
+                true,
+                modifier_color,
+                key_current_color,
+                modifier_text_color,
+                key_current_text_color,
+                key_border_color,
+            );
+            x += key_width * 1.2 + key_spacing;
         }
         if let Some(ctrl_r) = layout_borrowed.modifiers.get("ctrl_right") {
             Self::draw_single_key(
