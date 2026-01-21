@@ -36,7 +36,8 @@ impl KeyboardLayout {
     pub fn load_from_json(layout_code: &str) -> Result<Self, Box<dyn std::error::Error>> {
         let json_data = match layout_code {
             "us" => include_str!("../data/keyboard_layouts/us.json"),
-            "es" | "gl" => include_str!("../data/keyboard_layouts/es.json"),
+            "es" => include_str!("../data/keyboard_layouts/es.json"),
+            "gl" => include_str!("../data/keyboard_layouts/gl.json"),
             "it" => include_str!("../data/keyboard_layouts/it.json"),
             "pl" => include_str!("../data/keyboard_layouts/pl.json"),
             _ => return Err(format!("Unsupported layout: {}", layout_code).into()),
