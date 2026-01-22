@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mecalin 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 17:53+0100\n"
+"POT-Creation-Date: 2026-01-22 17:54+0100\n"
 "PO-Revision-Date: 2026-01-14 15:35+0100\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
@@ -23,6 +23,19 @@ msgstr "Mecalin"
 #: data/io.github.nacho.mecalin.desktop.in:4
 msgid "Learn how to type"
 msgstr "Aprende a escribir"
+
+#: resources/ui/falling_keys_game.ui:56 resources/ui/scrolling_lanes_game.ui:57
+#, fuzzy
+msgid "Score"
+msgstr "Puntuación: {}"
+
+#: resources/ui/falling_keys_game.ui:82 resources/ui/scrolling_lanes_game.ui:83
+msgid "Level Reached"
+msgstr ""
+
+#: resources/ui/falling_keys_game.ui:94 resources/ui/scrolling_lanes_game.ui:95
+msgid "Play Again"
+msgstr ""
 
 #: resources/ui/lesson_view.ui:87
 msgid "Continue"
