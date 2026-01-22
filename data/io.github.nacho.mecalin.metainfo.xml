@@ -95,6 +95,18 @@
   </screenshots>
   
   <releases>
+    <release version="0.6.0" date="2026-01-22">
+      <description>
+        <ul>
+          <li>Added Galician language support (keyboard layout, lessons, and translations)</li>
+          <li>Migrated to GTK 4.14 GSK rendering API for improved performance</li>
+          <li>Ported keyboard widget, falling keys game, and scrolling lanes game to GSK</li>
+          <li>Moved game results UI to GtkBuilder for better maintainability</li>
+          <li>Added Super L and Super R keys to keyboard layouts</li>
+          <li>Updated dependencies</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.5.0" date="2026-01-20">
       <description>
         <ul>
