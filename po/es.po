@@ -25,17 +25,16 @@ msgid "Learn how to type"
 msgstr "Aprende a escribir"
 
 #: resources/ui/falling_keys_game.ui:56 resources/ui/scrolling_lanes_game.ui:57
-#, fuzzy
 msgid "Score"
-msgstr "Puntuación: {}"
+msgstr "Puntuación"
 
 #: resources/ui/falling_keys_game.ui:82 resources/ui/scrolling_lanes_game.ui:83
 msgid "Level Reached"
-msgstr ""
+msgstr "Nivel Alcanzado"
 
 #: resources/ui/falling_keys_game.ui:94 resources/ui/scrolling_lanes_game.ui:95
 msgid "Play Again"
-msgstr ""
+msgstr "Jugar de Nuevo"
 
 #: resources/ui/lesson_view.ui:87
 msgid "Continue"
