@@ -1,6 +1,9 @@
+use gtk::gdk;
+use gtk::glib;
+use gtk::graphene;
+use gtk::pango;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
-use gtk::{glib, DrawingArea};
 use i18n_format::i18n_fmt;
 use rand::Rng;
 use std::cell::RefCell;
@@ -17,6 +20,121 @@ pub(crate) struct ScrollingText {
     x: f64,
 }
 
+mod lane_widget {
+    use super::*;
+
+    pub struct LaneWidget {
+        pub(super) lane_index: RefCell<usize>,
+        pub(super) current_lane: RefCell<Rc<RefCell<usize>>>,
+        pub(super) texts: RefCell<Rc<RefCell<Vec<Vec<ScrollingText>>>>>,
+        pub(super) bg_color: RefCell<gdk::RGBA>,
+        pub(super) current_color: RefCell<gdk::RGBA>,
+        pub(super) text_color: RefCell<gdk::RGBA>,
+    }
+
+    impl Default for LaneWidget {
+        fn default() -> Self {
+            Self {
+                lane_index: RefCell::new(0),
+                current_lane: RefCell::new(Rc::new(RefCell::new(0))),
+                texts: RefCell::new(Rc::new(RefCell::new(Vec::new()))),
+                bg_color: RefCell::new(gdk::RGBA::BLACK),
+                current_color: RefCell::new(gdk::RGBA::BLACK),
+                text_color: RefCell::new(gdk::RGBA::WHITE),
+            }
+        }
+    }
+
+    #[glib::object_subclass]
+    impl ObjectSubclass for LaneWidget {
+        const NAME: &'static str = "LaneWidget";
+        type Type = super::LaneWidget;
+        type ParentType = gtk::Widget;
+    }
+
+    impl ObjectImpl for LaneWidget {}
+
+    impl WidgetImpl for LaneWidget {
+        fn snapshot(&self, snapshot: &gtk::Snapshot) {
+            let widget = self.obj();
+            let width = widget.width() as f32;
+            let height = widget.height() as f32;
+
+            if width <= 0.0 || height <= 0.0 {
+                return;
+            }
+
+            let current = *self.current_lane.borrow().borrow();
+            let lane_index = *self.lane_index.borrow();
+            let bg_color = if current == lane_index {
+                &*self.current_color.borrow()
+            } else {
+                &*self.bg_color.borrow()
+            };
+
+            // Background
+            let bounds = graphene::Rect::new(0.0, 0.0, width, height);
+            snapshot.append_color(bg_color, &bounds);
+
+            // Draw texts
+            let pango_context = widget.pango_context();
+            let layout = pango::Layout::new(&pango_context);
+            let font_desc = pango::FontDescription::from_string("Sans 20");
+            layout.set_font_description(Some(&font_desc));
+
+            let text_color = self.text_color.borrow();
+
+            if let Ok(all_texts) = self.texts.borrow().try_borrow() {
+                for text in &all_texts[lane_index] {
+                    if text.x < width as f64 && text.x > -200.0 {
+                        layout.set_text(&text.text);
+                        snapshot.save();
+                        snapshot.translate(&graphene::Point::new(text.x as f32, 30.0));
+                        snapshot.append_layout(&layout, &text_color);
+                        snapshot.restore();
+                    }
+                }
+            }
+        }
+
+        fn measure(&self, orientation: gtk::Orientation, _for_size: i32) -> (i32, i32, i32, i32) {
+            match orientation {
+                gtk::Orientation::Vertical => (100, 100, -1, -1),
+                _ => (0, 0, -1, -1),
+            }
+        }
+    }
+}
+
+glib::wrapper! {
+    pub struct LaneWidget(ObjectSubclass<lane_widget::LaneWidget>)
+        @extends gtk::Widget;
+}
+
+impl LaneWidget {
+    pub(crate) fn new(
+        lane_index: usize,
+        current_lane: Rc<RefCell<usize>>,
+        texts: Rc<RefCell<Vec<Vec<ScrollingText>>>>,
+    ) -> Self {
+        let widget: Self = glib::Object::new();
+        let imp = widget.imp();
+        *imp.lane_index.borrow_mut() = lane_index;
+        *imp.current_lane.borrow_mut() = current_lane;
+        *imp.texts.borrow_mut() = texts;
+        widget.set_vexpand(true);
+        widget.set_hexpand(true);
+        widget
+    }
+
+    pub fn set_colors(&self, bg: gdk::RGBA, current: gdk::RGBA, text: gdk::RGBA) {
+        let imp = self.imp();
+        *imp.bg_color.borrow_mut() = bg;
+        *imp.current_color.borrow_mut() = current;
+        *imp.text_color.borrow_mut() = text;
+    }
+}
+
 mod imp {
     use super::*;
 
@@ -30,7 +148,7 @@ mod imp {
         #[template_child]
         pub level_label: TemplateChild<gtk::Label>,
 
-        pub lanes: Rc<RefCell<Vec<DrawingArea>>>,
+        pub lanes: Rc<RefCell<Vec<LaneWidget>>>,
         pub(crate) lane_texts: Rc<RefCell<Vec<Vec<ScrollingText>>>>,
         pub current_lane: Rc<RefCell<usize>>,
         pub score: RefCell<u32>,
@@ -84,71 +202,32 @@ impl ScrollingLanesGame {
         lanes_container.set_vexpand(true);
         lanes_container.set_hexpand(true);
 
-        // Query colors once before creating lanes
-        let get_color = |widget: &DrawingArea, class_name: &str| -> (f64, f64, f64) {
-            widget.add_css_class(class_name);
-            let color = widget.color();
-            widget.remove_css_class(class_name);
-            (
-                color.red() as f64,
-                color.green() as f64,
-                color.blue() as f64,
-            )
-        };
+        // Query colors
+        let temp_widget = gtk::Label::new(None);
+        temp_widget.add_css_class("lane-background");
+        let bg_color = temp_widget.color();
+        temp_widget.remove_css_class("lane-background");
 
-        // Create a temporary widget to query colors
-        let temp_widget = DrawingArea::new();
-        let bg_color = get_color(&temp_widget, "lane-background");
-        let current_color = get_color(&temp_widget, "lane-current");
-        let text_color = get_color(&temp_widget, "lane-text");
+        temp_widget.add_css_class("lane-current");
+        let current_color = temp_widget.color();
+        temp_widget.remove_css_class("lane-current");
+
+        temp_widget.add_css_class("lane-text");
+        let text_color = temp_widget.color();
 
         let mut lanes = Vec::new();
         let lane_texts = vec![Vec::new(), Vec::new(), Vec::new(), Vec::new()];
+        imp.lane_texts.replace(lane_texts);
 
         for i in 0..4 {
-            let lane = DrawingArea::new();
-            lane.set_vexpand(true);
-            lane.set_hexpand(true);
-            lane.set_height_request(100);
-
-            let lane_index = i;
-            let current_lane = imp.current_lane.clone();
-            let texts = imp.lane_texts.clone();
-
-            lane.set_draw_func(move |_widget, cr, width, _height| {
-                let current = *current_lane.borrow();
-
-                // Background
-                let (r, g, b) = if current == lane_index {
-                    current_color
-                } else {
-                    bg_color
-                };
-                cr.set_source_rgb(r, g, b);
-                cr.paint().unwrap();
-
-                // Draw texts
-                let (tr, tg, tb) = text_color;
-                cr.set_source_rgb(tr, tg, tb);
-                cr.set_font_size(20.0);
-
-                if let Ok(all_texts) = texts.try_borrow() {
-                    for text in &all_texts[lane_index] {
-                        if text.x < width as f64 && text.x > -200.0 {
-                            cr.move_to(text.x, 50.0);
-                            cr.show_text(&text.text).unwrap();
-                        }
-                    }
-                }
-            });
-
+            let lane = LaneWidget::new(i, imp.current_lane.clone(), imp.lane_texts.clone());
+            lane.set_colors(bg_color, current_color, text_color);
             lanes_container.append(&lane);
             lanes.push(lane);
         }
 
         imp.game_area.append(&lanes_container);
         imp.lanes.replace(lanes);
-        imp.lane_texts.replace(lane_texts);
 
         // Setup keyboard input
         let key_controller = gtk::EventControllerKey::new();
