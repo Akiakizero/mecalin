@@ -98,6 +98,14 @@ mod imp {
         pub score_label: TemplateChild<gtk::Label>,
         #[template_child]
         pub difficulty_label: TemplateChild<gtk::Label>,
+        #[template_child]
+        pub results_box: TemplateChild<gtk::Box>,
+        #[template_child]
+        pub results_score_label: TemplateChild<gtk::Label>,
+        #[template_child]
+        pub results_level_label: TemplateChild<gtk::Label>,
+        #[template_child]
+        pub restart_button: TemplateChild<gtk::Button>,
 
         pub falling_keys_widget: RefCell<Option<FallingKeysWidget>>,
         pub keyboard_widget: RefCell<Option<crate::keyboard_widget::KeyboardWidget>>,
@@ -184,6 +192,14 @@ impl FallingKeysGame {
         keys_widget.add_controller(key_controller);
 
         keys_widget.grab_focus();
+
+        // Setup restart button
+        let obj = self.downgrade();
+        imp.restart_button.connect_clicked(move |_| {
+            if let Some(obj) = obj.upgrade() {
+                obj.restart_game();
+            }
+        });
 
         // Start game loop
         self.start_game_loop();
@@ -320,87 +336,25 @@ impl FallingKeysGame {
         let imp = self.imp();
         *imp.game_over.borrow_mut() = true;
 
-        // Hide game area and show results
         if let Some(child) = imp.game_area.child() {
             child.set_visible(false);
-        }
-        if let Some(drawing_area) = imp.falling_keys_widget.borrow().as_ref() {
-            drawing_area.set_visible(false);
         }
         if let Some(keyboard) = imp.keyboard_widget.borrow().as_ref() {
             keyboard.set_visible(false);
         }
 
-        let score = *imp.score.borrow();
-        let level = *imp.difficulty.borrow();
-
-        // Create results view
-        let results_box = gtk::Box::new(gtk::Orientation::Vertical, 36);
-        results_box.set_halign(gtk::Align::Center);
-        results_box.set_valign(gtk::Align::Center);
-        results_box.set_vexpand(true);
-
-        // Score and level display
-        let stats_box = gtk::Box::new(gtk::Orientation::Horizontal, 12);
-
-        // Score
-        let score_box = gtk::Box::new(gtk::Orientation::Vertical, 0);
-        score_box.set_width_request(200);
-        let score_label = gtk::Label::new(Some(&score.to_string()));
-        score_label.add_css_class("title-1");
-        let score_desc = gtk::Label::new(Some("Score"));
-        score_desc.add_css_class("dim-label");
-        score_box.append(&score_label);
-        score_box.append(&score_desc);
-
-        let separator = gtk::Separator::new(gtk::Orientation::Vertical);
-
-        // Level
-        let level_box = gtk::Box::new(gtk::Orientation::Vertical, 0);
-        level_box.set_width_request(200);
-        let level_label = gtk::Label::new(Some(&level.to_string()));
-        level_label.add_css_class("title-1");
-        let level_desc = gtk::Label::new(Some("Level Reached"));
-        level_desc.add_css_class("dim-label");
-        level_box.append(&level_label);
-        level_box.append(&level_desc);
-
-        stats_box.append(&score_box);
-        stats_box.append(&separator);
-        stats_box.append(&level_box);
-
-        // Restart button
-        let restart_button = gtk::Button::with_label("Play Again");
-        restart_button.add_css_class("pill");
-        restart_button.add_css_class("suggested-action");
-
-        let obj = self.downgrade();
-        restart_button.connect_clicked(move |_| {
-            if let Some(obj) = obj.upgrade() {
-                obj.restart_game();
-            }
-        });
-
-        results_box.append(&stats_box);
-        results_box.append(&restart_button);
-
-        imp.game_area.add_overlay(&results_box);
+        imp.results_score_label
+            .set_text(&imp.score.borrow().to_string());
+        imp.results_level_label
+            .set_text(&imp.difficulty.borrow().to_string());
+        imp.results_box.set_visible(true);
     }
 
     fn restart_game(&self) {
         let imp = self.imp();
 
-        // Remove results overlay
-        let mut child = imp.game_area.first_child();
-        while let Some(widget) = child {
-            let next = widget.next_sibling();
-            if widget.type_() == gtk::Box::static_type() {
-                imp.game_area.remove_overlay(&widget);
-            }
-            child = next;
-        }
+        imp.results_box.set_visible(false);
 
-        // Show game elements
         if let Some(child) = imp.game_area.child() {
             child.set_visible(true);
         }
