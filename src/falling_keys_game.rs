@@ -90,10 +90,10 @@ impl FallingKeysGame {
 
         // Create keyboard widget
         let keyboard = crate::keyboard_widget::KeyboardWidget::new();
-        imp.game_area.add_overlay(keyboard.widget());
-        keyboard.widget().set_halign(gtk::Align::Center);
-        keyboard.widget().set_valign(gtk::Align::End);
-        keyboard.widget().set_margin_bottom(20);
+        imp.game_area.add_overlay(&keyboard);
+        keyboard.set_halign(gtk::Align::Center);
+        keyboard.set_valign(gtk::Align::End);
+        keyboard.set_margin_bottom(20);
         imp.keyboard_widget.replace(Some(keyboard));
 
         // Query text color from CSS
@@ -292,7 +292,7 @@ impl FallingKeysGame {
             drawing_area.set_visible(false);
         }
         if let Some(keyboard) = imp.keyboard_widget.borrow().as_ref() {
-            keyboard.widget().set_visible(false);
+            keyboard.set_visible(false);
         }
 
         let score = *imp.score.borrow();
@@ -373,7 +373,7 @@ impl FallingKeysGame {
             drawing_area.grab_focus();
         }
         if let Some(keyboard) = imp.keyboard_widget.borrow().as_ref() {
-            keyboard.widget().set_visible(true);
+            keyboard.set_visible(true);
         }
 
         self.reset();

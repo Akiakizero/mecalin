@@ -94,7 +94,7 @@ mod imp {
 impl imp::LessonView {
     fn setup_keyboard(&self) {
         let keyboard = KeyboardWidget::new();
-        self.keyboard_container.append(keyboard.widget());
+        self.keyboard_container.append(&keyboard);
         self.keyboard_widget.replace(Some(keyboard));
     }
 
