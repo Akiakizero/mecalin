@@ -2,8 +2,8 @@
   "lessons": [
     {
       "id": 0,
-      "title": "Benvido a Mecalin",
-      "description": "Benvido a Mecalin, o teu titor para aprender a teclear! Este curso ensinarache a teclear paso a paso. Comezarás pola fila principal de teclas e irás aprendendo todas as teclas do teclado gradualmente. Toma o teu tempo, practica regularmente e converteráste rapidamente nun experto tecleando",
+      "title": "¡Benvido a Mecalin",
+      "description": "¡Benvido a Mecalin, o teu titor para aprender a teclear! Este curso ensinarache a teclear paso a paso. Comezarás pola fila principal de teclas e irás aprendendo todas as teclas do teclado gradualmente. Toma o teu tempo, practica regularmente e converteráste rapidamente nun experto tecleando",
       "steps": [],
       "introduction": true
     },
@@ -21,13 +21,13 @@
         {
           "id": 1,
           "text": "a",
-          "description": "Pulse a tecla 'a' co dedo mínimo da man esquerda",
+          "description": "Pulse a tecla 'a' co dedo maimiño da man esquerda",
           "repetitions": 1
         },
         {
           "id": 2,
           "text": "ñ",
-          "description": "Non esqueza colocar os dedos sobre a liña base e os polgares sobre a barra espazadora. Debe acostumarse a adoptar a posición correcta en todas as sesións. Pulse a tecla 'ñ' co dedo mínimo da man dereita",
+          "description": "Non esqueza colocar os dedos sobre a liña base e os polgares sobre a barra espazadora. Debe acostumarse a adoptar a posición correcta en todas as sesións. Pulse a tecla 'ñ' co dedo maimiño da man dereita",
           "repetitions": 1
         },
         {
@@ -184,13 +184,13 @@
         {
           "id": 7,
           "text": "fñja djkf jslf",
-          "description": "Está pulsando a barra espazadora co polgar adecuado?",
+          "description": "¿Está pulsando a barra espazadora co polgar adecuado?",
           "repetitions": 2
         },
         {
           "id": 8,
           "text": "añsldkfj ñalskdjf",
-          "description": "Está pulsando a barra espazadora co polgar adecuado?",
+          "description": "¿Está pulsando a barra espazadora co polgar adecuado?",
           "repetitions": 2
         },
         {
@@ -232,25 +232,25 @@
         {
           "id": 15,
           "text": "´",
-          "description": "Outra tecla desta liña '´'. Púlsase co dedo mínimo da man dereita, igual que a tecla 'ñ', pero lembre que non debe desprazar a man, só o dedo",
+          "description": "Outra tecla desta liña '´'. Púlsase co dedo maimiño da man dereita, igual que a tecla 'ñ', pero lembre que non debe desprazar a man, só o dedo",
           "repetitions": 1
         },
         {
           "id": 16,
           "text": "añ´ sl´ dk´ fj´ gh´",
-          "description": "Outra tecla desta liña '´'. Púlsase co dedo mínimo da man dereita, igual que a tecla 'ñ', pero lembre que non debe desprazar a man, só o dedo",
+          "description": "Outra tecla desta liña '´'. Púlsase co dedo maimiño da man dereita, igual que a tecla 'ñ', pero lembre que non debe desprazar a man, só o dedo",
           "repetitions": 1
         },
         {
           "id": 17,
           "text": "ña´ ls´ kd´ jf´ hg´",
-          "description": "Outra tecla desta liña '´'. Púlsase co dedo mínimo da man dereita, igual que a tecla 'ñ', pero lembre que non debe desprazar a man, só o dedo",
+          "description": "Outra tecla desta liña '´'. Púlsase co dedo maimiño da man dereita, igual que a tecla 'ñ', pero lembre que non debe desprazar a man, só o dedo",
           "repetitions": 1
         },
         {
           "id": 18,
           "text": "çÇ",
-          "description": "Outra tecla desta liña base sería 'ç'. Púlsase co dedo mínimo da man dereita, debendo ter pulsada a tecla SHIFT se quere pulsala en maiúsculas 'Ç'",
+          "description": "Outra tecla desta liña base sería 'ç'. Púlsase co dedo maimiño da man dereita, debendo ter pulsada a tecla SHIFT se quere pulsala en maiúsculas 'Ç'",
           "repetitions": 1
         },
         {
@@ -292,7 +292,7 @@
         {
           "id": 25,
           "text": "fñjaç ajñfç gjhf",
-          "description": "Están os polgares na súa posición?",
+          "description": "¿Están os polgares na súa posición?",
           "repetitions": 2
         },
         {
@@ -310,7 +310,7 @@
         {
           "id": 28,
           "text": "",
-          "description": "Parabéns! Rematou a segunda lección",
+          "description": "¡Parabéns! Rematou a segunda lección",
           "introduction": true
         }
       ]
@@ -323,91 +323,91 @@
         {
           "id": 0,
           "text": "",
-          "description": "Aquí comeza la tercera lección. Imos empezar con la liña dominante, que es como se llama a la que está sobre la liña base",
+          "description": "Aquí comeza a terceira lección. Imos empezar coa liña dominante, que é como se chama á que está sobre a liña base",
           "introduction": true
         },
         {
           "id": 1,
           "text": "qp",
-          "description": "Pulse la tecla 'q' co dedo mínimo da man esquerda y la 'p' con el da man dereita",
+          "description": "Pulse a tecla 'q' co dedo maimiño da man esquerda e a 'p' co da man dereita",
           "repetitions": 1
         },
         {
           "id": 2,
           "text": "qqq ppp qpq pqp",
-          "description": "Teclee dos veces correctasmente",
+          "description": "Teclee dúas veces correctamente",
           "repetitions": 2
         },
         {
           "id": 3,
           "text": "wo",
-          "description": "Agora pulse la tecla 'w' co dedo anular da man esquerda y la 'o' con el da man dereita",
+          "description": "Agora pulse a tecla 'w' co dedo anular da man esquerda y la 'o' co da man dereita",
           "repetitions": 1
         },
         {
           "id": 4,
           "text": "www ooo wow owo",
-          "description": "Agora pulse la tecla 'w' co dedo anular da man esquerda y la 'o' con el da man dereita",
+          "description": "Agora pulse a tecla 'w' co dedo anular da man esquerda y la 'o' co da man dereita",
           "repetitions": 1
         },
         {
           "id": 5,
           "text": "qwop powq",
-          "description": "Y ahora unos exercicios con las catro primeras teclas de esta liña",
+          "description": "E agora uns exercicios coas catro primeiras teclas desta liña",
           "repetitions": 2
         },
         {
           "id": 6,
           "text": "qpwo pqow",
-          "description": "Y ahora unos exercicios con las catro primeras teclas de esta liña",
+          "description": "E agora uns exercicios coas catro primeiras teclas desta liña",
           "repetitions": 2
         },
         {
           "id": 7,
           "text": "wopq qpow",
-          "description": "Ya debe adoptar automáticamente la postura correctas",
+          "description": "Xa debe adoptar automaticamente a postura correcta",
           "repetitions": 2
         },
         {
           "id": 8,
           "text": "owqp pqwo",
-          "description": "Ya debe adoptar automáticamente la postura correctas",
+          "description": "Xa debe adoptar automaticamente a postura correcta",
           "repetitions": 2
         },
         {
           "id": 9,
           "text": "ei",
-          "description": "Dúas teclas máis para os dedos corazón. Con la esquerda la tecla 'e' y con la dereita la tecla 'i'",
+          "description": "Dúas teclas máis para os dedos corazón. Coa esquerda a tecla 'e' e coa dereita a tecla 'i'",
           "repetitions": 1
         },
         {
           "id": 10,
           "text": "eee iii eie iei",
-          "description": "Dúas teclas máis para os dedos corazón. Con la esquerda la tecla 'e' y con la dereita la tecla 'i'",
+          "description": "Dúas teclas máis para os dedos corazón. Coa esquerda a tecla 'e' e coa dereita a tecla 'i'",
           "repetitions": 1
         },
         {
           "id": 11,
           "text": "qwe ewq iop poi",
-          "description": "Non esqueza la posición de los polgares sobre la barra espazadora y el resto de los dedos sobre la liña base",
+          "description": "Non esqueza a posición dos polgares sobre la barra espazadora e o resto dos dedos sobre a liña base",
           "repetitions": 2
         },
         {
           "id": 12,
           "text": "qpwoei ieowpq",
-          "description": "Non esqueza la posición de los polgares sobre la barra espazadora y el resto de los dedos sobre la liña base",
+          "description": "Non esqueza a posición dos polgares sobre la barra espazadora e o resto dos dedos sobre a liña base",
           "repetitions": 2
         },
         {
           "id": 13,
           "text": "qiepow wopeiq",
-          "description": "No desplace toda a man, só los dedos que van a pulsar",
+          "description": "Non despraze toda a man, só os dedos que van a pulsar",
           "repetitions": 2
         },
         {
           "id": 14,
           "text": "eiwoqp pqowie",
-          "description": "No desplace toda a man, só los dedos que van a pulsar",
+          "description": "Non despraze toda a man, só os dedos que van a pulsar",
           "repetitions": 2
         },
         {
@@ -425,74 +425,74 @@
         {
           "id": 17,
           "text": "qiwoep epwoqi",
-          "description": "Non mire al teclado. Sólo debe mirar la pantalla",
+          "description": "Non mire o teclado. Só debe mirar a pantalla",
           "repetitions": 2
         },
         {
           "id": 18,
           "text": "peowiq iqowpe",
-          "description": "Non mire al teclado. Sólo debe mirar la pantalla",
+          "description": "Non mire o teclado. Só debe mirar a pantalla",
           "repetitions": 2
         },
         {
           "id": 19,
           "text": "qweiop poiewq",
-          "description": "No se precipite. No corra. Ya alcanzará velocidad a su debido tiempo. Agora concéntrese en hacer los exercicios bien",
+          "description": "Non se precipite. Non corra. Xa alcanzará velocidade no seu debido tempo. Agora concéntrese en facer os exercicios ben",
           "repetitions": 2
         },
         {
           "id": 20,
           "text": "pq wo ie wo pq",
-          "description": "No se precipite. No corra. Ya alcanzará velocidad a su debido tiempo. Agora concéntrese en hacer los exercicios bien",
+          "description": "Non se precipite. Non corra. Xa alcanzará velocidade no seu debido tempo. Agora concéntrese en facer os exercicios ben",
           "repetitions": 2
         },
         {
           "id": 21,
           "text": "",
-          "description": "Parabéns! Rematou la tercera lección",
+          "description": "¡Parabéns! Rematou a terceira lección",
           "introduction": true
         }
       ]
     },
     {
       "id": 4,
-      "title": "Fia dominante",
-      "description": "Aprende as tecas de a fia dominante: Q, W, E, R, T, Y, I, O, P",
+      "title": "Fila dominante",
+      "description": "Aprende as teclas da fila dominante: Q, W, E, R, T, Y, I, O, P",
       "steps": [
         {
           "id": 0,
           "text": "",
-          "description": "Nesta lección vamos a aprender o resto de a liña dominante y faremos exercicios con as dos liñas que ya coñecemos",
+          "description": "Nesta lección imos aprender o resto da liña dominante e faremos exercicios coas dúas liñas que xa coñecemos",
           "introduction": true
         },
         {
           "id": 1,
           "text": "ru",
-          "description": "Pulse a teca 'r' co dedo índice da man esquerda y a teca 'u' con o da man dereita",
+          "description": "Pulse a tecla 'r' co dedo índice da man esquerda e a tecla 'u' co da man dereita",
           "repetitions": 1
         },
         {
           "id": 2,
           "text": "rrr uuu rur uru",
-          "description": "Pulse a teca 'r' co dedo índice da man esquerda y a teca 'u' con o da man dereita",
+          "description": "Pulse a tecla 'r' co dedo índice da man esquerda e a tecla 'u' co da man dereita",
           "repetitions": 2
         },
         {
           "id": 3,
           "text": "qpwoeiru",
-          "description": "E agora con as demais tecas que ya coñecemos nesta liña",
+          "description": "E agora coas demais teclas que xa coñecemos nesta liña",
           "repetitions": 2
         },
         {
           "id": 4,
           "text": "pqowieur",
-          "description": "E agora con as demais tecas que ya coñecemos nesta liña",
+          "description": "E agora coas demais teclas que xa coñecemos nesta liña",
           "repetitions": 2
         },
         {
           "id": 5,
           "text": "rq up rw uo re ui",
-          "description": "E agora con as demais tecas que ya coñecemos nesta liña",
+          "description": "E agora coas demais teclas que xa coñecemos nesta liña",
           "repetitions": 2
         },
         {
@@ -504,13 +504,13 @@
         {
           "id": 7,
           "text": "t",
-          "description": "Co dedo índice da man esquerda pulse a teca 't'",
+          "description": "Co dedo índice da man esquerda pulse a tecla 't'",
           "repetitions": 1
         },
         {
           "id": 8,
           "text": "y",
-          "description": "Co dedo índice da man dereita pulse a teca 'y'",
+          "description": "Co dedo índice da man dereita pulse a tecla 'y'",
           "repetitions": 1
         },
         {
@@ -522,43 +522,43 @@
         {
           "id": 10,
           "text": "qpwo eiru tyru",
-          "description": "Asegúrese de pulsar as tecas cos dedos correctos",
+          "description": "Asegúrese de pulsar as teclas cos dedos correctos",
           "repetitions": 2
         },
         {
           "id": 11,
           "text": "ytur ieow pqow",
-          "description": "Non esqueza no desprazar as mans sino os dedos",
+          "description": "Non esqueza non desprazar as mans senón os dedos",
           "repetitions": 2
         },
         {
           "id": 12,
           "text": "ptqy orwu ieei",
-          "description": "Despois de cada pulsación os dedos deben volver a su posición correctas",
+          "description": "Despois de cada pulsación os dedos deben volver á súa posición correcta",
           "repetitions": 2
         },
         {
           "id": 13,
           "text": "`",
-          "description": "Co dedo mínimo da man dereita pulse a teca '`' que se indica y despois a barra espazadora para que aparezca a tilde, ya que se trata de una teca muerta ya que necesita otra teca para aparecer",
+          "description": "Co dedo maimiño da man dereita pulse a tecla '`' que se indica e despois a barra espazadora para que aparezca a tilde, xa que se trata dunha tecla morta xa que necesita outra tecla para aparecer",
           "repetitions": 1
         },
         {
           "id": 14,
           "text": "+",
-          "description": "Co mesmo dedo pulse a teca '+'",
+          "description": "Co mesmo dedo pulse a tecla '+'",
           "repetitions": 1
         },
         {
           "id": 15,
           "text": "*",
-          "description": "Agora imos utilizar a teca SHIFT o maiúscuas. Pulse SHIFT co dedo mínimo izquierdo y a teca '*' co dedo mínimo derecho",
+          "description": "Agora imos utilizar a tecla SHIFT ou maiúsculas. Pulse SHIFT co dedo maimiño izquierdo e a tecla '*' co dedo maimiño derecho",
           "repetitions": 1
         },
         {
           "id": 16,
           "text": "^",
-          "description": "Lembre que a teca SHIFT púlsase coa man contraria a a que va a pulsar a teca principao y cos dedos mínimos. Cos mesmos dedos y manos ahora pulse a teca '^' y a barra espazadora",
+          "description": "Lembre que a teca SHIFT púlsase coa man contraria a a que va a pulsar a teca principao e cos dedos mínimos. Cos mesmos dedos e mans agora pulse a tecla '^' e a barra espazadora",
           "repetitions": 1
         },
         {
@@ -570,31 +570,31 @@
         {
           "id": 18,
           "text": "qp+` wo+` ei+`+ ru` ty`",
-          "description": "Non se impaciente. Este exercicio es complicado si se intenta facer deprésa y sinxoo si se hace roaxadamente",
+          "description": "Non se impaciente. Este exercicio é complicado se se intenta facer deprisa e sinxelo se se fai relaxadamente",
           "repetitions": 1
         },
         {
           "id": 19,
           "text": "^* *^ p*p p^p",
-          "description": "Non se impaciente. Este exercicio es complicado si se intenta facer deprésa y sinxoo si se hace roaxadamente",
+          "description": "Non se impaciente. Este exercicio é complicado se se intenta facer deprisa e sinxelo se se fai relaxadamente",
           "repetitions": 1
         },
         {
           "id": 20,
           "text": "qpqñ ñqpa q*^a",
-          "description": "Agora ya coñece dos liñas completas. Los seguintes exercicios deben considerarse como un repaso de as catro leccións que leva ata o momento. Comezaremos con os mínimos",
+          "description": "Agora xa coñece dúas liñas completas. Os seguintes exercicios deben considerarse como un repaso das catro leccións que leva ata o momento. Comezaremos cos mínimos",
           "repetitions": 2
         },
         {
           "id": 21,
           "text": "ñapq^ *ç aç qp^",
-          "description": "Agora ya coñece dos liñas completas. Los seguintes exercicios deben considerarse como un repaso de as catro leccións que leva ata o momento. Comezaremos con os mínimos",
+          "description": "Agora xa coñece dúas liñas completas. Os seguintes exercicios deben considerarse como un repaso das catro leccións que leva ata o momento. Comezaremos cos mínimos",
           "repetitions": 2
         },
         {
           "id": 22,
           "text": "slwo owls swol",
-          "description": "Cos anuares",
+          "description": "Cos anulares",
           "repetitions": 2
         },
         {
@@ -624,61 +624,61 @@
         {
           "id": 27,
           "text": "qwert poiuy",
-          "description": "Y con todos...",
+          "description": "E con todos...",
           "repetitions": 2
         },
         {
           "id": 28,
           "text": "trewq yuiop",
-          "description": "Y con todos...",
+          "description": "E con todos...",
           "repetitions": 2
         },
         {
           "id": 29,
           "text": "aqwedsa",
-          "description": "Pulse cos dedos correctos cada teca",
+          "description": "Pulse cos dedos correctos cada tecla",
           "repetitions": 3
         },
         {
           "id": 30,
           "text": "ñ^`poiklñ",
-          "description": "Pulse cos dedos correctos cada teca",
+          "description": "Pulse cos dedos correctos cada tecla",
           "repetitions": 3
         },
         {
           "id": 31,
           "text": "asdewqa",
-          "description": "Despois de cada pulsación deben volver os dedos a su posición en a liña base",
+          "description": "Despois de cada pulsación deben volver os dedos á súa posición na liña base",
           "repetitions": 3
         },
         {
           "id": 32,
           "text": "ñlkiop´`^ñ",
-          "description": "Despois de cada pulsación deben volver os dedos a su posición en a liña base",
+          "description": "Despois de cada pulsación deben volver os dedos á súa posición na liña base",
           "repetitions": 3
         },
         {
           "id": 33,
           "text": "ñlkiopñ",
-          "description": "Los polgares debnestar sobre a barra espazadora",
+          "description": "Os polgares deben estar sobre a barra espazadora",
           "repetitions": 3
         },
         {
           "id": 34,
           "text": "frtgf jhyuj",
-          "description": "Los polgares debnestar sobre a barra espazadora",
+          "description": "Os polgares deben estar sobre a barra espazadora",
           "repetitions": 3
         },
         {
           "id": 35,
           "text": "fgtrf juyhj",
-          "description": "Los polgares debnestar sobre a barra espazadora",
+          "description": "Os polgares deben estar sobre a barra espazadora",
           "repetitions": 3
         },
         {
           "id": 36,
           "text": "aqwertgfdsa",
-          "description": "Non mire o tecado",
+          "description": "Non mire o teclado",
           "repetitions": 3
         },
         {
@@ -696,255 +696,255 @@
         {
           "id": 39,
           "text": "+ñlkjhyuiop`",
-          "description": "Coloque o corpo en a posición correctas",
+          "description": "Coloque o corpo na posición correcta",
           "repetitions": 2
         },
         {
           "id": 40,
           "text": "aqñp swlo deki frik",
-          "description": "Coloque o corpo en a posición correctas",
+          "description": "Coloque o corpo na posición correcta",
           "repetitions": 2
         },
         {
           "id": 41,
           "text": "jtuyth aqñp",
-          "description": "As paomas de as mans no deben apoiarse sobre a mesa o o tecado",
+          "description": "As palmas das mans non deben apoiarse sobre a mesa ou o teclado",
           "repetitions": 2
         },
         {
           "id": 42,
           "text": "heigwoñ frt",
-          "description": "As paomas de as mans no deben apoiarse sobre a mesa o o tecado",
+          "description": "As palmas das mans non deben apoiarse sobre a mesa ou o teclado",
           "repetitions": 2
         },
         {
           "id": 43,
           "text": "huij dert",
-          "description": "Non cruce as pernas; evitará entumecemento de os membros",
+          "description": "Non cruce as pernas; evitará entumecemento dos membros",
           "repetitions": 2
         },
         {
           "id": 44,
           "text": "parque parada",
-          "description": "Agora vamos a formar paoabras",
+          "description": "Agora imos formar palabras",
           "repetitions": 2
         },
         {
           "id": 45,
           "text": "golpea porque",
-          "description": "Agora vamos a formar paoabras",
+          "description": "Agora imos formar palabras",
           "repetitions": 2
         },
         {
           "id": 46,
           "text": "perito joyero",
-          "description": "Lembre que a posición de as mans es curvada y rozando levemente as tecas de a liña base",
+          "description": "Lembre que a posición das mans é curvada e rozando lixeiramente as teclas da liña base",
           "repetitions": 2
         },
         {
           "id": 47,
           "text": "pleura dedo",
-          "description": "Lembre que a posición de as mans es curvada y rozando levemente as tecas de a liña base",
+          "description": "Lembre que a posición das mans é curvada e rozando lixeiramente as teclas da liña base",
           "repetitions": 2
         },
         {
           "id": 48,
           "text": "pelota tres",
-          "description": "Los polgares debnestar sobre a barra espazadora",
+          "description": "Os polgares deben estar sobre a barra espazadora",
           "repetitions": 2
         },
         {
           "id": 49,
           "text": "aquelarre",
-          "description": "Los polgares debnestar sobre a barra espazadora",
+          "description": "Os polgares deben estar sobre a barra espazadora",
           "repetitions": 2
         },
         {
           "id": 50,
           "text": "deseado supuesto",
-          "description": "Non mire o tecado",
+          "description": "Non mire o teclado",
           "repetitions": 2
         },
         {
           "id": 51,
           "text": "aislado huido",
-          "description": "Non mire o tecado",
+          "description": "Non mire o teclado",
           "repetitions": 2
         },
         {
           "id": 52,
           "text": "fragua seguir",
-          "description": "A estas aoturas do curso ya debe ter os hábitos correctos. Se non é así sería aconsoable repasar a lección para principiantes",
+          "description": "A estas alturas do curso xa debe ter os hábitos correctos. Se non é así sería aconsellable repasar a lección para principiantes",
           "repetitions": 2
         },
         {
           "id": 53,
           "text": "fresa querido",
-          "description": "A estas aoturas do curso ya debe ter os hábitos correctos. Se non é así sería aconsoable repasar a lección para principiantes",
+          "description": "A estas alturas do curso xa debe ter os hábitos correctos. Se non é así sería aconsellable repasar a lección para principiantes",
           "repetitions": 2
         },
         {
           "id": 54,
           "text": "",
-          "description": "Parabéns! Rematou a cuarta lección",
+          "description": "¡Parabéns! Rematou a cuarta lección",
           "introduction": true
         }
       ]
     },
     {
       "id": 5,
-      "title": "Primera parte de a fia inferior",
-      "description": "Aprende parte de a fia inferior: Z, -, X, ., C, ,",
+      "title": "Primeira parte da fila inferior",
+      "description": "Aprende parte da fila inferior: Z, -, X, ., C, ,",
       "steps": [
         {
           "id": 0,
           "text": "",
-          "description": "Imos comezar con a liña inferior. Ya coñece o método y le será moi fácil esta quinta lección.",
+          "description": "Imos comezar coa liña inferior. Xa coñece o método e seralle moi fácil esta quinta lección.",
           "introduction": true
         },
         {
           "id": 1,
           "text": "z-",
-          "description": "Pulse 'z' co dedo mínimo da man esquerda y a teca '-' con o da man dereita",
+          "description": "Pulse 'z' co dedo maimiño da man esquerda e a tecla '-' co da man dereita",
           "repetitions": 1
         },
         {
           "id": 2,
           "text": "zzz --- z-z -z-",
-          "description": "Pulse 'z' co dedo mínimo da man esquerda y a teca '-' con o da man dereita",
+          "description": "Pulse 'z' co dedo maimiño da man esquerda e a tecla '-' co da man dereita",
           "repetitions": 2
         },
         {
           "id": 3,
           "text": "x.",
-          "description": "Pulse a teca 'x' co dedo anuar da man esquerda y a teca '.' con o da man dereita",
+          "description": "Pulse a tecla 'x' co dedo anuar da man esquerda e a tecla '.' co da man dereita",
           "repetitions": 1
         },
         {
           "id": 4,
           "text": "xxx ... x.x .x.",
-          "description": "Pulse a teca 'x' co dedo anuar da man esquerda y a teca '.' con o da man dereita",
+          "description": "Pulse a tecla 'x' co dedo anuar da man esquerda e a tecla '.' co da man dereita",
           "repetitions": 2
         },
         {
           "id": 5,
           "text": "zx.- -.xz",
-          "description": "Despois de cada pulsación en a fia inferior os dedos deben volver a a súa teca de a lína base",
+          "description": "Despois de cada pulsación na fila inferior os dedos deben volver á súa tecla da liña base",
           "repetitions": 2
         },
         {
           "id": 6,
           "text": "c,",
-          "description": "Pulse a teca 'c' co dedo corazón da man esquerda y a teca ',' con o da man dereita",
+          "description": "Pulse a tecla 'c' co dedo corazón da man esquerda e a tecla ',' co da man dereita",
           "repetitions": 1
         },
         {
           "id": 7,
           "text": "ccc ,,, c,c ,c,",
-          "description": "Pulse a teca 'c' co dedo corazón da man esquerda y a teca ',' con o da man dereita",
+          "description": "Pulse a tecla 'c' co dedo corazón da man esquerda e a tecla ',' co da man dereita",
           "repetitions": 2
         },
         {
           "id": 8,
           "text": "zxc cxz -., ,.-",
-          "description": "Los dedos son os que se desprazan non as mans",
+          "description": "Os dedos son os que se desprazan non as mans",
           "repetitions": 2
         },
         {
           "id": 9,
           "text": "z-x.c, ,c.x-z",
-          "description": "Los dedos son os que se desprazan non as mans",
+          "description": "Os dedos son os que se desprazan non as mans",
           "repetitions": 2
         },
         {
           "id": 10,
           "text": "zzxxcc ,,..--",
-          "description": "Los polgares debnestar sobre a barra espazadora",
+          "description": "Os polgares deben estar sobre a barra espazadora",
           "repetitions": 2
         },
         {
           "id": 11,
           "text": "--..,, ccxxzz",
-          "description": "Los polgares debnestar sobre a barra espazadora",
+          "description": "Os polgares deben estar sobre a barra espazadora",
           "repetitions": 2
         },
         {
           "id": 12,
           "text": "z, .x c-",
-          "description": "Non esqueza que a barra espazadora púlsase co dedo pulgar da man contraria a a última teca pulsada",
+          "description": "Non esqueza que a barra espazadora púlsase co dedo pulgar da man contraria á última tecla pulsada",
           "repetitions": 2
         },
         {
           "id": 13,
           "text": ",z x. -c",
-          "description": "Non esqueza que a barra espazadora púlsase co dedo pulgar da man contraria a a última teca pulsada",
+          "description": "Non esqueza que a barra espazadora púlsase co dedo pulgar da man contraria á última tecla pulsada",
           "repetitions": 2
         },
         {
           "id": 14,
           "text": "cc,, -- zz",
-          "description": "Está colocando os dedos na súa sitio despois de cada pulsación?",
+          "description": "¿Está colocando os dedos na súa sitio despois de cada pulsación?",
           "repetitions": 2
         },
         {
           "id": 15,
           "text": "z x c , . -",
-          "description": "Está colocando os dedos na súa sitio despois de cada pulsación?",
+          "description": "¿Está colocando os dedos na súa sitio despois de cada pulsación?",
           "repetitions": 2
         },
         {
           "id": 16,
           "text": "- . , c x z",
-          "description": "Lea todas as explicacións y consoos que aparecen nas leccións",
+          "description": "Lea todas as explicacións e consellos que aparecen nas leccións",
           "repetitions": 2
         },
         {
           "id": 17,
           "text": "",
-          "description": "Parabéns! Rematou a quinta lección",
+          "description": "¡Parabéns! Rematou a quinta lección",
           "introduction": true
         }
       ]
     },
     {
       "id": 6,
-      "title": "Fia inferior",
-      "description": "Aprende toda a fia inferior: Z, -, X, ., C, ,, V, M, B, N",
+      "title": "Fila inferior",
+      "description": "Aprende toda a fila inferior: Z, -, X, ., C, ,, V, M, B, N",
       "steps": [
         {
           "id": 0,
           "text": "",
-          "description": "Con esta lección completaremos a liña inferior. Despois deberá facer uns exercicios con todas as tecas que coñece",
+          "description": "Con esta lección completaremos a liña inferior. Despois deberá facer uns exercicios con todas as teclas que coñece",
           "introduction": true
         },
         {
           "id": 1,
           "text": "v",
-          "description": "Pulse a teca 'v' co dedo índice da man esquerda",
+          "description": "Pulse a tecla 'v' co dedo índice da man esquerda",
           "repetitions": 1
         },
         {
           "id": 2,
           "text": "m",
-          "description": "A continuación a teca 'm' co dedo índice da man dereita",
+          "description": "A continuación a tecla 'm' co dedo índice da man dereita",
           "repetitions": 1
         },
         {
           "id": 3,
           "text": "vvv mmm vmv mvm",
-          "description": "A continuación a teca 'm' co dedo índice da man dereita",
+          "description": "A continuación a tecla 'm' co dedo índice da man dereita",
           "repetitions": 2
         },
         {
           "id": 4,
           "text": "bn",
-          "description": "Agora con os mesmos dedos pulse con a esquerda a teca 'b' y con a dereita a teca 'n'",
+          "description": "Agora cos mesmos dedos pulse coa esquerda a tecla 'b' e coa dereita a tecla 'n'",
           "repetitions": 1
         },
         {
           "id": 5,
           "text": "bbb nnn bnb nbn",
-          "description": "Agora con os mesmos dedos pulse con a esquerda a teca 'b' y con a dereita a teca 'n'",
+          "description": "Agora cos mesmos dedos pulse coa esquerda a tecla 'b' e coa dereita a tecla 'n'",
           "repetitions": 2
         },
         {
@@ -962,79 +962,79 @@
         {
           "id": 8,
           "text": "z- x. c, vm bn",
-          "description": "Non esqueza todos os hábitos que debe ter adquirido nas leccións anteriores. De caoquera xeito los iremos lembrando nesta lección",
+          "description": "Non esqueza todos os hábitos que debe ter adquirido nas leccións anteriores. De calquera xeito os iremos lembrando nesta lección",
           "repetitions": 2
         },
         {
           "id": 9,
           "text": "-z .x ,c mv nb",
-          "description": "Non esqueza todos os hábitos que debe ter adquirido nas leccións anteriores. De caoquera xeito los iremos lembrando nesta lección",
+          "description": "Non esqueza todos os hábitos que debe ter adquirido nas leccións anteriores. De calquera xeito os iremos lembrando nesta lección",
           "repetitions": 2
         },
         {
           "id": 10,
           "text": "bn vm c, x. z-",
-          "description": "Non esqueza que a barra espazadora púlsase co dedo pulgar da man contraria a a última teca pulsada",
+          "description": "Non esqueza que a barra espazadora púlsase co dedo pulgar da man contraria á última tecla pulsada",
           "repetitions": 2
         },
         {
           "id": 11,
           "text": "nb mv ,c .x -z",
-          "description": "Non esqueza que a barra espazadora púlsase co dedo pulgar da man contraria a a última teca pulsada",
+          "description": "Non esqueza que a barra espazadora púlsase co dedo pulgar da man contraria á última tecla pulsada",
           "repetitions": 2
         },
         {
           "id": 12,
           "text": "znxmc,v.b-",
-          "description": "La costas debe estar rectas y as pernas sin cruzar",
+          "description": "As costas deben estar rectas e as pernas sen cruzar",
           "repetitions": 2
         },
         {
           "id": 13,
           "text": "-b.v,cmxnz",
-          "description": "La costas debe estar rectas y as pernas sin cruzar",
+          "description": "As costas deben estar rectas e as pernas sen cruzar",
           "repetitions": 2
         },
         {
           "id": 14,
           "text": ";",
-          "description": "Quedan só tres tecas desta liña, para as caoes hai que pulsar a teca SHIFT (maiúscuas) co dedo mínimo da man esquerda. Pulse a continuación ';' co dedo corazón da man dereita",
+          "description": "Quedan só tres teclas desta liña, para as cales hai que pulsar a tecla SHIFT (maiúscuas) co dedo maimiño da man esquerda. Pulse a continuación ';' co dedo corazón da man dereita",
           "repetitions": 1
         },
         {
           "id": 15,
           "text": ":_",
-          "description": "Sen soltar a teca SHIFT pulse a teca ':' co dedo índice y a teca '_' co dedo mínimo",
+          "description": "Sen soltar a teca SHIFT pulse a teca ':' co dedo índice e a tecla '_' co dedo maimiño",
           "repetitions": 1
         },
         {
           "id": 16,
           "text": ";:_:_; __:;",
-          "description": "Sen soltar a teca SHIFT pulse a teca ':' co dedo índice y a teca '_' co dedo mínimo",
+          "description": "Sen soltar a teca SHIFT pulse a teca ':' co dedo índice e a tecla '_' co dedo maimiño",
           "repetitions": 1
         },
         {
           "id": 17,
           "text": "zxcvb -.,mn",
-          "description": "Agora uns exercicios de repaso con as tres liñas completas",
+          "description": "Agora uns exercicios de repaso coas tres liñas completas",
           "repetitions": 2
         },
         {
           "id": 18,
           "text": "bvcxz nm,.-",
-          "description": "Agora uns exercicios de repaso con as tres liñas completas",
+          "description": "Agora uns exercicios de repaso coas tres liñas completas",
           "repetitions": 2
         },
         {
           "id": 19,
           "text": "azxcvbv",
-          "description": "La pulsación en a liña inferior se hace despazando o dedo correspondente y volviéndolo a su posición en a liña base",
+          "description": "A pulsación na liña inferior faise desprazando o dedo correspondente e volvéndoo á súa posición na liña base",
           "repetitions": 3
         },
         {
           "id": 20,
           "text": "ñ-.,mnm",
-          "description": "La pulsación en a liña inferior se hace despazando o dedo correspondente y volviéndolo a su posición en a liña base",
+          "description": "A pulsación na liña inferior faise desprazando o dedo correspondente e volvéndoo á súa posición na liña base",
           "repetitions": 3
         },
         {
@@ -1052,213 +1052,213 @@
         {
           "id": 23,
           "text": "azxcvbv ñ-.,mnm",
-          "description": "Las manos deben rozar levemente as tecas de a liña base",
+          "description": "As mans deben rozar lixeiramente as teclas da liña base",
           "repetitions": 2
         },
         {
           "id": 24,
           "text": "asdcxza ñlk,.-ñ",
-          "description": "Las manos deben rozar levemente as tecas de a liña base",
+          "description": "As mans deben rozar lixeiramente as teclas da liña base",
           "repetitions": 2
         },
         {
           "id": 25,
           "text": "bvcxza",
-          "description": "Non se impaciente. No importa que lo faga despacio. Lo importante es que lo faga bien y correctasmente. La voocidad ya vendrá soa",
+          "description": "Non se impaciente. Non importa que o faga devagar. O importante é que o faga ben e correctamente. A velocidade xa virá soa",
           "repetitions": 3
         },
         {
           "id": 26,
           "text": "nm,.-ñ",
-          "description": "Non se impaciente. No importa que lo faga despacio. Lo importante es que lo faga bien y correctasmente. La voocidad ya vendrá soa",
+          "description": "Non se impaciente. Non importa que o faga devagar. O importante é que o faga ben e correctamente. A velocidade xa virá soa",
           "repetitions": 3
         },
         {
           "id": 27,
           "text": "azxcvbgfdsa",
-          "description": "Non se impaciente. No importa que lo faga despacio. Lo importante es que lo faga bien y correctasmente. La voocidad ya vendrá soa",
+          "description": "Non se impaciente. Non importa que o faga devagar. O importante é que o faga ben e correctamente. A velocidade xa virá soa",
           "repetitions": 3
         },
         {
           "id": 28,
           "text": ";-.,mnhjklñ;",
-          "description": "Non se impaciente. No importa que lo faga despacio. Lo importante es que lo faga bien y correctasmente. La voocidad ya vendrá soa",
+          "description": "Non se impaciente. Non importa que o faga devagar. O importante é que o faga ben e correctamente. A velocidade xa virá soa",
           "repetitions": 3
         },
         {
           "id": 29,
           "text": "azxcvbgfdsa ;-.,mnhjklñ;",
-          "description": "Lembre que cada pulsación se hace co dedo correspondente",
+          "description": "Lembre que cada pulsación se fai co dedo correspondente",
           "repetitions": 2
         },
         {
           "id": 30,
           "text": "azqhny sxwjmu dcek,i fvrl.o gbtñ-p ;`",
-          "description": "Lembre que cada pulsación se hace co dedo correspondente",
+          "description": "Lembre que cada pulsación se fai co dedo correspondente",
           "repetitions": 2
         },
         {
           "id": 31,
           "text": "qazwsx edcrfv tgbyhn ujmik, ol.pñ-;`",
-          "description": "Lembre que cada pulsación se hace co dedo correspondente",
+          "description": "Lembre que cada pulsación se fai co dedo correspondente",
           "repetitions": 2
         },
         {
           "id": 32,
           "text": "bravo pueblo",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 33,
           "text": "hacienda comenzar",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 34,
           "text": "sobrepasa empresa",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 35,
           "text": "velocidad nuevos",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 36,
           "text": "juncos flacos",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 37,
           "text": "especie modelo",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 38,
           "text": "cuadrado circulo",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 39,
           "text": "siempre factura",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 40,
           "text": "frente parcela",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 41,
           "text": "teclado nuestro",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 42,
           "text": "cantante señala",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 43,
           "text": "tanto gentil",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 44,
           "text": "ventaja acuerdo",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 45,
           "text": "notario amigo",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 46,
           "text": "aprender infeliz",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 47,
           "text": "sonoras mucho",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 48,
           "text": "ordenador sencillo",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 49,
           "text": "inclinada hombre",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 50,
           "text": "pasamontañas",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 51,
           "text": "antonio bosque",
-          "description": "Agora aogunas paoabras con as tres liñas",
+          "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 52,
           "text": "después balcón",
-          "description": "Algunhas paoabras con til. Pulse a tilde y despois a letra correspondente",
+          "description": "Algunhas palabras con til. Pulse a tilde e despois a letra correspondente",
           "repetitions": 2
         },
         {
           "id": 53,
           "text": "será esdrújula",
-          "description": "Algunhas paoabras con til. Pulse a tilde y despois a letra correspondente",
+          "description": "Algunhas palabras con til. Pulse a tilde e despois a letra correspondente",
           "repetitions": 2
         },
         {
           "id": 54,
           "text": "señoría aguijón",
-          "description": "Algunhas paoabras con til. Pulse a tilde y despois a letra correspondente",
+          "description": "Algunhas palabras con til. Pulse a tilde e despois a letra correspondente",
           "repetitions": 2
         },
         {
           "id": 55,
           "text": "lección más",
-          "description": "Algunhas paoabras con til. Pulse a tilde y despois a letra correspondente",
+          "description": "Algunhas palabras con til. Pulse a tilde e despois a letra correspondente",
           "repetitions": 2
         },
         {
           "id": 56,
           "text": "",
-          "description": "Parabéns! Rematou a sexta lección",
+          "description": "¡Parabéns! Rematou a sexta lección",
           "introduction": true
         }
       ]
     },
     {
       "id": 7,
-      "title": "Fia de números",
-      "description": "Aprende a fia de números",
+      "title": "Fila de números",
+      "description": "Aprende a fila de números",
       "steps": [
         {
           "id": 0,
@@ -1269,61 +1269,61 @@
         {
           "id": 1,
           "text": "12",
-          "description": "Con a mano esquerda vamos a pulsar os dos primeiros número |1| y |2|, pulsando co dedo mínimo o 1 y co dedo anuar o 2",
+          "description": "Coa man esquerda imos pulsar os dous primeiros números |1| e |2|, pulsando co dedo maimiño o 1 e co dedo anular o 2",
           "repetitions": 1
         },
         {
           "id": 2,
           "text": "345",
-          "description": "Co dedo corazón púlsase o |3|, y co dedo índice o |4| y o |5|",
+          "description": "Co dedo corazón púlsase o |3|, e co dedo índice o |4| e o |5|",
           "repetitions": 1
         },
         {
           "id": 3,
           "text": "12345",
-          "description": "Co dedo corazón púlsase o |3|, y co dedo índice o |4| y o |5|",
+          "description": "Co dedo corazón púlsase o |3|, e co dedo índice o |4| e o |5|",
           "repetitions": 1
         },
         {
           "id": 4,
           "text": "54321",
-          "description": "Co dedo corazón púlsase o |3|, y co dedo índice o |4| y o |5|",
+          "description": "Co dedo corazón púlsase o |3|, e co dedo índice o |4| e o |5|",
           "repetitions": 1
         },
         {
           "id": 5,
           "text": "12345 54321",
-          "description": "Co dedo corazón púlsase o |3|, y co dedo índice o |4| y o |5|",
+          "description": "Co dedo corazón púlsase o |3|, e co dedo índice o |4| e o |5|",
           "repetitions": 2
         },
         {
           "id": 6,
           "text": "09",
-          "description": "Agora vamos a practicar cos dedos da man dereita, vamos a pulsar o |0| y o |9| cos dedos mínimo y anuar respectivamente",
+          "description": "Agora imos practicar cos dedos da man dereita, imos pulsar o |0| e o |9| cos dedos mínimo e anular respectivamente",
           "repetitions": 1
         },
         {
           "id": 7,
           "text": "876",
-          "description": "Co dedo corazón pulsaremos o |8| y con o índice o |7| y o |6|",
+          "description": "Co dedo corazón pulsaremos o |8| e co índice o |7| e o |6|",
           "repetitions": 1
         },
         {
           "id": 8,
           "text": "09876",
-          "description": "Co dedo corazón pulsaremos o |8| y con o índice o |7| y o |6|",
+          "description": "Co dedo corazón pulsaremos o |8| e co índice o |7| e o |6|",
           "repetitions": 1
         },
         {
           "id": 9,
           "text": "67890",
-          "description": "Co dedo corazón pulsaremos o |8| y con o índice o |7| y o |6|",
+          "description": "Co dedo corazón pulsaremos o |8| e co índice o |7| e o |6|",
           "repetitions": 1
         },
         {
           "id": 10,
           "text": "09876 67890",
-          "description": "Co dedo corazón pulsaremos o |8| y con o índice o |7| y o |6|",
+          "description": "Co dedo corazón pulsaremos o |8| e co índice o |7| e o |6|",
           "repetitions": 2
         },
         {
@@ -1353,121 +1353,121 @@
         {
           "id": 15,
           "text": "135 680",
-          "description": "Lembre que a posición de os dedos debe ser en a liña base",
+          "description": "Lembre que a posición dos dedos debe ser na liña base",
           "repetitions": 2
         },
         {
           "id": 16,
           "text": "24 79",
-          "description": "Lembre que a posición de os dedos debe ser en a liña base",
+          "description": "Lembre que a posición dos dedos debe ser na liña base",
           "repetitions": 2
         },
         {
           "id": 17,
           "text": "135680",
-          "description": "Lembre que a posición de os dedos debe ser en a liña base",
+          "description": "Lembre que a posición dos dedos debe ser na liña base",
           "repetitions": 2
         },
         {
           "id": 18,
           "text": "103856",
-          "description": "Lembre que a posición de os dedos debe ser en a liña base",
+          "description": "Lembre que a posición dos dedos debe ser na liña base",
           "repetitions": 2
         },
         {
           "id": 19,
           "text": "258017",
-          "description": "Lembre que a posición de os dedos debe ser en a liña base",
+          "description": "Lembre que a posición dos dedos debe ser na liña base",
           "repetitions": 2
         },
         {
           "id": 20,
           "text": "5647382910",
-          "description": "Lembre que a posición de os dedos debe ser en a liña base",
+          "description": "Lembre que a posición dos dedos debe ser na liña base",
           "repetitions": 2
         },
         {
           "id": 21,
           "text": "0192837465",
-          "description": "Lembre que a posición de os dedos debe ser en a liña base",
+          "description": "Lembre que a posición dos dedos debe ser na liña base",
           "repetitions": 2
         },
         {
           "id": 22,
           "text": "6574839201",
-          "description": "Lembre que a posición de os dedos debe ser en a liña base",
+          "description": "Lembre que a posición dos dedos debe ser na liña base",
           "repetitions": 2
         },
         {
           "id": 23,
           "text": "1029384756",
-          "description": "Lembre que a posición de os dedos debe ser en a liña base",
+          "description": "Lembre que a posición dos dedos debe ser na liña base",
           "repetitions": 2
         },
         {
           "id": 24,
           "text": "35689247",
-          "description": "Lembre que a posición de os dedos debe ser en a liña base",
+          "description": "Lembre que a posición dos dedos debe ser na liña base",
           "repetitions": 2
         },
         {
           "id": 25,
           "text": "74298653",
-          "description": "Lembre que a posición de os dedos debe ser en a liña base",
+          "description": "Lembre que a posición dos dedos debe ser na liña base",
           "repetitions": 2
         },
         {
           "id": 26,
           "text": "1092387456",
-          "description": "Lembre que a posición de os dedos debe ser en a liña base",
+          "description": "Lembre que a posición dos dedos debe ser na liña base",
           "repetitions": 2
         },
         {
           "id": 27,
           "text": "6547832901",
-          "description": "Lembre que a posición de os dedos debe ser en a liña base",
+          "description": "Lembre que a posición dos dedos debe ser na liña base",
           "repetitions": 2
         },
         {
           "id": 28,
           "text": "a1s2d3f4g5",
-          "description": "Imos mezcar letras con números",
+          "description": "Imos mesturar letras con números",
           "repetitions": 2
         },
         {
           "id": 29,
           "text": "ñ0l9k8j7h6",
-          "description": "Imos mezcar letras con números",
+          "description": "Imos mesturar letras con números",
           "repetitions": 2
         },
         {
           "id": 30,
           "text": "as123df45g ñl098kj76h",
-          "description": "Imos mezcar letras con números",
+          "description": "Imos mesturar letras con números",
           "repetitions": 2
         },
         {
           "id": 31,
           "text": "añ10sl29",
-          "description": "Imos mezcar letras con números",
+          "description": "Imos mesturar letras con números",
           "repetitions": 2
         },
         {
           "id": 32,
           "text": "dk38 83kd",
-          "description": "Imos mezcar letras con números",
+          "description": "Imos mesturar letras con números",
           "repetitions": 2
         },
         {
           "id": 33,
           "text": "jf47 hg65",
-          "description": "Imos mezcar letras con números",
+          "description": "Imos mesturar letras con números",
           "repetitions": 2
         },
         {
           "id": 34,
           "text": "56gh 74fj",
-          "description": "Imos mezcar letras con números",
+          "description": "Imos mesturar letras con números",
           "repetitions": 2
         },
         {
@@ -1497,25 +1497,25 @@
         {
           "id": 39,
           "text": "2wsx 9ol.",
-          "description": "Agora cos dedos anuares de ambas as mans",
+          "description": "Agora cos dedos anulares de ambas as mans",
           "repetitions": 2
         },
         {
           "id": 40,
           "text": ".lo9 xsw2",
-          "description": "Agora cos dedos anuares de ambas as mans",
+          "description": "Agora cos dedos anulares de ambas as mans",
           "repetitions": 2
         },
         {
           "id": 41,
           "text": "9xoslw.2 2.wlsox9",
-          "description": "Agora cos dedos anuares de ambas as mans",
+          "description": "Agora cos dedos anulares de ambas as mans",
           "repetitions": 2
         },
         {
           "id": 42,
           "text": ".xlsow92 29woslx.",
-          "description": "Agora cos dedos anuares de ambas as mans",
+          "description": "Agora cos dedos anulares de ambas as mans",
           "repetitions": 2
         },
         {
@@ -1569,31 +1569,31 @@
         {
           "id": 51,
           "text": "7vufjrm4 m4jruf7v",
-          "description": "Non mire o tecado y manteñase en a posición correctas",
+          "description": "Non mire o teclado y manteñase en a posición correctas",
           "repetitions": 2
         },
         {
           "id": 52,
           "text": "mvjfur74 74urjfmv",
-          "description": "Non mire o tecado y manteñase en a posición correctas",
+          "description": "Non mire o teclado y manteñase en a posición correctas",
           "repetitions": 2
         },
         {
           "id": 53,
           "text": "6byghtn5 n6htyg6b",
-          "description": "Non mire o tecado y manteñase en a posición correctas",
+          "description": "Non mire o teclado y manteñase en a posición correctas",
           "repetitions": 2
         },
         {
           "id": 54,
           "text": "nbhgyt65 56tyghbn",
-          "description": "Non mire o tecado y manteñase en a posición correctas",
+          "description": "Non mire o teclado y manteñase en a posición correctas",
           "repetitions": 2
         },
         {
           "id": 55,
           "text": "",
-          "description": "Parabéns! Rematou a sétima lección",
+          "description": "¡Parabéns! Rematou a sétima lección",
           "introduction": true
         }
       ]
