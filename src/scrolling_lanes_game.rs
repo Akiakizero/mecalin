@@ -147,6 +147,14 @@ mod imp {
         pub score_label: TemplateChild<gtk::Label>,
         #[template_child]
         pub level_label: TemplateChild<gtk::Label>,
+        #[template_child]
+        pub results_box: TemplateChild<gtk::Box>,
+        #[template_child]
+        pub results_score_label: TemplateChild<gtk::Label>,
+        #[template_child]
+        pub results_level_label: TemplateChild<gtk::Label>,
+        #[template_child]
+        pub restart_button: TemplateChild<gtk::Button>,
 
         pub lanes: Rc<RefCell<Vec<LaneWidget>>>,
         pub(crate) lane_texts: Rc<RefCell<Vec<Vec<ScrollingText>>>>,
@@ -156,6 +164,7 @@ mod imp {
         pub speed: RefCell<f64>,
         pub game_over: RefCell<bool>,
         pub game_loop_running: RefCell<bool>,
+        pub lanes_container: RefCell<Option<gtk::Box>>,
     }
 
     #[glib::object_subclass]
@@ -228,6 +237,15 @@ impl ScrollingLanesGame {
 
         imp.game_area.append(&lanes_container);
         imp.lanes.replace(lanes);
+        imp.lanes_container.replace(Some(lanes_container));
+
+        // Setup restart button
+        let obj = self.downgrade();
+        imp.restart_button.connect_clicked(move |_| {
+            if let Some(obj) = obj.upgrade() {
+                obj.restart_game();
+            }
+        });
 
         // Setup keyboard input
         let key_controller = gtk::EventControllerKey::new();
@@ -429,76 +447,24 @@ impl ScrollingLanesGame {
         let imp = self.imp();
         *imp.game_over.borrow_mut() = true;
 
-        // Hide lanes
-        if let Some(child) = imp.game_area.first_child() {
-            child.set_visible(false);
+        if let Some(lanes) = imp.lanes_container.borrow().as_ref() {
+            lanes.set_visible(false);
         }
 
-        let score = *imp.score.borrow();
-        let level = *imp.difficulty.borrow();
-
-        // Create results view
-        let results_box = gtk::Box::new(gtk::Orientation::Vertical, 36);
-        results_box.set_halign(gtk::Align::Center);
-        results_box.set_valign(gtk::Align::Center);
-        results_box.set_vexpand(true);
-
-        let stats_box = gtk::Box::new(gtk::Orientation::Horizontal, 12);
-
-        let score_box = gtk::Box::new(gtk::Orientation::Vertical, 0);
-        score_box.set_width_request(200);
-        let score_label = gtk::Label::new(Some(&score.to_string()));
-        score_label.add_css_class("title-1");
-        let score_desc = gtk::Label::new(Some("Score"));
-        score_desc.add_css_class("dim-label");
-        score_box.append(&score_label);
-        score_box.append(&score_desc);
-
-        let separator = gtk::Separator::new(gtk::Orientation::Vertical);
-
-        let level_box = gtk::Box::new(gtk::Orientation::Vertical, 0);
-        level_box.set_width_request(200);
-        let level_label = gtk::Label::new(Some(&level.to_string()));
-        level_label.add_css_class("title-1");
-        let level_desc = gtk::Label::new(Some("Level Reached"));
-        level_desc.add_css_class("dim-label");
-        level_box.append(&level_label);
-        level_box.append(&level_desc);
-
-        stats_box.append(&score_box);
-        stats_box.append(&separator);
-        stats_box.append(&level_box);
-
-        let restart_button = gtk::Button::with_label("Play Again");
-        restart_button.add_css_class("pill");
-        restart_button.add_css_class("suggested-action");
-
-        let obj = self.downgrade();
-        restart_button.connect_clicked(move |_| {
-            if let Some(obj) = obj.upgrade() {
-                obj.restart_game();
-            }
-        });
-
-        results_box.append(&stats_box);
-        results_box.append(&restart_button);
-
-        imp.game_area.append(&results_box);
+        imp.results_score_label
+            .set_text(&imp.score.borrow().to_string());
+        imp.results_level_label
+            .set_text(&imp.difficulty.borrow().to_string());
+        imp.results_box.set_visible(true);
     }
 
     fn restart_game(&self) {
         let imp = self.imp();
 
-        // Remove results
-        if let Some(child) = imp.game_area.last_child() {
-            if child.type_() == gtk::Box::static_type() {
-                imp.game_area.remove(&child);
-            }
-        }
+        imp.results_box.set_visible(false);
 
-        // Show lanes
-        if let Some(child) = imp.game_area.first_child() {
-            child.set_visible(true);
+        if let Some(lanes) = imp.lanes_container.borrow().as_ref() {
+            lanes.set_visible(true);
         }
 
         self.grab_focus();
