@@ -1,6 +1,9 @@
+use gtk::gdk;
+use gtk::glib;
+use gtk::graphene;
+use gtk::pango;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
-use gtk::{glib, DrawingArea};
 use i18n_format::i18n_fmt;
 use rand::Rng;
 use std::cell::RefCell;
@@ -17,6 +20,72 @@ pub(crate) struct FallingKey {
     y: f64,
 }
 
+mod falling_keys_widget {
+    use super::*;
+
+    pub struct FallingKeysWidget {
+        pub(super) falling_keys: RefCell<Rc<RefCell<Vec<FallingKey>>>>,
+        pub(super) text_color: RefCell<gdk::RGBA>,
+    }
+
+    impl Default for FallingKeysWidget {
+        fn default() -> Self {
+            Self {
+                falling_keys: RefCell::new(Rc::new(RefCell::new(Vec::new()))),
+                text_color: RefCell::new(gdk::RGBA::BLACK),
+            }
+        }
+    }
+
+    #[glib::object_subclass]
+    impl ObjectSubclass for FallingKeysWidget {
+        const NAME: &'static str = "FallingKeysWidget";
+        type Type = super::FallingKeysWidget;
+        type ParentType = gtk::Widget;
+    }
+
+    impl ObjectImpl for FallingKeysWidget {}
+
+    impl WidgetImpl for FallingKeysWidget {
+        fn snapshot(&self, snapshot: &gtk::Snapshot) {
+            let widget = self.obj();
+            let pango_context = widget.pango_context();
+            let layout = pango::Layout::new(&pango_context);
+            let font_desc = pango::FontDescription::from_string("Sans 24");
+            layout.set_font_description(Some(&font_desc));
+
+            let text_color = self.text_color.borrow();
+
+            for key in self.falling_keys.borrow().borrow().iter() {
+                layout.set_text(&key.key.to_string());
+                snapshot.save();
+                snapshot.translate(&graphene::Point::new(key.x as f32, key.y as f32));
+                snapshot.append_layout(&layout, &text_color);
+                snapshot.restore();
+            }
+        }
+    }
+}
+
+glib::wrapper! {
+    pub struct FallingKeysWidget(ObjectSubclass<falling_keys_widget::FallingKeysWidget>)
+        @extends gtk::Widget;
+}
+
+impl FallingKeysWidget {
+    pub(crate) fn new(falling_keys: Rc<RefCell<Vec<FallingKey>>>) -> Self {
+        let widget: Self = glib::Object::new();
+        widget.imp().falling_keys.replace(falling_keys.clone());
+        widget.set_vexpand(true);
+        widget.set_hexpand(true);
+        widget
+    }
+
+    pub fn set_text_color(&self, color: gdk::RGBA) {
+        *self.imp().text_color.borrow_mut() = color;
+    }
+}
+
 mod imp {
     use super::*;
 
@@ -30,7 +99,7 @@ mod imp {
         #[template_child]
         pub difficulty_label: TemplateChild<gtk::Label>,
 
-        pub drawing_area: RefCell<Option<DrawingArea>>,
+        pub falling_keys_widget: RefCell<Option<FallingKeysWidget>>,
         pub keyboard_widget: RefCell<Option<crate::keyboard_widget::KeyboardWidget>>,
         pub(crate) falling_keys: Rc<RefCell<Vec<FallingKey>>>,
         pub score: RefCell<u32>,
@@ -79,15 +148,6 @@ impl FallingKeysGame {
     fn setup_game(&self) {
         let imp = self.imp();
 
-        // Create drawing area for falling keys
-        let drawing_area = DrawingArea::new();
-        drawing_area.set_vexpand(true);
-        drawing_area.set_hexpand(true);
-        drawing_area.set_can_focus(true);
-        drawing_area.set_focusable(true);
-
-        imp.game_area.set_child(Some(&drawing_area));
-
         // Create keyboard widget
         let keyboard = crate::keyboard_widget::KeyboardWidget::new();
         imp.game_area.add_overlay(&keyboard);
@@ -97,43 +157,20 @@ impl FallingKeysGame {
         imp.keyboard_widget.replace(Some(keyboard));
 
         // Query text color from CSS
-        let get_color = |widget: &DrawingArea, class_name: &str| -> (f64, f64, f64) {
-            widget.add_css_class(class_name);
-            let color = widget.color();
-            widget.remove_css_class(class_name);
-            (
-                color.red() as f64,
-                color.green() as f64,
-                color.blue() as f64,
-            )
-        };
+        let temp_widget = gtk::Label::new(None);
+        temp_widget.add_css_class("falling-key-text");
+        let text_color = temp_widget.color();
 
-        let temp_widget = DrawingArea::new();
-        let text_color = get_color(&temp_widget, "falling-key-text");
+        // Create falling keys widget
+        let keys_widget = FallingKeysWidget::new(imp.falling_keys.clone());
+        keys_widget.set_text_color(text_color);
+        keys_widget.set_can_focus(true);
+        keys_widget.set_focusable(true);
 
-        // Add falling keys overlay on top of keyboard
-        let keys_overlay = DrawingArea::new();
-        keys_overlay.set_vexpand(true);
-        keys_overlay.set_hexpand(true);
-        keys_overlay.set_can_focus(true);
-        keys_overlay.set_focusable(true);
+        imp.game_area.set_child(Some(&keys_widget));
+        imp.falling_keys_widget.replace(Some(keys_widget.clone()));
 
-        let falling_keys_clone = imp.falling_keys.clone();
-        keys_overlay.set_draw_func(move |_, cr, _width, _height| {
-            let (r, g, b) = text_color;
-            cr.set_source_rgb(r, g, b);
-            cr.set_font_size(24.0);
-
-            for key in falling_keys_clone.borrow().iter() {
-                cr.move_to(key.x, key.y);
-                cr.show_text(&key.key.to_string()).unwrap();
-            }
-        });
-
-        imp.game_area.add_overlay(&keys_overlay);
-        imp.drawing_area.replace(Some(keys_overlay.clone()));
-
-        // Setup keyboard input on the keys overlay
+        // Setup keyboard input
         let key_controller = gtk::EventControllerKey::new();
         let obj = self.downgrade();
         key_controller.connect_key_pressed(move |_, key, _, _| {
@@ -144,10 +181,9 @@ impl FallingKeysGame {
             }
             glib::Propagation::Stop
         });
-        keys_overlay.add_controller(key_controller);
+        keys_widget.add_controller(key_controller);
 
-        // Grab focus when shown
-        keys_overlay.grab_focus();
+        keys_widget.grab_focus();
 
         // Start game loop
         self.start_game_loop();
@@ -195,7 +231,7 @@ impl FallingKeysGame {
         let imp = self.imp();
         let mut rng = rand::thread_rng();
 
-        if let Some(drawing_area) = imp.drawing_area.borrow().as_ref() {
+        if let Some(drawing_area) = imp.falling_keys_widget.borrow().as_ref() {
             let width = drawing_area.width() as f64;
             if width > 100.0 {
                 let key = KEYS[rng.gen_range(0..KEYS.len())];
@@ -213,7 +249,7 @@ impl FallingKeysGame {
         let imp = self.imp();
         let speed = *imp.speed.borrow();
 
-        if let Some(drawing_area) = imp.drawing_area.borrow().as_ref() {
+        if let Some(drawing_area) = imp.falling_keys_widget.borrow().as_ref() {
             let height = drawing_area.height() as f64;
             let mut keys = imp.falling_keys.borrow_mut();
 
@@ -266,7 +302,7 @@ impl FallingKeysGame {
                 *speed += 0.5;
             }
 
-            if let Some(drawing_area) = imp.drawing_area.borrow().as_ref() {
+            if let Some(drawing_area) = imp.falling_keys_widget.borrow().as_ref() {
                 drawing_area.queue_draw();
             }
         } else {
@@ -288,7 +324,7 @@ impl FallingKeysGame {
         if let Some(child) = imp.game_area.child() {
             child.set_visible(false);
         }
-        if let Some(drawing_area) = imp.drawing_area.borrow().as_ref() {
+        if let Some(drawing_area) = imp.falling_keys_widget.borrow().as_ref() {
             drawing_area.set_visible(false);
         }
         if let Some(keyboard) = imp.keyboard_widget.borrow().as_ref() {
@@ -368,7 +404,7 @@ impl FallingKeysGame {
         if let Some(child) = imp.game_area.child() {
             child.set_visible(true);
         }
-        if let Some(drawing_area) = imp.drawing_area.borrow().as_ref() {
+        if let Some(drawing_area) = imp.falling_keys_widget.borrow().as_ref() {
             drawing_area.set_visible(true);
             drawing_area.grab_focus();
         }
@@ -392,7 +428,7 @@ impl FallingKeysGame {
         imp.difficulty_label
             .set_text(&i18n_fmt! { i18n_fmt("Level: {}", 1) });
 
-        if let Some(drawing_area) = imp.drawing_area.borrow().as_ref() {
+        if let Some(drawing_area) = imp.falling_keys_widget.borrow().as_ref() {
             drawing_area.grab_focus();
             drawing_area.queue_draw();
         }
