@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mecalin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-14 15:32+0100\n"
+"POT-Creation-Date: 2026-01-22 17:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,14 +29,14 @@ msgstr ""
 msgid "Continue"
 msgstr ""
 
-#: src/falling_keys_game.rs:252 src/falling_keys_game.rs:274
-#: src/falling_keys_game.rs:388 src/scrolling_lanes_game.rs:309
-#: src/scrolling_lanes_game.rs:323 src/scrolling_lanes_game.rs:422
+#: src/falling_keys_game.rs:307 src/falling_keys_game.rs:329
+#: src/falling_keys_game.rs:381 src/scrolling_lanes_game.rs:426
+#: src/scrolling_lanes_game.rs:440 src/scrolling_lanes_game.rs:487
 msgid "Score: {}"
 msgstr ""
 
-#: src/falling_keys_game.rs:259 src/falling_keys_game.rs:390
-#: src/scrolling_lanes_game.rs:315 src/scrolling_lanes_game.rs:424
+#: src/falling_keys_game.rs:314 src/falling_keys_game.rs:383
+#: src/scrolling_lanes_game.rs:432 src/scrolling_lanes_game.rs:489
 msgid "Level: {}"
 msgstr ""
 
