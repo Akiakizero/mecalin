@@ -285,10 +285,10 @@ mod imp {
                 &rounded,
                 &[1.0, 1.0, 1.0, 1.0],
                 &[
-                    key_border_color.clone(),
-                    key_border_color.clone(),
-                    key_border_color.clone(),
-                    key_border_color.clone(),
+                    *key_border_color,
+                    *key_border_color,
+                    *key_border_color,
+                    *key_border_color,
                 ],
             );
 
