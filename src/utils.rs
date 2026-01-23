@@ -8,6 +8,8 @@ pub fn language_from_locale() -> &'static str {
         "it"
     } else if locale.starts_with("pl") {
         "pl"
+    } else if locale.starts_with("pt") {
+        "pt"
     } else {
         "us"
     }
@@ -60,6 +62,13 @@ mod tests {
         let _lock = TEST_MUTEX.lock().unwrap();
         std::env::set_var("LANG", "gl_ES.UTF-8");
         assert_eq!(language_from_locale(), "gl");
+    }
+
+    #[test]
+    fn test_language_from_locale_portuguese() {
+        let _lock = TEST_MUTEX.lock().unwrap();
+        std::env::set_var("LANG", "pt_PT.UTF-8");
+        assert_eq!(language_from_locale(), "pt");
     }
 
     #[test]

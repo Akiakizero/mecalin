@@ -9,6 +9,7 @@
   <summary xml:lang="gl">Aprende mecanografía</summary>
   <summary xml:lang="it">Impara a digitare</summary>
   <summary xml:lang="pl">Naucz się pisać bezwzrokowo</summary>
+  <summary xml:lang="pt">Aprende mecanografia</summary>
   
   <developer_name>Ignacio Casal Quinteiro</developer_name>
   
@@ -41,6 +42,10 @@
       Mecalin to nowoczesna aplikacja do nauki pisania, która pomaga nauczyć się i poprawić umiejętności pisania bezwzrokowego.
       Zapewnia przejrzysty i intuicyjny interfejs do ćwiczenia pisania.
     </p>
+    <p xml:lang="pt">
+      Mecalin é uma aplicação moderna de aprendizagem de mecanografia que o ajuda a aprender e melhorar as suas capacidades de escrita táctil.
+      Fornece uma interface limpa e intuitiva para praticar mecanografia.
+    </p>
     <p>
       Features include structured lessons, keyboard layout visualization, and progress tracking to help you
       become a more efficient typist.
@@ -60,6 +65,10 @@
     <p xml:lang="pl">
       Funkcje obejmują uporządkowane lekcje, wizualizację układu klawiatury i śledzenie postępów, aby pomóc Ci
       stać się bardziej wydajnym maszynistą.
+    </p>
+    <p xml:lang="pt">
+      As funcionalidades incluem lições estruturadas, visualização do layout do teclado e acompanhamento do progresso para o ajudar
+      a tornar-se um mecanógrafo mais eficiente.
     </p>
   </description>
   
