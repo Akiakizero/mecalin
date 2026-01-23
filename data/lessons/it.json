@@ -1246,61 +1246,61 @@
           "id": 1,
           "text": "12",
           "repetitions": 1,
-          "description": "Con la mano sinistra premeremo i primi due numeri |1| e |2|, premendo 1 con il mignolo e 2 con l'anulare"
+          "description": "Con la mano sinistra premeremo i primi due numeri '1' e '2', premendo '1' con il mignolo e '2' con l'anulare"
         },
         {
           "id": 2,
           "text": "345",
           "repetitions": 1,
-          "description": "Il |3| si preme con il medio, e il |4| e il |5| con l'indice"
+          "description": "Il '3' si preme con il medio, e il '4' e il '5' con l'indice"
         },
         {
           "id": 3,
           "text": "12345",
           "repetitions": 1,
-          "description": "Il |3| si preme con il medio, e il |4| e il |5| con l'indice"
+          "description": "Il '3' si preme con il medio, e il '4' e il '5' con l'indice"
         },
         {
           "id": 4,
           "text": "54321",
           "repetitions": 1,
-          "description": "Il |3| si preme con il medio, e il |4| e il |5| con l'indice"
+          "description": "Il '3' si preme con il medio, e il '4' e il '5' con l'indice"
         },
         {
           "id": 5,
           "text": "12345 54321",
           "repetitions": 2,
-          "description": "Il |3| si preme con il medio, e il |4| e il |5| con l'indice"
+          "description": "Il '3' si preme con il medio, e il '4' e il '5' con l'indice"
         },
         {
           "id": 6,
           "text": "09",
           "repetitions": 1,
-          "description": "Ora praticheremo con le dita della mano destra, premeremo |0| e |9| con il mignolo e l'anulare rispettivamente"
+          "description": "Ora praticheremo con le dita della mano destra, premeremo '0' e '9' con il mignolo e l'anulare rispettivamente"
         },
         {
           "id": 7,
           "text": "876",
           "repetitions": 1,
-          "description": "Premeremo |8| con il medio e |7| e |6| con l'indice"
+          "description": "Premeremo '8' con il medio e '7' e '6' con l'indice"
         },
         {
           "id": 8,
           "text": "09876",
           "repetitions": 1,
-          "description": "Premeremo |8| con il medio e |7| e |6| con l'indice"
+          "description": "Premeremo '8' con il medio e '7' e '6' con l'indice"
         },
         {
           "id": 9,
           "text": "67890",
           "repetitions": 1,
-          "description": "Premeremo |8| con il medio e |7| e |6| con l'indice"
+          "description": "Premeremo '8' con il medio e '7' e '6' con l'indice"
         },
         {
           "id": 10,
           "text": "09876 67890",
           "repetitions": 2,
-          "description": "Premeremo |8| con il medio e |7| e |6| con l'indice"
+          "description": "Premeremo '8' con il medio e '7' e '6' con l'indice"
         },
         {
           "id": 11,
@@ -1588,49 +1588,49 @@
         {
           "id": 1,
           "text": "!= != !=",
-          "description": "Premendo con il dito mignolo della mano destra SHIFT premi con quello della sinistra |!| e al contrario |=|",
+          "description": "Premendo con il dito mignolo della mano destra SHIFT premi con quello della sinistra '!' e al contrario '='",
           "repetitions": 2
         },
         {
           "id": 2,
           "text": "=! =! =!",
-          "description": "Premendo con il dito mignolo della mano destra SHIFT premi con quello della sinistra |!| e al contrario |=|",
+          "description": "Premendo con il dito mignolo della mano destra SHIFT premi con quello della sinistra '!' e al contrario '='",
           "repetitions": 2
         },
         {
           "id": 3,
           "text": "\") \") \")",
-          "description": "Continua a premere con il dito mignolo corrispondente il tasto SHIFT e con il dito anulare della mano sinistra il tasto |\"| e con il dito anulare della mano destra |)|",
+          "description": "Continua a premere con il dito mignolo corrispondente il tasto SHIFT e con il dito anulare della mano sinistra il tasto '\"' e con il dito anulare della mano destra ')'",
           "repetitions": 2
         },
         {
           "id": 4,
           "text": "((((",
-          "description": "Successivamente premi con il dito medio della mano destra |(|. Non dimenticare di premere il tasto SHIFT con la mano sinistra",
+          "description": "Successivamente premi con il dito medio della mano destra '('. Non dimenticare di premere il tasto SHIFT con la mano sinistra",
           "repetitions": 2
         },
         {
           "id": 5,
           "text": "=\")(",
-          "description": "Successivamente premi con il dito medio della mano destra |(|. Non dimenticare di premere il tasto SHIFT con la mano sinistra",
+          "description": "Successivamente premi con il dito medio della mano destra '('. Non dimenticare di premere il tasto SHIFT con la mano sinistra",
           "repetitions": 2
         },
         {
           "id": 6,
           "text": "!$% /&()",
-          "description": "Ora praticheremo il resto dei caratteri; premi con il dito indice della mano sinistra |$| e |%|, e con il dito indice della mano destra |/| e |&|",
+          "description": "Ora praticheremo il resto dei caratteri; premi con il dito indice della mano sinistra '$' e '%', e con il dito indice della mano destra '/' e '&'",
           "repetitions": 2
         },
         {
           "id": 7,
           "text": "!)($&%/",
-          "description": "Ora praticheremo il resto dei caratteri; premi con il dito indice della mano sinistra |$| e |%|, e con il dito indice della mano destra |/| e |&|",
+          "description": "Ora praticheremo il resto dei caratteri; premi con il dito indice della mano sinistra '$' e '%', e con il dito indice della mano destra '/' e '&'",
           "repetitions": 2
         },
         {
           "id": 8,
           "text": "!% /)",
-          "description": "Ora praticheremo il resto dei caratteri; premi con il dito indice della mano sinistra |$| e |%|, e con il dito indice della mano destra |/| e |&|",
+          "description": "Ora praticheremo il resto dei caratteri; premi con il dito indice della mano sinistra '$' e '%', e con il dito indice della mano destra '/' e '&'",
           "repetitions": 2
         },
         {
@@ -1666,7 +1666,7 @@
         {
           "id": 14,
           "text": "#",
-          "description": "Per poter utilizzare |#| dobbiamo premere questo tasto con il dito medio della mano sinistra e premere ALTGR con il dito medio della mano destra",
+          "description": "Per poter utilizzare '#' dobbiamo premere questo tasto con il dito medio della mano sinistra e premere ALTGR con il dito medio della mano destra",
           "repetitions": 1
         },
         {

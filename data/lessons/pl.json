@@ -1126,61 +1126,61 @@
           "id": 1,
           "text": "12",
           "repetitions": 1,
-          "description": "Lewą ręką naciśniemy pierwsze dwie cyfry |1| i |2|, naciskając 1 małym palcem i 2 palcem serdecznym"
+          "description": "Lewą ręką naciśniemy pierwsze dwie cyfry '1' i '2', naciskając '1' małym palcem i '2' palcem serdecznym"
         },
         {
           "id": 2,
           "text": "345",
           "repetitions": 1,
-          "description": "|3| naciska się środkowym palcem, a |4| i |5| palcem wskazującym"
+          "description": "'3' naciska się środkowym palcem, a '4' i '5' palcem wskazującym"
         },
         {
           "id": 3,
           "text": "12345",
           "repetitions": 1,
-          "description": "|3| naciska się środkowym palcem, a |4| i |5| palcem wskazującym"
+          "description": "'3' naciska się środkowym palcem, a '4' i '5' palcem wskazującym"
         },
         {
           "id": 4,
           "text": "54321",
           "repetitions": 1,
-          "description": "|3| naciska się środkowym palcem, a |4| i |5| palcem wskazującym"
+          "description": "'3' naciska się środkowym palcem, a '4' i '5' palcem wskazującym"
         },
         {
           "id": 5,
           "text": "12345 54321",
           "repetitions": 2,
-          "description": "|3| naciska się środkowym palcem, a |4| i |5| palcem wskazującym"
+          "description": "'3' naciska się środkowym palcem, a '4' i '5' palcem wskazującym"
         },
         {
           "id": 6,
           "text": "09",
           "repetitions": 1,
-          "description": "Teraz będziemy ćwiczyć palcami prawej ręki, naciśniemy |0| i |9| odpowiednio małym i serdecznym palcem"
+          "description": "Teraz będziemy ćwiczyć palcami prawej ręki, naciśniemy '0' i '9' odpowiednio małym i serdecznym palcem"
         },
         {
           "id": 7,
           "text": "876",
           "repetitions": 1,
-          "description": "Naciśniemy |8| środkowym palcem i |7| i |6| palcem wskazującym"
+          "description": "Naciśniemy '8' środkowym palcem i '7' i '6' palcem wskazującym"
         },
         {
           "id": 8,
           "text": "09876",
           "repetitions": 1,
-          "description": "Naciśniemy |8| środkowym palcem i |7| i |6| palcem wskazującym"
+          "description": "Naciśniemy '8' środkowym palcem i '7' i '6' palcem wskazującym"
         },
         {
           "id": 9,
           "text": "67890",
           "repetitions": 1,
-          "description": "Naciśniemy |8| środkowym palcem i |7| i |6| palcem wskazującym"
+          "description": "Naciśniemy '8' środkowym palcem i '7' i '6' palcem wskazującym"
         },
         {
           "id": 10,
           "text": "09876 67890",
           "repetitions": 2,
-          "description": "Naciśniemy |8| środkowym palcem i |7| i |6| palcem wskazującym"
+          "description": "Naciśniemy '8' środkowym palcem i '7' i '6' palcem wskazującym"
         },
         {
           "id": 11,
@@ -1468,49 +1468,49 @@
         {
           "id": 1,
           "text": "!= != !=",
-          "description": "Wciskając małym palcem prawej ręki SHIFT naciśnij lewym |!| i odwrotnie |=|",
+          "description": "Wciskając małym palcem prawej ręki SHIFT naciśnij lewym '!' i odwrotnie '='",
           "repetitions": 2
         },
         {
           "id": 2,
           "text": "=! =! =!",
-          "description": "Wciskając małym palcem prawej ręki SHIFT naciśnij lewym |!| i odwrotnie |=|",
+          "description": "Wciskając małym palcem prawej ręki SHIFT naciśnij lewym '!' i odwrotnie '='",
           "repetitions": 2
         },
         {
           "id": 3,
           "text": "\") \") \")",
-          "description": "Kontynuuj naciskanie odpowiednim małym palcem klawisza SHIFT i palcem serdecznym lewej ręki klawisza |\"| oraz palcem serdecznym prawej ręki |)|",
+          "description": "Kontynuuj naciskanie odpowiednim małym palcem klawisza SHIFT i palcem serdecznym lewej ręki klawisza '\"' oraz palcem serdecznym prawej ręki ')'",
           "repetitions": 2
         },
         {
           "id": 4,
           "text": "((((",
-          "description": "Następnie naciśnij palcem środkowym prawej ręki |(|. Nie zapomnij nacisnąć klawisza SHIFT lewą ręką",
+          "description": "Następnie naciśnij palcem środkowym prawej ręki '('. Nie zapomnij nacisnąć klawisza SHIFT lewą ręką",
           "repetitions": 2
         },
         {
           "id": 5,
           "text": "=\")(",
-          "description": "Następnie naciśnij palcem środkowym prawej ręki |(|. Nie zapomnij nacisnąć klawisza SHIFT lewą ręką",
+          "description": "Następnie naciśnij palcem środkowym prawej ręki '('. Nie zapomnij nacisnąć klawisza SHIFT lewą ręką",
           "repetitions": 2
         },
         {
           "id": 6,
           "text": "!$% /&()",
-          "description": "Teraz przećwiczymy pozostałe znaki; naciśnij palcem wskazującym lewej ręki |$| i |%|, oraz palcem wskazującym prawej ręki |/| i |&|",
+          "description": "Teraz przećwiczymy pozostałe znaki; naciśnij palcem wskazującym lewej ręki '$' i '%', oraz palcem wskazującym prawej ręki '/' i '&'",
           "repetitions": 2
         },
         {
           "id": 7,
           "text": "!)($&%/",
-          "description": "Teraz przećwiczymy pozostałe znaki; naciśnij palcem wskazującym lewej ręki |$| i |%|, oraz palcem wskazującym prawej ręki |/| i |&|",
+          "description": "Teraz przećwiczymy pozostałe znaki; naciśnij palcem wskazującym lewej ręki '$' i '%', oraz palcem wskazującym prawej ręki '/' i '&'",
           "repetitions": 2
         },
         {
           "id": 8,
           "text": "!% /)",
-          "description": "Teraz przećwiczymy pozostałe znaki; naciśnij palcem wskazującym lewej ręki |$| i |%|, oraz palcem wskazującym prawej ręki |/| i |&|",
+          "description": "Teraz przećwiczymy pozostałe znaki; naciśnij palcem wskazującym lewej ręki '$' i '%', oraz palcem wskazującym prawej ręki '/' i '&'",
           "repetitions": 2
         },
         {
@@ -1546,7 +1546,7 @@
         {
           "id": 14,
           "text": "#",
-          "description": "Aby użyć |#| musimy nacisnąć ten klawisz palcem środkowym lewej ręki i nacisnąć ALTGR palcem środkowym prawej ręki",
+          "description": "Aby użyć '#' musimy nacisnąć ten klawisz palcem środkowym lewej ręki i nacisnąć ALTGR palcem środkowym prawej ręki",
           "repetitions": 1
         },
         {

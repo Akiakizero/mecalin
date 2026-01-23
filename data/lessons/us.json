@@ -1246,61 +1246,61 @@
           "id": 1,
           "text": "12",
           "repetitions": 1,
-          "description": "With the left hand we will press the first two numbers |1| and |2|, pressing 1 with the pinky finger and 2 with the ring finger"
+          "description": "With the left hand we will press the first two numbers '1' and '2', pressing '1' with the pinky finger and '2' with the ring finger"
         },
         {
           "id": 2,
           "text": "345",
           "repetitions": 1,
-          "description": "The |3| is pressed with the middle finger, and the |4| and |5| with the index finger"
+          "description": "The '3' is pressed with the middle finger, and the '4' and '5' with the index finger"
         },
         {
           "id": 3,
           "text": "12345",
           "repetitions": 1,
-          "description": "The |3| is pressed with the middle finger, and the |4| and |5| with the index finger"
+          "description": "The '3' is pressed with the middle finger, and the '4' and '5' with the index finger"
         },
         {
           "id": 4,
           "text": "54321",
           "repetitions": 1,
-          "description": "The |3| is pressed with the middle finger, and the |4| and |5| with the index finger"
+          "description": "The '3' is pressed with the middle finger, and the '4' and '5' with the index finger"
         },
         {
           "id": 5,
           "text": "12345 54321",
           "repetitions": 2,
-          "description": "The |3| is pressed with the middle finger, and the |4| and |5| with the index finger"
+          "description": "The '3' is pressed with the middle finger, and the '4' and '5' with the index finger"
         },
         {
           "id": 6,
           "text": "09",
           "repetitions": 1,
-          "description": "Now we will practice with the fingers of the right hand, we will press |0| and |9| with the pinky and ring fingers respectively"
+          "description": "Now we will practice with the fingers of the right hand, we will press '0' and '9' with the pinky and ring fingers respectively"
         },
         {
           "id": 7,
           "text": "876",
           "repetitions": 1,
-          "description": "We will press |8| with the middle finger and |7| and |6| with the index finger"
+          "description": "We will press '8' with the middle finger and '7' and '6' with the index finger"
         },
         {
           "id": 8,
           "text": "09876",
           "repetitions": 1,
-          "description": "We will press |8| with the middle finger and |7| and |6| with the index finger"
+          "description": "We will press '8' with the middle finger and '7' and '6' with the index finger"
         },
         {
           "id": 9,
           "text": "67890",
           "repetitions": 1,
-          "description": "We will press |8| with the middle finger and |7| and |6| with the index finger"
+          "description": "We will press '8' with the middle finger and '7' and '6' with the index finger"
         },
         {
           "id": 10,
           "text": "09876 67890",
           "repetitions": 2,
-          "description": "We will press |8| with the middle finger and |7| and |6| with the index finger"
+          "description": "We will press '8' with the middle finger and '7' and '6' with the index finger"
         },
         {
           "id": 11,
@@ -1588,49 +1588,49 @@
         {
           "id": 1,
           "text": "!= != !=",
-          "description": "Pressing SHIFT with the little finger of your right hand, press |!| with your left hand, and vice versa |=|",
+          "description": "Pressing SHIFT with the little finger of your right hand, press '!' with your left hand, and vice versa '='",
           "repetitions": 2
         },
         {
           "id": 2,
           "text": "=! =! =!",
-          "description": "Pressing SHIFT with the little finger of your right hand, press |!| with your left hand, and vice versa |=|",
+          "description": "Pressing SHIFT with the little finger of your right hand, press '!' with your left hand, and vice versa '='",
           "repetitions": 2
         },
         {
           "id": 3,
           "text": "\") \") \")",
-          "description": "Continue pressing the SHIFT key with the corresponding little finger and press the |\"| key with the ring finger of your left hand and |)| with the ring finger of your right hand",
+          "description": "Continue pressing the SHIFT key with the corresponding little finger and press the '\"' key with the ring finger of your left hand and ')' with the ring finger of your right hand",
           "repetitions": 2
         },
         {
           "id": 4,
           "text": "((((",
-          "description": "Next, press |(| with the middle finger of your right hand. Don't forget to press the SHIFT key with your left hand",
+          "description": "Next, press '(' with the middle finger of your right hand. Don't forget to press the SHIFT key with your left hand",
           "repetitions": 2
         },
         {
           "id": 5,
           "text": "=\")(",
-          "description": "Next, press |(| with the middle finger of your right hand. Don't forget to press the SHIFT key with your left hand",
+          "description": "Next, press '(' with the middle finger of your right hand. Don't forget to press the SHIFT key with your left hand",
           "repetitions": 2
         },
         {
           "id": 6,
           "text": "!$% /&()",
-          "description": "Now we will practice the rest of the characters; press |$| and |%| with the index finger of your left hand, and |/| and |&| with the index finger of your right hand",
+          "description": "Now we will practice the rest of the characters; press '$' and '%' with the index finger of your left hand, and '/' and '&' with the index finger of your right hand",
           "repetitions": 2
         },
         {
           "id": 7,
           "text": "!)($&%/",
-          "description": "Now we will practice the rest of the characters; press |$| and |%| with the index finger of your left hand, and |/| and |&| with the index finger of your right hand",
+          "description": "Now we will practice the rest of the characters; press '$' and '%' with the index finger of your left hand, and '/' and '&' with the index finger of your right hand",
           "repetitions": 2
         },
         {
           "id": 8,
           "text": "!% /)",
-          "description": "Now we will practice the rest of the characters; press |$| and |%| with the index finger of your left hand, and |/| and |&| with the index finger of your right hand",
+          "description": "Now we will practice the rest of the characters; press '$' and '%' with the index finger of your left hand, and '/' and '&' with the index finger of your right hand",
           "repetitions": 2
         },
         {
@@ -1666,7 +1666,7 @@
         {
           "id": 14,
           "text": "#",
-          "description": "To use |#| we must press this key with the middle finger of the left hand and press ALTGR with the middle finger of the right hand",
+          "description": "To use '#' we must press this key with the middle finger of the left hand and press ALTGR with the middle finger of the right hand",
           "repetitions": 1
         },
         {

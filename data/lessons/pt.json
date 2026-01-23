@@ -1269,61 +1269,61 @@
         {
           "id": 1,
           "text": "12",
-          "description": "Com a mão esquerda vamos pressionar os dois primeiros número |1| y |2|, pressionando com o dedo mindinho o 1 e com o dedo anelar o 2",
+          "description": "Com a mão esquerda vamos pressionar os dois primeiros número '1' y '2', pressionando com o dedo mindinho o '1' e com o dedo anelar o '2'",
           "repetitions": 1
         },
         {
           "id": 2,
           "text": "345",
-          "description": "Com o dedo médio pressiona-se o |3|, e com o dedo indicador o |4| e o |5|",
+          "description": "Com o dedo médio pressiona-se o '3', e com o dedo indicador o '4' e o '5'",
           "repetitions": 1
         },
         {
           "id": 3,
           "text": "12345",
-          "description": "Com o dedo médio pressiona-se o |3|, e com o dedo indicador o |4| e o |5|",
+          "description": "Com o dedo médio pressiona-se o '3', e com o dedo indicador o '4' e o '5'",
           "repetitions": 1
         },
         {
           "id": 4,
           "text": "54321",
-          "description": "Com o dedo médio pressiona-se o |3|, e com o dedo indicador o |4| e o |5|",
+          "description": "Com o dedo médio pressiona-se o '3', e com o dedo indicador o '4' e o '5'",
           "repetitions": 1
         },
         {
           "id": 5,
           "text": "12345 54321",
-          "description": "Com o dedo médio pressiona-se o |3|, e com o dedo indicador o |4| e o |5|",
+          "description": "Com o dedo médio pressiona-se o '3', e com o dedo indicador o '4' e o '5'",
           "repetitions": 2
         },
         {
           "id": 6,
           "text": "09",
-          "description": "Agora vamos praticar com os dedos da mão direita, vamos pressionar o |0| e o |9| com os dedos mindinho e anelar respectivamente",
+          "description": "Agora vamos praticar com os dedos da mão direita, vamos pressionar o '0' e o '9' com os dedos mindinho e anelar respectivamente",
           "repetitions": 1
         },
         {
           "id": 7,
           "text": "876",
-          "description": "Com o dedo médio pressionaremos o |8| e com o indicador o |7| e o |6|",
+          "description": "Com o dedo médio pressionaremos o '8' e com o indicador o '7' e o '6'",
           "repetitions": 1
         },
         {
           "id": 8,
           "text": "09876",
-          "description": "Com o dedo médio pressionaremos o |8| e com o indicador o |7| e o |6|",
+          "description": "Com o dedo médio pressionaremos o '8' e com o indicador o '7' e o '6'",
           "repetitions": 1
         },
         {
           "id": 9,
           "text": "67890",
-          "description": "Com o dedo médio pressionaremos o |8| e com o indicador o |7| e o |6|",
+          "description": "Com o dedo médio pressionaremos o '8' e com o indicador o '7' e o '6'",
           "repetitions": 1
         },
         {
           "id": 10,
           "text": "09876 67890",
-          "description": "Com o dedo médio pressionaremos o |8| e com o indicador o |7| e o |6|",
+          "description": "Com o dedo médio pressionaremos o '8' e com o indicador o '7' e o '6'",
           "repetitions": 2
         },
         {
@@ -1612,49 +1612,49 @@
         {
           "id": 1,
           "text": "!= != !=",
-          "description": "Pressionando com o dedo mínimo da mão direita SHIFT pressione com o da esquerda |!| e ao contrário |=|",
+          "description": "Pressionando com o dedo mínimo da mão direita SHIFT pressione com o da esquerda '!' e ao contrário '='",
           "repetitions": 2
         },
         {
           "id": 2,
           "text": "=! =! =!",
-          "description": "Pressionando com o dedo mínimo da mão direita SHIFT pressione com o da esquerda |!| e ao contrário |=|",
+          "description": "Pressionando com o dedo mínimo da mão direita SHIFT pressione com o da esquerda '!' e ao contrário '='",
           "repetitions": 2
         },
         {
           "id": 3,
           "text": "\") \") \")",
-          "description": "Continue pressionando com o dedo mínimo correspondente a tecla SHIFT e com o dedo anelar da mão esquerda a tecla |\"| e com o dedo anelar da mão direita |)|",
+          "description": "Continue pressionando com o dedo mínimo correspondente a tecla SHIFT e com o dedo anelar da mão esquerda a tecla '\"' e com o dedo anelar da mão direita ')'",
           "repetitions": 2
         },
         {
           "id": 4,
           "text": "((((",
-          "description": "A seguir pressione com o dedo médio da mão direita |(|. Não esqueça de pressionar a tecla SHIFT com a mão esquerda",
+          "description": "A seguir pressione com o dedo médio da mão direita '('. Não esqueça de pressionar a tecla SHIFT com a mão esquerda",
           "repetitions": 2
         },
         {
           "id": 5,
           "text": "=\")(",
-          "description": "A seguir pressione com o dedo médio da mão direita |(|. Não esqueça de pressionar a tecla SHIFT com a mão esquerda",
+          "description": "A seguir pressione com o dedo médio da mão direita '('. Não esqueça de pressionar a tecla SHIFT com a mão esquerda",
           "repetitions": 2
         },
         {
           "id": 6,
           "text": "!$% /&()",
-          "description": "Agora praticaremos o resto dos caracteres; pressione com o dedo indicador da mão esquerda |$| e |%|, e com o dedo indicador da mão direita |/| e |&|",
+          "description": "Agora praticaremos o resto dos caracteres; pressione com o dedo indicador da mão esquerda '$' e '%', e com o dedo indicador da mão direita '/' e '&'",
           "repetitions": 2
         },
         {
           "id": 7,
           "text": "!)($&%/",
-          "description": "Agora praticaremos o resto dos caracteres; pressione com o dedo indicador da mão esquerda |$| e |%|, e com o dedo indicador da mão direita |/| e |&|",
+          "description": "Agora praticaremos o resto dos caracteres; pressione com o dedo indicador da mão esquerda '$' e '%', e com o dedo indicador da mão direita '/' e '&'",
           "repetitions": 2
         },
         {
           "id": 8,
           "text": "!% /)",
-          "description": "Agora praticaremos o resto dos caracteres; pressione com o dedo indicador da mão esquerda |$| e |%|, e com o dedo indicador da mão direita |/| e |&|",
+          "description": "Agora praticaremos o resto dos caracteres; pressione com o dedo indicador da mão esquerda '$' e '%', e com o dedo indicador da mão direita '/' e '&'",
           "repetitions": 2
         },
         {
@@ -1690,7 +1690,7 @@
         {
           "id": 14,
           "text": "#",
-          "description": "Para poder utilizar |#| devemos pressionar esta tecla com o dedo médio da mão esquerda e pressionar ALTGR com o dedo médio da mão direita",
+          "description": "Para poder utilizar '#' devemos pressionar esta tecla com o dedo médio da mão esquerda e pressionar ALTGR com o dedo médio da mão direita",
           "repetitions": 1
         },
         {

@@ -1269,61 +1269,61 @@
         {
           "id": 1,
           "text": "12",
-          "description": "Coa man esquerda imos pulsar os dous primeiros números |1| e |2|, pulsando co dedo maimiño o 1 e co dedo anular o 2",
+          "description": "Coa man esquerda imos pulsar os dous primeiros números '1' e '2', pulsando co dedo maimiño o '1' e co dedo anular o '2'",
           "repetitions": 1
         },
         {
           "id": 2,
           "text": "345",
-          "description": "Co dedo corazón púlsase o |3|, e co dedo índice o |4| e o |5|",
+          "description": "Co dedo corazón púlsase o '3', e co dedo índice o '4' e o '5'",
           "repetitions": 1
         },
         {
           "id": 3,
           "text": "12345",
-          "description": "Co dedo corazón púlsase o |3|, e co dedo índice o |4| e o |5|",
+          "description": "Co dedo corazón púlsase o '3', e co dedo índice o '4' e o '5'",
           "repetitions": 1
         },
         {
           "id": 4,
           "text": "54321",
-          "description": "Co dedo corazón púlsase o |3|, e co dedo índice o |4| e o |5|",
+          "description": "Co dedo corazón púlsase o '3', e co dedo índice o '4' e o '5'",
           "repetitions": 1
         },
         {
           "id": 5,
           "text": "12345 54321",
-          "description": "Co dedo corazón púlsase o |3|, e co dedo índice o |4| e o |5|",
+          "description": "Co dedo corazón púlsase o '3', e co dedo índice o '4' e o '5'",
           "repetitions": 2
         },
         {
           "id": 6,
           "text": "09",
-          "description": "Agora imos practicar cos dedos da man dereita, imos pulsar o |0| e o |9| cos dedos mínimo e anular respectivamente",
+          "description": "Agora imos practicar cos dedos da man dereita, imos pulsar o '0' e o '9' cos dedos mínimo e anular respectivamente",
           "repetitions": 1
         },
         {
           "id": 7,
           "text": "876",
-          "description": "Co dedo corazón pulsaremos o |8| e co índice o |7| e o |6|",
+          "description": "Co dedo corazón pulsaremos o '8' e co índice o '7' e o '6'",
           "repetitions": 1
         },
         {
           "id": 8,
           "text": "09876",
-          "description": "Co dedo corazón pulsaremos o |8| e co índice o |7| e o |6|",
+          "description": "Co dedo corazón pulsaremos o '8' e co índice o '7' e o '6'",
           "repetitions": 1
         },
         {
           "id": 9,
           "text": "67890",
-          "description": "Co dedo corazón pulsaremos o |8| e co índice o |7| e o |6|",
+          "description": "Co dedo corazón pulsaremos o '8' e co índice o '7' e o '6'",
           "repetitions": 1
         },
         {
           "id": 10,
           "text": "09876 67890",
-          "description": "Co dedo corazón pulsaremos o |8| e co índice o |7| e o |6|",
+          "description": "Co dedo corazón pulsaremos o '8' e co índice o '7' e o '6'",
           "repetitions": 2
         },
         {
@@ -1612,49 +1612,49 @@
         {
           "id": 1,
           "text": "!= != !=",
-          "description": "Pulsando co dedo maimiño da man dereita SHIFT pulse co da esquerda |!| e ao contrario |=|",
+          "description": "Pulsando co dedo maimiño da man dereita SHIFT pulse co da esquerda '!' e ao contrario '='",
           "repetitions": 2
         },
         {
           "id": 2,
           "text": "=! =! =!",
-          "description": "Pulsando co dedo maimiño da man dereita SHIFT pulse co da esquerda |!| e ao contrario |=|",
+          "description": "Pulsando co dedo maimiño da man dereita SHIFT pulse co da esquerda '!' e ao contrario '='",
           "repetitions": 2
         },
         {
           "id": 3,
           "text": "\") \") \")",
-          "description": "Siga pulsando co dedo maimiño correspondente a tecla SHIFT e co dedo anular da man esquerda a tecla |\"| e co dedo anular da man dereita |)|",
+          "description": "Siga pulsando co dedo maimiño correspondente a tecla SHIFT e co dedo anular da man esquerda a tecla '\"' e co dedo anular da man dereita ')'",
           "repetitions": 2
         },
         {
           "id": 4,
           "text": "((((",
-          "description": "A continuación pulse co dedo corazón da man dereita |(|. Non esqueza pulsar a tecla SHIFT coa man esquerda",
+          "description": "A continuación pulse co dedo corazón da man dereita '('. Non esqueza pulsar a tecla SHIFT coa man esquerda",
           "repetitions": 2
         },
         {
           "id": 5,
           "text": "=\")(",
-          "description": "A continuación pulse co dedo corazón da man dereita |(|. Non esqueza pulsar a tecla SHIFT coa man esquerda",
+          "description": "A continuación pulse co dedo corazón da man dereita '('. Non esqueza pulsar a tecla SHIFT coa man esquerda",
           "repetitions": 2
         },
         {
           "id": 6,
           "text": "!$% /&()",
-          "description": "Agora practicaremos o resto dos caracteres; pulse co dedo índice da man esquerda |$| e |%|, e co dedo índice da man dereita |/| e |&|",
+          "description": "Agora practicaremos o resto dos caracteres; pulse co dedo índice da man esquerda '$' e '%', e co dedo índice da man dereita '/' e '&'",
           "repetitions": 2
         },
         {
           "id": 7,
           "text": "!)($&%/",
-          "description": "Agora practicaremos o resto dos caracteres; pulse co dedo índice da man esquerda |$| e |%|, e co dedo índice da man dereita |/| e |&|",
+          "description": "Agora practicaremos o resto dos caracteres; pulse co dedo índice da man esquerda '$' e '%', e co dedo índice da man dereita '/' e '&'",
           "repetitions": 2
         },
         {
           "id": 8,
           "text": "!% /)",
-          "description": "Agora practicaremos o resto dos caracteres; pulse co dedo índice da man esquerda |$| e |%|, e co dedo índice da man dereita |/| e |&|",
+          "description": "Agora practicaremos o resto dos caracteres; pulse co dedo índice da man esquerda '$' e '%', e co dedo índice da man dereita '/' e '&'",
           "repetitions": 2
         },
         {
@@ -1690,7 +1690,7 @@
         {
           "id": 14,
           "text": "#",
-          "description": "Para poder utilizar |#| debemos pulsar esta tecla co dedo corazón da man esquerda e pulsar ALTGR co dedo corazón da man dereita",
+          "description": "Para poder utilizar '#' debemos pulsar esta tecla co dedo corazón da man esquerda e pulsar ALTGR co dedo corazón da man dereita",
           "repetitions": 1
         },
         {
