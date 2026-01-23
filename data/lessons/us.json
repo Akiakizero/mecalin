@@ -1573,6 +1573,199 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 8,
+      "title": "Characters in the Top Row",
+      "description": "Learn the characters in the top row",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Now we are going to learn the characters in the top row",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "!= != !=",
+          "description": "Pressing SHIFT with the little finger of your right hand, press |!| with your left hand, and vice versa |=|",
+          "repetitions": 2
+        },
+        {
+          "id": 2,
+          "text": "=! =! =!",
+          "description": "Pressing SHIFT with the little finger of your right hand, press |!| with your left hand, and vice versa |=|",
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "\") \") \")",
+          "description": "Continue pressing the SHIFT key with the corresponding little finger and press the |\"| key with the ring finger of your left hand and |)| with the ring finger of your right hand",
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "((((",
+          "description": "Next, press |(| with the middle finger of your right hand. Don't forget to press the SHIFT key with your left hand",
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "=\")(",
+          "description": "Next, press |(| with the middle finger of your right hand. Don't forget to press the SHIFT key with your left hand",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "!$% /&()",
+          "description": "Now we will practice the rest of the characters; press |$| and |%| with the index finger of your left hand, and |/| and |&| with the index finger of your right hand",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "!)($&%/",
+          "description": "Now we will practice the rest of the characters; press |$| and |%| with the index finger of your left hand, and |/| and |&| with the index finger of your right hand",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "!% /)",
+          "description": "Now we will practice the rest of the characters; press |$| and |%| with the index finger of your left hand, and |/| and |&| with the index finger of your right hand",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "!/&($)%",
+          "description": "Remember that you must press the SHIFT keys with the little finger corresponding to each hand",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": ")!(&$/%",
+          "description": "Remember that you must press the SHIFT keys with the little finger corresponding to each hand",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "/%&$()!",
+          "description": "Remember that you must press the SHIFT keys with the little finger corresponding to each hand",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "!/&$(%)",
+          "description": "Your fingers should always return to the home row",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": ")%($&/!",
+          "description": "Your fingers should always return to the home row",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": "#",
+          "description": "To use |#| we must press this key with the middle finger of the left hand and press ALTGR with the middle finger of the right hand",
+          "repetitions": 1
+        },
+        {
+          "id": 15,
+          "text": ")(&%$\"!",
+          "description": "Don't forget to press SHIFT when appropriate",
+          "repetitions": 2
+        },
+        {
+          "id": 16,
+          "text": "asd#f$g% h/j&kl(ñ)",
+          "description": "Now we will also practice with letters",
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "%w$ #rt",
+          "description": "Now we will also practice with letters",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "y)u(i*o&p/",
+          "description": "Now we will also practice with letters",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "z)x(c*v&b/ nm#.$´%",
+          "description": "Now we will also practice with letters",
+          "repetitions": 2
+        },
+        {
+          "id": 20,
+          "text": "q/a&z( w)sx e#$c%",
+          "description": "Remember that to press the characters in the number row you must hold down the SHIFT key at the same time",
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "pñ´# o$l%./ i%k$,*",
+          "description": "Remember that to press the characters in the number row you must hold down the SHIFT key at the same time",
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "r)f(v* ujm# t$g%b/",
+          "description": "Remember that to press the characters in the number row you must hold down the SHIFT key at the same time",
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "y&h*n(m)",
+          "description": "Remember that to press the characters in the number row you must hold down the SHIFT key at the same time",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "1)2(3=4&5/ 098#7$6%",
+          "description": "Next we will practice all the characters in the top row",
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": "09#8$7%6 )1(2=3&4/5",
+          "description": "Next we will practice all the characters in the top row",
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "6)7(8=9&0/ 543#2$1%",
+          "description": "Next we will practice all the characters in the top row",
+          "repetitions": 2
+        },
+        {
+          "id": 27,
+          "text": "zx#c )´(.*, $v%b/n&m",
+          "description": "Don't be impatient. You will acquire speed through practice. The important thing is to know at all times which finger corresponds to each key",
+          "repetitions": 2
+        },
+        {
+          "id": 28,
+          "text": "as# )ñ(l=k $f%g/h&j",
+          "description": "Don't be impatient. You will acquire speed through practice. The important thing is to know at all times which finger corresponds to each key",
+          "repetitions": 2
+        },
+        {
+          "id": 29,
+          "text": "qw#e )p(o=i $r%t/y&u",
+          "description": "Don't be impatient. You will acquire speed through practice. The important thing is to know at all times which finger corresponds to each key",
+          "repetitions": 2
+        },
+        {
+          "id": 30,
+          "text": "",
+          "description": "Congratulations! You have completed the eighth lesson",
+          "introduction": true
+        }
+      ]
     }
   ]
 }
