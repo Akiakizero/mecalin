@@ -1597,6 +1597,199 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 8,
+      "title": "Caracteres en la fila superior",
+      "description": "Aprende los caracteres de la fila superior",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Ahora vamos a conocer los caracteres de la fila superior",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "!= != !=",
+          "description": "Pulsando con el dedo meñique de la mano derecha SHIFT pulse con el de la izquierda |!| y al contrario |=|",
+          "repetitions": 2
+        },
+        {
+          "id": 2,
+          "text": "=! =! =!",
+          "description": "Pulsando con el dedo meñique de la mano derecha SHIFT pulse con el de la izquierda |!| y al contrario |=|",
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "\") \") \")",
+          "description": "Siga pulsando con el dedo meñique correspondiente la tecla SHIFT y con el dedo anular de la mano izquierda la tecla |\"| y con el dedo anular de la mano derecha |)|",
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "((((",
+          "description": "A continuación pulse con el dedo corazón de la mano derecha |(|. No olvide pulsar la tecla SHIFT con la mano izquierda",
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "=\")(",
+          "description": "A continuación pulse con el dedo corazón de la mano derecha |(|. No olvide pulsar la tecla SHIFT con la mano izquierda",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "!$% /&()",
+          "description": "Ahora practicaremos el resto de los caracteres; pulse con el dedo índice de la mano izquierda |$| y |%|, y con el dedo índice de la mano derecha |/| y |&|",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "!)($&%/",
+          "description": "Ahora practicaremos el resto de los caracteres; pulse con el dedo índice de la mano izquierda |$| y |%|, y con el dedo índice de la mano derecha |/| y |&|",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "!% /)",
+          "description": "Ahora practicaremos el resto de los caracteres; pulse con el dedo índice de la mano izquierda |$| y |%|, y con el dedo índice de la mano derecha |/| y |&|",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "!/&($)%",
+          "description": "Recuerde que debe pulsar las teclas SHIFT con el dedo meñique correspondiente a cada mano",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": ")!(&$/%",
+          "description": "Recuerde que debe pulsar las teclas SHIFT con el dedo meñique correspondiente a cada mano",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "/%&$()!",
+          "description": "Recuerde que debe pulsar las teclas SHIFT con el dedo meñique correspondiente a cada mano",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "!/&$(%)",
+          "description": "Los dedos siempre deben volver a la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": ")%($&/!",
+          "description": "Los dedos siempre deben volver a la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": "#",
+          "description": "Para poder utilizar |#| debemos pulsar esta tecla con el dedo corazón de la mano izquierda y pulsar ALTGR con el dedo corazón de la mano derecha",
+          "repetitions": 1
+        },
+        {
+          "id": 15,
+          "text": ")(&%$\"!",
+          "description": "No olvide pulsar SHIFT cuando corresponda",
+          "repetitions": 2
+        },
+        {
+          "id": 16,
+          "text": "asd#f$g% h/j&kl(ñ)",
+          "description": "Ahora vamos a practicar también con letras",
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "%w$ #rt",
+          "description": "Ahora vamos a practicar también con letras",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "y)u(i*o&p/",
+          "description": "Ahora vamos a practicar también con letras",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "z)x(c*v&b/ nm#.$´%",
+          "description": "Ahora vamos a practicar también con letras",
+          "repetitions": 2
+        },
+        {
+          "id": 20,
+          "text": "q/a&z( w)sx e#$c%",
+          "description": "Recuerde que para pulsar los caracteres de la línea de números debe mantener pulsada la tecla SHIFT al mismo tiempo",
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "pñ´# o$l%./ i%k$,*",
+          "description": "Recuerde que para pulsar los caracteres de la línea de números debe mantener pulsada la tecla SHIFT al mismo tiempo",
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "r)f(v* ujm# t$g%b/",
+          "description": "Recuerde que para pulsar los caracteres de la línea de números debe mantener pulsada la tecla SHIFT al mismo tiempo",
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "y&h*n(m)",
+          "description": "Recuerde que para pulsar los caracteres de la línea de números debe mantener pulsada la tecla SHIFT al mismo tiempo",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "1)2(3=4&5/ 098#7$6%",
+          "description": "A continuación vamos a practicar todos los caracteres de la línea superior",
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": "09#8$7%6 )1(2=3&4/5",
+          "description": "A continuación vamos a practicar todos los caracteres de la línea superior",
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "6)7(8=9&0/ 543#2$1%",
+          "description": "A continuación vamos a practicar todos los caracteres de la línea superior",
+          "repetitions": 2
+        },
+        {
+          "id": 27,
+          "text": "zx#c )´(.*, $v%b/n&m",
+          "description": "No se impaciente. La velocidad ya la adquirirá a través de la práctica. Lo importante es saber en todo momento qué dedo corresponde a cada tecla",
+          "repetitions": 2
+        },
+        {
+          "id": 28,
+          "text": "as# )ñ(l=k $f%g/h&j",
+          "description": "No se impaciente. La velocidad ya la adquirirá a través de la práctica. Lo importante es saber en todo momento qué dedo corresponde a cada tecla",
+          "repetitions": 2
+        },
+        {
+          "id": 29,
+          "text": "qw#e )p(o=i $r%t/y&u",
+          "description": "No se impaciente. La velocidad ya la adquirirá a través de la práctica. Lo importante es saber en todo momento qué dedo corresponde a cada tecla",
+          "repetitions": 2
+        },
+        {
+          "id": 30,
+          "text": "",
+          "description": "¡Enhorabuena! Ha acabado la octava lección",
+          "introduction": true
+        }
+      ]
     }
   ]
 }
