@@ -13,7 +13,6 @@ use crate::lesson_view::LessonView;
 use crate::main_action_list::MainActionList;
 use crate::scrolling_lanes_game::ScrollingLanesGame;
 use crate::target_text_view::TargetTextView;
-use crate::text_view::TextView;
 
 mod imp {
     use super::*;
@@ -42,7 +41,6 @@ mod imp {
         fn class_init(klass: &mut Self::Class) {
             MainActionList::ensure_type();
             LessonView::ensure_type();
-            TextView::ensure_type();
             TargetTextView::ensure_type();
             FallingKeysGame::ensure_type();
             ScrollingLanesGame::ensure_type();

@@ -6,7 +6,6 @@ mod lesson_view;
 mod main_action_list;
 mod scrolling_lanes_game;
 mod target_text_view;
-mod text_view;
 
 mod config {
     include!(concat!(env!("OUT_DIR"), "/config.rs"));

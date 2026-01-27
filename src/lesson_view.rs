@@ -7,7 +7,6 @@ use std::cell::{Cell, RefCell};
 use crate::course::Lesson;
 use crate::keyboard_widget::KeyboardWidget;
 use crate::target_text_view::TargetTextView;
-use crate::text_view::TextView;
 
 mod imp {
     use super::*;
@@ -29,7 +28,7 @@ mod imp {
         #[template_child]
         pub target_text_view: TemplateChild<TargetTextView>,
         #[template_child]
-        pub text_view: TemplateChild<TextView>,
+        pub text_view: TemplateChild<gtk::TextView>,
         #[template_child]
         pub keyboard_container: TemplateChild<gtk::Box>,
 
