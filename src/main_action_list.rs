@@ -1,6 +1,7 @@
 use gettextrs::gettext;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
+use libadwaita as adw;
 
 mod imp {
     use super::*;
@@ -70,26 +71,11 @@ impl imp::MainActionList {
         ];
 
         for (title, subtitle) in actions {
-            let row = gtk::ListBoxRow::new();
-            let hbox = gtk::Box::new(gtk::Orientation::Horizontal, 12);
-            hbox.set_margin_top(12);
-            hbox.set_margin_bottom(12);
-            hbox.set_margin_start(12);
-            hbox.set_margin_end(12);
-
-            let vbox = gtk::Box::new(gtk::Orientation::Vertical, 4);
-            let title_label = gtk::Label::new(Some(title));
-            title_label.set_halign(gtk::Align::Start);
-            title_label.add_css_class("heading");
-
-            let subtitle_label = gtk::Label::new(Some(subtitle));
-            subtitle_label.set_halign(gtk::Align::Start);
-            subtitle_label.add_css_class("dim-label");
-
-            vbox.append(&title_label);
-            vbox.append(&subtitle_label);
-            hbox.append(&vbox);
-            row.set_child(Some(&hbox));
+            let row = adw::ActionRow::builder()
+                .title(title)
+                .subtitle(subtitle)
+                .activatable(true)
+                .build();
 
             self.action_list.append(&row);
         }
