@@ -68,6 +68,7 @@
     "ctrl_right": {"label": "Ctrl", "finger": "right_pinky"},
     "super_left": {"label": "Super", "finger": "left_thumb"},
     "super_right": {"label": "Super", "finger": "right_thumb"},
+    "menu": {"label": "Menu", "finger": "right_pinky"},
     "alt_left": {"label": "Alt", "finger": "left_thumb"},
     "alt_right": {"label": "Alt", "finger": "right_thumb"},
     "enter": {"label": "Enter", "finger": "right_pinky"},

@@ -234,6 +234,8 @@ mod imp {
                 + key_spacing
                 + key_width * 1.2
                 + key_spacing
+                + key_width * 1.2
+                + key_spacing
                 + key_width * 1.5;
 
             let keyboard_width = row0_width
@@ -775,6 +777,26 @@ mod imp {
                     key_height,
                     None,
                     Some(&super_r.label),
+                    false,
+                    true,
+                    &modifier_color,
+                    &key_current_color,
+                    &modifier_text_color,
+                    &key_current_text_color,
+                    &key_border_color,
+                );
+                x += key_width * 1.2 + key_spacing;
+            }
+            if let Some(menu) = layout_borrowed.modifiers.get("menu") {
+                Self::draw_single_key(
+                    snapshot,
+                    &pango_context,
+                    x,
+                    y4,
+                    key_width * 1.2,
+                    key_height,
+                    None,
+                    Some(&menu.label),
                     false,
                     true,
                     &modifier_color,
