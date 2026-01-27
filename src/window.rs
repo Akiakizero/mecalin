@@ -11,7 +11,7 @@ use crate::course::Lesson;
 use crate::falling_keys_game::FallingKeysGame;
 use crate::lesson_view::LessonView;
 use crate::scrolling_lanes_game::ScrollingLanesGame;
-use crate::target_text_view::TargetTextView;
+use crate::typing_row::TypingRow;
 
 mod imp {
     use super::*;
@@ -45,7 +45,7 @@ mod imp {
 
         fn class_init(klass: &mut Self::Class) {
             LessonView::ensure_type();
-            TargetTextView::ensure_type();
+            TypingRow::ensure_type();
             FallingKeysGame::ensure_type();
             ScrollingLanesGame::ensure_type();
             klass.bind_template();

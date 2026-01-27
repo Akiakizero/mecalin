@@ -4,7 +4,7 @@ mod falling_keys_game;
 mod keyboard_widget;
 mod lesson_view;
 mod scrolling_lanes_game;
-mod target_text_view;
+mod typing_row;
 
 mod config {
     include!(concat!(env!("OUT_DIR"), "/config.rs"));

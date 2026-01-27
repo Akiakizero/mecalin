@@ -6,7 +6,7 @@ use std::cell::{Cell, RefCell};
 
 use crate::course::Lesson;
 use crate::keyboard_widget::KeyboardWidget;
-use crate::target_text_view::TargetTextView;
+use crate::typing_row::TypingRow;
 
 mod imp {
     use super::*;
@@ -24,11 +24,7 @@ mod imp {
         #[template_child]
         pub text_container: TemplateChild<gtk::Box>,
         #[template_child]
-        pub repetition_label: TemplateChild<gtk::Label>,
-        #[template_child]
-        pub target_text_view: TemplateChild<TargetTextView>,
-        #[template_child]
-        pub text_view: TemplateChild<gtk::TextView>,
+        pub typing_row: TemplateChild<TypingRow>,
         #[template_child]
         pub keyboard_container: TemplateChild<gtk::Box>,
 
@@ -83,7 +79,7 @@ mod imp {
 
     impl WidgetImpl for LessonView {
         fn grab_focus(&self) -> bool {
-            self.text_view.grab_focus()
+            self.typing_row.text_input().grab_focus()
         }
     }
 
@@ -108,113 +104,111 @@ impl imp::LessonView {
 
         // Track composition state for dead keys
         let lesson_view_weak = self.obj().downgrade();
-        self.text_view.connect_preedit_changed(move |_, preedit| {
-            if let Some(lesson_view) = lesson_view_weak.upgrade() {
-                let imp = lesson_view.imp();
-                let is_composing = !preedit.is_empty();
-                imp.composition_in_progress.set(is_composing);
+        self.typing_row
+            .text_input()
+            .connect_preedit_changed(move |_, preedit| {
+                if let Some(lesson_view) = lesson_view_weak.upgrade() {
+                    let imp = lesson_view.imp();
+                    let is_composing = !preedit.is_empty();
+                    imp.composition_in_progress.set(is_composing);
 
-                // If composition started, store the dead key
-                if is_composing && preedit.len() == 1 {
-                    if let Some(dead_key) = preedit.chars().next() {
-                        *imp.pending_dead_key.borrow_mut() = Some(dead_key);
+                    // If composition started, store the dead key
+                    if is_composing && preedit.len() == 1 {
+                        if let Some(dead_key) = preedit.chars().next() {
+                            *imp.pending_dead_key.borrow_mut() = Some(dead_key);
 
-                        // Advance keyboard sequence to show next character
-                        if let Some(keyboard) = imp.keyboard_widget.borrow().as_ref() {
-                            keyboard.advance_sequence();
+                            // Advance keyboard sequence to show next character
+                            if let Some(keyboard) = imp.keyboard_widget.borrow().as_ref() {
+                                keyboard.advance_sequence();
+                            }
                         }
+                    } else if !is_composing {
+                        // Composition ended, clear pending dead key
+                        *imp.pending_dead_key.borrow_mut() = None;
                     }
-                } else if !is_composing {
-                    // Composition ended, clear pending dead key
-                    *imp.pending_dead_key.borrow_mut() = None;
                 }
+            });
+
+        // Prevent cursor movement - always keep cursor at the end
+        let text_input = self.typing_row.text_input();
+        let text_input_clone = text_input.clone();
+        text_input.connect_move_cursor(move |_, _, _, _| {
+            glib::idle_add_local_once({
+                let text = text_input_clone.clone();
+                move || {
+                    let buffer = text.buffer();
+                    let text_len = buffer.text().len() as u16;
+                    text.set_position(text_len as i32);
+                }
+            });
+        });
+
+        // Also reset cursor position on any notify::cursor-position
+        let text_input_clone2 = text_input.clone();
+        text_input.connect_notify_local(Some("cursor-position"), move |_, _| {
+            let buffer = text_input_clone2.buffer();
+            let text_len = buffer.text().len() as u16;
+            let current_pos = text_input_clone2.position();
+            if current_pos != text_len as i32 {
+                text_input_clone2.set_position(text_len as i32);
             }
         });
 
         let keyboard_widget = self.keyboard_widget.borrow();
         if let Some(keyboard) = keyboard_widget.as_ref() {
             let keyboard_clone = keyboard.clone();
-            let target_text_view = self.target_text_view.clone();
-            let target_text_view_clone = self.target_text_view.clone();
+            let typing_row = self.typing_row.clone();
             let lesson_view_clone = self.obj().downgrade();
-            let lesson_view_clone2 = self.obj().downgrade();
 
-            let buffer = self.text_view.buffer();
-            buffer.connect_insert_text(move |buffer, _iter, text| {
-                let current_text = buffer.text(&buffer.start_iter(), &buffer.end_iter(), false);
-                let target_buffer = target_text_view.buffer();
-                let target_text = target_buffer.text(
-                    &target_buffer.start_iter(),
-                    &target_buffer.end_iter(),
-                    false,
-                );
-
-                let current_str = current_text.as_str();
-                let target_str = target_text.as_str();
-                let new_text = format!("{}{}", current_str, text);
-
-                // Check if the new text would match target text
-                if !target_str.starts_with(&new_text) {
-                    // Check if this is a composed character that matches
-                    let inserted_char = text.chars().next();
-                    let is_valid_composition = if let Some(ch) = inserted_char {
-                        // Check if this composed character matches the target
-                        let cursor_pos = current_str.chars().count();
-                        target_str.chars().nth(cursor_pos) == Some(ch)
-                    } else {
-                        false
-                    };
-
-                    if !is_valid_composition {
-                        // Find the last space position or go to beginning
-                        let last_space_pos = current_str.rfind(' ').map(|pos| pos + 1).unwrap_or(0);
-
-                        // Mark as mistake if:
-                        // - Not at the beginning (last_space_pos > 0), OR
-                        // - At the beginning but on a repetition after the first (current_repetition > 0)
-                        if let Some(lesson_view) = lesson_view_clone.upgrade() {
-                            let imp = lesson_view.imp();
-                            if last_space_pos > 0 || imp.current_repetition.get() > 0 {
-                                imp.has_mistake.set(true);
-                            }
-                        }
-
-                        // Reset to last space position
-                        let corrected_text = &current_str[..last_space_pos];
-
-                        glib::idle_add_local_once({
-                            let buffer = buffer.clone();
-                            let corrected_text = corrected_text.to_string();
-                            move || {
-                                buffer.set_text(&corrected_text);
-                                let end_iter = buffer.end_iter();
-                                buffer.place_cursor(&end_iter);
-                            }
-                        });
-                    }
-                }
-            });
-
-            buffer.connect_changed(move |buffer| {
-                let typed_text = buffer.text(&buffer.start_iter(), &buffer.end_iter(), false);
-                let target_buffer = target_text_view_clone.buffer();
-                let target_text = target_buffer.text(
-                    &target_buffer.start_iter(),
-                    &target_buffer.end_iter(),
-                    false,
-                );
+            let buffer = self.typing_row.buffer();
+            buffer.connect_notify_local(Some("text"), move |buffer, _| {
+                let typed_text = buffer.text();
+                let target_text = typing_row.imp().target_label.text();
 
                 let typed_str = typed_text.as_str();
                 let target_str = target_text.as_str();
 
+                // Check if the new text would match target text
+                if !target_str.starts_with(typed_str) && !typed_str.is_empty() {
+                    // Find the last space position or go to beginning
+                    let last_space_pos = typed_str.rfind(' ').map(|pos| pos + 1).unwrap_or(0);
+
+                    // Mark as mistake if:
+                    // - Not at the beginning (last_space_pos > 0), OR
+                    // - At the beginning but on a repetition after the first (current_repetition > 0)
+                    if let Some(lesson_view) = lesson_view_clone.upgrade() {
+                        let imp = lesson_view.imp();
+                        if last_space_pos > 0 || imp.current_repetition.get() > 0 {
+                            imp.has_mistake.set(true);
+                        }
+                    }
+
+                    // Reset to last space position
+                    let corrected_text = &typed_str[..last_space_pos];
+
+                    glib::idle_add_local_once({
+                        let buffer = buffer.clone();
+                        let typing_row = typing_row.clone();
+                        let corrected_text = corrected_text.to_string();
+                        let corrected_len = corrected_text.len();
+                        move || {
+                            buffer.delete_text(0, None);
+                            buffer.insert_text(0, &corrected_text);
+                            // Set cursor to end of corrected text
+                            typing_row.text_input().set_position(corrected_len as i32);
+                        }
+                    });
+                    return;
+                }
+
                 let cursor_pos = typed_str.chars().count() as i32;
-                target_text_view_clone.set_cursor_position(cursor_pos);
+                typing_row.set_cursor_position(cursor_pos);
 
                 // Check if step is completed
                 if typed_str == target_str && !target_str.is_empty() {
                     // Step completed - check if we need more repetitions
                     glib::idle_add_local_once({
-                        let lesson_view = lesson_view_clone2.clone();
+                        let lesson_view = lesson_view_clone.clone();
                         move || {
                             if let Some(lesson_view) = lesson_view.upgrade() {
                                 lesson_view.handle_step_completion();
@@ -310,7 +304,7 @@ impl LessonView {
                     imp.step_description.set_visible(false);
                     imp.continue_button.set_visible(false);
                     imp.text_container.set_visible(true);
-                    imp.target_text_view.set_text(&first_step.text);
+                    imp.typing_row.set_target_text(&first_step.text);
 
                     // Show step description if available
                     if let Some(description) = &first_step.description {
@@ -321,7 +315,7 @@ impl LessonView {
                     self.update_repetition_label();
 
                     // Focus the text view for immediate typing
-                    imp.text_view.grab_focus();
+                    imp.typing_row.text_input().grab_focus();
                 }
 
                 // Extract unique characters from the lesson text for keyboard display
@@ -339,7 +333,7 @@ impl LessonView {
             }
         }
 
-        imp.text_view.buffer().set_text("");
+        imp.typing_row.buffer().delete_text(0, None);
         imp.has_mistake.set(false);
     }
 
@@ -372,12 +366,12 @@ impl LessonView {
                         }
                         imp.continue_button.set_visible(false);
                         imp.text_container.set_visible(true);
-                        imp.target_text_view.set_text(&step.text);
-                        imp.text_view.buffer().set_text("");
+                        imp.typing_row.set_target_text(&step.text);
+                        imp.typing_row.buffer().delete_text(0, None);
                         self.update_repetition_label();
 
                         // Focus the text view for immediate typing
-                        imp.text_view.grab_focus();
+                        imp.typing_row.text_input().grab_focus();
                     }
 
                     // Update keyboard for this step
@@ -419,7 +413,7 @@ impl LessonView {
                 if let Some(step) = lesson.steps.get(step_index) {
                     let label_text =
                         i18n_fmt! { i18n_fmt("{}/{} Good", current_repetition, step.repetitions) };
-                    imp.repetition_label.set_text(&label_text);
+                    imp.typing_row.set_repetition_text(&label_text);
                 }
             }
         }
@@ -433,8 +427,8 @@ impl LessonView {
             // Restart the step - reset repetition count and clear text
             self.reset_repetition_count();
             imp.has_mistake.set(false);
-            imp.text_view.buffer().set_text("");
-            imp.text_view.grab_focus();
+            imp.typing_row.buffer().delete_text(0, None);
+            imp.typing_row.text_input().grab_focus();
             return;
         }
 
@@ -453,10 +447,10 @@ impl LessonView {
                         self.advance_to_next_step();
                     } else {
                         // Need more repetitions, clear text for next attempt
-                        imp.text_view.buffer().set_text("");
+                        imp.typing_row.buffer().delete_text(0, None);
 
                         // Focus the text view for next repetition
-                        imp.text_view.grab_focus();
+                        imp.typing_row.text_input().grab_focus();
                     }
                 }
             }
@@ -556,14 +550,14 @@ impl LessonView {
                 let has_course = imp.course.borrow().is_some();
                 if has_course {
                     // All lessons completed
-                    imp.target_text_view
-                        .set_text(&gettext("Course completed! Congratulations!"));
+                    imp.typing_row
+                        .set_target_text(&gettext("Course completed! Congratulations!"));
                 } else {
                     // No course set, just show lesson completion
-                    imp.target_text_view
-                        .set_text(&gettext("Lesson completed! Well done!"));
+                    imp.typing_row
+                        .set_target_text(&gettext("Lesson completed! Well done!"));
                 }
-                imp.text_view.buffer().set_text("");
+                imp.typing_row.buffer().delete_text(0, None);
             }
         }
     }
