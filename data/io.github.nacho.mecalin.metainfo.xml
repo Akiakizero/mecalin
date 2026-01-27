@@ -104,6 +104,21 @@
   </screenshots>
   
   <releases>
+    <release version="0.7.0" date="2026-01-27">
+      <description>
+        <ul>
+          <li>Added Portuguese (Portugal) language support (keyboard layout, lessons, and translations)</li>
+          <li>Added lesson 8 covering special characters in the top row for all languages</li>
+          <li>Added Menu key support to keyboard layouts</li>
+          <li>New unified TypingRow widget combining target text, input field, and repetition counter</li>
+          <li>Modernized main menu using AdwPreferencesPage and AdwActionRow</li>
+          <li>Simplified text view integration for better code organization</li>
+          <li>Fixed typo in lesson 7 step 53</li>
+          <li>Standardized key notation from |key| to 'key' in lessons 7-8</li>
+          <li>Completed missing translations in po files</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.6.0" date="2026-01-22">
       <description>
         <ul>
