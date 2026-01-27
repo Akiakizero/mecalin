@@ -3,14 +3,13 @@ use gtk::prelude::*;
 use gtk::subclass::prelude::*;
 use i18n_format::i18n_fmt;
 use libadwaita as adw;
-use libadwaita::prelude::AdwDialogExt;
+use libadwaita::prelude::{ActionRowExt, AdwDialogExt};
 use libadwaita::subclass::prelude::*;
 
 use crate::config;
 use crate::course::Lesson;
 use crate::falling_keys_game::FallingKeysGame;
 use crate::lesson_view::LessonView;
-use crate::main_action_list::MainActionList;
 use crate::scrolling_lanes_game::ScrollingLanesGame;
 use crate::target_text_view::TargetTextView;
 
@@ -29,7 +28,13 @@ mod imp {
         #[template_child]
         pub main_stack: TemplateChild<gtk::Stack>,
         #[template_child]
-        pub main_action_list_widget: TemplateChild<MainActionList>,
+        pub lessons_row: TemplateChild<adw::ActionRow>,
+        #[template_child]
+        pub falling_keys_row: TemplateChild<adw::ActionRow>,
+        #[template_child]
+        pub scrolling_lanes_row: TemplateChild<adw::ActionRow>,
+        #[template_child]
+        pub about_row: TemplateChild<adw::ActionRow>,
     }
 
     #[glib::object_subclass]
@@ -39,7 +44,6 @@ mod imp {
         type ParentType = adw::ApplicationWindow;
 
         fn class_init(klass: &mut Self::Class) {
-            MainActionList::ensure_type();
             LessonView::ensure_type();
             TargetTextView::ensure_type();
             FallingKeysGame::ensure_type();
@@ -242,40 +246,32 @@ impl MecalinWindow {
 impl imp::MecalinWindow {
     fn setup_signals(&self) {
         let window = self.obj().downgrade();
-        self.main_action_list_widget
-            .connect_local("lessons-selected", false, move |_| {
-                if let Some(window) = window.upgrade() {
-                    window.show_lessons();
-                }
-                None
-            });
+        self.lessons_row.connect_activated(move |_| {
+            if let Some(window) = window.upgrade() {
+                window.show_lessons();
+            }
+        });
 
         let window = self.obj().downgrade();
-        self.main_action_list_widget
-            .connect_local("game-selected", false, move |_| {
-                if let Some(window) = window.upgrade() {
-                    window.show_game();
-                }
-                None
-            });
+        self.falling_keys_row.connect_activated(move |_| {
+            if let Some(window) = window.upgrade() {
+                window.show_game();
+            }
+        });
 
         let window = self.obj().downgrade();
-        self.main_action_list_widget
-            .connect_local("lanes-game-selected", false, move |_| {
-                if let Some(window) = window.upgrade() {
-                    window.show_lanes_game();
-                }
-                None
-            });
+        self.scrolling_lanes_row.connect_activated(move |_| {
+            if let Some(window) = window.upgrade() {
+                window.show_lanes_game();
+            }
+        });
 
         let window = self.obj().downgrade();
-        self.main_action_list_widget
-            .connect_local("about-selected", false, move |_| {
-                if let Some(window) = window.upgrade() {
-                    window.show_about();
-                }
-                None
-            });
+        self.about_row.connect_activated(move |_| {
+            if let Some(window) = window.upgrade() {
+                window.show_about();
+            }
+        });
 
         let window = self.obj().downgrade();
         self.back_button.connect_clicked(move |_| {

@@ -31,7 +31,40 @@
               <object class="GtkStackPage">
                 <property name="name">main_menu</property>
                 <property name="child">
-                  <object class="MainActionList" id="main_action_list_widget"/>
+                  <object class="AdwPreferencesPage" id="main_menu_page">
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <child>
+                          <object class="AdwActionRow" id="lessons_row">
+                            <property name="title" translatable="yes">Lessons</property>
+                            <property name="subtitle" translatable="yes">Learn typing fundamentals</property>
+                            <property name="activatable">true</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow" id="falling_keys_row">
+                            <property name="title" translatable="yes">Falling Keys</property>
+                            <property name="subtitle" translatable="yes">Practice with a fun game</property>
+                            <property name="activatable">true</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow" id="scrolling_lanes_row">
+                            <property name="title" translatable="yes">Scrolling Lanes</property>
+                            <property name="subtitle" translatable="yes">Type fast in multiple lanes</property>
+                            <property name="activatable">true</property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow" id="about_row">
+                            <property name="title" translatable="yes">About</property>
+                            <property name="subtitle" translatable="yes">Application information</property>
+                            <property name="activatable">true</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
                 </property>
               </object>
             </child>

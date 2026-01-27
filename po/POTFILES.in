@@ -4,6 +4,5 @@ resources/ui/lesson_view.ui
 resources/ui/scrolling_lanes_game.ui
 resources/ui/window.ui
 src/falling_keys_game.rs
-src/main_action_list.rs
 src/scrolling_lanes_game.rs
 src/window.rs
