@@ -50,11 +50,11 @@ msgstr "Aprende os fundamentos de mecanografia"
 
 #: resources/ui/window.ui:46 src/window.rs:143
 msgid "Speed Test"
-msgstr ""
+msgstr "Teste de Velocidade"
 
 #: resources/ui/window.ui:47
 msgid "Test your typing speed"
-msgstr ""
+msgstr "Teste a sua velocidade de digitação"
 
 #: resources/ui/window.ui:53 src/window.rs:105
 msgid "Falling Keys"
