@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mecalin 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 17:54+0100\n"
+"POT-Creation-Date: 2026-01-28 13:17+0100\n"
 "PO-Revision-Date: 2026-01-14 15:35+0100\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
@@ -36,9 +36,49 @@ msgstr "Nivel Alcanzado"
 msgid "Play Again"
 msgstr "Jugar de Nuevo"
 
-#: resources/ui/lesson_view.ui:87
+#: resources/ui/lesson_view.ui:71
 msgid "Continue"
 msgstr "Continuar"
+
+#: resources/ui/window.ui:39
+msgid "Lessons"
+msgstr "Lecciones"
+
+#: resources/ui/window.ui:40
+msgid "Learn typing fundamentals"
+msgstr "Aprende los fundamentos de mecanografía"
+
+#: resources/ui/window.ui:46 src/window.rs:143
+msgid "Speed Test"
+msgstr "Prueba de velocidad"
+
+#: resources/ui/window.ui:47
+msgid "Test your typing speed"
+msgstr "Prueba tu velocidad de escritura"
+
+#: resources/ui/window.ui:53 src/window.rs:105
+msgid "Falling Keys"
+msgstr "Teclas Cayendo"
+
+#: resources/ui/window.ui:54
+msgid "Practice with a fun game"
+msgstr "Practica con un juego divertido"
+
+#: resources/ui/window.ui:60 src/window.rs:120
+msgid "Scrolling Lanes"
+msgstr "Carriles Deslizantes"
+
+#: resources/ui/window.ui:61
+msgid "Type fast in multiple lanes"
+msgstr "Escribe rápido en múltiples carriles"
+
+#: resources/ui/window.ui:67
+msgid "About"
+msgstr "Acerca de"
+
+#: resources/ui/window.ui:68
+msgid "Application information"
+msgstr "Información de la aplicación"
 
 #: src/falling_keys_game.rs:307 src/falling_keys_game.rs:329
 #: src/falling_keys_game.rs:381 src/scrolling_lanes_game.rs:426
@@ -51,48 +91,10 @@ msgstr "Puntuación: {}"
 msgid "Level: {}"
 msgstr "Nivel: {}"
 
-#: src/main_action_list.rs:60
-msgid "Lessons"
-msgstr "Lecciones"
-
-#: src/main_action_list.rs:60
-msgid "Learn typing fundamentals"
-msgstr "Aprende los fundamentos de mecanografía"
-
-#: src/main_action_list.rs:62 src/window.rs:100
-msgid "Falling Keys"
-msgstr "Teclas Cayendo"
-
-#: src/main_action_list.rs:63
-msgid "Practice with a fun game"
-msgstr "Practica con un juego divertido"
-
-#: src/main_action_list.rs:66 src/window.rs:115
-msgid "Scrolling Lanes"
-msgstr "Carriles Deslizantes"
-
-#: src/main_action_list.rs:67
-msgid "Type fast in multiple lanes"
-msgstr "Escribe rápido en múltiples carriles"
-
-#: src/main_action_list.rs:69
-msgid "About"
-msgstr "Acerca de"
-
-#: src/main_action_list.rs:69
-msgid "Application information"
-msgstr "Información de la aplicación"
-
-#: src/window.rs:193
+#: src/window.rs:240
 msgid "Lesson {}"
 msgstr "Lección {}"
 
-#: src/window.rs:198
+#: src/window.rs:245
 msgid "Lesson {}: Step {}/{}"
 msgstr "Lección {}: Paso {}/{}"
-
-msgid "Speed Test"
-msgstr "Prueba de velocidad"
-
-msgid "Test your typing speed"
-msgstr "Prueba tu velocidad de escritura"

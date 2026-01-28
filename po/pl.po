@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mecalin 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 17:54+0100\n"
+"POT-Creation-Date: 2026-01-28 13:17+0100\n"
 "PO-Revision-Date: 2026-01-20 08:59+0100\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
@@ -36,9 +36,49 @@ msgstr "Osiągnięty Poziom"
 msgid "Play Again"
 msgstr "Zagraj Ponownie"
 
-#: resources/ui/lesson_view.ui:87
+#: resources/ui/lesson_view.ui:71
 msgid "Continue"
 msgstr "Kontynuuj"
+
+#: resources/ui/window.ui:39
+msgid "Lessons"
+msgstr "Lekcje"
+
+#: resources/ui/window.ui:40
+msgid "Learn typing fundamentals"
+msgstr "Naucz się podstaw pisania"
+
+#: resources/ui/window.ui:46 src/window.rs:143
+msgid "Speed Test"
+msgstr "Test prędkości"
+
+#: resources/ui/window.ui:47
+msgid "Test your typing speed"
+msgstr "Przetestuj swoją prędkość pisania"
+
+#: resources/ui/window.ui:53 src/window.rs:105
+msgid "Falling Keys"
+msgstr "Spadające Klawisze"
+
+#: resources/ui/window.ui:54
+msgid "Practice with a fun game"
+msgstr "Ćwicz z zabawną grą"
+
+#: resources/ui/window.ui:60 src/window.rs:120
+msgid "Scrolling Lanes"
+msgstr "Przewijane Pasy"
+
+#: resources/ui/window.ui:61
+msgid "Type fast in multiple lanes"
+msgstr "Pisz szybko na wielu pasach"
+
+#: resources/ui/window.ui:67
+msgid "About"
+msgstr "O programie"
+
+#: resources/ui/window.ui:68
+msgid "Application information"
+msgstr "Informacje o aplikacji"
 
 #: src/falling_keys_game.rs:307 src/falling_keys_game.rs:329
 #: src/falling_keys_game.rs:381 src/scrolling_lanes_game.rs:426
@@ -51,48 +91,10 @@ msgstr "Wynik: {}"
 msgid "Level: {}"
 msgstr "Poziom: {}"
 
-#: src/main_action_list.rs:60
-msgid "Lessons"
-msgstr "Lekcje"
-
-#: src/main_action_list.rs:60
-msgid "Learn typing fundamentals"
-msgstr "Naucz się podstaw pisania"
-
-#: src/main_action_list.rs:62 src/window.rs:100
-msgid "Falling Keys"
-msgstr "Spadające Klawisze"
-
-#: src/main_action_list.rs:63
-msgid "Practice with a fun game"
-msgstr "Ćwicz z zabawną grą"
-
-#: src/main_action_list.rs:66 src/window.rs:115
-msgid "Scrolling Lanes"
-msgstr "Przewijane Pasy"
-
-#: src/main_action_list.rs:67
-msgid "Type fast in multiple lanes"
-msgstr "Pisz szybko na wielu pasach"
-
-#: src/main_action_list.rs:69
-msgid "About"
-msgstr "O programie"
-
-#: src/main_action_list.rs:69
-msgid "Application information"
-msgstr "Informacje o aplikacji"
-
-#: src/window.rs:193
+#: src/window.rs:240
 msgid "Lesson {}"
 msgstr "Lekcja {}"
 
-#: src/window.rs:198
+#: src/window.rs:245
 msgid "Lesson {}: Step {}/{}"
 msgstr "Lekcja {}: Krok {}/{}"
-
-msgid "Speed Test"
-msgstr "Test prędkości"
-
-msgid "Test your typing speed"
-msgstr "Przetestuj swoją prędkość pisania"

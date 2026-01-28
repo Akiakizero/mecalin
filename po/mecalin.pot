@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mecalin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-22 17:54+0100\n"
+"POT-Creation-Date: 2026-01-28 13:17+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,8 +37,48 @@ msgstr ""
 msgid "Play Again"
 msgstr ""
 
-#: resources/ui/lesson_view.ui:87
+#: resources/ui/lesson_view.ui:71
 msgid "Continue"
+msgstr ""
+
+#: resources/ui/window.ui:39
+msgid "Lessons"
+msgstr ""
+
+#: resources/ui/window.ui:40
+msgid "Learn typing fundamentals"
+msgstr ""
+
+#: resources/ui/window.ui:46 src/window.rs:143
+msgid "Speed Test"
+msgstr ""
+
+#: resources/ui/window.ui:47
+msgid "Test your typing speed"
+msgstr ""
+
+#: resources/ui/window.ui:53 src/window.rs:105
+msgid "Falling Keys"
+msgstr ""
+
+#: resources/ui/window.ui:54
+msgid "Practice with a fun game"
+msgstr ""
+
+#: resources/ui/window.ui:60 src/window.rs:120
+msgid "Scrolling Lanes"
+msgstr ""
+
+#: resources/ui/window.ui:61
+msgid "Type fast in multiple lanes"
+msgstr ""
+
+#: resources/ui/window.ui:67
+msgid "About"
+msgstr ""
+
+#: resources/ui/window.ui:68
+msgid "Application information"
 msgstr ""
 
 #: src/falling_keys_game.rs:307 src/falling_keys_game.rs:329
@@ -52,42 +92,10 @@ msgstr ""
 msgid "Level: {}"
 msgstr ""
 
-#: src/main_action_list.rs:60
-msgid "Lessons"
-msgstr ""
-
-#: src/main_action_list.rs:60
-msgid "Learn typing fundamentals"
-msgstr ""
-
-#: src/main_action_list.rs:62 src/window.rs:100
-msgid "Falling Keys"
-msgstr ""
-
-#: src/main_action_list.rs:63
-msgid "Practice with a fun game"
-msgstr ""
-
-#: src/main_action_list.rs:66 src/window.rs:115
-msgid "Scrolling Lanes"
-msgstr ""
-
-#: src/main_action_list.rs:67
-msgid "Type fast in multiple lanes"
-msgstr ""
-
-#: src/main_action_list.rs:69
-msgid "About"
-msgstr ""
-
-#: src/main_action_list.rs:69
-msgid "Application information"
-msgstr ""
-
-#: src/window.rs:193
+#: src/window.rs:240
 msgid "Lesson {}"
 msgstr ""
 
-#: src/window.rs:198
+#: src/window.rs:245
 msgid "Lesson {}: Step {}/{}"
 msgstr ""
