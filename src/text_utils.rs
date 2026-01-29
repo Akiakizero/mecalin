@@ -298,10 +298,10 @@ pub fn current_word(original: &str, typed_grapheme_count: usize) -> usize {
 pub fn calculate_wpm(duration: Duration, original: &str, typed: &str) -> f64 {
     let minutes = duration.as_secs_f64() / 60.;
 
-    let correct_chars = zip(original.chars(), typed.chars())
-        .filter(|(oc, tc)| oc == tc)
+    let correct_graphemes = zip(original.graphemes(true), typed.graphemes(true))
+        .filter(|(og, tg)| og == tg)
         .count();
-    let words = correct_chars as f64 / 5.;
+    let words = correct_graphemes as f64 / 5.;
 
     words / minutes
 }
