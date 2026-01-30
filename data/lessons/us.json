@@ -1766,6 +1766,200 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 9,
+      "title": "Special Characters",
+      "description": "Learn some of the special characters",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "In this lesson we will learn more keys located on the top row of the keyboard",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "-=-=-====---=",
+          "description": "Press the ' and ! keys with the pinky finger of your right hand",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 2,
+          "text": "-=-=-=----==-",
+          "description": "Press the ' and ! keys with the pinky finger of your right hand",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "==-==-==---==",
+          "description": "Press the ' and ! keys with the pinky finger of your right hand",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "__+++_+__+ +_",
+          "description": "Press the SHIFT key with the pinky finger of your left hand and the '?' or '¿' key with your right hand",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "+_ _+ ++ __ +_+",
+          "description": "Press the SHIFT key with the pinky finger of your left hand and the '?' or '¿' key with your right hand",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "==--_+ +_-= =_+",
+          "description": "Press the SHIFT key with the pinky finger of your left hand and the '?' or '¿' key with your right hand",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "_+= _-+ _=+ +=-=_",
+          "description": "Press the SHIFT key with the pinky finger of your left hand and the '?' or '¿' key with your right hand",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "<<>> ><><><<",
+          "description": "To press '<' use the pinky finger of your left hand and to press '>' press the same key while holding SHIFT with the pinky finger of your right hand",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": ">><<><><>< >>",
+          "description": "To press '<' use the pinky finger of your left hand and to press '>' press the same key while holding SHIFT with the pinky finger of your right hand",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "__>><_+",
+          "description": "To press '<' use the pinky finger of your left hand and to press '>' press the same key while holding SHIFT with the pinky finger of your right hand",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "=-_+><=+",
+          "description": "To press '<' use the pinky finger of your left hand and to press '>' press the same key while holding SHIFT with the pinky finger of your right hand",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "><+=_-><_+",
+          "description": "To press '<' use the pinky finger of your left hand and to press '>' press the same key while holding SHIFT with the pinky finger of your right hand",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "~`~` ~~",
+          "description": "Let's learn to use the '`' key with the pinky finger of your left hand and the '~' key with the same finger while pressing SHIFT",
+          "introduction": false,
+          "repetitions": 1
+        },
+        {
+          "id": 14,
+          "text": "~ `AB `A",
+          "description": "Let's learn to use the '`' key with the pinky finger of your left hand and the '~' key with the same finger while pressing SHIFT",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "A`B~",
+          "description": "Let's learn to use the '`' key with the pinky finger of your left hand and the '~' key with the same finger while pressing SHIFT",
+          "introduction": false,
+          "repetitions": 3
+        },
+        {
+          "id": 16,
+          "text": "<[<- -<[<",
+          "description": "The important thing is to get used to pressing with all fingers and never forget to use the spacebar only with your thumbs",
+          "introduction": false,
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": ")-; ;-)",
+          "description": "Press the following keys with the pinky finger of your right hand",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "/p0 0p/ /0p /p0",
+          "description": "Press the following keys with the pinky finger of your right hand",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "<)/1 <)/q <)/a` <)/z~",
+          "description": "Now with the pinkies of both hands",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 20,
+          "text": "1q<~ az)` 1z/",
+          "description": "Now with the pinkies of both hands",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "p>q ;]a .?z",
+          "description": "Now with the pinkies of both hands",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "=q1a<z +w2>x ³e3d)c",
+          "description": "Let's practice these characters along with the others learned in previous lessons, without forgetting to press SHIFT when necessary",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "$r4f]v %t5g/b &y6h?n",
+          "description": "Let's practice these characters along with the others learned in previous lessons, without forgetting to press SHIFT when necessary",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "^u7j<m }i8k>, *i9l).",
+          "description": "Let's practice these characters along with the others learned in previous lessons, without forgetting to press SHIFT when necessary",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": "(p0;]- /1=?+] 2<³>3]",
+          "description": "Let's practice these characters along with the others learned in previous lessons, without forgetting to press SHIFT when necessary",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "",
+          "description": "Congratulations! You have finished the ninth lesson",
+          "introduction": true
+        }
+      ]
     }
   ]
 }

@@ -1790,6 +1790,200 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 9,
+      "title": "Caracteres Especiais",
+      "description": "Aprende alguns dos caracteres especiais",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Nesta lição vamos conhecer mais teclas situadas na linha superior do teclado",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "'«'«'««««'''«",
+          "description": "Pressione as teclas ' e ! com o dedo mindinho da mão direita",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 2,
+          "text": "'«'«'«''''««'",
+          "description": "Pressione as teclas ' e ! com o dedo mindinho da mão direita",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "««'««'««'''««",
+          "description": "Pressione as teclas ' e ! com o dedo mindinho da mão direita",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "??»»»?»??» »?",
+          "description": "Pressione com o dedo mindinho da mão esquerda a tecla SHIFT e com o da mão direita '?' ou '¿'",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "»? ?» »» ?? »?»",
+          "description": "Pressione com o dedo mindinho da mão esquerda a tecla SHIFT e com o da mão direita '?' ou '¿'",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "««''?» »?'« «?»",
+          "description": "Pressione com o dedo mindinho da mão esquerda a tecla SHIFT e com o da mão direita '?' ou '¿'",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "?»« ?'» ?«» »«'«?",
+          "description": "Pressione com o dedo mindinho da mão esquerda a tecla SHIFT e com o da mão direita '?' ou '¿'",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "<<>> ><><><<",
+          "description": "Para pressionar '<' utiliza-se o dedo mindinho da mão esquerda e para pressionar '>' pressiona-se da mesma forma além de pressionar a tecla SHIFT com o dedo mindinho da mão direita",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": ">><<><><>< >>",
+          "description": "Para pressionar '<' utiliza-se o dedo mindinho da mão esquerda e para pressionar '>' pressiona-se da mesma forma além de pressionar a tecla SHIFT com o dedo mindinho da mão direita",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "??>><?»",
+          "description": "Para pressionar '<' utiliza-se o dedo mindinho da mão esquerda e para pressionar '>' pressiona-se da mesma forma além de pressionar a tecla SHIFT com o dedo mindinho da mão direita",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "«'?»><«»",
+          "description": "Para pressionar '<' utiliza-se o dedo mindinho da mão esquerda e para pressionar '>' pressiona-se da mesma forma além de pressionar a tecla SHIFT com o dedo mindinho da mão direita",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "><»«?'><?»",
+          "description": "Para pressionar '<' utiliza-se o dedo mindinho da mão esquerda e para pressionar '>' pressiona-se da mesma forma além de pressionar a tecla SHIFT com o dedo mindinho da mão direita",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "|\\|\\ ||",
+          "description": "Vamos aprender a utilizar a tecla 'º' com o dedo mindinho da mão esquerda e a tecla 'ª' com o mesmo dedo pressionando a tecla SHIFT",
+          "introduction": false,
+          "repetitions": 1
+        },
+        {
+          "id": 14,
+          "text": "| \\AB \\A",
+          "description": "Vamos aprender a utilizar a tecla 'º' com o dedo mindinho da mão esquerda e a tecla 'ª' com o mesmo dedo pressionando a tecla SHIFT",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "A\\B|",
+          "description": "Vamos aprender a utilizar a tecla 'º' com o dedo mindinho da mão esquerda e a tecla 'ª' com o mesmo dedo pressionando a tecla SHIFT",
+          "introduction": false,
+          "repetitions": 3
+        },
+        {
+          "id": 16,
+          "text": "<+;' ';+<",
+          "description": "O interessante é que se acostume a pressionar com todos os dedos e não se esqueça nunca de utilizar a barra de espaço só com os polegares",
+          "introduction": false,
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "='ç ç'=",
+          "description": "Pressione as seguintes teclas com o dedo mindinho da mão direita",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "-p0 0p- -0p -p0",
+          "description": "Pressione as seguintes teclas com o dedo mindinho da mão direita",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "<=-1 <=-q <=-a\\ <=-z|",
+          "description": "Agora com os mindinhos de ambas as mãos",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 20,
+          "text": "1q<| az=\\ 1z-",
+          "description": "Agora com os mindinhos de ambas as mãos",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "p>q ç´a ._z",
+          "description": "Agora com os mindinhos de ambas as mãos",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "«q1a<z »w2>x £e3d=c",
+          "description": "Pratiquemos estes caracteres junto com os demais do teclado aprendidos nas lições anteriores, sem esquecer de pressionar a tecla SHIFT quando necessário",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "$r4f´v %t5g-b /y6h_n",
+          "description": "Pratiquemos estes caracteres junto com os demais do teclado aprendidos nas lições anteriores, sem esquecer de pressionar a tecla SHIFT quando necessário",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "&u7j<m `i8k>, (i9l=.",
+          "description": "Pratiquemos estes caracteres junto com os demais do teclado aprendidos nas lições anteriores, sem esquecer de pressionar a tecla SHIFT quando necessário",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": ")p0ç´' -1«_»´ 2<£>3´",
+          "description": "Pratiquemos estes caracteres junto com os demais do teclado aprendidos nas lições anteriores, sem esquecer de pressionar a tecla SHIFT quando necessário",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "",
+          "description": "Parabéns! Acabou a nona lição",
+          "introduction": true
+        }
+      ]
     }
   ]
 }

@@ -1646,6 +1646,200 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 9,
+      "title": "Znaki specjalne",
+      "description": "Naucz się niektórych znaków specjalnych",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "W tej lekcji poznamy więcej klawiszy znajdujących się w górnym rzędzie klawiatury",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "-=-=-====---=",
+          "description": "Naciśnij klawisze ' i ! małym palcem prawej ręki",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 2,
+          "text": "-=-=-=----==-",
+          "description": "Naciśnij klawisze ' i ! małym palcem prawej ręki",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "==-==-==---==",
+          "description": "Naciśnij klawisze ' i ! małym palcem prawej ręki",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "__+++_+__+ +_",
+          "description": "Naciśnij małym palcem lewej ręki klawisz SHIFT, a małym palcem prawej ręki '?' lub '¿'",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "+_ _+ ++ __ +_+",
+          "description": "Naciśnij małym palcem lewej ręki klawisz SHIFT, a małym palcem prawej ręki '?' lub '¿'",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "==--_+ +_-= =_+",
+          "description": "Naciśnij małym palcem lewej ręki klawisz SHIFT, a małym palcem prawej ręki '?' lub '¿'",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "_+= _-+ _=+ +=-=_",
+          "description": "Naciśnij małym palcem lewej ręki klawisz SHIFT, a małym palcem prawej ręki '?' lub '¿'",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "<<>> ><><><<",
+          "description": "Aby nacisnąć '<' użyj małego palca lewej ręki, a aby nacisnąć '>' naciśnij w ten sam sposób, dodatkowo naciskając klawisz SHIFT małym palcem prawej ręki",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": ">><<><><>< >>",
+          "description": "Aby nacisnąć '<' użyj małego palca lewej ręki, a aby nacisnąć '>' naciśnij w ten sam sposób, dodatkowo naciskając klawisz SHIFT małym palcem prawej ręki",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "__>><_+",
+          "description": "Aby nacisnąć '<' użyj małego palca lewej ręki, a aby nacisnąć '>' naciśnij w ten sam sposób, dodatkowo naciskając klawisz SHIFT małym palcem prawej ręki",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "=-_+><=+",
+          "description": "Aby nacisnąć '<' użyj małego palca lewej ręki, a aby nacisnąć '>' naciśnij w ten sam sposób, dodatkowo naciskając klawisz SHIFT małym palcem prawej ręki",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "><+=_-><_+",
+          "description": "Aby nacisnąć '<' użyj małego palca lewej ręki, a aby nacisnąć '>' naciśnij w ten sam sposób, dodatkowo naciskając klawisz SHIFT małym palcem prawej ręki",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "~`~` ~~",
+          "description": "Nauczmy się używać klawisza '`' małym palcem lewej ręki i klawisza '~' tym samym palcem, naciskając klawisz SHIFT",
+          "introduction": false,
+          "repetitions": 1
+        },
+        {
+          "id": 14,
+          "text": "~ `AB `A",
+          "description": "Nauczmy się używać klawisza '`' małym palcem lewej ręki i klawisza '~' tym samym palcem, naciskając klawisz SHIFT",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "A`B~",
+          "description": "Nauczmy się używać klawisza '`' małym palcem lewej ręki i klawisza '~' tym samym palcem, naciskając klawisz SHIFT",
+          "introduction": false,
+          "repetitions": 3
+        },
+        {
+          "id": 16,
+          "text": "<[<- -<[<",
+          "description": "Ważne jest, aby przyzwyczaić się do naciskania wszystkimi palcami i nigdy nie zapominać o używaniu klawisza spacji tylko kciukami",
+          "introduction": false,
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": ")-; ;-)",
+          "description": "Naciśnij następujące klawisze małym palcem prawej ręki",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "/p0 0p/ /0p /p0",
+          "description": "Naciśnij następujące klawisze małym palcem prawej ręki",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "<)/1 <)/q <)/a` <)/z~",
+          "description": "Teraz małymi palcami obu rąk",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 20,
+          "text": "1q<~ az)` 1z/",
+          "description": "Teraz małymi palcami obu rąk",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "p>q ;]a .?z",
+          "description": "Teraz małymi palcami obu rąk",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "=q1a<z +w2>x #e3d)c",
+          "description": "Poćwiczmy te znaki wraz z pozostałymi klawiszami klawiatury poznanych w poprzednich lekcjach, nie zapominając o naciskaniu klawisza SHIFT, gdy jest to konieczne",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "$r4f]v %t5g/b &y6h?n",
+          "description": "Poćwiczmy te znaki wraz z pozostałymi klawiszami klawiatury poznanych w poprzednich lekcjach, nie zapominając o naciskaniu klawisza SHIFT, gdy jest to konieczne",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "^u7j<m }i8k>, *i9l).",
+          "description": "Poćwiczmy te znaki wraz z pozostałymi klawiszami klawiatury poznanych w poprzednich lekcjach, nie zapominając o naciskaniu klawisza SHIFT, gdy jest to konieczne",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": "(p0;]- /1=?+] 2<#>3]",
+          "description": "Poćwiczmy te znaki wraz z pozostałymi klawiszami klawiatury poznanych w poprzednich lekcjach, nie zapominając o naciskaniu klawisza SHIFT, gdy jest to konieczne",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "",
+          "description": "Gratulacje! Ukończyłeś dziewiątą lekcję",
+          "introduction": true
+        }
+      ]
     }
   ]
 }

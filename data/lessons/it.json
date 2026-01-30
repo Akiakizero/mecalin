@@ -1766,6 +1766,200 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 9,
+      "title": "Caratteri Speciali",
+      "description": "Impara alcuni dei caratteri speciali",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "In questa lezione impareremo altri tasti situati nella riga superiore della tastiera",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "'ì'ì'ìììì'''ì",
+          "description": "Premi i tasti ' e ! con il dito mignolo della mano destra",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 2,
+          "text": "'ì'ì'ì''''ìì'",
+          "description": "Premi i tasti ' e ! con il dito mignolo della mano destra",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "ìì'ìì'ìì'''ìì",
+          "description": "Premi i tasti ' e ! con il dito mignolo della mano destra",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "??^^^?^??^ ^?",
+          "description": "Premi con il dito mignolo della mano sinistra il tasto SHIFT e con quello della mano destra '?' o '¿'",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "^? ?^ ^^ ?? ^?^",
+          "description": "Premi con il dito mignolo della mano sinistra il tasto SHIFT e con quello della mano destra '?' o '¿'",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "ìì''?^ ^?'ì ì?^",
+          "description": "Premi con il dito mignolo della mano sinistra il tasto SHIFT e con quello della mano destra '?' o '¿'",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "?^ì ?'^ ?ì^ ^ì'ì?",
+          "description": "Premi con il dito mignolo della mano sinistra il tasto SHIFT e con quello della mano destra '?' o '¿'",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "<<>> ><><><<",
+          "description": "Per premere '<' si utilizza il dito mignolo della mano sinistra e per premere '>' si preme allo stesso modo oltre a premere il tasto SHIFT con il dito mignolo della mano destra",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": ">><<><><>< >>",
+          "description": "Per premere '<' si utilizza il dito mignolo della mano sinistra e per premere '>' si preme allo stesso modo oltre a premere il tasto SHIFT con il dito mignolo della mano destra",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "??>><?^",
+          "description": "Per premere '<' si utilizza il dito mignolo della mano sinistra e per premere '>' si preme allo stesso modo oltre a premere il tasto SHIFT con il dito mignolo della mano destra",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "ì'?^><ì^",
+          "description": "Per premere '<' si utilizza il dito mignolo della mano sinistra e per premere '>' si preme allo stesso modo oltre a premere il tasto SHIFT con il dito mignolo della mano destra",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "><^ì?'><?^",
+          "description": "Per premere '<' si utilizza il dito mignolo della mano sinistra e per premere '>' si preme allo stesso modo oltre a premere il tasto SHIFT con il dito mignolo della mano destra",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "|\\|\\ ||",
+          "description": "Impariamo a usare il tasto '\\' con il dito mignolo della mano sinistra e il tasto '|' con lo stesso dito premendo il tasto SHIFT",
+          "introduction": false,
+          "repetitions": 1
+        },
+        {
+          "id": 14,
+          "text": "| \\AB \\A",
+          "description": "Impariamo a usare il tasto '\\' con il dito mignolo della mano sinistra e il tasto '|' con lo stesso dito premendo il tasto SHIFT",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "A\\B|",
+          "description": "Impariamo a usare il tasto '\\' con il dito mignolo della mano sinistra e il tasto '|' con lo stesso dito premendo il tasto SHIFT",
+          "introduction": false,
+          "repetitions": 3
+        },
+        {
+          "id": 16,
+          "text": "<è;' ';è<",
+          "description": "L'importante è abituarsi a premere con tutte le dita e non dimenticare mai di usare la barra spaziatrice solo con i pollici",
+          "introduction": false,
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "='ò ò'=",
+          "description": "Premi i seguenti tasti con il dito mignolo della mano destra",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "-p0 0p- -0p -p0",
+          "description": "Premi i seguenti tasti con il dito mignolo della mano destra",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "<=-1 <=-q <=-a\\ <=-z|",
+          "description": "Ora con i mignoli di entrambe le mani",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 20,
+          "text": "1q<| az=\\ 1z-",
+          "description": "Ora con i mignoli di entrambe le mani",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "p>q ò+a ._z",
+          "description": "Ora con i mignoli di entrambe le mani",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "ìq1a<z ^w2>x ³e3d=c",
+          "description": "Pratichiamo questi caratteri insieme agli altri della tastiera appresi nelle lezioni precedenti, senza dimenticare di premere il tasto SHIFT quando necessario",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "$r4f+v %t5g-b /y6h_n",
+          "description": "Pratichiamo questi caratteri insieme agli altri della tastiera appresi nelle lezioni precedenti, senza dimenticare di premere il tasto SHIFT quando necessario",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "&u7j<m *i8k>, (i9l=.",
+          "description": "Pratichiamo questi caratteri insieme agli altri della tastiera appresi nelle lezioni precedenti, senza dimenticare di premere il tasto SHIFT quando necessario",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": ")p0ò+' -1ì_^+ 2<³>3+",
+          "description": "Pratichiamo questi caratteri insieme agli altri della tastiera appresi nelle lezioni precedenti, senza dimenticare di premere il tasto SHIFT quando necessario",
+          "introduction": false,
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "",
+          "description": "Congratulazioni! Hai finito la nona lezione",
+          "introduction": true
+        }
+      ]
     }
   ]
 }
