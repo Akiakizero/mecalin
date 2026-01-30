@@ -1790,6 +1790,175 @@
           "introduction": true
         }
       ]
+    },
+    {
+      "id": 9,
+      "title": "Caracteres especiales",
+      "description": "Aprende algunos de los caracteres especiales",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "En esta lección vamos a conocer más teclas situadas en la línea superior del teclado",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "'¡'¡'¡¡¡¡'''¡",
+          "description": "Pulse las teclas ' y '¡' con el dedo meñique de la mano derecha",
+          "repetitions": 2
+        },
+        {
+          "id": 2,
+          "text": "'¡'¡'¡''''¡¡'",
+          "description": "Pulse las teclas ' y '¡' con el dedo meñique de la mano derecha",
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "¡¡'¡¡'¡¡'''¡¡",
+          "description": "Pulse las teclas ' y '¡' con el dedo meñique de la mano derecha",
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "??¿¿¿?¿??¿ ¿?",
+          "description": "Pulse con el dedo meñique de la mano izquierda la tecla SHIFT y con el de la mano derecha '?' o '¿'",
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "¿? ?¿ ¿¿ ?? ¿?¿",
+          "description": "Pulse con el dedo meñique de la mano izquierda la tecla SHIFT y con el de la mano derecha '?' o '¿'",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "¡¡''?¿ ¿?'¡ ¡?¿",
+          "description": "Pulse con el dedo meñique de la mano izquierda la tecla SHIFT y con el de la mano derecha '?' o '¿'",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "?¿¡ ?'¿ ?¡¿ ¿¡'¡?",
+          "description": "Pulse con el dedo meñique de la mano izquierda la tecla SHIFT y con el de la mano derecha '?' o '¿'",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "<<>> ><><><<",
+          "description": "Para pulsar '<' se utiliza el dedo meñique de la mano izquierda y para pulsar '>' se pulsa de igual forma además de pulsar la tecla SHIFT con el dedo meñique de la mano derecha",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": ">><<><><>< >>",
+          "description": "Para pulsar '<' se utiliza el dedo meñique de la mano izquierda y para pulsar '>' se pulsa de igual forma además de pulsar la tecla SHIFT con el dedo meñique de la mano derecha",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "??>><?¿",
+          "description": "Para pulsar '<' se utiliza el dedo meñique de la mano izquierda y para pulsar '>' se pulsa de igual forma además de pulsar la tecla SHIFT con el dedo meñique de la mano derecha",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "¡'?¿><¡¿",
+          "description": "Para pulsar '<' se utiliza el dedo meñique de la mano izquierda y para pulsar '>' se pulsa de igual forma además de pulsar la tecla SHIFT con el dedo meñique de la mano derecha",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "><¿¡?'><?¿",
+          "description": "Para pulsar '<' se utiliza el dedo meñique de la mano izquierda y para pulsar '>' se pulsa de igual forma además de pulsar la tecla SHIFT con el dedo meñique de la mano derecha",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "ªºªº ªª",
+          "description": "Vamos a aprender a utilizar la tecla 'º' con el dedo meñique de la mano izquierda y la tecla 'ª' con el mismo dedo pulsando la tecla SHIFT",
+          "repetitions": 1
+        },
+        {
+          "id": 14,
+          "text": "ª ºAB ºA",
+          "description": "Vamos a aprender a utilizar la tecla 'º' con el dedo meñique de la mano izquierda y la tecla 'ª' con el mismo dedo pulsando la tecla SHIFT",
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "AºBª",
+          "description": "Vamos a aprender a utilizar la tecla 'º' con el dedo meñique de la mano izquierda y la tecla 'ª' con el mismo dedo pulsando la tecla SHIFT",
+          "repetitions": 3
+        },
+        {
+          "id": 16,
+          "text": "<`;' ';`<",
+          "description": "Lo interesante es que se acostumbre a pulsar con todos los dedos y no se olvide nunca de utilizar la barra espaciadora sólo con los pulgares",
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "='ñ ñ'=",
+          "description": "Pulse las siguientes teclas con el dedo meñique de la mano derecha",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "-p0 0p- -0p -p0",
+          "description": "Pulse las siguientes teclas con el dedo meñique de la mano derecha",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "<=-1 <=-q <=-aº <=-zª",
+          "description": "Ahora con los meñiques de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 20,
+          "text": "1q<ª az=º 1z-",
+          "description": "Ahora con los meñiques de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "p>q ñ+a ._z",
+          "description": "Ahora con los meñiques de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "¡q1a<z ¿w2>x #e3d=c",
+          "description": "Practiquemos estos caracteres junto con los demás del teclado aprendidos en las lecciones anteriores, sin olvidarse de pulsar la tecla SHIFT cuando sea necesario",
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "$r4f+v %t5g-b /y6h_n",
+          "description": "Practiquemos estos caracteres junto con los demás del teclado aprendidos en las lecciones anteriores, sin olvidarse de pulsar la tecla SHIFT cuando sea necesario",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "&u7j<m *i8k>, (i9l=.",
+          "description": "Practiquemos estos caracteres junto con los demás del teclado aprendidos en las lecciones anteriores, sin olvidarse de pulsar la tecla SHIFT cuando sea necesario",
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": ")p0ñ+' -1¡_¿+ 2<#>3+",
+          "description": "Practiquemos estos caracteres junto con los demás del teclado aprendidos en las lecciones anteriores, sin olvidarse de pulsar la tecla SHIFT cuando sea necesario",
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "",
+          "description": "¡Enhorabuena! Ha acabado la novena lección",
+          "introduction": true
+        }
+      ]
     }
   ]
 }
