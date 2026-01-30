@@ -170,6 +170,9 @@ impl imp::LessonView {
 
                 // Check if the new text would match target text
                 if !target_str.starts_with(typed_str) && !typed_str.is_empty() {
+                    // Show error animation
+                    typing_row.show_error();
+
                     // Find the last space position or go to beginning
                     let last_space_pos = typed_str.rfind(' ').map(|pos| pos + 1).unwrap_or(0);
 

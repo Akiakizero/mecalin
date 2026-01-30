@@ -133,6 +133,17 @@ impl TypingRow {
     pub fn set_repetition_text(&self, text: &str) {
         self.imp().repetition_label.set_text(text);
     }
+
+    pub fn show_error(&self) {
+        self.add_css_class("typing-error");
+
+        glib::timeout_add_local_once(std::time::Duration::from_millis(400), {
+            let typing_row = self.clone();
+            move || {
+                typing_row.remove_css_class("typing-error");
+            }
+        });
+    }
 }
 
 impl Default for TypingRow {

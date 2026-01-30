@@ -69,3 +69,8 @@ SpeedTestResultsView .key-number {
   font-size: 3.5rem;
   font-weight: 700;
 }
+
+.card.typing-error {
+  background-color: alpha(@error_color, 0.2);
+  transition: background-color 100ms ease-out;
+}
