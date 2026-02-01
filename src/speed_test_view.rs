@@ -9,7 +9,7 @@
 use crate::speed_test_results_view::SpeedTestResultsView;
 use crate::speed_test_text_view::SpeedTestTextView;
 use crate::text_generation::{advanced, simple, Language};
-use crate::typing_test_utils::TestDuration;
+use crate::typing_test_utils::{GeneratedTestDifficulty, TestConfig, TestDuration, TestSummary};
 use gtk::glib;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
@@ -142,6 +142,39 @@ impl SpeedTestView {
         imp.results_view.set_visible(false);
     }
 
+    fn show_results(&self, start_instant: Instant) {
+        let imp = self.imp();
+
+        let lang_code = crate::utils::language_from_locale();
+        let language = Language::from_str(lang_code).unwrap_or(Language::English);
+
+        let difficulty = if imp.text_type_dropdown.selected() == 0 {
+            GeneratedTestDifficulty::Simple
+        } else {
+            GeneratedTestDifficulty::Advanced
+        };
+
+        let config = TestConfig::Generated {
+            difficulty,
+            language,
+            duration: *imp.test_duration.borrow(),
+        };
+
+        let summary = TestSummary::new(
+            std::time::SystemTime::now(),
+            start_instant,
+            Instant::now(),
+            config,
+            &imp.text_view.original_text(),
+            &imp.text_view.typed_text(),
+            &[],
+        );
+
+        imp.results_view.set_summary(summary);
+        imp.results_view.set_visible(true);
+        imp.text_view.set_visible(false);
+    }
+
     fn setup_signals(&self) {
         let imp = self.imp();
 
@@ -183,7 +216,7 @@ impl SpeedTestView {
                         let text_view_clone = text_view.clone();
                         let timer_source_id = imp.timer_source_id.clone();
                         let test_duration = imp.test_duration.clone();
-                        let results_view = imp.results_view.clone();
+                        let view_weak = view.downgrade();
                         let source_id = glib::timeout_add_local(
                             std::time::Duration::from_millis(100),
                             move || {
@@ -196,11 +229,13 @@ impl SpeedTestView {
                                     if remaining == 0 {
                                         text_view_clone.set_running(false);
                                         text_view_clone.set_accepts_input(false);
-                                        text_view_clone.set_visible(false);
                                         timer_label.set_text("0:00");
                                         *start_time.borrow_mut() = None;
                                         *timer_source_id.borrow_mut() = None;
-                                        results_view.set_visible(true);
+
+                                        if let Some(view) = view_weak.upgrade() {
+                                            view.show_results(start);
+                                        }
                                         return glib::ControlFlow::Break;
                                     }
 
@@ -221,15 +256,17 @@ impl SpeedTestView {
                     if typed.len() >= original.len() {
                         text_view.set_running(false);
                         text_view.set_accepts_input(false);
-                        text_view.set_visible(false);
 
                         let imp = view.imp();
+                        let start_instant = *imp.start_time.borrow();
                         *imp.start_time.borrow_mut() = None;
                         if let Some(source_id) = imp.timer_source_id.borrow_mut().take() {
                             source_id.remove();
                         }
 
-                        imp.results_view.set_visible(true);
+                        if let Some(start) = start_instant {
+                            view.show_results(start);
+                        }
                     }
                 }
             ),
