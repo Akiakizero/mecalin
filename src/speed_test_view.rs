@@ -132,6 +132,7 @@ impl SpeedTestView {
         self.text_view.set_typed_text("");
         self.text_view.set_running(false);
         self.text_view.set_accepts_input(true);
+        self.text_view.set_visible(true);
         self.text_view.grab_focus();
         self.results_view.set_visible(false);
     }
@@ -202,6 +203,7 @@ impl SpeedTestView {
                                 if remaining == 0 {
                                     text_view_clone.set_running(false);
                                     text_view_clone.set_accepts_input(false);
+                                    text_view_clone.set_visible(false);
                                     timer_label_clone.set_text("0:00");
                                     *start_time_clone.borrow_mut() = None;
                                     *timer_source_id_clone.borrow_mut() = None;
@@ -225,6 +227,7 @@ impl SpeedTestView {
                 if typed.len() >= original.len() {
                     text_view.set_running(false);
                     text_view.set_accepts_input(false);
+                    text_view.set_visible(false);
 
                     *start_time.borrow_mut() = None;
                     if let Some(source_id) = timer_source_id.borrow_mut().take() {
