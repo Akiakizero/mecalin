@@ -192,7 +192,8 @@ impl SpeedTestView {
                     let test_duration_clone = test_duration.clone();
                     let source_id =
                         glib::timeout_add_local(Duration::from_millis(100), move || {
-                            if let Some(start) = *start_time_clone.borrow() {
+                            let start_opt = *start_time_clone.borrow();
+                            if let Some(start) = start_opt {
                                 let elapsed = start.elapsed();
                                 let duration_secs = *test_duration_clone.borrow();
                                 let remaining = duration_secs.saturating_sub(elapsed.as_secs());
