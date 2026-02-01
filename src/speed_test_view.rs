@@ -190,6 +190,7 @@ impl SpeedTestView {
                     let text_view_clone = text_view.clone();
                     let timer_source_id_clone = timer_source_id.clone();
                     let test_duration_clone = test_duration.clone();
+                    let results_view_clone = results_view.clone();
                     let source_id =
                         glib::timeout_add_local(Duration::from_millis(100), move || {
                             let start_opt = *start_time_clone.borrow();
@@ -204,6 +205,7 @@ impl SpeedTestView {
                                     timer_label_clone.set_text("0:00");
                                     *start_time_clone.borrow_mut() = None;
                                     *timer_source_id_clone.borrow_mut() = None;
+                                    results_view_clone.set_visible(true);
                                     return glib::ControlFlow::Break;
                                 }
 
