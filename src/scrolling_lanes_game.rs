@@ -5,14 +5,10 @@ use gtk::pango;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
 use i18n_format::i18n_fmt;
+use rand::seq::SliceRandom;
 use rand::Rng;
 use std::cell::RefCell;
 use std::rc::Rc;
-
-const WORDS: &[&str] = &[
-    "the", "quick", "brown", "fox", "jumps", "over", "lazy", "dog", "hello", "world", "rust",
-    "code", "type", "fast", "game", "play", "win", "lose", "start", "end",
-];
 
 #[derive(Clone)]
 pub(crate) struct ScrollingText {
@@ -138,7 +134,7 @@ impl LaneWidget {
 mod imp {
     use super::*;
 
-    #[derive(Default, gtk::CompositeTemplate)]
+    #[derive(gtk::CompositeTemplate)]
     #[template(resource = "/io/github/nacho/mecalin/ui/scrolling_lanes_game.ui")]
     pub struct ScrollingLanesGame {
         #[template_child]
@@ -165,6 +161,39 @@ mod imp {
         pub game_over: RefCell<bool>,
         pub game_loop_running: RefCell<bool>,
         pub lanes_container: RefCell<Option<gtk::Box>>,
+        pub word_list: RefCell<Vec<String>>,
+    }
+
+    impl Default for ScrollingLanesGame {
+        fn default() -> Self {
+            use std::str::FromStr;
+
+            let lang_code = crate::utils::language_from_locale();
+            let language = crate::text_generation::Language::from_str(lang_code)
+                .unwrap_or(crate::text_generation::Language::English);
+            let text = crate::text_generation::simple(language);
+            let word_list: Vec<String> = text.split_whitespace().map(|s| s.to_string()).collect();
+
+            Self {
+                game_area: Default::default(),
+                score_label: Default::default(),
+                level_label: Default::default(),
+                results_box: Default::default(),
+                results_score_label: Default::default(),
+                results_level_label: Default::default(),
+                restart_button: Default::default(),
+                lanes: Default::default(),
+                lane_texts: Default::default(),
+                current_lane: Default::default(),
+                score: Default::default(),
+                difficulty: Default::default(),
+                speed: Default::default(),
+                game_over: Default::default(),
+                game_loop_running: Default::default(),
+                lanes_container: Default::default(),
+                word_list: RefCell::new(word_list),
+            }
+        }
     }
 
     #[glib::object_subclass]
@@ -316,12 +345,17 @@ impl ScrollingLanesGame {
         let mut rng = rand::thread_rng();
 
         let lane_index = rng.gen_range(0..4);
-        let word = WORDS[rng.gen_range(0..WORDS.len())];
+        let word = imp
+            .word_list
+            .borrow()
+            .choose(&mut rng)
+            .expect("word list contains at least 1 word")
+            .clone();
 
         if let Some(lane) = imp.lanes.borrow().get(lane_index) {
             let width = lane.width() as f64;
             imp.lane_texts.borrow_mut()[lane_index].push(ScrollingText {
-                text: word.to_string(),
+                text: word,
                 x: width,
             });
         }
