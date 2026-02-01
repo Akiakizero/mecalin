@@ -9,6 +9,7 @@
 use crate::speed_test_results_view::SpeedTestResultsView;
 use crate::speed_test_text_view::SpeedTestTextView;
 use crate::text_generation::{advanced, simple, Language};
+use crate::typing_test_utils::TestDuration;
 use gtk::glib;
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
@@ -38,7 +39,7 @@ mod imp {
 
         pub start_time: Rc<RefCell<Option<Instant>>>,
         pub timer_source_id: Rc<RefCell<Option<glib::SourceId>>>,
-        pub test_duration: Rc<RefCell<u64>>,
+        pub test_duration: Rc<RefCell<TestDuration>>,
     }
 
     #[glib::object_subclass]
@@ -65,7 +66,7 @@ mod imp {
                 settings_box: Default::default(),
                 start_time: Rc::new(RefCell::new(None)),
                 timer_source_id: Rc::new(RefCell::new(None)),
-                test_duration: Rc::new(RefCell::new(60)),
+                test_duration: Rc::new(RefCell::new(TestDuration::Sec30)),
             }
         }
     }
@@ -100,13 +101,13 @@ impl SpeedTestView {
         glib::Object::new()
     }
 
-    fn get_duration_seconds(&self) -> u64 {
+    fn get_duration(&self) -> TestDuration {
         match self.imp().duration_dropdown.selected() {
-            0 => 15,
-            1 => 30,
-            2 => 60,
-            3 => 120,
-            _ => 60,
+            0 => TestDuration::Sec15,
+            1 => TestDuration::Sec30,
+            2 => TestDuration::Min1,
+            3 => TestDuration::Min5,
+            _ => TestDuration::Min1,
         }
     }
 
@@ -117,7 +118,7 @@ impl SpeedTestView {
         }
         *imp.start_time.borrow_mut() = None;
 
-        let duration = self.get_duration_seconds();
+        let duration = self.get_duration();
         *imp.test_duration.borrow_mut() = duration;
 
         imp.settings_box.set_visible(true);
@@ -189,7 +190,7 @@ impl SpeedTestView {
                                 let start_opt = *start_time.borrow();
                                 if let Some(start) = start_opt {
                                     let elapsed = start.elapsed();
-                                    let duration_secs = *test_duration.borrow();
+                                    let duration_secs = test_duration.borrow().as_seconds();
                                     let remaining = duration_secs.saturating_sub(elapsed.as_secs());
 
                                     if remaining == 0 {

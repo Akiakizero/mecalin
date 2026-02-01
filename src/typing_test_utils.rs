@@ -97,6 +97,16 @@ impl TestDuration {
             TestDuration::Min10 => "10 minutes",
         }
     }
+
+    pub fn as_seconds(&self) -> u64 {
+        match self {
+            TestDuration::Sec15 => 15,
+            TestDuration::Sec30 => 30,
+            TestDuration::Min1 => 60,
+            TestDuration::Min5 => 300,
+            TestDuration::Min10 => 600,
+        }
+    }
 }
 
 #[derive(Clone, Copy)]
