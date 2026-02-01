@@ -160,6 +160,9 @@ impl SpeedTestView {
             duration: *imp.test_duration.borrow(),
         };
 
+        let keystrokes = imp.text_view.keystrokes();
+        let keystrokes_vec: Vec<_> = keystrokes.iter().copied().collect();
+
         let summary = TestSummary::new(
             std::time::SystemTime::now(),
             start_instant,
@@ -167,7 +170,7 @@ impl SpeedTestView {
             config,
             &imp.text_view.original_text(),
             &imp.text_view.typed_text(),
-            &[],
+            &keystrokes_vec,
         );
 
         imp.results_view.set_summary(summary);
