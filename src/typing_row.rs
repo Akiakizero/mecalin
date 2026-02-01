@@ -62,14 +62,17 @@ impl imp::TypingRow {
 
         let layout = label.layout();
 
+        // Find byte index for the character position
         let mut index = 0;
+        let mut char_count = 0;
         for (i, _) in text.char_indices() {
-            if i >= cursor_pos as usize {
+            if char_count >= cursor_pos as usize {
                 index = i;
                 break;
             }
+            char_count += 1;
         }
-        if cursor_pos as usize >= text.len() {
+        if cursor_pos as usize >= text.chars().count() {
             index = text.len();
         }
 
