@@ -86,12 +86,12 @@
   
   <screenshots>
     <screenshot type="default">
-      <caption>Main menu with study room option</caption>
-      <image>https://raw.githubusercontent.com/nacho/mecalin/main/data/screenshots/1-main-menu.png</image>
+      <caption>Typing lesson with keyboard layout</caption>
+      <image>https://raw.githubusercontent.com/nacho/mecalin/main/data/screenshots/1-lesson-view.png</image>
     </screenshot>
     <screenshot>
-      <caption>Typing lesson with keyboard layout</caption>
-      <image>https://raw.githubusercontent.com/nacho/mecalin/main/data/screenshots/2-lesson-view.png</image>
+      <caption>Speed Test</caption>
+      <image>https://raw.githubusercontent.com/nacho/mecalin/main/data/screenshots/2-speed-test.png</image>
     </screenshot>
     <screenshot>
       <caption>Falling Keys game</caption>
@@ -104,6 +104,23 @@
   </screenshots>
   
   <releases>
+    <release version="0.8.0" date="2026-02-01">
+      <description>
+        <ul>
+          <li>Added lesson 9 covering special characters for all languages</li>
+          <li>Added Galician word list for text generation in games</li>
+          <li>Speed test now uses system locale for language selection</li>
+          <li>Added retry button to speed test results</li>
+          <li>Added red glow error effect to typing row for visual feedback</li>
+          <li>Fixed WPM calculation to use graphemes instead of characters</li>
+          <li>Fixed keyboard widget character matching for accented characters</li>
+          <li>Fixed cursor position handling for multi-byte UTF-8 characters</li>
+          <li>Fixed falling keys rendering to appear above keyboard widget</li>
+          <li>Refactored scrolling lanes game to use text generation module</li>
+          <li>Updated Speed Test translations for all languages</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.7.0" date="2026-01-27">
       <description>
         <ul>
@@ -156,6 +173,5 @@
         </ul>
       </description>
     </release>
-    <release version="0.1.4" date="2026-01-13" />
   </releases>
 </component>
