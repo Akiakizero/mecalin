@@ -50,6 +50,8 @@ mod imp {
         pub language_box: TemplateChild<gtk::Box>,
         #[template_child]
         pub language_label: TemplateChild<gtk::Label>,
+        #[template_child]
+        pub retry_button: TemplateChild<gtk::Button>,
 
         #[property(get, set)]
         show_personal_best: Cell<bool>,
@@ -69,6 +71,7 @@ mod imp {
             klass.set_layout_manager_type::<gtk::BinLayout>();
 
             klass.bind_template();
+            klass.bind_template_callbacks();
         }
 
         fn instance_init(obj: &glib::subclass::InitializingObject<Self>) {
@@ -85,6 +88,7 @@ mod imp {
                 duration_label: Default::default(),
                 language_box: Default::default(),
                 language_label: Default::default(),
+                retry_button: Default::default(),
 
                 show_personal_best: Default::default(),
                 orientation: RefCell::new(gtk::Orientation::Horizontal),
@@ -103,6 +107,12 @@ mod imp {
 
         fn property(&self, id: usize, pspec: &glib::ParamSpec) -> glib::Value {
             self.derived_property(id, pspec)
+        }
+
+        fn signals() -> &'static [glib::subclass::Signal] {
+            use std::sync::OnceLock;
+            static SIGNALS: OnceLock<Vec<glib::subclass::Signal>> = OnceLock::new();
+            SIGNALS.get_or_init(|| vec![glib::subclass::Signal::builder("retry").build()])
         }
 
         fn constructed(&self) {
@@ -136,6 +146,14 @@ mod imp {
     }
     impl WidgetImpl for SpeedTestResultsView {}
     impl OrientableImpl for SpeedTestResultsView {}
+
+    #[gtk::template_callbacks]
+    impl SpeedTestResultsView {
+        #[template_callback]
+        fn on_retry_clicked(&self) {
+            self.obj().emit_by_name::<()>("retry", &[]);
+        }
+    }
 }
 
 glib::wrapper! {

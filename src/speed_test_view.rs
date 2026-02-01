@@ -181,6 +181,18 @@ impl SpeedTestView {
     fn setup_signals(&self) {
         let imp = self.imp();
 
+        imp.results_view.connect_closure(
+            "retry",
+            false,
+            glib::closure_local!(
+                #[weak(rename_to = view)]
+                self,
+                move |_results_view: SpeedTestResultsView| {
+                    view.reset_test();
+                }
+            ),
+        );
+
         imp.text_type_dropdown.connect_selected_notify(glib::clone!(
             #[weak(rename_to = view)]
             self,

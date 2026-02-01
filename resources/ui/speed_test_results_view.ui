@@ -155,6 +155,17 @@
             </child>
           </object>
         </child>
+        <child>
+          <object class="GtkButton" id="retry_button">
+            <property name="label" translatable="yes">Retry</property>
+            <property name="halign">center</property>
+            <signal name="clicked" handler="on_retry_clicked" swapped="yes"/>
+            <style>
+              <class name="pill"/>
+              <class name="suggested-action"/>
+            </style>
+          </object>
+        </child>
       </object>
     </child>
   </template>
