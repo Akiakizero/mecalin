@@ -51,6 +51,17 @@ mod imp {
 }
 
 impl imp::TypingRow {
+    fn char_pos_to_byte_index(text: &str, char_pos: usize) -> usize {
+        let mut char_count = 0;
+        for (byte_idx, _) in text.char_indices() {
+            if char_count >= char_pos {
+                return byte_idx;
+            }
+            char_count += 1;
+        }
+        text.len()
+    }
+
     fn draw_cursor(&self, snapshot: &gtk::Snapshot) {
         let cursor_pos = self.cursor_position.get();
         let label = self.target_label.get();
@@ -62,20 +73,7 @@ impl imp::TypingRow {
 
         let layout = label.layout();
 
-        // Find byte index for the character position
-        let mut index = 0;
-        let mut char_count = 0;
-        for (i, _) in text.char_indices() {
-            if char_count >= cursor_pos as usize {
-                index = i;
-                break;
-            }
-            char_count += 1;
-        }
-        if cursor_pos as usize >= text.chars().count() {
-            index = text.len();
-        }
-
+        let index = Self::char_pos_to_byte_index(&text, cursor_pos as usize);
         let (rect, _) = layout.cursor_pos(index as i32);
 
         // Get the label's position relative to the TypingRow widget
@@ -152,5 +150,42 @@ impl TypingRow {
 impl Default for TypingRow {
     fn default() -> Self {
         Self::new()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_char_pos_to_byte_index_ascii() {
+        let text = "hello";
+        assert_eq!(imp::TypingRow::char_pos_to_byte_index(text, 0), 0);
+        assert_eq!(imp::TypingRow::char_pos_to_byte_index(text, 2), 2);
+        assert_eq!(imp::TypingRow::char_pos_to_byte_index(text, 5), 5);
+        assert_eq!(imp::TypingRow::char_pos_to_byte_index(text, 10), 5); // Beyond end
+    }
+
+    #[test]
+    fn test_char_pos_to_byte_index_multibyte() {
+        let text = "añ";
+        assert_eq!(imp::TypingRow::char_pos_to_byte_index(text, 0), 0); // 'a' at byte 0
+        assert_eq!(imp::TypingRow::char_pos_to_byte_index(text, 1), 1); // 'ñ' at byte 1
+        assert_eq!(imp::TypingRow::char_pos_to_byte_index(text, 2), 3); // End (ñ is 2 bytes)
+    }
+
+    #[test]
+    fn test_char_pos_to_byte_index_mixed() {
+        let text = "hola ñ mundo";
+        assert_eq!(imp::TypingRow::char_pos_to_byte_index(text, 0), 0); // 'h'
+        assert_eq!(imp::TypingRow::char_pos_to_byte_index(text, 5), 5); // 'ñ'
+        assert_eq!(imp::TypingRow::char_pos_to_byte_index(text, 6), 7); // ' ' after ñ
+    }
+
+    #[test]
+    fn test_char_pos_to_byte_index_empty() {
+        let text = "";
+        assert_eq!(imp::TypingRow::char_pos_to_byte_index(text, 0), 0);
+        assert_eq!(imp::TypingRow::char_pos_to_byte_index(text, 5), 0);
     }
 }
