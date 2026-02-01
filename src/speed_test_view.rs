@@ -13,6 +13,7 @@ use gtk::prelude::*;
 use gtk::{glib, Box, DropDown, Label, Orientation, StringList};
 use std::cell::RefCell;
 use std::rc::Rc;
+use std::str::FromStr;
 use std::time::{Duration, Instant};
 
 pub struct SpeedTestView {
@@ -118,10 +119,13 @@ impl SpeedTestView {
         self.settings_box.set_visible(true);
         self.timer_label.set_visible(false);
 
+        let lang_code = crate::utils::language_from_locale();
+        let language = Language::from_str(lang_code).unwrap_or(Language::English);
+
         let text = if self.text_type_dropdown.selected() == 0 {
-            simple(Language::English)
+            simple(language)
         } else {
-            advanced(Language::English)
+            advanced(language)
         };
 
         self.text_view.set_original_text(&text);
