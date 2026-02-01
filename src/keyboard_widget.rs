@@ -50,6 +50,46 @@ impl KeyboardLayout {
     }
 }
 
+impl KeyboardLayout {
+    pub fn contains_character(&self, ch: char) -> bool {
+        let ch_lower = ch.to_lowercase().next().unwrap();
+
+        // Check space key
+        if ch == ' ' {
+            return true;
+        }
+
+        // Check all keys in the layout
+        for row in &self.keys {
+            for key_info in row {
+                let key_char = key_info.base.chars().next().unwrap_or(' ');
+                let base_lower = key_char.to_lowercase().next().unwrap();
+
+                // Check base (lowercase comparison)
+                if ch_lower == base_lower {
+                    return true;
+                }
+
+                // Check shift (exact match)
+                if let Some(shift) = &key_info.shift {
+                    if shift.chars().next().unwrap_or(' ') == ch {
+                        return true;
+                    }
+                }
+
+                // Check altgr (exact match)
+                if let Some(altgr) = &key_info.altgr {
+                    if altgr.chars().next().unwrap_or(' ') == ch {
+                        return true;
+                    }
+                }
+            }
+        }
+
+        false
+    }
+}
+
 impl Default for KeyboardLayout {
     fn default() -> Self {
         Self::load_from_json("us").unwrap_or_else(|_| Self {
@@ -125,6 +165,52 @@ mod tests {
     fn test_load_from_json_invalid() {
         let result = KeyboardLayout::load_from_json("invalid");
         assert!(result.is_err());
+    }
+
+    #[test]
+    fn test_contains_character_spanish() {
+        let layout = KeyboardLayout::load_from_json("es").unwrap();
+
+        // Test base characters (lowercase comparison)
+        assert!(layout.contains_character('ñ'));
+        assert!(layout.contains_character('Ñ'));
+        assert!(layout.contains_character('a'));
+        assert!(layout.contains_character('A'));
+
+        // Test shift characters (exact match)
+        assert!(layout.contains_character('!'));
+        assert!(layout.contains_character('?'));
+
+        // Test altgr characters (exact match)
+        assert!(layout.contains_character('€'));
+        assert!(layout.contains_character('['));
+
+        // Test space
+        assert!(layout.contains_character(' '));
+
+        // Test characters not in layout
+        assert!(!layout.contains_character('á'));
+        assert!(!layout.contains_character('é'));
+    }
+
+    #[test]
+    fn test_contains_character_us() {
+        let layout = KeyboardLayout::load_from_json("us").unwrap();
+
+        // Test base characters
+        assert!(layout.contains_character('a'));
+        assert!(layout.contains_character('z'));
+
+        // Test that ñ exists in US layout as altgr character
+        assert!(layout.contains_character('ñ'));
+
+        // Test space
+        assert!(layout.contains_character(' '));
+
+        // Test characters not in layout (using characters that truly don't exist)
+        assert!(!layout.contains_character('Ñ')); // Uppercase ñ not in US layout
+        assert!(!layout.contains_character('ą')); // Polish character
+        assert!(!layout.contains_character('ę')); // Polish character
     }
 }
 
@@ -843,10 +929,17 @@ impl KeyboardWidget {
     pub fn set_current_key(&self, key: Option<char>) {
         let imp = self.imp();
         if let Some(ch) = key {
-            if let glib::CharacterDecomposition::Pair(dead_key, base_char) = ch.decompose() {
-                *imp.current_key_sequence.borrow_mut() = vec![dead_key, base_char];
-                *imp.sequence_index.borrow_mut() = 0;
-                *imp.current_key.borrow_mut() = Some(dead_key);
+            // Only decompose if the character doesn't exist in the layout
+            if !imp.layout.borrow().contains_character(ch) {
+                if let glib::CharacterDecomposition::Pair(dead_key, base_char) = ch.decompose() {
+                    *imp.current_key_sequence.borrow_mut() = vec![dead_key, base_char];
+                    *imp.sequence_index.borrow_mut() = 0;
+                    *imp.current_key.borrow_mut() = Some(dead_key);
+                } else {
+                    *imp.current_key_sequence.borrow_mut() = Vec::new();
+                    *imp.sequence_index.borrow_mut() = 0;
+                    *imp.current_key.borrow_mut() = key;
+                }
             } else {
                 *imp.current_key_sequence.borrow_mut() = Vec::new();
                 *imp.sequence_index.borrow_mut() = 0;
