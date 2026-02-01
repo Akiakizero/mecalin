@@ -52,12 +52,10 @@ mod imp {
 
 impl imp::TypingRow {
     fn char_pos_to_byte_index(text: &str, char_pos: usize) -> usize {
-        let mut char_count = 0;
-        for (byte_idx, _) in text.char_indices() {
+        for (char_count, (byte_idx, _)) in text.char_indices().enumerate() {
             if char_count >= char_pos {
                 return byte_idx;
             }
-            char_count += 1;
         }
         text.len()
     }
