@@ -134,8 +134,7 @@ impl MecalinWindow {
         // Create speed test view if it doesn't exist
         if imp.main_stack.child_by_name("speed_test").is_none() {
             let speed_test = SpeedTestView::new();
-            imp.main_stack
-                .add_named(speed_test.widget(), Some("speed_test"));
+            imp.main_stack.add_named(&speed_test, Some("speed_test"));
         }
 
         imp.main_stack.set_visible_child_name("speed_test");
