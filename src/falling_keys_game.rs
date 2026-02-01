@@ -175,7 +175,7 @@ impl FallingKeysGame {
         keys_widget.set_can_focus(true);
         keys_widget.set_focusable(true);
 
-        imp.game_area.set_child(Some(&keys_widget));
+        imp.game_area.add_overlay(&keys_widget);
         imp.falling_keys_widget.replace(Some(keys_widget.clone()));
 
         // Setup keyboard input
