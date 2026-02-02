@@ -517,6 +517,10 @@ impl ScrollingLanesGame {
         *imp.speed.borrow_mut() = 2.0;
         *imp.game_over.borrow_mut() = false;
 
+        // Hide game over overlay
+        imp.results_box.set_visible(false);
+        imp.game_area.set_visible(true);
+
         imp.score_label
             .set_text(&i18n_fmt! { i18n_fmt("Score: {}", 0) });
         imp.level_label

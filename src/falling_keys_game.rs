@@ -377,6 +377,17 @@ impl FallingKeysGame {
         *imp.speed.borrow_mut() = 2.0;
         *imp.game_over.borrow_mut() = false;
 
+        // Hide game over overlay
+        imp.results_box.set_visible(false);
+
+        // Show game area and keyboard
+        if let Some(child) = imp.game_area.child() {
+            child.set_visible(true);
+        }
+        if let Some(keyboard) = imp.keyboard_widget.borrow().as_ref() {
+            keyboard.set_visible(true);
+        }
+
         imp.score_label
             .set_text(&i18n_fmt! { i18n_fmt("Score: {}", 0) });
         imp.difficulty_label
