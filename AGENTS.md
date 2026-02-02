@@ -5,7 +5,7 @@ Mecalin is a typing tutor application built with GTK4, Rust, and Adwaita. It fol
 
 ## Technology Stack
 - **Language**: Rust
-- **UI Framework**: GTK4 4.10+
+- **UI Framework**: GTK4 4.14+
 - **Design**: libadwaita 1.5+ (Adwaita design system)
 - **Build System**: Meson (production), Cargo (development)
 - **Architecture**: GTK Builder with XML UI templates
