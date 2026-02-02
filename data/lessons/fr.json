@@ -1,0 +1,1964 @@
+{
+  "lessons": [
+    {
+      "id": 0,
+      "title": "Bienvenue à Mecalin",
+      "description": "Bienvenue à Mecalin, votre tuteur pour apprendre à taper ! Ce cours vous apprendra à taper étape par étape. Vous commencerez par la rangée principale de touches et apprendrez progressivement toutes les touches du clavier. Prenez votre temps, pratiquez régulièrement et vous deviendrez rapidement un expert en dactylographie",
+      "steps": [],
+      "introduction": true
+    },
+    {
+      "id": 1,
+      "title": "Première partie de la rangée de base",
+      "description": "Apprenez une partie de la rangée de base : Q, S, D, K, L, M",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Ici commence la première leçon. Faites attention aux erreurs pour ne pas les répéter. Dans cette leçon, vous apprendrez les touches q, s, d, k, l, m",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "q",
+          "description": "Appuyez sur la touche 'q' avec le petit doigt de la main gauche",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "m",
+          "description": "N'oubliez pas de placer vos doigts sur la ligne de base et vos pouces sur la barre d'espace. Vous devez vous habituer à adopter la position correcte dans toutes les sessions. Appuyez sur la touche 'm' avec le petit doigt de la main droite",
+          "repetitions": 1
+        },
+        {
+          "id": 3,
+          "text": "sl",
+          "description": "Regardez l'écran et non le clavier. Appuyez sur la touche 's' avec l'annulaire de la main gauche et la touche 'l' avec celui de la main droite",
+          "repetitions": 1
+        },
+        {
+          "id": 4,
+          "text": "qqq mmm qmq mqm",
+          "description": "Maintenant, nous allons faire quelques exercices avec ces 4 lettres dans le bon ordre. S'il y a une erreur dans la ligne, il faudra la répéter. Ne vous impatientez pas si cela ne fonctionne pas du premier coup. N'oubliez pas d'appuyer sur la barre d'espace entre les mots",
+          "repetitions": 1
+        },
+        {
+          "id": 5,
+          "text": "sss lll sls lsl",
+          "description": "Maintenant, nous allons faire quelques exercices avec ces 4 lettres dans le bon ordre. S'il y a une erreur dans la ligne, il faudra la répéter. Ne vous impatientez pas si cela ne fonctionne pas du premier coup. N'oubliez pas d'appuyer sur la barre d'espace entre les mots",
+          "repetitions": 1
+        },
+        {
+          "id": 6,
+          "text": "qmsl mqls",
+          "description": "Maintenant, nous allons faire quelques exercices avec ces 4 lettres dans le bon ordre. S'il y a une erreur dans la ligne, il faudra la répéter. Ne vous impatientez pas si cela ne fonctionne pas du premier coup. N'oubliez pas d'appuyer sur la barre d'espace entre les mots",
+          "repetitions": 1
+        },
+        {
+          "id": 7,
+          "text": "slmq lsqm",
+          "description": "Maintenant, nous allons faire quelques exercices avec ces 4 lettres dans le bon ordre. S'il y a une erreur dans la ligne, il faudra la répéter. Ne vous impatientez pas si cela ne fonctionne pas du premier coup. N'oubliez pas d'appuyer sur la barre d'espace entre les mots",
+          "repetitions": 1
+        },
+        {
+          "id": 8,
+          "text": "dk",
+          "description": "Maintenant, nous allons ajouter deux touches pour les majeurs ; avec la main gauche la touche 'd' et avec la droite la 'k'",
+          "repetitions": 1
+        },
+        {
+          "id": 9,
+          "text": "ddd kkk dkd kdk",
+          "description": "N'oubliez pas que la barre d'espace est pressée avec le pouce de la main opposée à la dernière touche appuyée",
+          "repetitions": 1
+        },
+        {
+          "id": 10,
+          "text": "qsd dsq klm mlk",
+          "description": "N'oubliez pas que la barre d'espace est pressée avec le pouce de la main opposée à la dernière touche appuyée",
+          "repetitions": 1
+        },
+        {
+          "id": 11,
+          "text": "qdkm sdkl",
+          "description": "Les doigts doivent revenir à leur position après avoir appuyé sur chaque touche",
+          "repetitions": 1
+        },
+        {
+          "id": 12,
+          "text": "dqmk dslk",
+          "description": "Les doigts doivent revenir à leur position après avoir appuyé sur chaque touche",
+          "repetitions": 1
+        },
+        {
+          "id": 13,
+          "text": "qdmk dqkm",
+          "description": "Les doigts doivent revenir à leur position après avoir appuyé sur chaque touche",
+          "repetitions": 1
+        },
+        {
+          "id": 14,
+          "text": "lksd klds",
+          "description": "Appuyez sur les touches avec les bons doigts, même si cela vous semble plus lent maintenant",
+          "repetitions": 1
+        },
+        {
+          "id": 15,
+          "text": "qmsldk mlskd",
+          "description": "Appuyez sur les touches avec les bons doigts, même si cela vous semble plus lent maintenant",
+          "repetitions": 1
+        },
+        {
+          "id": 16,
+          "text": "qsdklm mlkdsq",
+          "description": "Maintenant, les exercices doivent être répétés 2 fois sans erreurs pour pouvoir passer au suivant",
+          "repetitions": 2
+        },
+        {
+          "id": 17,
+          "text": "qmsldk kdlsmq",
+          "description": "Maintenant, les exercices doivent être répétés 2 fois sans erreurs pour pouvoir passer au suivant",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "dkslqm mlskd",
+          "description": "Ne vous impatientez pas. Ne vous précipitez pas",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "",
+          "description": "Vous avez terminé la première leçon et fait vos premiers exercices",
+          "introduction": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Rangée de base",
+      "description": "Apprenez les touches de la rangée de base : Q, S, D, F, G, H, J, K, L, M",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Ici commence la deuxième leçon. Nous allons apprendre le reste de la ligne de base et faire une série d'exercices avec elle. Rappelez-vous que vous ne devez pas regarder le clavier, mais l'écran de votre ordinateur",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "f",
+          "description": "Appuyez sur la touche 'f' avec l'index de la main gauche",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "fj",
+          "description": "Appuyez sur la touche 'f' avec l'index de la main gauche et la touche 'j' avec celui de la main droite",
+          "repetitions": 1
+        },
+        {
+          "id": 3,
+          "text": "fff jjj fjf jfj",
+          "description": "Vous devez effectuer chaque exercice deux fois sans erreurs pour pouvoir passer à l'exercice suivant",
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "qsdf mlkj",
+          "description": "Vous devez effectuer chaque exercice deux fois sans erreurs pour pouvoir passer à l'exercice suivant",
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "fdsq jklm",
+          "description": "Surveillez la position des doigts à la fin de chaque pression",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "qfjm ljsf fdjk",
+          "description": "Surveillez la position des doigts à la fin de chaque pression",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "fmjq djkf jslf",
+          "description": "Appuyez-vous sur la barre d'espace avec le bon pouce ?",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "qmsldkfj mlskdjf",
+          "description": "Appuyez-vous sur la barre d'espace avec le bon pouce ?",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "jfkdlsmq fjdkslqm",
+          "description": "Ne regardez pas le clavier, seulement l'écran de votre ordinateur",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "gh",
+          "description": "Deux touches supplémentaires pour les mêmes doigts. Avec l'index de la main gauche la touche 'g' et avec celui de la main droite la 'h'",
+          "repetitions": 1
+        },
+        {
+          "id": 11,
+          "text": "ggg hhh ghg hgh",
+          "description": "Rappelez-vous que vous devez maintenir une posture correcte. Le dos droit, les mains sur la ligne de base et les pouces sur la barre d'espace. Continuez avec plus d'exercices...",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "gjfh hfjg gkhd dhkg",
+          "description": "Rappelez-vous que vous devez maintenir une posture correcte. Le dos droit, les mains sur la ligne de base et les pouces sur la barre d'espace. Continuez avec plus d'exercices...",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "qmsldkfjgh hgjfkdlsmq",
+          "description": "Déplacez seulement les index, pas toute la main",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": "ghfjdkslqm mlskdjfhg",
+          "description": "Déplacez seulement les index, pas toute la main",
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "ù",
+          "description": "Une autre touche de cette ligne 'ù'. Elle est pressée avec le petit doigt de la main droite, comme la touche 'm', mais rappelez-vous que vous ne devez pas déplacer la main, seulement le doigt",
+          "repetitions": 1
+        },
+        {
+          "id": 16,
+          "text": "qmù slù dkù fjù ghù",
+          "description": "Une autre touche de cette ligne 'ù'. Elle est pressée avec le petit doigt de la main droite, comme la touche 'm', mais rappelez-vous que vous ne devez pas déplacer la main, seulement le doigt",
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "mqù lsù kdù jfù hgù",
+          "description": "Une autre touche de cette ligne 'ù'. Elle est pressée avec le petit doigt de la main droite, comme la touche 'm', mais rappelez-vous que vous ne devez pas déplacer la main, seulement le doigt",
+          "repetitions": 1
+        },
+        {
+          "id": 18,
+          "text": "*×",
+          "description": "Une autre touche de cette ligne de base serait '*'. Elle est pressée avec le petit doigt de la main droite, et vous devez maintenir la touche SHIFT enfoncée si vous voulez l'appuyer en majuscules '×'",
+          "repetitions": 1
+        },
+        {
+          "id": 19,
+          "text": "ùmq ùls* ùkd ùjf ùhg",
+          "description": "Les doigts doivent revenir à la ligne de base après avoir appuyé sur chaque touche",
+          "repetitions": 1
+        },
+        {
+          "id": 20,
+          "text": "'qm 'sl 'dk 'fj 'gh*",
+          "description": "Les doigts doivent revenir à la ligne de base après avoir appuyé sur chaque touche",
+          "repetitions": 1
+        },
+        {
+          "id": 21,
+          "text": "qs ml lm sq",
+          "description": "Et maintenant quelques exercices de révision des deux premières leçons",
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "qdgjlù mkhfs",
+          "description": "Et maintenant quelques exercices de révision des deux premières leçons",
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "sfhkm ùljgdq",
+          "description": "N'oubliez pas toutes les indications que nous vous donnons tout au long de la leçon",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "slqm mqsl qghm",
+          "description": "N'oubliez pas toutes les indications que nous vous donnons tout au long de la leçon",
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": "fmjq* qjmf* gjhf",
+          "description": "Les pouces sont-ils en position ?",
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "qsdfghjklmù* ùmlkjhgfdsq*",
+          "description": "Rappelez-vous de garder les mains dans une position détendue",
+          "repetitions": 2
+        },
+        {
+          "id": 27,
+          "text": "qsdsq ùmlklmù",
+          "description": "Rappelez-vous de garder les mains dans une position détendue",
+          "repetitions": 2
+        },
+        {
+          "id": 28,
+          "text": "",
+          "description": "Félicitations ! Vous avez terminé la deuxième leçon",
+          "introduction": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Première partie de la rangée dominante",
+      "description": "Apprenez les touches de la rangée dominante : A, Z, E, I, O, P",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Voici le début de la troisième leçon. Nous allons commencer avec la ligne dominante, qui est le nom donné à celle qui est au-dessus de la ligne de base",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "ap",
+          "description": "Appuyez sur la touche 'a' avec l'auriculaire gauche et sur 'p' avec celui de la main droite",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "aaa ppp apa pap",
+          "description": "Tapez correctement deux fois",
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "zo",
+          "description": "Maintenant appuyez sur la touche 'z' avec l'annulaire gauche et sur 'o' avec celui de la main droite",
+          "repetitions": 1
+        },
+        {
+          "id": 4,
+          "text": "zzz ooo zoz ozo",
+          "description": "Maintenant appuyez sur la touche 'z' avec l'annulaire gauche et sur 'o' avec celui de la main droite",
+          "repetitions": 1
+        },
+        {
+          "id": 5,
+          "text": "azop poza",
+          "description": "Et maintenant quelques exercices avec les quatre premières touches de cette ligne",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "apzo paoz",
+          "description": "Et maintenant quelques exercices avec les quatre premières touches de cette ligne",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "zopa apoz",
+          "description": "Vous devez désormais adopter automatiquement la bonne posture",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "ozap pazo",
+          "description": "Vous devez désormais adopter automatiquement la bonne posture",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "ei",
+          "description": "Deux touches supplémentaires pour les majeurs. Avec le gauche la touche 'e' et avec le droit la touche 'i'",
+          "repetitions": 1
+        },
+        {
+          "id": 10,
+          "text": "eee iii eie iei",
+          "description": "Deux touches supplémentaires pour les majeurs. Avec le gauche la touche 'e' et avec le droit la touche 'i'",
+          "repetitions": 1
+        },
+        {
+          "id": 11,
+          "text": "aze eza iop poi",
+          "description": "N'oubliez pas la position des pouces sur la barre d'espace et le reste des doigts sur la ligne de base",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "apzoei ieozpa",
+          "description": "N'oubliez pas la position des pouces sur la barre d'espace et le reste des doigts sur la ligne de base",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "aiepo zopeai",
+          "description": "Ne déplacez pas toute la main, seulement les doigts qui vont appuyer",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": "eizoap pazoie",
+          "description": "Ne déplacez pas toute la main, seulement les doigts qui vont appuyer",
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "az ez io po pa oz ie",
+          "description": "N'oubliez pas que la barre d'espace se presse avec le pouce de la main opposée à la dernière touche pressée",
+          "repetitions": 2
+        },
+        {
+          "id": 16,
+          "text": "ei zo ap op oi ze za",
+          "description": "N'oubliez pas que la barre d'espace se presse avec le pouce de la main opposée à la dernière touche pressée",
+          "repetitions": 2
+        },
+        {
+          "id": 17,
+          "text": "aizoep epzoai",
+          "description": "Ne regardez pas le clavier. Vous devez seulement regarder l'écran",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "peozai aiozpe",
+          "description": "Ne regardez pas le clavier. Vous devez seulement regarder l'écran",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "azeiop poieza",
+          "description": "Ne vous précipitez pas. Ne courez pas. Vous atteindrez la vitesse en temps voulu. Maintenant concentrez-vous sur bien faire les exercices",
+          "repetitions": 2
+        },
+        {
+          "id": 20,
+          "text": "pa zo ie zo pa",
+          "description": "Ne vous précipitez pas. Ne courez pas. Vous atteindrez la vitesse en temps voulu. Maintenant concentrez-vous sur bien faire les exercices",
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "",
+          "description": "Félicitations ! Vous avez terminé la troisième leçon",
+          "introduction": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Rangée dominante",
+      "description": "Apprenez les touches de la rangée dominante : A, Z, E, R, T, Y, I, O, P",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "En esta leçon nous allons aprender el resto de la línea dominante y haremos exercices con las dos líneas que ya conocemos",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "ru",
+          "description": "Appuyez sur la touche 'r' avec le doigt index de la main gauche y la touche 'u' con el de la main droite",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "rrr uuu rur uru",
+          "description": "Appuyez sur la touche 'r' avec le doigt index de la main gauche y la touche 'u' con el de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "apzoeiru",
+          "description": "Y ahora con las demás touches que ya conocemos en esta línea",
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "paozieur",
+          "description": "Y ahora con las demás touches que ya conocemos en esta línea",
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "ra up rz uo re ui",
+          "description": "Y ahora con las demás touches que ya conocemos en esta línea",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "iu er ou zr pu ar",
+          "description": "Asegúrese de que está pulsando con los doigts correctos",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "t",
+          "description": "Con el dedo index de la main gauche pulse la touche 't'",
+          "repetitions": 1
+        },
+        {
+          "id": 8,
+          "text": "y",
+          "description": "Con el dedo index de la main droite pulse la touche 'y'",
+          "repetitions": 1
+        },
+        {
+          "id": 9,
+          "text": "azertyuiop poiuytreza",
+          "description": "Maintenant unos exercices",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "apzo eiru tyru",
+          "description": "Asegúrese de pulsar las touches con los doigts correctos",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "ytur ieoz paoz",
+          "description": "N'oubliez pas no desplazar las manos sino los doigts",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "ptay orzu ieei",
+          "description": "Después de cada pulsación los doigts deben volver a su posición correcta",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "^",
+          "description": "Con el dedo auriculaire de la main droite pulse la touche '`' que se indica y después la barre d'espace para que aparezca la tilde, ya que se trata de una touche muerta ya que necesita otra touche para aparecer",
+          "repetitions": 1
+        },
+        {
+          "id": 14,
+          "text": "$",
+          "description": "Con el mismo dedo pulse la touche '+'",
+          "repetitions": 1
+        },
+        {
+          "id": 15,
+          "text": "*",
+          "description": "Maintenant nous allons utilizar la touche SHIFT o mayúsculas. Appuyez sur SHIFT avec le doigt auriculaire izquierdo y la touche '*' avec le doigt auriculaire derecho",
+          "repetitions": 1
+        },
+        {
+          "id": 16,
+          "text": "^",
+          "description": "Rappelez-vous que la touche SHIFT se pulsa con la mano contraria a la que va a pulsar la touche principal y con los doigts auriculaires. Con los mismos doigts y manos ahora pulse la touche '^' y la barre d'espace",
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "^^$^*^$^^ ^$*^^",
+          "description": "Siguiendo las instrucciones anteriores haga los exercices siguientes",
+          "repetitions": 1
+        },
+        {
+          "id": 18,
+          "text": "ap$^ zo$^ ei$^$ ru^ ty^",
+          "description": "No se impaciente. Este ejercicio es complicado si se intenta hacer deprisa y sencillo si se hace relajadamente",
+          "repetitions": 1
+        },
+        {
+          "id": 19,
+          "text": "^* *^ p*p p^p",
+          "description": "No se impaciente. Este ejercicio es complicado si se intenta hacer deprisa y sencillo si se hace relajadamente",
+          "repetitions": 1
+        },
+        {
+          "id": 20,
+          "text": "apam mapq a*^q",
+          "description": "Maintenant ya conoce dos líneas completas. Los siguientes exercices deben considerarse como un repaso de las cuatro lecciones que lleva hasta el momento. Empezaremos con los auriculaires",
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "mqpa^ ** q* ap^",
+          "description": "Maintenant ya conoce dos líneas completas. Los siguientes exercices deben considerarse como un repaso de las cuatro lecciones que lleva hasta el momento. Empezaremos con los auriculaires",
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "slzo ozls szol",
+          "description": "Con los annulairees",
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "deki edik eidk",
+          "description": "Con los doigts majeur",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "frju rfuj rufj",
+          "description": "Con los doigts index",
+          "repetitions": 1
+        },
+        {
+          "id": 25,
+          "text": "frjugthy hgjfuryt",
+          "description": "Con los doigts index",
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "jfhguryt fjghruty",
+          "description": "Con los doigts index",
+          "repetitions": 3
+        },
+        {
+          "id": 27,
+          "text": "azert poiuy",
+          "description": "Y con todos...",
+          "repetitions": 2
+        },
+        {
+          "id": 28,
+          "text": "treza yuiop",
+          "description": "Y con todos...",
+          "repetitions": 2
+        },
+        {
+          "id": 29,
+          "text": "qazedsq",
+          "description": "Appuyez sur con los doigts correctos cada touche",
+          "repetitions": 3
+        },
+        {
+          "id": 30,
+          "text": "m^^poiklm",
+          "description": "Appuyez sur con los doigts correctos cada touche",
+          "repetitions": 3
+        },
+        {
+          "id": 31,
+          "text": "qsdezaq",
+          "description": "Después de cada pulsación deben volver los doigts a su posición en la línea base",
+          "repetitions": 3
+        },
+        {
+          "id": 32,
+          "text": "mlkiopù^^m",
+          "description": "Después de cada pulsación deben volver los doigts a su posición en la línea base",
+          "repetitions": 3
+        },
+        {
+          "id": 33,
+          "text": "mlkiopm",
+          "description": "Los pulgares deben estar sobre la barre d'espace",
+          "repetitions": 3
+        },
+        {
+          "id": 34,
+          "text": "frtgf jhyuj",
+          "description": "Los pulgares deben estar sobre la barre d'espace",
+          "repetitions": 3
+        },
+        {
+          "id": 35,
+          "text": "fgtrf juyhj",
+          "description": "Los pulgares deben estar sobre la barre d'espace",
+          "repetitions": 3
+        },
+        {
+          "id": 36,
+          "text": "qazertgfdsq",
+          "description": "No mire el touchedo",
+          "repetitions": 3
+        },
+        {
+          "id": 37,
+          "text": "^ùpoiuyhjklm^",
+          "description": "No tenga prisa",
+          "repetitions": 3
+        },
+        {
+          "id": 38,
+          "text": "qsdfgtrezaq",
+          "description": "No tenga prisa",
+          "repetitions": 3
+        },
+        {
+          "id": 39,
+          "text": "$mlkjhyuiop^",
+          "description": "Coloque el cuerpo en la posición correcta",
+          "repetitions": 2
+        },
+        {
+          "id": 40,
+          "text": "qamp szlo deki frik",
+          "description": "Coloque el cuerpo en la posición correcta",
+          "repetitions": 2
+        },
+        {
+          "id": 41,
+          "text": "jtuyth qamp",
+          "description": "Las palmas de las manos no deben apoyarse sobre la mesa o el touchedo",
+          "repetitions": 2
+        },
+        {
+          "id": 42,
+          "text": "heigzom frt",
+          "description": "Las palmas de las manos no deben apoyarse sobre la mesa o el touchedo",
+          "repetitions": 2
+        },
+        {
+          "id": 43,
+          "text": "huij dert",
+          "description": "No cruce las piernas; evitará entumecimiento de los miembros",
+          "repetitions": 2
+        },
+        {
+          "id": 44,
+          "text": "pqraue pqrqdq",
+          "description": "Maintenant nous allons formar palabras",
+          "repetitions": 2
+        },
+        {
+          "id": 45,
+          "text": "golpeq poraue",
+          "description": "Maintenant nous allons formar palabras",
+          "repetitions": 2
+        },
+        {
+          "id": 46,
+          "text": "perito joyero",
+          "description": "Rappelez-vous que la posición de las manos es curvada y rozando levemente las touches de la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 47,
+          "text": "pleurq dedo",
+          "description": "Rappelez-vous que la posición de las manos es curvada y rozando levemente las touches de la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 48,
+          "text": "pelotq tres",
+          "description": "Los pulgares deben estar sobre la barre d'espace",
+          "repetitions": 2
+        },
+        {
+          "id": 49,
+          "text": "qauelqrre",
+          "description": "Los pulgares deben estar sobre la barre d'espace",
+          "repetitions": 2
+        },
+        {
+          "id": 50,
+          "text": "deseqdo supuesto",
+          "description": "No mire el touchedo",
+          "repetitions": 2
+        },
+        {
+          "id": 51,
+          "text": "qislqdo huido",
+          "description": "No mire el touchedo",
+          "repetitions": 2
+        },
+        {
+          "id": 52,
+          "text": "frqguq seguir",
+          "description": "A estas alturas del curso ya debe tener los hábitos correctos. Si no es así sería aconsejable repasar la leçon para principiantes",
+          "repetitions": 2
+        },
+        {
+          "id": 53,
+          "text": "fresq auerido",
+          "description": "A estas alturas del curso ya debe tener los hábitos correctos. Si no es así sería aconsejable repasar la leçon para principiantes",
+          "repetitions": 2
+        },
+        {
+          "id": 54,
+          "text": "",
+          "description": "Félicitations ! Vous avez terminé la cuarta leçon",
+          "introduction": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Première partie de la rangée inférieure",
+      "description": "Apprenez une partie de la rangée inférieure : W, :, X, ;, C, ;",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Vamos a comenzar con la línea inferior. Ya conoce el método y le será muy fácil esta quinta leçon.",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "w:",
+          "description": "Appuyez sur 'z' avec le doigt auriculaire de la main gauche y la touche '-' con el de la main droite",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "www ::: w:w :w:",
+          "description": "Appuyez sur 'z' avec le doigt auriculaire de la main gauche y la touche '-' con el de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "x;",
+          "description": "Appuyez sur la touche 'x' avec le doigt annulaire de la main gauche y la touche '.' con el de la main droite",
+          "repetitions": 1
+        },
+        {
+          "id": 4,
+          "text": "xxx ;;; x;x ;x;",
+          "description": "Appuyez sur la touche 'x' avec le doigt annulaire de la main gauche y la touche '.' con el de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "wx;: :;xw",
+          "description": "Después de cada pulsación en la fila inferior los doigts deben volver a su touche de la lína base",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "c;",
+          "description": "Appuyez sur la touche 'c' avec le doigt majeur de la main gauche y la touche ',' con el de la main droite",
+          "repetitions": 1
+        },
+        {
+          "id": 7,
+          "text": "ccc ;;; c;c ;c;",
+          "description": "Appuyez sur la touche 'c' avec le doigt majeur de la main gauche y la touche ',' con el de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "wxc cxw :;; ;;:",
+          "description": "Los doigts son los que se desplazan no las manos",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "w:x;c; ;c;x:w",
+          "description": "Los doigts son los que se desplazan no las manos",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "wwxxcc ;;;;::",
+          "description": "Los pulgares deben estar sobre la barre d'espace",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "::;;;; ccxxww",
+          "description": "Los pulgares deben estar sobre la barre d'espace",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "w; ;x c:",
+          "description": "N'oubliez pas que la barre d'espace se pulsa avec le doigt pulgar de la mano contraria a la última touche pulsada",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": ";w x; :c",
+          "description": "N'oubliez pas que la barre d'espace se pulsa avec le doigt pulgar de la mano contraria a la última touche pulsada",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": "cc;; :: ww",
+          "description": "¿Está colocando los doigts en su sitio después de cada pulsación?",
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "w x c ; ; :",
+          "description": "¿Está colocando los doigts en su sitio después de cada pulsación?",
+          "repetitions": 2
+        },
+        {
+          "id": 16,
+          "text": ": ; ; c x w",
+          "description": "Lea todas las explicaciones y consejos que aparecen en las lecciones",
+          "repetitions": 2
+        },
+        {
+          "id": 17,
+          "text": "",
+          "description": "Félicitations ! Vous avez terminé la quinta leçon",
+          "introduction": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Rangée inférieure",
+      "description": "Apprenez toute la rangée inférieure : W, :, X, ;, C, ;, V, ,, B, N",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Con esta leçon completaremos la línea inferior. Después deberá hacer unos exercices con todas las touches que conoce",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "v",
+          "description": "Appuyez sur la touche 'v' avec le doigt index de la main gauche",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": ",",
+          "description": "A continuación la touche 'm' avec le doigt index de la main droite",
+          "repetitions": 1
+        },
+        {
+          "id": 3,
+          "text": "vvv ,,, v,v ,v,",
+          "description": "A continuación la touche 'm' avec le doigt index de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "bn",
+          "description": "Maintenant con los mismos doigts pulse con la izquierda la touche 'b' y con la derecha la touche 'n'",
+          "repetitions": 1
+        },
+        {
+          "id": 5,
+          "text": "bbb nnn bnb nbn",
+          "description": "Maintenant con los mismos doigts pulse con la izquierda la touche 'b' y con la derecha la touche 'n'",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "wxcvbn,;;:",
+          "description": "Unos exercices con toda la línea",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": ":;;,nbvcxw",
+          "description": "Unos exercices con toda la línea",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "w: x; c; v, bn",
+          "description": "N'oubliez pas todos los hábitos que debe haber adquirido en las lecciones anteriores. De cualquier manera se los iremos recordando en esta leçon",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": ":w ;x ;c ,v nb",
+          "description": "N'oubliez pas todos los hábitos que debe haber adquirido en las lecciones anteriores. De cualquier manera se los iremos recordando en esta leçon",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "bn v, c; x; w:",
+          "description": "N'oubliez pas que la barre d'espace se pulsa avec le doigt pulgar de la mano contraria a la última touche pulsada",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "nb ,v ;c ;x :w",
+          "description": "N'oubliez pas que la barre d'espace se pulsa avec le doigt pulgar de la mano contraria a la última touche pulsada",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "wnx,c;v;b:",
+          "description": "La espalda debe estar recta y las piernas sin cruzar",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": ":b;v;c,xnw",
+          "description": "La espalda debe estar recta y las piernas sin cruzar",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": ";",
+          "description": "Quedan sólo tres touches de esta línea, para las cuales hay que pulsar la touche SHIFT (mayúsculas) avec le doigt auriculaire de la main gauche. Appuyez sur a continuación ';' avec le doigt majeur de la main droite",
+          "repetitions": 1
+        },
+        {
+          "id": 15,
+          "text": ":_",
+          "description": "Sin soltar la touche SHIFT pulse la touche ':' avec le doigt index y la touche '_' avec le doigt auriculaire",
+          "repetitions": 1
+        },
+        {
+          "id": 16,
+          "text": ";:_:_; __:;",
+          "description": "Sin soltar la touche SHIFT pulse la touche ':' avec le doigt index y la touche '_' avec le doigt auriculaire",
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "wxcvb :;;,n",
+          "description": "Maintenant unos exercices de repaso con las tres líneas completas",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "bvcxw n,;;:",
+          "description": "Maintenant unos exercices de repaso con las tres líneas completas",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "qwxcvbv",
+          "description": "La pulsación en la línea inferior se hace desplazando el dedo correspondiente y volviéndolo a su posición en la línea base",
+          "repetitions": 3
+        },
+        {
+          "id": 20,
+          "text": "m:;;,n,",
+          "description": "La pulsación en la línea inferior se hace desplazando el dedo correspondiente y volviéndolo a su posición en la línea base",
+          "repetitions": 3
+        },
+        {
+          "id": 21,
+          "text": "qsdcxwq",
+          "description": "Mantenga los pulgares sobre la barre d'espace",
+          "repetitions": 3
+        },
+        {
+          "id": 22,
+          "text": "mlk;;:m",
+          "description": "Mantenga los pulgares sobre la barre d'espace",
+          "repetitions": 3
+        },
+        {
+          "id": 23,
+          "text": "qwxcvbv m:;;,n,",
+          "description": "Las manos deben rozar levemente las touches de la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "qsdcxwq mlk;;:m",
+          "description": "Las manos deben rozar levemente las touches de la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": "bvcxwq",
+          "description": "No se impaciente. No importa que lo haga despacio. Lo importante es que lo haga bien y correctamente. La velocidad ya vendrá sola",
+          "repetitions": 3
+        },
+        {
+          "id": 26,
+          "text": "n,;;:m",
+          "description": "No se impaciente. No importa que lo haga despacio. Lo importante es que lo haga bien y correctamente. La velocidad ya vendrá sola",
+          "repetitions": 3
+        },
+        {
+          "id": 27,
+          "text": "qwxcvbgfdsq",
+          "description": "No se impaciente. No importa que lo haga despacio. Lo importante es que lo haga bien y correctamente. La velocidad ya vendrá sola",
+          "repetitions": 3
+        },
+        {
+          "id": 28,
+          "text": ";:;;,nhjklm;",
+          "description": "No se impaciente. No importa que lo haga despacio. Lo importante es que lo haga bien y correctamente. La velocidad ya vendrá sola",
+          "repetitions": 3
+        },
+        {
+          "id": 29,
+          "text": "qwxcvbgfdsq ;:;;,nhjklm;",
+          "description": "Rappelez-vous que cada pulsación se hace avec le doigt correspondiente",
+          "repetitions": 2
+        },
+        {
+          "id": 30,
+          "text": "qwahny sxzj,u dcek;i fvrl;o gbtm:p ;^",
+          "description": "Rappelez-vous que cada pulsación se hace avec le doigt correspondiente",
+          "repetitions": 2
+        },
+        {
+          "id": 31,
+          "text": "aqwzsx edcrfv tgbyhn uj,ik; ol;pm:;^",
+          "description": "Rappelez-vous que cada pulsación se hace avec le doigt correspondiente",
+          "repetitions": 2
+        },
+        {
+          "id": 32,
+          "text": "brqvo pueblo",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 33,
+          "text": "hqciendq co,enwqr",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 34,
+          "text": "sobrepqsq e,presq",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 35,
+          "text": "velocidqd nuevos",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 36,
+          "text": "juncos flqcos",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 37,
+          "text": "especie ,odelo",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 38,
+          "text": "cuqdrqdo circulo",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 39,
+          "text": "sie,pre fqcturq",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 40,
+          "text": "frente pqrcelq",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 41,
+          "text": "teclqdo nuestro",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 42,
+          "text": "cqntqnte semqlq",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 43,
+          "text": "tqnto gentil",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 44,
+          "text": "ventqjq qcuerdo",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 45,
+          "text": "notqrio q,igo",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 46,
+          "text": "qprender infeliw",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 47,
+          "text": "sonorqs ,ucho",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 48,
+          "text": "ordenqdor sencillo",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 49,
+          "text": "inclinqdq ho,bre",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 50,
+          "text": "pqsq,ontqmqs",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 51,
+          "text": "qntonio bosaue",
+          "description": "Maintenant algunas palabras con las tres líneas",
+          "repetitions": 2
+        },
+        {
+          "id": 52,
+          "text": "después bqlcón",
+          "description": "Algunas palabras con tilde. Appuyez sur la tilde y después la letra correspondiente",
+          "repetitions": 2
+        },
+        {
+          "id": 53,
+          "text": "será esdrújulq",
+          "description": "Algunas palabras con tilde. Appuyez sur la tilde y después la letra correspondiente",
+          "repetitions": 2
+        },
+        {
+          "id": 54,
+          "text": "semoríq qguijón",
+          "description": "Algunas palabras con tilde. Appuyez sur la tilde y después la letra correspondiente",
+          "repetitions": 2
+        },
+        {
+          "id": 55,
+          "text": "lección ,ás",
+          "description": "Algunas palabras con tilde. Appuyez sur la tilde y después la letra correspondiente",
+          "repetitions": 2
+        },
+        {
+          "id": 56,
+          "text": "",
+          "description": "Félicitations ! Vous avez terminé la sexta leçon",
+          "introduction": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Rangée de chiffres",
+      "description": "Apprenez la rangée de chiffres",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "En esta leçon nous allons utilizar la línea de números.",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "&é",
+          "description": "Con la main gauche nous allons pulsar los dos primeros número '1' y '2', pulsando avec le doigt auriculaire el '1' y avec le doigt annulaire el '2'",
+          "repetitions": 1
+        },
+        {
+          "id": 2,
+          "text": "\"'(",
+          "description": "Con el dedo majeur se pulsa el '3', y avec le doigt index el '4' y el '5'",
+          "repetitions": 1
+        },
+        {
+          "id": 3,
+          "text": "&é\"'(",
+          "description": "Con el dedo majeur se pulsa el '3', y avec le doigt index el '4' y el '5'",
+          "repetitions": 1
+        },
+        {
+          "id": 4,
+          "text": "('\"é&",
+          "description": "Con el dedo majeur se pulsa el '3', y avec le doigt index el '4' y el '5'",
+          "repetitions": 1
+        },
+        {
+          "id": 5,
+          "text": "&é\"'( ('\"é&",
+          "description": "Con el dedo majeur se pulsa el '3', y avec le doigt index el '4' y el '5'",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "àç",
+          "description": "Maintenant nous allons practicar con los doigts de la main droite, nous allons pulsar el '0' y el '9' con los doigts auriculaire y annulaire respectivamente",
+          "repetitions": 1
+        },
+        {
+          "id": 7,
+          "text": "_è-",
+          "description": "Con el dedo majeur pulsaremos el '8' y con el index el '7' y el '6'",
+          "repetitions": 1
+        },
+        {
+          "id": 8,
+          "text": "àç_è-",
+          "description": "Con el dedo majeur pulsaremos el '8' y con el index el '7' y el '6'",
+          "repetitions": 1
+        },
+        {
+          "id": 9,
+          "text": "-è_çà",
+          "description": "Con el dedo majeur pulsaremos el '8' y con el index el '7' y el '6'",
+          "repetitions": 1
+        },
+        {
+          "id": 10,
+          "text": "àç_è- -è_çà",
+          "description": "Con el dedo majeur pulsaremos el '8' y con el index el '7' y el '6'",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "&é\"'(-è_çà",
+          "description": "Maintenant utilizaremos ambas manos, recordando que cada dedo index sirve para dos números",
+          "repetitions": 1
+        },
+        {
+          "id": 12,
+          "text": "àç_è-('\"é&",
+          "description": "Maintenant utilizaremos ambas manos, recordando que cada dedo index sirve para dos números",
+          "repetitions": 1
+        },
+        {
+          "id": 13,
+          "text": "&é\"'(-è_çà",
+          "description": "Maintenant utilizaremos ambas manos, recordando que cada dedo index sirve para dos números",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": "àç_è-('\"é&",
+          "description": "Maintenant utilizaremos ambas manos, recordando que cada dedo index sirve para dos números",
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "&\"( -_à",
+          "description": "Rappelez-vous que la posición de los doigts debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 16,
+          "text": "é' èç",
+          "description": "Rappelez-vous que la posición de los doigts debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 17,
+          "text": "&\"(-_à",
+          "description": "Rappelez-vous que la posición de los doigts debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "&à\"_(-",
+          "description": "Rappelez-vous que la posición de los doigts debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "é(_à&è",
+          "description": "Rappelez-vous que la posición de los doigts debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 20,
+          "text": "(-'è\"_éç&à",
+          "description": "Rappelez-vous que la posición de los doigts debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "à&çé_\"è'-(",
+          "description": "Rappelez-vous que la posición de los doigts debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "-(è'_\"çéà&",
+          "description": "Rappelez-vous que la posición de los doigts debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "&àéç\"_'è(-",
+          "description": "Rappelez-vous que la posición de los doigts debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "\"(-_çé'è",
+          "description": "Rappelez-vous que la posición de los doigts debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": "è'éç_-(\"",
+          "description": "Rappelez-vous que la posición de los doigts debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "&àçé\"_è'(-",
+          "description": "Rappelez-vous que la posición de los doigts debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 27,
+          "text": "-('è_\"éçà&",
+          "description": "Rappelez-vous que la posición de los doigts debe ser en la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 28,
+          "text": "q&séd\"f'g(",
+          "description": "Vamos a mezclar letras con números",
+          "repetitions": 2
+        },
+        {
+          "id": 29,
+          "text": "màlçk_jèh-",
+          "description": "Vamos a mezclar letras con números",
+          "repetitions": 2
+        },
+        {
+          "id": 30,
+          "text": "qs&é\"df'(g mlàç_kjè-h",
+          "description": "Vamos a mezclar letras con números",
+          "repetitions": 2
+        },
+        {
+          "id": 31,
+          "text": "qm&àsléç",
+          "description": "Vamos a mezclar letras con números",
+          "repetitions": 2
+        },
+        {
+          "id": 32,
+          "text": "dk\"_ _\"kd",
+          "description": "Vamos a mezclar letras con números",
+          "repetitions": 2
+        },
+        {
+          "id": 33,
+          "text": "jf'è hg-(",
+          "description": "Vamos a mezclar letras con números",
+          "repetitions": 2
+        },
+        {
+          "id": 34,
+          "text": "(-gh è'fj",
+          "description": "Vamos a mezclar letras con números",
+          "repetitions": 2
+        },
+        {
+          "id": 35,
+          "text": "&aqw àpm:",
+          "description": "Maintenant pulsaremos sólo con los doigts auriculaires",
+          "repetitions": 2
+        },
+        {
+          "id": 36,
+          "text": "wqa& :mpà",
+          "description": "Maintenant pulsaremos sólo con los doigts auriculaires",
+          "repetitions": 2
+        },
+        {
+          "id": 37,
+          "text": ":wmqpaà& à&pamq:w",
+          "description": "Maintenant pulsaremos sólo con los doigts auriculaires",
+          "repetitions": 2
+        },
+        {
+          "id": 38,
+          "text": "àwpqma:& :&mapqàw",
+          "description": "Maintenant pulsaremos sólo con los doigts auriculaires",
+          "repetitions": 2
+        },
+        {
+          "id": 39,
+          "text": "ézsx çol;",
+          "description": "Maintenant con los doigts annulairees de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 40,
+          "text": ";loç xszé",
+          "description": "Maintenant con los doigts annulairees de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 41,
+          "text": "çxoslz;é é;zlsoxç",
+          "description": "Maintenant con los doigts annulairees de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 42,
+          "text": ";xlsozçé éçzoslx;",
+          "description": "Maintenant con los doigts annulairees de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 43,
+          "text": "\"edc _ik;",
+          "description": "Maintenant pulsaremos con los doigts majeur de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 44,
+          "text": ";ki_ cde\"",
+          "description": "Maintenant pulsaremos con los doigts majeur de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 45,
+          "text": "_cidke;\" \";ekdic_",
+          "description": "Maintenant pulsaremos con los doigts majeur de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 46,
+          "text": ";ckdie_\" \"_eidkc;",
+          "description": "Maintenant pulsaremos con los doigts majeur de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 47,
+          "text": "'rfv èuj,",
+          "description": "Los indexs son los que ahora entran en juego",
+          "repetitions": 2
+        },
+        {
+          "id": 48,
+          "text": "(tgb -yhn",
+          "description": "Los indexs son los que ahora entran en juego",
+          "repetitions": 2
+        },
+        {
+          "id": 49,
+          "text": ",juè vfr'",
+          "description": "Los indexs son los que ahora entran en juego",
+          "repetitions": 2
+        },
+        {
+          "id": 50,
+          "text": "nhy- bgt(",
+          "description": "Los indexs son los que ahora entran en juego",
+          "repetitions": 2
+        },
+        {
+          "id": 51,
+          "text": "èvufjr,' ,'jrufèv",
+          "description": "No mire el touchedo y manténgase en la posición correcta",
+          "repetitions": 2
+        },
+        {
+          "id": 52,
+          "text": ",vjfurè' è'urjf,v",
+          "description": "No mire el touchedo y manténgase en la posición correcta",
+          "repetitions": 2
+        },
+        {
+          "id": 53,
+          "text": "-byghtn( n(htyg-b",
+          "description": "No mire el touchedo y manténgase en la posición correcta",
+          "repetitions": 2
+        },
+        {
+          "id": 54,
+          "text": "nbhgyt-( (-tyghbn",
+          "description": "No mire el touchedo y manténgase en la posición correcta",
+          "repetitions": 2
+        },
+        {
+          "id": 55,
+          "text": "",
+          "description": "Félicitations ! Vous avez terminé la séptima leçon",
+          "introduction": true
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Caractères dans la rangée supérieure",
+      "description": "Apprenez les caractères de la rangée supérieure",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "Maintenant nous allons conocer los caracteres de la fila superior",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": "!= != !=",
+          "description": "Pulsando avec le doigt auriculaire de la main droite SHIFT pulse con el de la izquierda '!' y al contrario '='",
+          "repetitions": 2
+        },
+        {
+          "id": 2,
+          "text": "=! =! =!",
+          "description": "Pulsando avec le doigt auriculaire de la main droite SHIFT pulse con el de la izquierda '!' y al contrario '='",
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "\") \") \")",
+          "description": "Siga pulsando avec le doigt auriculaire correspondiente la touche SHIFT y avec le doigt annulaire de la main gauche la touche '\"' y avec le doigt annulaire de la main droite ')'",
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "((((",
+          "description": "A continuación pulse avec le doigt majeur de la main droite '('. N'oubliez pas pulsar la touche SHIFT con la main gauche",
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "=\")(",
+          "description": "A continuación pulse avec le doigt majeur de la main droite '('. N'oubliez pas pulsar la touche SHIFT con la main gauche",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "!$% /&()",
+          "description": "Maintenant practicaremos el resto de los caracteres; pulse avec le doigt index de la main gauche '$' y '%', y avec le doigt index de la main droite '/' y '&'",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "!)($&%/",
+          "description": "Maintenant practicaremos el resto de los caracteres; pulse avec le doigt index de la main gauche '$' y '%', y avec le doigt index de la main droite '/' y '&'",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "!% /)",
+          "description": "Maintenant practicaremos el resto de los caracteres; pulse avec le doigt index de la main gauche '$' y '%', y avec le doigt index de la main droite '/' y '&'",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": "!/&($)%",
+          "description": "Rappelez-vous que debe pulsar las touches SHIFT avec le doigt auriculaire correspondiente a cada mano",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": ")!(&$/%",
+          "description": "Rappelez-vous que debe pulsar las touches SHIFT avec le doigt auriculaire correspondiente a cada mano",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "/%&$()!",
+          "description": "Rappelez-vous que debe pulsar las touches SHIFT avec le doigt auriculaire correspondiente a cada mano",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "!/&$(%)",
+          "description": "Los doigts siempre deben volver a la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": ")%($&/!",
+          "description": "Los doigts siempre deben volver a la línea base",
+          "repetitions": 2
+        },
+        {
+          "id": 14,
+          "text": "#",
+          "description": "Para poder utilizar '#' debemos pulsar esta touche avec le doigt majeur de la main gauche y pulsar ALTGR avec le doigt majeur de la main droite",
+          "repetitions": 1
+        },
+        {
+          "id": 15,
+          "text": ")(&%$\"!",
+          "description": "N'oubliez pas pulsar SHIFT cuando corresponda",
+          "repetitions": 2
+        },
+        {
+          "id": 16,
+          "text": "qsd#f$g% h/j&kl(m)",
+          "description": "Maintenant nous allons practicar también con letras",
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "%z$ #rt",
+          "description": "Maintenant nous allons practicar también con letras",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": "y)u(i*o&p/",
+          "description": "Maintenant nous allons practicar también con letras",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "w)x(c*v&b/ n,#;$ù%",
+          "description": "Maintenant nous allons practicar también con letras",
+          "repetitions": 2
+        },
+        {
+          "id": 20,
+          "text": "a/q&w( z)sx e#$c%",
+          "description": "Rappelez-vous que para pulsar los caracteres de la línea de números debe mantener pulsada la touche SHIFT al mismo tiempo",
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "pmù# o$l%;/ i%k$;*",
+          "description": "Rappelez-vous que para pulsar los caracteres de la línea de números debe mantener pulsada la touche SHIFT al mismo tiempo",
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "r)f(v* uj,# t$g%b/",
+          "description": "Rappelez-vous que para pulsar los caracteres de la línea de números debe mantener pulsada la touche SHIFT al mismo tiempo",
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "y&h*n(,)",
+          "description": "Rappelez-vous que para pulsar los caracteres de la línea de números debe mantener pulsada la touche SHIFT al mismo tiempo",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "&)é(\"='&(/ àç_#è$-%",
+          "description": "A continuación nous allons practicar todos los caracteres de la línea superior",
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": "àç#_$è%- )&(é=\"&'/(",
+          "description": "A continuación nous allons practicar todos los caracteres de la línea superior",
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "-)è(_=ç&à/ ('\"#é$&%",
+          "description": "A continuación nous allons practicar todos los caracteres de la línea superior",
+          "repetitions": 2
+        },
+        {
+          "id": 27,
+          "text": "wx#c )ù(;*; $v%b/n&,",
+          "description": "No se impaciente. La velocidad ya la adquirirá a través de la práctica. Lo importante es saber en todo momento qué dedo corresponde a cada touche",
+          "repetitions": 2
+        },
+        {
+          "id": 28,
+          "text": "qs# )m(l=k $f%g/h&j",
+          "description": "No se impaciente. La velocidad ya la adquirirá a través de la práctica. Lo importante es saber en todo momento qué dedo corresponde a cada touche",
+          "repetitions": 2
+        },
+        {
+          "id": 29,
+          "text": "az#e )p(o=i $r%t/y&u",
+          "description": "No se impaciente. La velocidad ya la adquirirá a través de la práctica. Lo importante es saber en todo momento qué dedo corresponde a cada touche",
+          "repetitions": 2
+        },
+        {
+          "id": 30,
+          "text": "",
+          "description": "Félicitations ! Vous avez terminé la octava leçon",
+          "introduction": true
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Caractères spéciaux",
+      "description": "Apprenez quelques caractères spéciaux",
+      "steps": [
+        {
+          "id": 0,
+          "text": "",
+          "description": "En esta leçon nous allons conocer más touches situadas en la línea superior del touchedo",
+          "introduction": true
+        },
+        {
+          "id": 1,
+          "text": ")=)=)====)))=",
+          "description": "Appuyez sur las touches ' y '¡' avec le doigt auriculaire de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 2,
+          "text": ")=)=)=))))==)",
+          "description": "Appuyez sur las touches ' y '¡' avec le doigt auriculaire de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 3,
+          "text": "==)==)==)))==",
+          "description": "Appuyez sur las touches ' y '¡' avec le doigt auriculaire de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 4,
+          "text": "??°°°?°??° °?",
+          "description": "Appuyez sur avec le doigt auriculaire de la main gauche la touche SHIFT y con el de la main droite '?' o '¿'",
+          "repetitions": 2
+        },
+        {
+          "id": 5,
+          "text": "°? ?° °° ?? °?°",
+          "description": "Appuyez sur avec le doigt auriculaire de la main gauche la touche SHIFT y con el de la main droite '?' o '¿'",
+          "repetitions": 2
+        },
+        {
+          "id": 6,
+          "text": "==))?° °?)= =?°",
+          "description": "Appuyez sur avec le doigt auriculaire de la main gauche la touche SHIFT y con el de la main droite '?' o '¿'",
+          "repetitions": 2
+        },
+        {
+          "id": 7,
+          "text": "?°= ?)° ?=° °=)=?",
+          "description": "Appuyez sur avec le doigt auriculaire de la main gauche la touche SHIFT y con el de la main droite '?' o '¿'",
+          "repetitions": 2
+        },
+        {
+          "id": 8,
+          "text": "<<>> ><><><<",
+          "description": "Para pulsar '<' se utiliza el dedo auriculaire de la main gauche y para pulsar '>' se pulsa de igual forma además de pulsar la touche SHIFT avec le doigt auriculaire de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 9,
+          "text": ">><<><><>< >>",
+          "description": "Para pulsar '<' se utiliza el dedo auriculaire de la main gauche y para pulsar '>' se pulsa de igual forma además de pulsar la touche SHIFT avec le doigt auriculaire de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 10,
+          "text": "??>><?°",
+          "description": "Para pulsar '<' se utiliza el dedo auriculaire de la main gauche y para pulsar '>' se pulsa de igual forma además de pulsar la touche SHIFT avec le doigt auriculaire de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 11,
+          "text": "=)?°><=°",
+          "description": "Para pulsar '<' se utiliza el dedo auriculaire de la main gauche y para pulsar '>' se pulsa de igual forma además de pulsar la touche SHIFT avec le doigt auriculaire de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 12,
+          "text": "><°=?)><?°",
+          "description": "Para pulsar '<' se utiliza el dedo auriculaire de la main gauche y para pulsar '>' se pulsa de igual forma además de pulsar la touche SHIFT avec le doigt auriculaire de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 13,
+          "text": "ª²ª² ªª",
+          "description": "Vamos a aprender a utilizar la touche 'º' avec le doigt auriculaire de la main gauche y la touche 'ª' con el mismo dedo pulsando la touche SHIFT",
+          "repetitions": 1
+        },
+        {
+          "id": 14,
+          "text": "ª ²AB ²A",
+          "description": "Vamos a aprender a utilizar la touche 'º' avec le doigt auriculaire de la main gauche y la touche 'ª' con el mismo dedo pulsando la touche SHIFT",
+          "repetitions": 2
+        },
+        {
+          "id": 15,
+          "text": "A²Bª",
+          "description": "Vamos a aprender a utilizar la touche 'º' avec le doigt auriculaire de la main gauche y la touche 'ª' con el mismo dedo pulsando la touche SHIFT",
+          "repetitions": 3
+        },
+        {
+          "id": 16,
+          "text": "<^;) );^<",
+          "description": "Lo interesante es que se acostumbre a pulsar con todos los doigts y no se olvide nunca de utilizar la barre d'espace sólo con los pulgares",
+          "repetitions": 1
+        },
+        {
+          "id": 17,
+          "text": "=)m m)=",
+          "description": "Appuyez sur las siguientes touches avec le doigt auriculaire de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 18,
+          "text": ":pà àp: :àp :pà",
+          "description": "Appuyez sur las siguientes touches avec le doigt auriculaire de la main droite",
+          "repetitions": 2
+        },
+        {
+          "id": 19,
+          "text": "<=:& <=:a <=:q² <=:wª",
+          "description": "Maintenant con los auriculaires de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 20,
+          "text": "&a<ª qw=² &w:",
+          "description": "Maintenant con los auriculaires de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 21,
+          "text": "p>a m$q ;_w",
+          "description": "Maintenant con los auriculaires de ambas manos",
+          "repetitions": 2
+        },
+        {
+          "id": 22,
+          "text": "=a&q<w °zé>x #e\"d=c",
+          "description": "Practiquemos estos caracteres junto con los demás del touchedo aprendidos en las lecciones anteriores, sin olvidarse de pulsar la touche SHIFT cuando sea necesario",
+          "repetitions": 2
+        },
+        {
+          "id": 23,
+          "text": "$r'f$v %t(g:b /y-h_n",
+          "description": "Practiquemos estos caracteres junto con los demás del touchedo aprendidos en las lecciones anteriores, sin olvidarse de pulsar la touche SHIFT cuando sea necesario",
+          "repetitions": 2
+        },
+        {
+          "id": 24,
+          "text": "&uèj<, *i_k>; (içl=;",
+          "description": "Practiquemos estos caracteres junto con los demás del touchedo aprendidos en las lecciones anteriores, sin olvidarse de pulsar la touche SHIFT cuando sea necesario",
+          "repetitions": 2
+        },
+        {
+          "id": 25,
+          "text": ")pàm$) :&=_°$ é<#>\"$",
+          "description": "Practiquemos estos caracteres junto con los demás del touchedo aprendidos en las lecciones anteriores, sin olvidarse de pulsar la touche SHIFT cuando sea necesario",
+          "repetitions": 2
+        },
+        {
+          "id": 26,
+          "text": "",
+          "description": "Félicitations ! Vous avez terminé la novena leçon",
+          "introduction": true
+        }
+      ]
+    }
+  ]
+}

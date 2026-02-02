@@ -6,6 +6,7 @@
   
   <summary>Learn touch typing</summary>
   <summary xml:lang="es">Aprende mecanografía</summary>
+  <summary xml:lang="fr">Apprendre la dactylographie</summary>
   <summary xml:lang="gl">Aprende mecanografía</summary>
   <summary xml:lang="it">Impara a digitare</summary>
   <summary xml:lang="pl">Naucz się pisać bezwzrokowo</summary>
@@ -30,6 +31,10 @@
       Mecalin es una aplicación moderna para aprender mecanografía que te ayuda a aprender y mejorar tus habilidades de escritura táctil.
       Proporciona una interfaz limpia e intuitiva para practicar mecanografía.
     </p>
+    <p xml:lang="fr">
+      Mecalin est une application moderne d'apprentissage de la dactylographie qui vous aide à apprendre et améliorer vos compétences de frappe au toucher.
+      Elle offre une interface claire et intuitive pour pratiquer la dactylographie.
+    </p>
     <p xml:lang="gl">
       Mecalin é unha aplicación moderna para aprender mecanografía que che axuda a aprender e mellorar as túas habilidades de escritura táctil.
       Proporciona unha interface limpa e intuitiva para practicar mecanografía.
@@ -53,6 +58,10 @@
     <p xml:lang="es">
       Las características incluyen lecciones estructuradas, visualización del diseño del teclado y seguimiento del progreso para ayudarte
       a convertirte en un mecanógrafo más eficiente.
+    </p>
+    <p xml:lang="fr">
+      Les fonctionnalités incluent des leçons structurées, la visualisation de la disposition du clavier et le suivi des progrès pour vous aider
+      à devenir un dactylographe plus efficace.
     </p>
     <p xml:lang="gl">
       As características inclúen leccións estruturadas, visualización do deseño do teclado e seguimento do progreso para axudarche

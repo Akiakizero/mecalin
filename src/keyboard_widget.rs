@@ -40,6 +40,7 @@ impl KeyboardLayout {
         let json_data = match layout_code {
             "us" => include_str!("../data/keyboard_layouts/us.json"),
             "es" => include_str!("../data/keyboard_layouts/es.json"),
+            "fr" => include_str!("../data/keyboard_layouts/fr.json"),
             "gl" => include_str!("../data/keyboard_layouts/gl.json"),
             "it" => include_str!("../data/keyboard_layouts/it.json"),
             "pl" => include_str!("../data/keyboard_layouts/pl.json"),

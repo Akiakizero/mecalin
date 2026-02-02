@@ -1,0 +1,71 @@
+{
+  "name": "French AZERTY",
+  "keys": [
+    [
+      {"base": "²", "shift": "", "altgr": "", "finger": "left_pinky"},
+      {"base": "&", "shift": "1", "altgr": "", "finger": "left_pinky"},
+      {"base": "é", "shift": "2", "altgr": "~", "finger": "left_ring"},
+      {"base": "\"", "shift": "3", "altgr": "#", "finger": "left_middle"},
+      {"base": "'", "shift": "4", "altgr": "{", "finger": "left_index"},
+      {"base": "(", "shift": "5", "altgr": "[", "finger": "left_index"},
+      {"base": "-", "shift": "6", "altgr": "|", "finger": "right_index"},
+      {"base": "è", "shift": "7", "altgr": "`", "finger": "right_index"},
+      {"base": "_", "shift": "8", "altgr": "\\", "finger": "right_middle"},
+      {"base": "ç", "shift": "9", "altgr": "^", "finger": "right_ring"},
+      {"base": "à", "shift": "0", "altgr": "@", "finger": "right_pinky"},
+      {"base": ")", "shift": "°", "altgr": "]", "finger": "right_pinky"},
+      {"base": "=", "shift": "+", "altgr": "}", "finger": "right_pinky"}
+    ],
+    [
+      {"base": "a", "shift": "A", "altgr": "", "finger": "left_pinky"},
+      {"base": "z", "shift": "Z", "altgr": "", "finger": "left_ring"},
+      {"base": "e", "shift": "E", "altgr": "€", "finger": "left_middle"},
+      {"base": "r", "shift": "R", "altgr": "", "finger": "left_index"},
+      {"base": "t", "shift": "T", "altgr": "", "finger": "left_index"},
+      {"base": "y", "shift": "Y", "altgr": "", "finger": "right_index"},
+      {"base": "u", "shift": "U", "altgr": "", "finger": "right_index"},
+      {"base": "i", "shift": "I", "altgr": "", "finger": "right_middle"},
+      {"base": "o", "shift": "O", "altgr": "", "finger": "right_ring"},
+      {"base": "p", "shift": "P", "altgr": "", "finger": "right_pinky"},
+      {"base": "^", "shift": "¨", "altgr": "", "finger": "right_pinky"},
+      {"base": "$", "shift": "£", "altgr": "¤", "finger": "right_pinky"}
+    ],
+    [
+      {"base": "q", "shift": "Q", "altgr": "", "finger": "left_pinky"},
+      {"base": "s", "shift": "S", "altgr": "", "finger": "left_ring"},
+      {"base": "d", "shift": "D", "altgr": "", "finger": "left_middle"},
+      {"base": "f", "shift": "F", "altgr": "", "finger": "left_index"},
+      {"base": "g", "shift": "G", "altgr": "", "finger": "left_index"},
+      {"base": "h", "shift": "H", "altgr": "", "finger": "right_index"},
+      {"base": "j", "shift": "J", "altgr": "", "finger": "right_index"},
+      {"base": "k", "shift": "K", "altgr": "", "finger": "right_middle"},
+      {"base": "l", "shift": "L", "altgr": "", "finger": "right_ring"},
+      {"base": "m", "shift": "M", "altgr": "", "finger": "right_pinky"},
+      {"base": "ù", "shift": "%", "altgr": "", "finger": "right_pinky"},
+      {"base": "*", "shift": "µ", "altgr": "", "finger": "right_pinky"}
+    ],
+    [
+      {"base": "<", "shift": ">", "altgr": "", "finger": "left_pinky"},
+      {"base": "w", "shift": "W", "altgr": "", "finger": "left_pinky"},
+      {"base": "x", "shift": "X", "altgr": "", "finger": "left_ring"},
+      {"base": "c", "shift": "C", "altgr": "", "finger": "left_middle"},
+      {"base": "v", "shift": "V", "altgr": "", "finger": "left_index"},
+      {"base": "b", "shift": "B", "altgr": "", "finger": "left_index"},
+      {"base": "n", "shift": "N", "altgr": "", "finger": "right_index"},
+      {"base": ",", "shift": "?", "altgr": "", "finger": "right_middle"},
+      {"base": ";", "shift": ".", "altgr": "", "finger": "right_ring"},
+      {"base": ":", "shift": "/", "altgr": "", "finger": "right_pinky"},
+      {"base": "!", "shift": "§", "altgr": "", "finger": "right_pinky"}
+    ]
+  ],
+  "modifiers": {
+    "shift": {
+      "label": "Shift",
+      "keys": ["ShiftLeft", "ShiftRight"]
+    },
+    "altgr": {
+      "label": "AltGr",
+      "keys": ["AltRight"]
+    }
+  }
+}
