@@ -28,6 +28,46 @@ meson compile -C builddir
 - Run `cargo clippy` to check for warnings
 - Ensure code compiles without errors
 
+## Release Process
+
+### Version Bump
+1. Update version in `Cargo.toml`
+2. Update version in `meson.build`
+3. Add release entry in `data/io.github.nacho.mecalin.metainfo.xml` with:
+   - New version number
+   - Release date (YYYY-MM-DD format, use current date)
+   - List of changes since last release
+
+### Generating Changelog
+Review commits since last release:
+```bash
+git log vPREVIOUS..HEAD --oneline --no-merges
+```
+
+Organize changes into categories:
+- **Added**: New features (Added hand widget, Added French translation)
+- **Improved**: Enhancements (Improved keyboard highlighting, Improved performance)
+- **Fixed**: Bug fixes (Fixed cursor position, Fixed WPM calculation)
+- **Updated**: Translations and dependencies (Updated Italian translation, Updated dependencies)
+
+### Creating Release
+```bash
+# Format code
+cargo fmt
+
+# Update Cargo.lock with new version
+cargo update -p mecalin
+
+# Commit version bump
+git commit -am "Release X.Y.Z"
+
+# Tag release
+git tag vX.Y.Z
+
+# Push changes and tag
+git push && git push --tags
+```
+
 ### Code Conventions
 - Follow Rust standard conventions (rustfmt, clippy)
 - Use GTK4/Adwaita patterns for UI components
