@@ -262,6 +262,15 @@ impl imp::LessonView {
                 .set_uint("current-step", lesson_view.current_step_index() + 1)
                 .unwrap();
         });
+
+        // Listen to settings changes for current-lesson
+        let settings = gio::Settings::new("io.github.nacho.mecalin");
+        let lesson_view_weak = obj.downgrade();
+        settings.connect_changed(Some("current-lesson"), move |_settings, _| {
+            if let Some(lesson_view) = lesson_view_weak.upgrade() {
+                lesson_view.load_course_and_lesson();
+            }
+        });
     }
 }
 
