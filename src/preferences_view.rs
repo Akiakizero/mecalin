@@ -1,6 +1,7 @@
 use gtk::prelude::*;
 use gtk::subclass::prelude::*;
 use gtk::{gio, glib};
+use i18n_format::i18n_fmt;
 use libadwaita as adw;
 use libadwaita::prelude::*;
 
@@ -77,7 +78,7 @@ mod imp {
                     .get_lessons()
                     .iter()
                     .enumerate()
-                    .map(|(i, lesson)| format!("Lesson {}: {}", i, lesson.title))
+                    .map(|(i, lesson)| i18n_fmt!(i18n_fmt("Lesson {}: {}", i, &lesson.title)))
                     .collect();
                 let lesson_strs: Vec<&str> = lesson_names.iter().map(|s| s.as_str()).collect();
                 let lesson_model = gtk::StringList::new(&lesson_strs);

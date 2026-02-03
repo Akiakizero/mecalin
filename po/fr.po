@@ -151,6 +151,10 @@ msgstr "Cours terminé ! Félicitations !"
 msgid "Lesson completed! Well done!"
 msgstr "Leçon terminée ! Bien joué !"
 
+#: src/preferences_view.rs:81
+msgid "Lesson {}: {}"
+msgstr "Leçon {} : {}"
+
 #: src/speed_test_results_view.rs:183
 msgid "{}%"
 msgstr "{}%"
