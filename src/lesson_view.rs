@@ -402,8 +402,18 @@ impl LessonView {
                     }
 
                     let keyboard_widget = imp.keyboard_widget.borrow();
+                    let hand_widget = imp.hand_widget.borrow();
                     if let Some(keyboard) = keyboard_widget.as_ref() {
                         keyboard.set_visible_keys(Some(target_keys));
+
+                        // Set initial key/finger highlight
+                        let first_char = step.text.chars().next();
+                        keyboard.set_current_key(first_char);
+
+                        if let Some(hand) = hand_widget.as_ref() {
+                            let finger = first_char.and_then(|ch| keyboard.get_finger_for_char(ch));
+                            hand.set_current_finger(finger);
+                        }
                     }
                 }
             }
