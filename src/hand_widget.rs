@@ -70,31 +70,31 @@ mod imp {
 
             // Finger layout: (name, x, y, width, height)
             let fingers = [
-                ("left_pinky", 10.0, 40.0, 20.0, 50.0),
-                ("left_ring", 35.0, 20.0, 20.0, 60.0),
-                ("left_middle", 60.0, 10.0, 20.0, 70.0),
-                ("left_index", 85.0, 20.0, 20.0, 60.0),
-                ("right_index", 195.0, 20.0, 20.0, 60.0),
-                ("right_middle", 220.0, 10.0, 20.0, 70.0),
-                ("right_ring", 245.0, 20.0, 20.0, 60.0),
-                ("right_pinky", 270.0, 40.0, 20.0, 50.0),
+                ("left_pinky", 9.0, 34.0, 17.0, 43.0),
+                ("left_ring", 30.0, 17.0, 17.0, 51.0),
+                ("left_middle", 51.0, 9.0, 17.0, 60.0),
+                ("left_index", 72.0, 17.0, 17.0, 51.0),
+                ("right_index", 166.0, 17.0, 17.0, 51.0),
+                ("right_middle", 187.0, 9.0, 17.0, 60.0),
+                ("right_ring", 208.0, 17.0, 17.0, 51.0),
+                ("right_pinky", 230.0, 34.0, 17.0, 43.0),
             ];
 
             let thumbs = [
-                ("left_thumb", 108.0, 80.0, 35.0, 28.0),
-                ("right_thumb", 157.0, 80.0, 35.0, 28.0),
+                ("left_thumb", 92.0, 68.0, 30.0, 24.0),
+                ("right_thumb", 133.0, 68.0, 30.0, 24.0),
             ];
 
             // Draw left palm
             let palm_color = get_color("hand-palm");
             let palm_border_color = get_color("hand-palm-border");
-            let left_palm_rect = graphene::Rect::new(10.0, 70.0, 105.0, 70.0);
+            let left_palm_rect = graphene::Rect::new(9.0, 64.0, 89.0, 68.0);
             let left_palm_rounded = gsk::RoundedRect::new(
                 left_palm_rect,
-                graphene::Size::new(20.0, 20.0),
-                graphene::Size::new(20.0, 20.0),
-                graphene::Size::new(20.0, 20.0),
-                graphene::Size::new(20.0, 20.0),
+                graphene::Size::new(17.0, 17.0),
+                graphene::Size::new(17.0, 17.0),
+                graphene::Size::new(17.0, 17.0),
+                graphene::Size::new(17.0, 17.0),
             );
             snapshot.push_rounded_clip(&left_palm_rounded);
             snapshot.append_color(&palm_color, &left_palm_rect);
@@ -109,13 +109,13 @@ mod imp {
             snapshot.pop();
 
             // Draw right palm
-            let right_palm_rect = graphene::Rect::new(185.0, 70.0, 105.0, 70.0);
+            let right_palm_rect = graphene::Rect::new(157.0, 64.0, 89.0, 68.0);
             let right_palm_rounded = gsk::RoundedRect::new(
                 right_palm_rect,
-                graphene::Size::new(20.0, 20.0),
-                graphene::Size::new(20.0, 20.0),
-                graphene::Size::new(20.0, 20.0),
-                graphene::Size::new(20.0, 20.0),
+                graphene::Size::new(17.0, 17.0),
+                graphene::Size::new(17.0, 17.0),
+                graphene::Size::new(17.0, 17.0),
+                graphene::Size::new(17.0, 17.0),
             );
             snapshot.push_rounded_clip(&right_palm_rounded);
             snapshot.append_color(&palm_color, &right_palm_rect);
@@ -189,10 +189,10 @@ mod imp {
             let rect = graphene::Rect::new(x, y, w, h);
             let rounded = gsk::RoundedRect::new(
                 rect,
-                graphene::Size::new(10.0, 10.0), // top-left (tip)
-                graphene::Size::new(10.0, 10.0), // top-right (tip)
-                graphene::Size::new(5.0, 5.0),   // bottom-right (base)
-                graphene::Size::new(5.0, 5.0),   // bottom-left (base)
+                graphene::Size::new(9.0, 9.0), // top-left (tip)
+                graphene::Size::new(9.0, 9.0), // top-right (tip)
+                graphene::Size::new(4.0, 4.0), // bottom-right (base)
+                graphene::Size::new(4.0, 4.0), // bottom-left (base)
             );
 
             if is_active {
@@ -237,19 +237,19 @@ mod imp {
                 // Left thumb - more rounded on right (outer) side
                 gsk::RoundedRect::new(
                     rect,
-                    graphene::Size::new(8.0, 8.0),   // top-left (inner)
-                    graphene::Size::new(14.0, 14.0), // top-right (outer tip)
-                    graphene::Size::new(14.0, 14.0), // bottom-right (outer base)
-                    graphene::Size::new(8.0, 8.0),   // bottom-left (inner)
+                    graphene::Size::new(7.0, 7.0),   // top-left (inner)
+                    graphene::Size::new(12.0, 12.0), // top-right (outer tip)
+                    graphene::Size::new(12.0, 12.0), // bottom-right (outer base)
+                    graphene::Size::new(7.0, 7.0),   // bottom-left (inner)
                 )
             } else {
                 // Right thumb - more rounded on left (outer) side
                 gsk::RoundedRect::new(
                     rect,
-                    graphene::Size::new(14.0, 14.0), // top-left (outer tip)
-                    graphene::Size::new(8.0, 8.0),   // top-right (inner)
-                    graphene::Size::new(8.0, 8.0),   // bottom-right (inner)
-                    graphene::Size::new(14.0, 14.0), // bottom-left (outer base)
+                    graphene::Size::new(12.0, 12.0), // top-left (outer tip)
+                    graphene::Size::new(7.0, 7.0),   // top-right (inner)
+                    graphene::Size::new(7.0, 7.0),   // bottom-right (inner)
+                    graphene::Size::new(12.0, 12.0), // bottom-left (outer base)
                 )
             };
 
