@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mecalin 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-28 13:17+0100\n"
+"POT-Creation-Date: 2026-02-03 11:35+0100\n"
 "PO-Revision-Date: 2026-02-02 09:00+0100\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
@@ -28,7 +28,7 @@ msgstr "Apprendre à taper"
 msgid "Score"
 msgstr "Score"
 
-#: resources/ui/falling_keys_game.ui:82 resources/ui/scrolling_lanes_game.ui:95
+#: resources/ui/falling_keys_game.ui:82 resources/ui/scrolling_lanes_game.ui:83
 msgid "Level Reached"
 msgstr "Niveau Atteint"
 
@@ -36,7 +36,7 @@ msgstr "Niveau Atteint"
 msgid "Play Again"
 msgstr "Rejouer"
 
-#: resources/ui/lesson_view.ui:71
+#: resources/ui/lesson_view.ui:72
 msgid "Continue"
 msgstr "Continuer"
 
@@ -48,7 +48,7 @@ msgstr "Leçons"
 msgid "Learn typing fundamentals"
 msgstr "Apprendre les bases de la dactylographie"
 
-#: resources/ui/window.ui:46 src/window.rs:143
+#: resources/ui/window.ui:46 src/window.rs:146
 msgid "Speed Test"
 msgstr "Test de vitesse"
 
@@ -56,7 +56,7 @@ msgstr "Test de vitesse"
 msgid "Test your typing speed"
 msgstr "Testez votre vitesse de frappe"
 
-#: resources/ui/window.ui:53 src/window.rs:105
+#: resources/ui/window.ui:53 src/window.rs:109
 msgid "Falling Keys"
 msgstr "Touches Tombantes"
 
@@ -64,7 +64,7 @@ msgstr "Touches Tombantes"
 msgid "Practice with a fun game"
 msgstr "Pratiquez avec un jeu amusant"
 
-#: resources/ui/window.ui:60 src/window.rs:120
+#: resources/ui/window.ui:60 src/window.rs:124
 msgid "Scrolling Lanes"
 msgstr "Couloirs Défilants"
 
@@ -73,28 +73,36 @@ msgid "Type fast in multiple lanes"
 msgstr "Tapez rapidement dans plusieurs couloirs"
 
 #: resources/ui/window.ui:67
+msgid "Preferences"
+msgstr ""
+
+#: resources/ui/window.ui:68
+msgid "Configure application settings"
+msgstr ""
+
+#: resources/ui/window.ui:74
 msgid "About"
 msgstr "À propos"
 
-#: resources/ui/window.ui:68
+#: resources/ui/window.ui:75
 msgid "Application information"
 msgstr "Informations sur l'application"
 
 #: src/falling_keys_game.rs:307 src/falling_keys_game.rs:329
-#: src/falling_keys_game.rs:381 src/scrolling_lanes_game.rs:426
-#: src/scrolling_lanes_game.rs:440 src/scrolling_lanes_game.rs:487
+#: src/falling_keys_game.rs:392 src/scrolling_lanes_game.rs:460
+#: src/scrolling_lanes_game.rs:474 src/scrolling_lanes_game.rs:525
 msgid "Score: {}"
 msgstr "Score : {}"
 
-#: src/falling_keys_game.rs:314 src/falling_keys_game.rs:383
-#: src/scrolling_lanes_game.rs:432 src/scrolling_lanes_game.rs:489
+#: src/falling_keys_game.rs:314 src/falling_keys_game.rs:394
+#: src/scrolling_lanes_game.rs:466 src/scrolling_lanes_game.rs:527
 msgid "Level: {}"
 msgstr "Niveau : {}"
 
-#: src/window.rs:240
+#: src/window.rs:253
 msgid "Lesson {}"
 msgstr "Leçon {}"
 
-#: src/window.rs:245
+#: src/window.rs:258
 msgid "Lesson {}: Step {}/{}"
 msgstr "Leçon {} : Étape {}/{}"

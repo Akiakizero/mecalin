@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mecalin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-28 13:17+0100\n"
+"POT-Creation-Date: 2026-02-03 11:35+0100\n"
 "PO-Revision-Date: 2026-02-01 21:31+0200\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -36,7 +36,7 @@ msgstr "Livello raggiunto"
 msgid "Play Again"
 msgstr "Gioca di nuovo"
 
-#: resources/ui/lesson_view.ui:71
+#: resources/ui/lesson_view.ui:72
 msgid "Continue"
 msgstr "Continua"
 
@@ -48,7 +48,7 @@ msgstr "Lezioni"
 msgid "Learn typing fundamentals"
 msgstr "Impara le basi della digitazione"
 
-#: resources/ui/window.ui:46 src/window.rs:143
+#: resources/ui/window.ui:46 src/window.rs:146
 msgid "Speed Test"
 msgstr "Test di velocità"
 
@@ -56,7 +56,7 @@ msgstr "Test di velocità"
 msgid "Test your typing speed"
 msgstr "Testa la tua velocità di digitazione"
 
-#: resources/ui/window.ui:53 src/window.rs:105
+#: resources/ui/window.ui:53 src/window.rs:109
 msgid "Falling Keys"
 msgstr "Tasti che cadono"
 
@@ -64,7 +64,7 @@ msgstr "Tasti che cadono"
 msgid "Practice with a fun game"
 msgstr "Esercitati con un gioco divertente"
 
-#: resources/ui/window.ui:60 src/window.rs:120
+#: resources/ui/window.ui:60 src/window.rs:124
 msgid "Scrolling Lanes"
 msgstr "Corsie a scorrimento"
 
@@ -73,28 +73,36 @@ msgid "Type fast in multiple lanes"
 msgstr "Digita velocemente su più corsie"
 
 #: resources/ui/window.ui:67
+msgid "Preferences"
+msgstr ""
+
+#: resources/ui/window.ui:68
+msgid "Configure application settings"
+msgstr ""
+
+#: resources/ui/window.ui:74
 msgid "About"
 msgstr "Informazioni"
 
-#: resources/ui/window.ui:68
+#: resources/ui/window.ui:75
 msgid "Application information"
 msgstr "Informazioni sull'applicazione"
 
 #: src/falling_keys_game.rs:307 src/falling_keys_game.rs:329
-#: src/falling_keys_game.rs:381 src/scrolling_lanes_game.rs:426
-#: src/scrolling_lanes_game.rs:440 src/scrolling_lanes_game.rs:487
+#: src/falling_keys_game.rs:392 src/scrolling_lanes_game.rs:460
+#: src/scrolling_lanes_game.rs:474 src/scrolling_lanes_game.rs:525
 msgid "Score: {}"
 msgstr "Punteggio: {}"
 
-#: src/falling_keys_game.rs:314 src/falling_keys_game.rs:383
-#: src/scrolling_lanes_game.rs:432 src/scrolling_lanes_game.rs:489
+#: src/falling_keys_game.rs:314 src/falling_keys_game.rs:394
+#: src/scrolling_lanes_game.rs:466 src/scrolling_lanes_game.rs:527
 msgid "Level: {}"
 msgstr "Livello: {}"
 
-#: src/window.rs:240
+#: src/window.rs:253
 msgid "Lesson {}"
 msgstr "Lezione {}"
 
-#: src/window.rs:245
+#: src/window.rs:258
 msgid "Lesson {}: Step {}/{}"
 msgstr "Lezione {}: Passo {}/{}"
