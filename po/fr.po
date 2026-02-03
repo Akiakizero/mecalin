@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mecalin 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-03 11:37+0100\n"
+"POT-Creation-Date: 2026-02-03 18:21+0100\n"
 "PO-Revision-Date: 2026-02-02 09:00+0100\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
@@ -60,15 +60,23 @@ msgstr "Afficher le widget du clavier"
 msgid "Display keyboard layout"
 msgstr "Afficher la disposition du clavier"
 
-#: resources/ui/preferences_view.ui:31
+#: resources/ui/preferences_view.ui:29
+msgid "Use Finger Colors"
+msgstr "Utiliser les couleurs des doigts"
+
+#: resources/ui/preferences_view.ui:30
+msgid "Color keyboard keys and hand by finger assignment"
+msgstr "Colorer les touches du clavier et la main selon l'attribution des doigts"
+
+#: resources/ui/preferences_view.ui:37
 msgid "Lesson Progress"
 msgstr "Progression des leçons"
 
-#: resources/ui/preferences_view.ui:34
+#: resources/ui/preferences_view.ui:40
 msgid "Current Lesson"
 msgstr "Leçon actuelle"
 
-#: resources/ui/preferences_view.ui:35
+#: resources/ui/preferences_view.ui:41
 msgid "Select active lesson (resets step to beginning)"
 msgstr "Sélectionner la leçon active (réinitialise l'étape au début)"
 
@@ -104,7 +112,7 @@ msgstr "Couloirs Défilants"
 msgid "Type fast in multiple lanes"
 msgstr "Tapez rapidement dans plusieurs couloirs"
 
-#: resources/ui/window.ui:67
+#: resources/ui/window.ui:67 src/window.rs:209
 msgid "Preferences"
 msgstr "Préférences"
 
@@ -131,70 +139,6 @@ msgstr "Score : {}"
 msgid "Level: {}"
 msgstr "Niveau : {}"
 
-#: src/window.rs:253
-msgid "Lesson {}"
-msgstr "Leçon {}"
-
-#: src/window.rs:258
-msgid "Lesson {}: Step {}/{}"
-msgstr "Leçon {} : Étape {}/{}"
-
-#: src/lesson_view.rs:463
-msgid "{}/{} Good"
-msgstr "{}/{} Bien"
-
-#: src/lesson_view.rs:553 src/lesson_view.rs:602
-msgid "Course completed! Congratulations!"
-msgstr "Cours terminé ! Félicitations !"
-
-#: src/lesson_view.rs:606
-msgid "Lesson completed! Well done!"
-msgstr "Leçon terminée ! Bien joué !"
-
-#: src/preferences_view.rs:81
-msgid "Lesson {}: {}"
-msgstr "Leçon {} : {}"
-
-#: src/speed_test_results_view.rs:183
-msgid "{}%"
-msgstr "{}%"
-
-#: src/speed_test_results_view.rs:189
-msgid "Custom"
-msgstr "Personnalisé"
-
-#: src/speed_test_results_view.rs:191
-msgid "Simple"
-msgstr "Simple"
-
-#: src/speed_test_results_view.rs:192
-msgid "Advanced"
-msgstr "Avancé"
-
-#: src/speed_test_results_view.rs:218
-msgid "{}m {}s"
-msgstr "{}m {}s"
-
-#: src/typing_test_utils.rs:83
-msgid "15 seconds"
-msgstr "15 secondes"
-
-#: src/typing_test_utils.rs:84
-msgid "30 seconds"
-msgstr "30 secondes"
-
-#: src/typing_test_utils.rs:85
-msgid "1 minute"
-msgstr "1 minute"
-
-#: src/typing_test_utils.rs:86
-msgid "5 minutes"
-msgstr "5 minutes"
-
-#: src/typing_test_utils.rs:87
-msgid "10 minutes"
-msgstr "10 minutes"
-
 #: src/window.rs:177
 msgid "Code by"
 msgstr "Code par"
@@ -203,6 +147,52 @@ msgstr "Code par"
 msgid "Speed Test Orthography"
 msgstr "Orthographe du test de vitesse"
 
-#: src/window.rs:209
-msgid "Preferences"
-msgstr "Préférences"
+#: src/window.rs:253
+msgid "Lesson {}"
+msgstr "Leçon {}"
+
+#: src/window.rs:258
+msgid "Lesson {}: Step {}/{}"
+msgstr "Leçon {} : Étape {}/{}"
+
+#~ msgid "{}/{} Good"
+#~ msgstr "{}/{} Bien"
+
+#~ msgid "Course completed! Congratulations!"
+#~ msgstr "Cours terminé ! Félicitations !"
+
+#~ msgid "Lesson completed! Well done!"
+#~ msgstr "Leçon terminée ! Bien joué !"
+
+#~ msgid "Lesson {}: {}"
+#~ msgstr "Leçon {} : {}"
+
+#~ msgid "{}%"
+#~ msgstr "{}%"
+
+#~ msgid "Custom"
+#~ msgstr "Personnalisé"
+
+#~ msgid "Simple"
+#~ msgstr "Simple"
+
+#~ msgid "Advanced"
+#~ msgstr "Avancé"
+
+#~ msgid "{}m {}s"
+#~ msgstr "{}m {}s"
+
+#~ msgid "15 seconds"
+#~ msgstr "15 secondes"
+
+#~ msgid "30 seconds"
+#~ msgstr "30 secondes"
+
+#~ msgid "1 minute"
+#~ msgstr "1 minute"
+
+#~ msgid "5 minutes"
+#~ msgstr "5 minutes"
+
+#~ msgid "10 minutes"
+#~ msgstr "10 minutes"
