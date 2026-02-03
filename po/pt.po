@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mecalin 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-03 11:35+0100\n"
+"POT-Creation-Date: 2026-02-03 11:37+0100\n"
 "PO-Revision-Date: 2026-01-23 09:25+0100\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese\n"
@@ -39,6 +39,38 @@ msgstr "Jogar Novamente"
 #: resources/ui/lesson_view.ui:72
 msgid "Continue"
 msgstr "Continuar"
+
+#: resources/ui/preferences_view.ui:14
+msgid "Display"
+msgstr "Visualização"
+
+#: resources/ui/preferences_view.ui:17
+msgid "Show Hand Widget"
+msgstr "Mostrar widget de mãos"
+
+#: resources/ui/preferences_view.ui:18
+msgid "Display finger position guide"
+msgstr "Mostrar guia de posição dos dedos"
+
+#: resources/ui/preferences_view.ui:23
+msgid "Show Keyboard Widget"
+msgstr "Mostrar widget do teclado"
+
+#: resources/ui/preferences_view.ui:24
+msgid "Display keyboard layout"
+msgstr "Mostrar disposição do teclado"
+
+#: resources/ui/preferences_view.ui:31
+msgid "Lesson Progress"
+msgstr "Progresso das lições"
+
+#: resources/ui/preferences_view.ui:34
+msgid "Current Lesson"
+msgstr "Lição atual"
+
+#: resources/ui/preferences_view.ui:35
+msgid "Select active lesson (resets step to beginning)"
+msgstr "Selecionar lição ativa (reinicia o passo ao início)"
 
 #: resources/ui/window.ui:39
 msgid "Lessons"
@@ -74,11 +106,11 @@ msgstr "Escreve rápido em múltiplas faixas"
 
 #: resources/ui/window.ui:67
 msgid "Preferences"
-msgstr ""
+msgstr "Preferências"
 
 #: resources/ui/window.ui:68
 msgid "Configure application settings"
-msgstr ""
+msgstr "Configurar definições da aplicação"
 
 #: resources/ui/window.ui:74
 msgid "About"

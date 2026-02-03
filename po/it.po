@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mecalin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-03 11:35+0100\n"
+"POT-Creation-Date: 2026-02-03 11:37+0100\n"
 "PO-Revision-Date: 2026-02-01 21:31+0200\n"
 "Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -39,6 +39,38 @@ msgstr "Gioca di nuovo"
 #: resources/ui/lesson_view.ui:72
 msgid "Continue"
 msgstr "Continua"
+
+#: resources/ui/preferences_view.ui:14
+msgid "Display"
+msgstr "Visualizzazione"
+
+#: resources/ui/preferences_view.ui:17
+msgid "Show Hand Widget"
+msgstr "Mostra widget mani"
+
+#: resources/ui/preferences_view.ui:18
+msgid "Display finger position guide"
+msgstr "Mostra guida posizione dita"
+
+#: resources/ui/preferences_view.ui:23
+msgid "Show Keyboard Widget"
+msgstr "Mostra widget tastiera"
+
+#: resources/ui/preferences_view.ui:24
+msgid "Display keyboard layout"
+msgstr "Mostra layout tastiera"
+
+#: resources/ui/preferences_view.ui:31
+msgid "Lesson Progress"
+msgstr "Progresso lezioni"
+
+#: resources/ui/preferences_view.ui:34
+msgid "Current Lesson"
+msgstr "Lezione corrente"
+
+#: resources/ui/preferences_view.ui:35
+msgid "Select active lesson (resets step to beginning)"
+msgstr "Seleziona lezione attiva (riavvia il passo dall'inizio)"
 
 #: resources/ui/window.ui:39
 msgid "Lessons"
@@ -74,11 +106,11 @@ msgstr "Digita velocemente su più corsie"
 
 #: resources/ui/window.ui:67
 msgid "Preferences"
-msgstr ""
+msgstr "Preferenze"
 
 #: resources/ui/window.ui:68
 msgid "Configure application settings"
-msgstr ""
+msgstr "Configura impostazioni applicazione"
 
 #: resources/ui/window.ui:74
 msgid "About"

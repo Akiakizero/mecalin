@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mecalin 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-03 11:35+0100\n"
+"POT-Creation-Date: 2026-02-03 11:37+0100\n"
 "PO-Revision-Date: 2026-01-20 08:59+0100\n"
 "Last-Translator: \n"
 "Language-Team: Polish\n"
@@ -39,6 +39,38 @@ msgstr "Zagraj Ponownie"
 #: resources/ui/lesson_view.ui:72
 msgid "Continue"
 msgstr "Kontynuuj"
+
+#: resources/ui/preferences_view.ui:14
+msgid "Display"
+msgstr "Wyświetlanie"
+
+#: resources/ui/preferences_view.ui:17
+msgid "Show Hand Widget"
+msgstr "Pokaż widget dłoni"
+
+#: resources/ui/preferences_view.ui:18
+msgid "Display finger position guide"
+msgstr "Wyświetl przewodnik pozycji palców"
+
+#: resources/ui/preferences_view.ui:23
+msgid "Show Keyboard Widget"
+msgstr "Pokaż widget klawiatury"
+
+#: resources/ui/preferences_view.ui:24
+msgid "Display keyboard layout"
+msgstr "Wyświetl układ klawiatury"
+
+#: resources/ui/preferences_view.ui:31
+msgid "Lesson Progress"
+msgstr "Postęp lekcji"
+
+#: resources/ui/preferences_view.ui:34
+msgid "Current Lesson"
+msgstr "Bieżąca lekcja"
+
+#: resources/ui/preferences_view.ui:35
+msgid "Select active lesson (resets step to beginning)"
+msgstr "Wybierz aktywną lekcję (resetuje krok do początku)"
 
 #: resources/ui/window.ui:39
 msgid "Lessons"
@@ -74,11 +106,11 @@ msgstr "Pisz szybko na wielu pasach"
 
 #: resources/ui/window.ui:67
 msgid "Preferences"
-msgstr ""
+msgstr "Preferencje"
 
 #: resources/ui/window.ui:68
 msgid "Configure application settings"
-msgstr ""
+msgstr "Konfiguruj ustawienia aplikacji"
 
 #: resources/ui/window.ui:74
 msgid "About"
