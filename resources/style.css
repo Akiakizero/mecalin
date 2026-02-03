@@ -28,6 +28,20 @@
   color: @borders;
 }
 
+/* Hand widget color styles - GNOME HIG palette */
+
+.hand-palm {
+  color: @card_bg_color;
+}
+
+.hand-finger-default {
+  color: @view_bg_color;
+}
+
+.hand-finger-current {
+  color: @accent_bg_color;
+}
+
 /* Scrolling lanes game color styles */
 
 .lane-background {

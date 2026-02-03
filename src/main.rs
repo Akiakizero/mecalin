@@ -1,6 +1,7 @@
 mod application;
 mod course;
 mod falling_keys_game;
+mod hand_widget;
 mod keyboard_widget;
 mod lesson_view;
 mod scrolling_lanes_game;

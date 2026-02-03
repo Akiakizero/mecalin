@@ -59,6 +59,7 @@
         <property name="halign">center</property>
         <property name="valign">end</property>
         <property name="vexpand">true</property>
+        <property name="spacing">12</property>
       </object>
     </child>
     <child>

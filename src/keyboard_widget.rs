@@ -49,6 +49,44 @@ impl KeyboardLayout {
         };
         Ok(serde_json::from_str(json_data)?)
     }
+
+    pub fn get_finger_for_char(&self, ch: char) -> Option<String> {
+        let ch_lower = ch.to_lowercase().next().unwrap();
+
+        // Check space key
+        if ch == ' ' {
+            return Some(self.space.finger.clone());
+        }
+
+        // Check all keys in the layout
+        for row in &self.keys {
+            for key_info in row {
+                let key_char = key_info.base.chars().next().unwrap_or(' ');
+                let base_lower = key_char.to_lowercase().next().unwrap();
+
+                // Check base (lowercase comparison)
+                if ch_lower == base_lower {
+                    return Some(key_info.finger.clone());
+                }
+
+                // Check shift (exact match)
+                if let Some(shift) = &key_info.shift {
+                    if shift.chars().next().unwrap_or(' ') == ch {
+                        return Some(key_info.finger.clone());
+                    }
+                }
+
+                // Check altgr (exact match)
+                if let Some(altgr) = &key_info.altgr {
+                    if altgr.chars().next().unwrap_or(' ') == ch {
+                        return Some(key_info.finger.clone());
+                    }
+                }
+            }
+        }
+
+        None
+    }
 }
 
 impl KeyboardLayout {
@@ -212,6 +250,83 @@ mod tests {
         assert!(!layout.contains_character('Ñ')); // Uppercase ñ not in US layout
         assert!(!layout.contains_character('ą')); // Polish character
         assert!(!layout.contains_character('ę')); // Polish character
+    }
+
+    #[test]
+    fn test_get_finger_for_char_us() {
+        let layout = KeyboardLayout::load_from_json("us").unwrap();
+
+        // Test base characters
+        assert_eq!(
+            layout.get_finger_for_char('a'),
+            Some("left_pinky".to_string())
+        );
+        assert_eq!(
+            layout.get_finger_for_char('A'),
+            Some("left_pinky".to_string())
+        );
+        assert_eq!(
+            layout.get_finger_for_char('f'),
+            Some("left_index".to_string())
+        );
+        assert_eq!(
+            layout.get_finger_for_char('j'),
+            Some("right_index".to_string())
+        );
+        assert_eq!(
+            layout.get_finger_for_char('l'),
+            Some("right_ring".to_string())
+        );
+
+        // Test space
+        assert_eq!(
+            layout.get_finger_for_char(' '),
+            Some("both_thumbs".to_string())
+        );
+
+        // Test shift characters
+        assert_eq!(
+            layout.get_finger_for_char('!'),
+            Some("left_pinky".to_string())
+        );
+        assert_eq!(
+            layout.get_finger_for_char('@'),
+            Some("left_ring".to_string())
+        );
+
+        // Test character not in layout
+        assert_eq!(layout.get_finger_for_char('Ñ'), None);
+    }
+
+    #[test]
+    fn test_get_finger_for_char_es() {
+        let layout = KeyboardLayout::load_from_json("es").unwrap();
+
+        // Test Spanish-specific characters
+        assert_eq!(
+            layout.get_finger_for_char('ñ'),
+            Some("right_pinky".to_string())
+        );
+        assert_eq!(
+            layout.get_finger_for_char('Ñ'),
+            Some("right_pinky".to_string())
+        );
+
+        // Test base characters
+        assert_eq!(
+            layout.get_finger_for_char('a'),
+            Some("left_pinky".to_string())
+        );
+        assert_eq!(
+            layout.get_finger_for_char('s'),
+            Some("left_ring".to_string())
+        );
+
+        // Test space
+        assert_eq!(
+            layout.get_finger_for_char(' '),
+            Some("both_thumbs".to_string())
+        );
     }
 }
 
@@ -969,6 +1084,10 @@ impl KeyboardWidget {
     pub fn set_visible_keys(&self, keys: Option<HashSet<char>>) {
         *self.imp().visible_keys.borrow_mut() = keys;
         self.queue_draw();
+    }
+
+    pub fn get_finger_for_char(&self, ch: char) -> Option<String> {
+        self.imp().layout.borrow().get_finger_for_char(ch)
     }
 }
 

@@ -5,6 +5,7 @@ use i18n_format::i18n_fmt;
 use std::cell::{Cell, RefCell};
 
 use crate::course::Lesson;
+use crate::hand_widget::HandWidget;
 use crate::keyboard_widget::KeyboardWidget;
 use crate::typing_row::TypingRow;
 
@@ -28,6 +29,7 @@ mod imp {
         #[template_child]
         pub keyboard_container: TemplateChild<gtk::Box>,
 
+        pub hand_widget: RefCell<Option<HandWidget>>,
         pub keyboard_widget: RefCell<Option<KeyboardWidget>>,
         #[property(get, set, nullable)]
         pub current_lesson: RefCell<Option<glib::BoxedAnyObject>>,
@@ -88,6 +90,12 @@ mod imp {
 
 impl imp::LessonView {
     fn setup_keyboard(&self) {
+        let hand = HandWidget::new();
+        hand.set_halign(gtk::Align::Center);
+        hand.set_margin_bottom(24);
+        self.keyboard_container.append(&hand);
+        self.hand_widget.replace(Some(hand));
+
         let keyboard = KeyboardWidget::new();
         self.keyboard_container.append(&keyboard);
         self.keyboard_widget.replace(Some(keyboard));
@@ -155,8 +163,10 @@ impl imp::LessonView {
         });
 
         let keyboard_widget = self.keyboard_widget.borrow();
+        let hand_widget = self.hand_widget.borrow();
         if let Some(keyboard) = keyboard_widget.as_ref() {
             let keyboard_clone = keyboard.clone();
+            let hand_clone = hand_widget.as_ref().cloned();
             let typing_row = self.typing_row.clone();
             let lesson_view_clone = self.obj().downgrade();
 
@@ -224,6 +234,12 @@ impl imp::LessonView {
                 // Update keyboard highlighting for next character
                 let next_char = target_str.chars().nth(cursor_pos as usize);
                 keyboard_clone.set_current_key(next_char);
+
+                // Update hand widget to highlight the finger for next character
+                if let Some(hand) = &hand_clone {
+                    let finger = next_char.and_then(|ch| keyboard_clone.get_finger_for_char(ch));
+                    hand.set_current_finger(finger);
+                }
             });
         }
     }
