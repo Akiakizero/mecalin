@@ -98,8 +98,7 @@ mod imp {
             );
             snapshot.push_rounded_clip(&left_palm_rounded);
             snapshot.append_color(&palm_color, &left_palm_rect);
-            snapshot.pop();
-            let border_width = [2.0, 2.0, 2.0, 2.0];
+            let border_width = [1.0, 1.0, 1.0, 1.0];
             let border_color = [
                 palm_border_color,
                 palm_border_color,
@@ -107,6 +106,7 @@ mod imp {
                 palm_border_color,
             ];
             snapshot.append_border(&left_palm_rounded, &border_width, &border_color);
+            snapshot.pop();
 
             // Draw right palm
             let right_palm_rect = graphene::Rect::new(185.0, 70.0, 105.0, 70.0);
@@ -119,8 +119,8 @@ mod imp {
             );
             snapshot.push_rounded_clip(&right_palm_rounded);
             snapshot.append_color(&palm_color, &right_palm_rect);
-            snapshot.pop();
             snapshot.append_border(&right_palm_rounded, &border_width, &border_color);
+            snapshot.pop();
 
             // Draw fingers
             for (finger_name, x, y, w, h) in &fingers {
@@ -202,7 +202,7 @@ mod imp {
                 snapshot.append_color(color, &rect);
                 snapshot.pop();
 
-                let border_width = [2.0, 2.0, 2.0, 2.0];
+                let border_width = [1.0, 1.0, 1.0, 1.0];
                 let border_colors = [*border_color, *border_color, *border_color, *border_color];
                 snapshot.append_border(&rounded, &border_width, &border_colors);
             }
