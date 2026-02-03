@@ -66,6 +66,7 @@ mod imp {
             let settings = gtk::gio::Settings::new("io.github.nacho.mecalin");
             let use_finger_colors = settings.boolean("use-finger-colors");
             let default_color = get_color("hand-finger-default");
+            let default_border = get_color("hand-finger-border");
 
             // Finger layout: (name, x, y, width, height)
             let fingers = [
@@ -86,6 +87,7 @@ mod imp {
 
             // Draw left palm
             let palm_color = get_color("hand-palm");
+            let palm_border_color = get_color("hand-palm-border");
             let left_palm_rect = graphene::Rect::new(10.0, 70.0, 105.0, 70.0);
             let left_palm_rounded = gsk::RoundedRect::new(
                 left_palm_rect,
@@ -97,6 +99,14 @@ mod imp {
             snapshot.push_rounded_clip(&left_palm_rounded);
             snapshot.append_color(&palm_color, &left_palm_rect);
             snapshot.pop();
+            let border_width = [2.0, 2.0, 2.0, 2.0];
+            let border_color = [
+                palm_border_color,
+                palm_border_color,
+                palm_border_color,
+                palm_border_color,
+            ];
+            snapshot.append_border(&left_palm_rounded, &border_width, &border_color);
 
             // Draw right palm
             let right_palm_rect = graphene::Rect::new(185.0, 70.0, 105.0, 70.0);
@@ -110,18 +120,30 @@ mod imp {
             snapshot.push_rounded_clip(&right_palm_rounded);
             snapshot.append_color(&palm_color, &right_palm_rect);
             snapshot.pop();
+            snapshot.append_border(&right_palm_rounded, &border_width, &border_color);
 
             // Draw fingers
             for (finger_name, x, y, w, h) in &fingers {
                 let is_current = current.as_ref().is_some_and(|f| f == finger_name);
-                let color = if is_current {
-                    get_color("hand-finger-current")
+                let (fill_color, border_color) = if is_current {
+                    let c = get_color("hand-finger-current");
+                    (c, c)
                 } else if use_finger_colors {
-                    get_color(&Self::get_finger_css_class(finger_name))
+                    let c = get_color(&Self::get_finger_css_class(finger_name));
+                    (default_color, c)
                 } else {
-                    default_color
+                    (default_color, default_border)
                 };
-                Self::draw_finger(snapshot, *x, *y, *w, *h, &color, &default_color, is_current);
+                Self::draw_finger(
+                    snapshot,
+                    *x,
+                    *y,
+                    *w,
+                    *h,
+                    &fill_color,
+                    &border_color,
+                    is_current,
+                );
             }
 
             // Draw thumbs
@@ -129,14 +151,25 @@ mod imp {
                 let is_current = current
                     .as_ref()
                     .is_some_and(|f| f == "both_thumbs" || f == thumb_name);
-                let color = if is_current {
-                    get_color("hand-finger-current")
+                let (fill_color, border_color) = if is_current {
+                    let c = get_color("hand-finger-current");
+                    (c, c)
                 } else if use_finger_colors {
-                    get_color(&Self::get_finger_css_class(thumb_name))
+                    let c = get_color(&Self::get_finger_css_class(thumb_name));
+                    (default_color, c)
                 } else {
-                    default_color
+                    (default_color, default_border)
                 };
-                Self::draw_finger(snapshot, *x, *y, *w, *h, &color, &default_color, is_current);
+                Self::draw_finger(
+                    snapshot,
+                    *x,
+                    *y,
+                    *w,
+                    *h,
+                    &fill_color,
+                    &border_color,
+                    is_current,
+                );
             }
         }
 
@@ -148,7 +181,7 @@ mod imp {
             w: f32,
             h: f32,
             color: &gdk::RGBA,
-            fill_color: &gdk::RGBA,
+            border_color: &gdk::RGBA,
             is_active: bool,
         ) {
             let rect = graphene::Rect::new(x, y, w, h);
@@ -166,12 +199,12 @@ mod imp {
                 snapshot.pop();
             } else {
                 snapshot.push_rounded_clip(&rounded);
-                snapshot.append_color(fill_color, &rect);
+                snapshot.append_color(color, &rect);
                 snapshot.pop();
 
                 let border_width = [2.0, 2.0, 2.0, 2.0];
-                let border_color = [*color, *color, *color, *color];
-                snapshot.append_border(&rounded, &border_width, &border_color);
+                let border_colors = [*border_color, *border_color, *border_color, *border_color];
+                snapshot.append_border(&rounded, &border_width, &border_colors);
             }
         }
     }

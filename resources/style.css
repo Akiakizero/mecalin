@@ -56,8 +56,16 @@
   color: @card_bg_color;
 }
 
+.hand-palm-border {
+  color: @borders;
+}
+
 .hand-finger-default {
   color: @view_bg_color;
+}
+
+.hand-finger-border {
+  color: @borders;
 }
 
 .hand-finger-current {
