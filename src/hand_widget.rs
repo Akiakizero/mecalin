@@ -81,8 +81,8 @@ mod imp {
             ];
 
             let thumbs = [
-                ("left_thumb", 110.0, 85.0, 30.0, 25.0),
-                ("right_thumb", 160.0, 85.0, 30.0, 25.0),
+                ("left_thumb", 108.0, 80.0, 35.0, 28.0),
+                ("right_thumb", 157.0, 80.0, 35.0, 28.0),
             ];
 
             // Draw left palm
@@ -189,10 +189,10 @@ mod imp {
             let rect = graphene::Rect::new(x, y, w, h);
             let rounded = gsk::RoundedRect::new(
                 rect,
-                graphene::Size::new(8.0, 8.0),
-                graphene::Size::new(8.0, 8.0),
-                graphene::Size::new(8.0, 8.0),
-                graphene::Size::new(8.0, 8.0),
+                graphene::Size::new(10.0, 10.0), // top-left (tip)
+                graphene::Size::new(10.0, 10.0), // top-right (tip)
+                graphene::Size::new(5.0, 5.0),   // bottom-right (base)
+                graphene::Size::new(5.0, 5.0),   // bottom-left (base)
             );
 
             if is_active {
@@ -231,13 +231,27 @@ mod imp {
             snapshot.translate(&graphene::Point::new(-center_x, -center_y));
 
             let rect = graphene::Rect::new(x, y, w, h);
-            let rounded = gsk::RoundedRect::new(
-                rect,
-                graphene::Size::new(12.0, 12.0),
-                graphene::Size::new(12.0, 12.0),
-                graphene::Size::new(12.0, 12.0),
-                graphene::Size::new(12.0, 12.0),
-            );
+            // For thumbs, the "outer" end should be more rounded
+            // Left thumb: outer is right side, right thumb: outer is left side
+            let rounded = if angle < 0.0 {
+                // Left thumb - more rounded on right (outer) side
+                gsk::RoundedRect::new(
+                    rect,
+                    graphene::Size::new(8.0, 8.0),   // top-left (inner)
+                    graphene::Size::new(14.0, 14.0), // top-right (outer tip)
+                    graphene::Size::new(14.0, 14.0), // bottom-right (outer base)
+                    graphene::Size::new(8.0, 8.0),   // bottom-left (inner)
+                )
+            } else {
+                // Right thumb - more rounded on left (outer) side
+                gsk::RoundedRect::new(
+                    rect,
+                    graphene::Size::new(14.0, 14.0), // top-left (outer tip)
+                    graphene::Size::new(8.0, 8.0),   // top-right (inner)
+                    graphene::Size::new(8.0, 8.0),   // bottom-right (inner)
+                    graphene::Size::new(14.0, 14.0), // bottom-left (outer base)
+                )
+            };
 
             if is_active {
                 snapshot.push_rounded_clip(&rounded);
