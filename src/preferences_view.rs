@@ -68,7 +68,7 @@ mod imp {
                     .get_lessons()
                     .iter()
                     .enumerate()
-                    .map(|(i, lesson)| format!("Lesson {}: {}", i + 1, lesson.title))
+                    .map(|(i, lesson)| format!("Lesson {}: {}", i, lesson.title))
                     .collect();
                 let lesson_strs: Vec<&str> = lesson_names.iter().map(|s| s.as_str()).collect();
                 let lesson_model = gtk::StringList::new(&lesson_strs);
