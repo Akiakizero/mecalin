@@ -174,7 +174,7 @@ impl MecalinWindow {
             .build();
 
         about.add_credit_section(
-            Some("Code by"),
+            Some(&gettext("Code by")),
             &[
                 "Ignacio Casal Quinteiro",
                 "Brage Fuglseth https://bragefuglseth.dev",
@@ -182,7 +182,7 @@ impl MecalinWindow {
         );
 
         about.add_credit_section(
-            Some("Speed Test Orthography"),
+            Some(&gettext("Speed Test Orthography")),
             &[
                 "Angelo Verlain Shema https://www.vixalien.com/",
                 "Arnob Goswami",
@@ -206,7 +206,7 @@ impl MecalinWindow {
         let imp = self.imp();
         imp.main_stack.set_visible_child_name("preferences");
         imp.back_button.set_visible(true);
-        self.set_title("Preferences");
+        self.set_title(&gettext("Preferences"));
         self.set_subtitle("");
     }
 

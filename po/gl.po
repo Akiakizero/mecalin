@@ -138,3 +138,67 @@ msgstr "Lección {}"
 #: src/window.rs:258
 msgid "Lesson {}: Step {}/{}"
 msgstr "Lección {}: Paso {}/{}"
+
+#: src/lesson_view.rs:463
+msgid "{}/{} Good"
+msgstr "{}/{} Ben"
+
+#: src/lesson_view.rs:553 src/lesson_view.rs:602
+msgid "Course completed! Congratulations!"
+msgstr "Curso completado! Parabéns!"
+
+#: src/lesson_view.rs:606
+msgid "Lesson completed! Well done!"
+msgstr "Lección completada! Ben feito!"
+
+#: src/speed_test_results_view.rs:183
+msgid "{}%"
+msgstr "{}%"
+
+#: src/speed_test_results_view.rs:189
+msgid "Custom"
+msgstr "Personalizado"
+
+#: src/speed_test_results_view.rs:191
+msgid "Simple"
+msgstr "Simple"
+
+#: src/speed_test_results_view.rs:192
+msgid "Advanced"
+msgstr "Avanzado"
+
+#: src/speed_test_results_view.rs:218
+msgid "{}m {}s"
+msgstr "{}m {}s"
+
+#: src/typing_test_utils.rs:83
+msgid "15 seconds"
+msgstr "15 segundos"
+
+#: src/typing_test_utils.rs:84
+msgid "30 seconds"
+msgstr "30 segundos"
+
+#: src/typing_test_utils.rs:85
+msgid "1 minute"
+msgstr "1 minuto"
+
+#: src/typing_test_utils.rs:86
+msgid "5 minutes"
+msgstr "5 minutos"
+
+#: src/typing_test_utils.rs:87
+msgid "10 minutes"
+msgstr "10 minutos"
+
+#: src/window.rs:177
+msgid "Code by"
+msgstr "Código por"
+
+#: src/window.rs:185
+msgid "Speed Test Orthography"
+msgstr "Ortografía da proba de velocidade"
+
+#: src/window.rs:209
+msgid "Preferences"
+msgstr "Preferencias"
