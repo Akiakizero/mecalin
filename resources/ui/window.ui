@@ -63,6 +63,13 @@
                           </object>
                         </child>
                         <child>
+                          <object class="AdwActionRow" id="preferences_row">
+                            <property name="title" translatable="yes">Preferences</property>
+                            <property name="subtitle" translatable="yes">Configure application settings</property>
+                            <property name="activatable">true</property>
+                          </object>
+                        </child>
+                        <child>
                           <object class="AdwActionRow" id="about_row">
                             <property name="title" translatable="yes">About</property>
                             <property name="subtitle" translatable="yes">Application information</property>
@@ -96,6 +103,14 @@
                 <property name="name">lanes_game</property>
                 <property name="child">
                   <object class="ScrollingLanesGame" id="scrolling_lanes_game_widget"/>
+                </property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkStackPage">
+                <property name="name">preferences</property>
+                <property name="child">
+                  <object class="MecalinPreferencesView" id="preferences_view_widget"/>
                 </property>
               </object>
             </child>

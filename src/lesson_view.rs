@@ -90,15 +90,25 @@ mod imp {
 
 impl imp::LessonView {
     fn setup_keyboard(&self) {
+        let settings = gio::Settings::new("io.github.nacho.mecalin");
+
         let hand = HandWidget::new();
         hand.set_halign(gtk::Align::Center);
         hand.set_margin_bottom(24);
         self.keyboard_container.append(&hand);
-        self.hand_widget.replace(Some(hand));
+        self.hand_widget.replace(Some(hand.clone()));
+
+        // Bind hand widget visibility to settings
+        settings.bind("show-hand-widget", &hand, "visible").build();
 
         let keyboard = KeyboardWidget::new();
         self.keyboard_container.append(&keyboard);
-        self.keyboard_widget.replace(Some(keyboard));
+        self.keyboard_widget.replace(Some(keyboard.clone()));
+
+        // Bind keyboard widget visibility to settings
+        settings
+            .bind("show-keyboard-widget", &keyboard, "visible")
+            .build();
     }
 
     fn setup_signals(&self) {

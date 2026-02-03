@@ -10,6 +10,7 @@ use crate::config;
 use crate::course::Lesson;
 use crate::falling_keys_game::FallingKeysGame;
 use crate::lesson_view::LessonView;
+use crate::preferences_view::PreferencesView;
 use crate::scrolling_lanes_game::ScrollingLanesGame;
 use crate::speed_test_view::SpeedTestView;
 use crate::typing_row::TypingRow;
@@ -37,6 +38,8 @@ mod imp {
         #[template_child]
         pub scrolling_lanes_row: TemplateChild<adw::ActionRow>,
         #[template_child]
+        pub preferences_row: TemplateChild<adw::ActionRow>,
+        #[template_child]
         pub about_row: TemplateChild<adw::ActionRow>,
     }
 
@@ -51,6 +54,7 @@ mod imp {
             TypingRow::ensure_type();
             FallingKeysGame::ensure_type();
             ScrollingLanesGame::ensure_type();
+            PreferencesView::ensure_type();
             klass.bind_template();
         }
 
@@ -147,7 +151,9 @@ impl MecalinWindow {
         let imp = self.imp();
         let current_page = imp.main_stack.visible_child_name();
 
-        if let Some("lessons" | "game" | "lanes_game" | "speed_test") = current_page.as_deref() {
+        if let Some("lessons" | "game" | "lanes_game" | "speed_test" | "preferences") =
+            current_page.as_deref()
+        {
             imp.main_stack.set_visible_child_name("main_menu");
             imp.back_button.set_visible(false);
             imp.window_title.set_title("Mecalin");
@@ -194,6 +200,14 @@ impl MecalinWindow {
         );
 
         about.present(Some(self));
+    }
+
+    pub fn show_preferences(&self) {
+        let imp = self.imp();
+        imp.main_stack.set_visible_child_name("preferences");
+        imp.back_button.set_visible(true);
+        self.set_title("Preferences");
+        self.set_subtitle("");
     }
 
     pub fn set_title(&self, title: &str) {
@@ -321,6 +335,13 @@ impl imp::MecalinWindow {
         self.about_row.connect_activated(move |_| {
             if let Some(window) = window.upgrade() {
                 window.show_about();
+            }
+        });
+
+        let window = self.obj().downgrade();
+        self.preferences_row.connect_activated(move |_| {
+            if let Some(window) = window.upgrade() {
+                window.show_preferences();
             }
         });
 

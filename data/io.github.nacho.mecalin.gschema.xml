@@ -11,6 +11,16 @@
       <summary>Current step</summary>
       <description>The current step within the lesson</description>
     </key>
+    <key name="show-hand-widget" type="b">
+      <default>true</default>
+      <summary>Show hand widget</summary>
+      <description>Whether to show the hand widget during lessons</description>
+    </key>
+    <key name="show-keyboard-widget" type="b">
+      <default>true</default>
+      <summary>Show keyboard widget</summary>
+      <description>Whether to show the keyboard widget during lessons</description>
+    </key>
 
     <child name="state" schema="io.github.nacho.mecalin.state"/>
   </schema>

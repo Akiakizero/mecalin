@@ -4,6 +4,7 @@ mod falling_keys_game;
 mod hand_widget;
 mod keyboard_widget;
 mod lesson_view;
+mod preferences_view;
 mod scrolling_lanes_game;
 mod speed_test_results_view;
 mod speed_test_text_view;
