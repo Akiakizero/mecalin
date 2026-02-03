@@ -28,6 +28,28 @@
   color: @borders;
 }
 
+/* Finger colors - GNOME HIG palette */
+
+.finger-left-pinky, .finger-right-pinky {
+  color: @red_3;
+}
+
+.finger-left-ring, .finger-right-ring {
+  color: @orange_3;
+}
+
+.finger-left-middle, .finger-right-middle {
+  color: @yellow_3;
+}
+
+.finger-left-index, .finger-right-index {
+  color: @blue_3;
+}
+
+.finger-left-thumb, .finger-right-thumb, .finger-both-thumbs {
+  color: @green_3;
+}
+
 /* Hand widget color styles - GNOME HIG palette */
 
 .hand-palm {

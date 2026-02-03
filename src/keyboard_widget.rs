@@ -450,6 +450,10 @@ mod imp {
             (keyboard_width, keyboard_height)
         }
 
+        fn get_finger_css_class(finger: &str) -> String {
+            format!("finger-{}", finger.replace('_', "-"))
+        }
+
         #[allow(clippy::too_many_arguments)]
         fn draw_single_key(
             snapshot: &gtk::Snapshot,
@@ -467,6 +471,7 @@ mod imp {
             key_text_color: &gdk::RGBA,
             key_current_text_color: &gdk::RGBA,
             key_border_color: &gdk::RGBA,
+            finger_border_color: &gdk::RGBA,
         ) {
             let bounds = graphene::Rect::new(x, y, width, height);
             let rounded = gsk::RoundedRect::new(
@@ -486,15 +491,15 @@ mod imp {
                 &bounds,
             );
 
+            let border_color = if is_current {
+                key_border_color
+            } else {
+                finger_border_color
+            };
             snapshot.append_border(
                 &rounded,
                 &[1.0, 1.0, 1.0, 1.0],
-                &[
-                    *key_border_color,
-                    *key_border_color,
-                    *key_border_color,
-                    *key_border_color,
-                ],
+                &[*border_color, *border_color, *border_color, *border_color],
             );
 
             if should_show_text {
@@ -611,6 +616,17 @@ mod imp {
             let key_current_color = get_color("keyboard-key-current");
             let key_border_color = get_color("keyboard-border");
 
+            let settings = gio::Settings::new("io.github.nacho.mecalin");
+            let use_finger_colors = settings.boolean("use-finger-colors");
+
+            let get_finger_color = |finger: &str| -> gdk::RGBA {
+                if use_finger_colors {
+                    get_color(&Self::get_finger_css_class(finger))
+                } else {
+                    key_border_color
+                }
+            };
+
             let current = current_key.borrow();
 
             let is_key_current = |key_info: &KeyInfo| -> bool {
@@ -662,6 +678,7 @@ mod imp {
                         &key_text_color,
                         &key_current_text_color,
                         &key_border_color,
+                        &get_finger_color(&key_info.finger),
                     );
                     x += key_width + key_spacing;
                 }
@@ -681,6 +698,7 @@ mod imp {
                         &key_current_color,
                         &modifier_text_color,
                         &key_current_text_color,
+                        &key_border_color,
                         &key_border_color,
                     );
                 }
@@ -706,6 +724,7 @@ mod imp {
                     &modifier_text_color,
                     &key_current_text_color,
                     &key_border_color,
+                    &key_border_color,
                 );
                 x += key_width * 1.5 + key_spacing;
             }
@@ -728,6 +747,7 @@ mod imp {
                         &key_text_color,
                         &key_current_text_color,
                         &key_border_color,
+                        &get_finger_color(&key_info.finger),
                     );
                     x += key_width + key_spacing;
                 }
@@ -749,6 +769,7 @@ mod imp {
                     &key_current_color,
                     &modifier_text_color,
                     &key_current_text_color,
+                    &key_border_color,
                     &key_border_color,
                 );
             }
@@ -773,6 +794,7 @@ mod imp {
                     &modifier_text_color,
                     &key_current_text_color,
                     &key_border_color,
+                    &key_border_color,
                 );
                 x += key_width * 1.75 + key_spacing;
             }
@@ -795,6 +817,7 @@ mod imp {
                         &key_text_color,
                         &key_current_text_color,
                         &key_border_color,
+                        &get_finger_color(&key_info.finger),
                     );
                     x += key_width + key_spacing;
                 }
@@ -820,6 +843,7 @@ mod imp {
                     &modifier_text_color,
                     &key_current_text_color,
                     &key_border_color,
+                    &key_border_color,
                 );
                 x += key_width * 1.25 + key_spacing;
             }
@@ -842,6 +866,7 @@ mod imp {
                         &key_text_color,
                         &key_current_text_color,
                         &key_border_color,
+                        &get_finger_color(&key_info.finger),
                     );
                     x += key_width + key_spacing;
                 }
@@ -862,6 +887,7 @@ mod imp {
                     &key_current_color,
                     &modifier_text_color,
                     &key_current_text_color,
+                    &key_border_color,
                     &key_border_color,
                 );
             }
@@ -886,6 +912,7 @@ mod imp {
                     &modifier_text_color,
                     &key_current_text_color,
                     &key_border_color,
+                    &key_border_color,
                 );
                 x += key_width * 1.5 + key_spacing;
             }
@@ -906,6 +933,7 @@ mod imp {
                     &modifier_text_color,
                     &key_current_text_color,
                     &key_border_color,
+                    &key_border_color,
                 );
                 x += key_width * 1.2 + key_spacing;
             }
@@ -925,6 +953,7 @@ mod imp {
                     &key_current_color,
                     &modifier_text_color,
                     &key_current_text_color,
+                    &key_border_color,
                     &key_border_color,
                 );
                 x += key_width * 1.3 + key_spacing;
@@ -947,6 +976,7 @@ mod imp {
                 &key_text_color,
                 &key_current_text_color,
                 &key_border_color,
+                &get_finger_color(&layout_borrowed.space.finger),
             );
             x += key_width * 6.0 + key_spacing;
             if let Some(alt_r) = layout_borrowed.modifiers.get("alt_right") {
@@ -965,6 +995,7 @@ mod imp {
                     &key_current_color,
                     &modifier_text_color,
                     &key_current_text_color,
+                    &key_border_color,
                     &key_border_color,
                 );
                 x += key_width * 1.3 + key_spacing;
@@ -986,6 +1017,7 @@ mod imp {
                     &modifier_text_color,
                     &key_current_text_color,
                     &key_border_color,
+                    &key_border_color,
                 );
                 x += key_width * 1.2 + key_spacing;
             }
@@ -1006,6 +1038,7 @@ mod imp {
                     &modifier_text_color,
                     &key_current_text_color,
                     &key_border_color,
+                    &key_border_color,
                 );
                 x += key_width * 1.2 + key_spacing;
             }
@@ -1025,6 +1058,7 @@ mod imp {
                     &key_current_color,
                     &modifier_text_color,
                     &key_current_text_color,
+                    &key_border_color,
                     &key_border_color,
                 );
             }

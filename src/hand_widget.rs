@@ -45,6 +45,10 @@ mod imp {
     }
 
     impl HandWidget {
+        fn get_finger_css_class(finger: &str) -> String {
+            format!("finger-{}", finger.replace('_', "-"))
+        }
+
         fn draw_hand(
             snapshot: &gtk::Snapshot,
             widget: &super::HandWidget,
@@ -58,6 +62,9 @@ mod imp {
                 widget.remove_css_class(class_name);
                 color
             };
+
+            let settings = gtk::gio::Settings::new("io.github.nacho.mecalin");
+            let use_finger_colors = settings.boolean("use-finger-colors");
 
             // Finger layout: (name, x, y, width, height)
             let fingers = [
@@ -108,6 +115,8 @@ mod imp {
                 let is_current = current.as_ref().is_some_and(|f| f == finger_name);
                 let color = if is_current {
                     get_color("hand-finger-current")
+                } else if use_finger_colors {
+                    get_color(&Self::get_finger_css_class(finger_name))
                 } else {
                     get_color("hand-finger-default")
                 };
@@ -121,6 +130,8 @@ mod imp {
                     .is_some_and(|f| f == "both_thumbs" || f == thumb_name);
                 let color = if is_current {
                     get_color("hand-finger-current")
+                } else if use_finger_colors {
+                    get_color(&Self::get_finger_css_class(thumb_name))
                 } else {
                     get_color("hand-finger-default")
                 };

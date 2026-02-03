@@ -24,6 +24,12 @@
                 <property name="subtitle" translatable="yes">Display keyboard layout</property>
               </object>
             </child>
+            <child>
+              <object class="AdwSwitchRow" id="use_finger_colors_switch">
+                <property name="title" translatable="yes">Use Finger Colors</property>
+                <property name="subtitle" translatable="yes">Color keyboard keys and hand by finger assignment</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>

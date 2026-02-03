@@ -17,6 +17,8 @@ mod imp {
         #[template_child]
         pub show_keyboard_switch: TemplateChild<adw::SwitchRow>,
         #[template_child]
+        pub use_finger_colors_switch: TemplateChild<adw::SwitchRow>,
+        #[template_child]
         pub lesson_combo: TemplateChild<adw::ComboRow>,
     }
 
@@ -57,6 +59,13 @@ mod imp {
                 .bind(
                     "show-keyboard-widget",
                     &*self.show_keyboard_switch,
+                    "active",
+                )
+                .build();
+            settings
+                .bind(
+                    "use-finger-colors",
+                    &*self.use_finger_colors_switch,
                     "active",
                 )
                 .build();
