@@ -95,7 +95,7 @@
   
   <screenshots>
     <screenshot type="default">
-      <caption>Typing lesson with keyboard layout</caption>
+      <caption>Typing lesson</caption>
       <image>https://raw.githubusercontent.com/nacho/mecalin/main/data/screenshots/1-lesson-view.png</image>
     </screenshot>
     <screenshot>
@@ -113,6 +113,23 @@
   </screenshots>
   
   <releases>
+    <release version="0.9.0" date="2026-02-03">
+      <description>
+        <ul>
+          <li>Added hand widget to visualize finger positions during typing lessons</li>
+          <li>Added preferences page with customizable widget visibility and lesson/step selection</li>
+          <li>Added French language support (translations)</li>
+          <li>Added finger color customization setting for keyboard and hand widgets</li>
+          <li>Improved keyboard and hand widget highlighting initialization on lesson load</li>
+          <li>Improved hand widget design with borders for inactive fingers</li>
+          <li>Fixed lesson numbering in preferences to use 0-based indexing</li>
+          <li>Fixed lesson view to automatically reload when settings change</li>
+          <li>Fixed game over popup visibility issue when reopening game modes</li>
+          <li>Updated Italian translation</li>
+          <li>Updated dependencies</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.8.0" date="2026-02-01">
       <description>
         <ul>
