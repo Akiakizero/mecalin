@@ -65,6 +65,7 @@ mod imp {
 
             let settings = gtk::gio::Settings::new("io.github.nacho.mecalin");
             let use_finger_colors = settings.boolean("use-finger-colors");
+            let default_color = get_color("hand-finger-default");
 
             // Finger layout: (name, x, y, width, height)
             let fingers = [
@@ -118,9 +119,9 @@ mod imp {
                 } else if use_finger_colors {
                     get_color(&Self::get_finger_css_class(finger_name))
                 } else {
-                    get_color("hand-finger-default")
+                    default_color
                 };
-                Self::draw_finger(snapshot, *x, *y, *w, *h, &color);
+                Self::draw_finger(snapshot, *x, *y, *w, *h, &color, &default_color, is_current);
             }
 
             // Draw thumbs
@@ -133,12 +134,13 @@ mod imp {
                 } else if use_finger_colors {
                     get_color(&Self::get_finger_css_class(thumb_name))
                 } else {
-                    get_color("hand-finger-default")
+                    default_color
                 };
-                Self::draw_finger(snapshot, *x, *y, *w, *h, &color);
+                Self::draw_finger(snapshot, *x, *y, *w, *h, &color, &default_color, is_current);
             }
         }
 
+        #[allow(clippy::too_many_arguments)]
         fn draw_finger(
             snapshot: &gtk::Snapshot,
             x: f32,
@@ -146,6 +148,8 @@ mod imp {
             w: f32,
             h: f32,
             color: &gdk::RGBA,
+            fill_color: &gdk::RGBA,
+            is_active: bool,
         ) {
             let rect = graphene::Rect::new(x, y, w, h);
             let rounded = gsk::RoundedRect::new(
@@ -155,9 +159,20 @@ mod imp {
                 graphene::Size::new(8.0, 8.0),
                 graphene::Size::new(8.0, 8.0),
             );
-            snapshot.push_rounded_clip(&rounded);
-            snapshot.append_color(color, &rect);
-            snapshot.pop();
+
+            if is_active {
+                snapshot.push_rounded_clip(&rounded);
+                snapshot.append_color(color, &rect);
+                snapshot.pop();
+            } else {
+                snapshot.push_rounded_clip(&rounded);
+                snapshot.append_color(fill_color, &rect);
+                snapshot.pop();
+
+                let border_width = [2.0, 2.0, 2.0, 2.0];
+                let border_color = [*color, *color, *color, *color];
+                snapshot.append_border(&rounded, &border_width, &border_color);
+            }
         }
     }
 }
