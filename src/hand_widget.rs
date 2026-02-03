@@ -147,7 +147,7 @@ mod imp {
             }
 
             // Draw thumbs
-            for (thumb_name, x, y, w, h) in &thumbs {
+            for (i, (thumb_name, x, y, w, h)) in thumbs.iter().enumerate() {
                 let is_current = current
                     .as_ref()
                     .is_some_and(|f| f == "both_thumbs" || f == thumb_name);
@@ -160,7 +160,8 @@ mod imp {
                 } else {
                     (default_color, default_border)
                 };
-                Self::draw_finger(
+                let angle = if i == 0 { -35.0 } else { 35.0 };
+                Self::draw_thumb(
                     snapshot,
                     *x,
                     *y,
@@ -169,6 +170,7 @@ mod imp {
                     &fill_color,
                     &border_color,
                     is_current,
+                    angle,
                 );
             }
         }
@@ -206,6 +208,52 @@ mod imp {
                 let border_colors = [*border_color, *border_color, *border_color, *border_color];
                 snapshot.append_border(&rounded, &border_width, &border_colors);
             }
+        }
+
+        #[allow(clippy::too_many_arguments)]
+        fn draw_thumb(
+            snapshot: &gtk::Snapshot,
+            x: f32,
+            y: f32,
+            w: f32,
+            h: f32,
+            color: &gdk::RGBA,
+            border_color: &gdk::RGBA,
+            is_active: bool,
+            angle: f32,
+        ) {
+            let center_x = x + w / 2.0;
+            let center_y = y + h / 2.0;
+
+            snapshot.save();
+            snapshot.translate(&graphene::Point::new(center_x, center_y));
+            snapshot.rotate(angle);
+            snapshot.translate(&graphene::Point::new(-center_x, -center_y));
+
+            let rect = graphene::Rect::new(x, y, w, h);
+            let rounded = gsk::RoundedRect::new(
+                rect,
+                graphene::Size::new(12.0, 12.0),
+                graphene::Size::new(12.0, 12.0),
+                graphene::Size::new(12.0, 12.0),
+                graphene::Size::new(12.0, 12.0),
+            );
+
+            if is_active {
+                snapshot.push_rounded_clip(&rounded);
+                snapshot.append_color(color, &rect);
+                snapshot.pop();
+            } else {
+                snapshot.push_rounded_clip(&rounded);
+                snapshot.append_color(color, &rect);
+                snapshot.pop();
+
+                let border_width = [1.0, 1.0, 1.0, 1.0];
+                let border_colors = [*border_color, *border_color, *border_color, *border_color];
+                snapshot.append_border(&rounded, &border_width, &border_colors);
+            }
+
+            snapshot.restore();
         }
     }
 }
