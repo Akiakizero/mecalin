@@ -637,15 +637,32 @@ mod imp {
                     } else {
                         let c_lower = c.to_lowercase().next().unwrap();
                         let base_lower = key_char.to_lowercase().next().unwrap();
-                        c_lower == base_lower
-                            || key_info
-                                .shift
-                                .as_ref()
-                                .is_some_and(|s| s.chars().next().unwrap_or(' ') == c)
-                            || key_info
-                                .altgr
-                                .as_ref()
-                                .is_some_and(|a| a.chars().next().unwrap_or(' ') == c)
+                        // Check base first (case-insensitive)
+                        if c_lower == base_lower {
+                            return true;
+                        }
+                        // Check shift (exact match)
+                        if key_info
+                            .shift
+                            .as_ref()
+                            .is_some_and(|s| s.chars().next().unwrap_or(' ') == c)
+                        {
+                            return true;
+                        }
+                        // Only check altgr if character doesn't exist as base in any key
+                        if key_info
+                            .altgr
+                            .as_ref()
+                            .is_some_and(|a| a.chars().next().unwrap_or(' ') == c)
+                        {
+                            // Check if this character exists as base in the layout
+                            let exists_as_base = layout_borrowed.keys.iter().flatten().any(|k| {
+                                let k_char = k.base.chars().next().unwrap_or(' ');
+                                c_lower == k_char.to_lowercase().next().unwrap()
+                            });
+                            return !exists_as_base;
+                        }
+                        false
                     }
                 })
             };
