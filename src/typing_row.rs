@@ -35,7 +35,13 @@ mod imp {
         }
     }
 
-    impl ObjectImpl for TypingRow {}
+    impl ObjectImpl for TypingRow {
+        fn constructed(&self) {
+            self.parent_constructed();
+            self.setup_cursor_lock();
+        }
+    }
+
     impl WidgetImpl for TypingRow {
         fn snapshot(&self, snapshot: &gtk::Snapshot) {
             self.parent_snapshot(snapshot);
@@ -51,6 +57,33 @@ mod imp {
 }
 
 impl imp::TypingRow {
+    fn setup_cursor_lock(&self) {
+        // Prevent cursor movement - always keep cursor at the end
+        self.text_input
+            .connect_move_cursor(move |text_input, _, _, _| {
+                glib::idle_add_local_once(glib::clone!(
+                    #[weak]
+                    text_input,
+                    move || {
+                        let buffer = text_input.buffer();
+                        let text_len = buffer.text().len() as u16;
+                        text_input.set_position(text_len as i32);
+                    }
+                ));
+            });
+
+        // Also reset cursor position on any notify::cursor-position
+        self.text_input
+            .connect_notify_local(Some("cursor-position"), move |text_input, _| {
+                let buffer = text_input.buffer();
+                let text_len = buffer.text().len() as u16;
+                let current_pos = text_input.position();
+                if current_pos != text_len as i32 {
+                    text_input.set_position(text_len as i32);
+                }
+            });
+    }
+
     fn char_pos_to_byte_index(text: &str, char_pos: usize) -> usize {
         for (char_count, (byte_idx, _)) in text.char_indices().enumerate() {
             if char_count >= char_pos {

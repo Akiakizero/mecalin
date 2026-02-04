@@ -125,30 +125,6 @@ impl imp::LessonView {
                 }
             });
 
-        // Prevent cursor movement - always keep cursor at the end
-        let text_input = self.typing_row.text_input();
-        text_input.connect_move_cursor(move |text_input, _, _, _| {
-            glib::idle_add_local_once(glib::clone!(
-                #[weak]
-                text_input,
-                move || {
-                    let buffer = text_input.buffer();
-                    let text_len = buffer.text().len() as u16;
-                    text_input.set_position(text_len as i32);
-                }
-            ));
-        });
-
-        // Also reset cursor position on any notify::cursor-position
-        text_input.connect_notify_local(Some("cursor-position"), move |text_input, _| {
-            let buffer = text_input.buffer();
-            let text_len = buffer.text().len() as u16;
-            let current_pos = text_input.position();
-            if current_pos != text_len as i32 {
-                text_input.set_position(text_len as i32);
-            }
-        });
-
         let buffer = self.typing_row.buffer();
         buffer.connect_notify_local(
             Some("text"),
