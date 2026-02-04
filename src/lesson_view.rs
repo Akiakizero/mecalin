@@ -202,10 +202,14 @@ impl imp::LessonView {
                     let last_space_pos =
                         text_without_last.rfind(' ').map(|pos| pos + 1).unwrap_or(0);
 
-                    // Always mark as mistake when typing wrong character
+                    // Mark as mistake only if not at the very beginning
                     if let Some(lesson_view) = lesson_view_clone.upgrade() {
                         let imp = lesson_view.imp();
-                        imp.has_mistake.set(true);
+                        if last_space_pos > 0 {
+                            imp.has_mistake.set(true);
+                        } else {
+                            lesson_view.reset_repetition_count();
+                        }
                     }
 
                     // Reset to last space position
