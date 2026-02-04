@@ -193,21 +193,23 @@ impl imp::LessonView {
                     // Show error animation
                     typing_row.show_error();
 
-                    // Find the last space position or go to beginning
-                    let last_space_pos = typed_str.rfind(' ').map(|pos| pos + 1).unwrap_or(0);
+                    // Remove the last character that caused the error
+                    let mut chars: Vec<char> = typed_str.chars().collect();
+                    chars.pop();
+                    let text_without_last = chars.iter().collect::<String>();
 
-                    // Mark as mistake if:
-                    // - Not at the beginning (last_space_pos > 0), OR
-                    // - At the beginning but on a repetition after the first (current_repetition > 0)
+                    // Find the last space position in the corrected text, or go to beginning
+                    let last_space_pos =
+                        text_without_last.rfind(' ').map(|pos| pos + 1).unwrap_or(0);
+
+                    // Always mark as mistake when typing wrong character
                     if let Some(lesson_view) = lesson_view_clone.upgrade() {
                         let imp = lesson_view.imp();
-                        if last_space_pos > 0 || imp.current_repetition.get() > 0 {
-                            imp.has_mistake.set(true);
-                        }
+                        imp.has_mistake.set(true);
                     }
 
                     // Reset to last space position
-                    let corrected_text = &typed_str[..last_space_pos];
+                    let corrected_text = &text_without_last[..last_space_pos];
 
                     glib::idle_add_local_once({
                         let buffer = buffer.clone();
