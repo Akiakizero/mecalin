@@ -215,8 +215,7 @@ impl imp::LessonView {
                         let corrected_text = corrected_text.to_string();
                         let corrected_len = corrected_text.len();
                         move || {
-                            buffer.delete_text(0, None);
-                            buffer.insert_text(0, &corrected_text);
+                            buffer.set_text(&corrected_text);
                             // Set cursor to end of corrected text
                             typing_row.text_input().set_position(corrected_len as i32);
                         }
@@ -371,7 +370,7 @@ impl LessonView {
             }
         }
 
-        imp.typing_row.buffer().delete_text(0, None);
+        imp.typing_row.buffer().set_text("");
         imp.has_mistake.set(false);
     }
 
@@ -405,7 +404,7 @@ impl LessonView {
                         imp.continue_button.set_visible(false);
                         imp.text_container.set_visible(true);
                         imp.typing_row.set_target_text(&step.text);
-                        imp.typing_row.buffer().delete_text(0, None);
+                        imp.typing_row.buffer().set_text("");
                         self.update_repetition_label();
 
                         // Focus the text view for immediate typing
@@ -475,7 +474,7 @@ impl LessonView {
             // Restart the step - reset repetition count and clear text
             self.reset_repetition_count();
             imp.has_mistake.set(false);
-            imp.typing_row.buffer().delete_text(0, None);
+            imp.typing_row.buffer().set_text("");
             imp.typing_row.text_input().grab_focus();
             return;
         }
@@ -495,7 +494,7 @@ impl LessonView {
                         self.advance_to_next_step();
                     } else {
                         // Need more repetitions, clear text for next attempt
-                        imp.typing_row.buffer().delete_text(0, None);
+                        imp.typing_row.buffer().set_text("");
 
                         // Focus the text view for next repetition
                         imp.typing_row.text_input().grab_focus();
@@ -605,7 +604,7 @@ impl LessonView {
                     imp.typing_row
                         .set_target_text(&gettext("Lesson completed! Well done!"));
                 }
-                imp.typing_row.buffer().delete_text(0, None);
+                imp.typing_row.buffer().set_text("");
             }
         }
     }
