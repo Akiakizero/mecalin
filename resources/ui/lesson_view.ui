@@ -60,6 +60,15 @@
         <property name="valign">end</property>
         <property name="vexpand">true</property>
         <property name="spacing">12</property>
+        <child>
+          <object class="MecalinHandWidget" id="hand_widget">
+            <property name="halign">center</property>
+            <property name="margin-bottom">24</property>
+          </object>
+        </child>
+        <child>
+          <object class="MecalinKeyboardWidget" id="keyboard_widget"/>
+        </child>
       </object>
     </child>
     <child>

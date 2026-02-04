@@ -28,9 +28,12 @@ mod imp {
         pub typing_row: TemplateChild<TypingRow>,
         #[template_child]
         pub keyboard_container: TemplateChild<gtk::Box>,
+        #[template_child]
+        pub hand_widget: TemplateChild<HandWidget>,
+        #[template_child]
+        pub keyboard_widget: TemplateChild<KeyboardWidget>,
 
-        pub hand_widget: RefCell<Option<HandWidget>>,
-        pub keyboard_widget: RefCell<Option<KeyboardWidget>>,
+        pub settings: RefCell<Option<gio::Settings>>,
         #[property(get, set, nullable)]
         pub current_lesson: RefCell<Option<glib::BoxedAnyObject>>,
         #[property(get, set)]
@@ -72,9 +75,8 @@ mod imp {
 
         fn constructed(&self) {
             self.parent_constructed();
-            self.setup_keyboard();
+            self.setup_settings();
             self.setup_signals();
-            self.setup_settings_signals();
             self.obj().load_course_and_lesson();
         }
     }
@@ -89,28 +91,6 @@ mod imp {
 }
 
 impl imp::LessonView {
-    fn setup_keyboard(&self) {
-        let settings = gio::Settings::new("io.github.nacho.mecalin");
-
-        let hand = HandWidget::new();
-        hand.set_halign(gtk::Align::Center);
-        hand.set_margin_bottom(24);
-        self.keyboard_container.append(&hand);
-        self.hand_widget.replace(Some(hand.clone()));
-
-        // Bind hand widget visibility to settings
-        settings.bind("show-hand-widget", &hand, "visible").build();
-
-        let keyboard = KeyboardWidget::new();
-        self.keyboard_container.append(&keyboard);
-        self.keyboard_widget.replace(Some(keyboard.clone()));
-
-        // Bind keyboard widget visibility to settings
-        settings
-            .bind("show-keyboard-widget", &keyboard, "visible")
-            .build();
-    }
-
     fn setup_signals(&self) {
         // Setup continue button for introduction steps
         let lesson_view_weak = self.obj().downgrade();
@@ -136,9 +116,7 @@ impl imp::LessonView {
                             *imp.pending_dead_key.borrow_mut() = Some(dead_key);
 
                             // Advance keyboard sequence to show next character
-                            if let Some(keyboard) = imp.keyboard_widget.borrow().as_ref() {
-                                keyboard.advance_sequence();
-                            }
+                            imp.keyboard_widget.advance_sequence();
                         }
                     } else if !is_composing {
                         // Composition ended, clear pending dead key
@@ -171,116 +149,124 @@ impl imp::LessonView {
             }
         });
 
-        let keyboard_widget = self.keyboard_widget.borrow();
-        let hand_widget = self.hand_widget.borrow();
-        if let Some(keyboard) = keyboard_widget.as_ref() {
-            let buffer = self.typing_row.buffer();
-            buffer.connect_notify_local(
-                Some("text"),
-                glib::clone!(
-                    #[strong]
-                    keyboard,
-                    #[strong(rename_to = hand)]
-                    hand_widget,
-                    #[strong(rename_to = typing_row)]
-                    self.typing_row,
-                    #[weak(rename_to = lesson_view)]
-                    self.obj(),
-                    move |buffer, _| {
-                        let typed_text = buffer.text();
-                        let target_text = typing_row.imp().target_label.text();
+        let buffer = self.typing_row.buffer();
+        buffer.connect_notify_local(
+            Some("text"),
+            glib::clone!(
+                #[strong(rename_to = lesson_view)]
+                self.obj(),
+                move |buffer, _| {
+                    let imp = lesson_view.imp();
 
-                        let typed_str = typed_text.as_str();
-                        let target_str = target_text.as_str();
+                    let typed_text = buffer.text();
+                    let target_text = imp.typing_row.imp().target_label.text();
 
-                        // Check if the new text would match target text
-                        if !target_str.starts_with(typed_str) && !typed_str.is_empty() {
-                            // Show error animation
-                            typing_row.show_error();
+                    let typed_str = typed_text.as_str();
+                    let target_str = target_text.as_str();
 
-                            // Remove the last character that caused the error
-                            let mut chars: Vec<char> = typed_str.chars().collect();
-                            chars.pop();
-                            let text_without_last = chars.iter().collect::<String>();
+                    // Check if the new text would match target text
+                    if !target_str.starts_with(typed_str) && !typed_str.is_empty() {
+                        // Show error animation
+                        imp.typing_row.show_error();
 
-                            // Find the last space position in the corrected text, or go to beginning
-                            let last_space_pos =
-                                text_without_last.rfind(' ').map(|pos| pos + 1).unwrap_or(0);
+                        // Remove the last character that caused the error
+                        let mut chars: Vec<char> = typed_str.chars().collect();
+                        chars.pop();
+                        let text_without_last = chars.iter().collect::<String>();
 
-                            // Mark as mistake only if not at the very beginning
-                            let imp = lesson_view.imp();
-                            if last_space_pos > 0 {
-                                imp.has_mistake.set(true);
-                            } else {
-                                lesson_view.reset_repetition_count();
+                        // Find the last space position in the corrected text, or go to beginning
+                        let last_space_pos =
+                            text_without_last.rfind(' ').map(|pos| pos + 1).unwrap_or(0);
+
+                        // Mark as mistake only if not at the very beginning
+                        if last_space_pos > 0 {
+                            imp.has_mistake.set(true);
+                        } else {
+                            lesson_view.reset_repetition_count();
+                        }
+
+                        // Reset to last space position
+                        let corrected_text = text_without_last[..last_space_pos].to_string();
+
+                        glib::idle_add_local_once(glib::clone!(
+                            #[strong]
+                            lesson_view,
+                            move || {
+                                let imp = lesson_view.imp();
+                                let corrected_len = corrected_text.len();
+                                imp.typing_row.buffer().set_text(&corrected_text);
+                                // Set cursor to end of corrected text
+                                imp.typing_row
+                                    .text_input()
+                                    .set_position(corrected_len as i32);
                             }
-
-                            // Reset to last space position
-                            let corrected_text = text_without_last[..last_space_pos].to_string();
-
-                            glib::idle_add_local_once(glib::clone!(
-                                #[strong]
-                                buffer,
-                                #[strong]
-                                typing_row,
-                                move || {
-                                    let corrected_len = corrected_text.len();
-                                    buffer.set_text(&corrected_text);
-                                    // Set cursor to end of corrected text
-                                    typing_row.text_input().set_position(corrected_len as i32);
-                                }
-                            ));
-                            return;
-                        }
-
-                        let cursor_pos = typed_str.chars().count() as i32;
-                        typing_row.set_cursor_position(cursor_pos);
-
-                        // Check if step is completed
-                        if typed_str == target_str && !target_str.is_empty() {
-                            // Step completed - check if we need more repetitions
-                            glib::idle_add_local_once(glib::clone!(
-                                #[weak]
-                                lesson_view,
-                                move || {
-                                    lesson_view.handle_step_completion();
-                                }
-                            ));
-                            return;
-                        }
-
-                        // Update keyboard highlighting for next character
-                        let next_char = target_str.chars().nth(cursor_pos as usize);
-                        keyboard.set_current_key(next_char);
-
-                        // Update hand widget to highlight the finger for next character
-                        if let Some(hand) = hand.as_ref() {
-                            let finger = next_char.and_then(|ch| keyboard.get_finger_for_char(ch));
-                            hand.set_current_finger(finger);
-                        }
+                        ));
+                        return;
                     }
-                ),
-            );
-        }
+
+                    let cursor_pos = typed_str.chars().count() as i32;
+                    imp.typing_row.set_cursor_position(cursor_pos);
+
+                    // Check if step is completed
+                    if typed_str == target_str && !target_str.is_empty() {
+                        // Step completed - check if we need more repetitions
+                        glib::idle_add_local_once(glib::clone!(
+                            #[strong]
+                            lesson_view,
+                            move || {
+                                lesson_view.handle_step_completion();
+                            }
+                        ));
+                        return;
+                    }
+
+                    // Update keyboard highlighting for next character
+                    let next_char = target_str.chars().nth(cursor_pos as usize);
+                    imp.keyboard_widget.set_current_key(next_char);
+
+                    // Update hand widget to highlight the finger for next character
+                    let finger =
+                        next_char.and_then(|ch| imp.keyboard_widget.get_finger_for_char(ch));
+                    imp.hand_widget.set_current_finger(finger);
+                }
+            ),
+        );
     }
 
-    fn setup_settings_signals(&self) {
+    fn setup_settings(&self) {
         let obj = self.obj();
+        let settings = gio::Settings::new("io.github.nacho.mecalin");
+
+        // Bind widget visibility to settings
+        settings
+            .bind("show-hand-widget", &*self.hand_widget, "visible")
+            .build();
+        settings
+            .bind("show-keyboard-widget", &*self.keyboard_widget, "visible")
+            .build();
+
+        // Save current step index to settings
         obj.connect_notify_local(Some("current-step-index"), |lesson_view, _| {
-            let settings = gio::Settings::new("io.github.nacho.mecalin");
-            settings
-                .set_uint("current-step", lesson_view.current_step_index() + 1)
-                .unwrap();
+            if let Some(settings) = lesson_view.imp().settings.borrow().as_ref() {
+                settings
+                    .set_uint("current-step", lesson_view.current_step_index() + 1)
+                    .unwrap();
+            }
         });
 
         // Listen to settings changes for current-lesson
-        let settings = gio::Settings::new("io.github.nacho.mecalin");
-        let lesson_view_weak = obj.downgrade();
-        settings.connect_changed(Some("current-lesson"), move |_settings, _| {
-            if let Some(lesson_view) = lesson_view_weak.upgrade() {
-                lesson_view.load_course_and_lesson();
-            }
-        });
+        settings.connect_changed(
+            Some("current-lesson"),
+            glib::clone!(
+                #[weak(rename_to = lesson_view)]
+                obj,
+                move |_settings, _| {
+                    lesson_view.load_course_and_lesson();
+                }
+            ),
+        );
+
+        self.settings.replace(Some(settings));
     }
 }
 
@@ -374,10 +360,7 @@ impl LessonView {
                     }
                 }
 
-                let keyboard_widget = imp.keyboard_widget.borrow();
-                if let Some(keyboard) = keyboard_widget.as_ref() {
-                    keyboard.set_visible_keys(Some(target_keys));
-                }
+                imp.keyboard_widget.set_visible_keys(Some(target_keys));
             }
         }
 
@@ -430,20 +413,15 @@ impl LessonView {
                         }
                     }
 
-                    let keyboard_widget = imp.keyboard_widget.borrow();
-                    let hand_widget = imp.hand_widget.borrow();
-                    if let Some(keyboard) = keyboard_widget.as_ref() {
-                        keyboard.set_visible_keys(Some(target_keys));
+                    imp.keyboard_widget.set_visible_keys(Some(target_keys));
 
-                        // Set initial key/finger highlight
-                        let first_char = step.text.chars().next();
-                        keyboard.set_current_key(first_char);
+                    // Set initial key/finger highlight
+                    let first_char = step.text.chars().next();
+                    imp.keyboard_widget.set_current_key(first_char);
 
-                        if let Some(hand) = hand_widget.as_ref() {
-                            let finger = first_char.and_then(|ch| keyboard.get_finger_for_char(ch));
-                            hand.set_current_finger(finger);
-                        }
-                    }
+                    let finger =
+                        first_char.and_then(|ch| imp.keyboard_widget.get_finger_for_char(ch));
+                    imp.hand_widget.set_current_finger(finger);
                 }
             }
         }
