@@ -20,6 +20,49 @@ pub struct KeyInfo {
     pub finger: String,
 }
 
+impl KeyInfo {
+    /// Check if this key should be highlighted for the given character.
+    /// Prioritizes base keys over altgr variants to avoid multiple highlights.
+    pub fn matches_char(&self, ch: char, layout: &KeyboardLayout) -> bool {
+        if ch == ' ' {
+            return false;
+        }
+
+        let ch_lower = ch.to_lowercase().next().unwrap();
+        let base_char = self.base.chars().next().unwrap_or(' ');
+        let base_lower = base_char.to_lowercase().next().unwrap();
+
+        // Check base (case-insensitive)
+        if ch_lower == base_lower {
+            return true;
+        }
+
+        // Check shift (exact match)
+        if self
+            .shift
+            .as_ref()
+            .is_some_and(|s| s.chars().next().unwrap_or(' ') == ch)
+        {
+            return true;
+        }
+
+        // Only check altgr if character doesn't exist as base in any key
+        if self
+            .altgr
+            .as_ref()
+            .is_some_and(|a| a.chars().next().unwrap_or(' ') == ch)
+        {
+            let exists_as_base = layout.keys.iter().flatten().any(|k| {
+                let k_char = k.base.chars().next().unwrap_or(' ');
+                ch_lower == k_char.to_lowercase().next().unwrap()
+            });
+            return !exists_as_base;
+        }
+
+        false
+    }
+}
+
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ModifierKey {
     pub label: String,
@@ -328,6 +371,97 @@ mod tests {
             Some("both_thumbs".to_string())
         );
     }
+
+    fn create_test_layout() -> KeyboardLayout {
+        KeyboardLayout {
+            name: "Test".to_string(),
+            keys: vec![vec![
+                KeyInfo {
+                    base: "'".to_string(),
+                    label: None,
+                    shift: Some("\"".to_string()),
+                    altgr: Some("´".to_string()),
+                    finger: "right_pinky".to_string(),
+                },
+                KeyInfo {
+                    base: "9".to_string(),
+                    label: None,
+                    shift: Some("(".to_string()),
+                    altgr: Some("'".to_string()),
+                    finger: "right_ring".to_string(),
+                },
+                KeyInfo {
+                    base: "0".to_string(),
+                    label: None,
+                    shift: Some(")".to_string()),
+                    altgr: Some("'".to_string()),
+                    finger: "right_pinky".to_string(),
+                },
+            ]],
+            modifiers: std::collections::HashMap::new(),
+            space: KeyInfo {
+                base: " ".to_string(),
+                label: None,
+                shift: None,
+                altgr: None,
+                finger: "both_thumbs".to_string(),
+            },
+        }
+    }
+
+    #[test]
+    fn test_matches_char_base_priority() {
+        let layout = create_test_layout();
+        let apostrophe_key = &layout.keys[0][0];
+        let nine_key = &layout.keys[0][1];
+        let zero_key = &layout.keys[0][2];
+
+        // Only the apostrophe key should match, not the altgr variants
+        assert!(apostrophe_key.matches_char('\'', &layout));
+        assert!(!nine_key.matches_char('\'', &layout));
+        assert!(!zero_key.matches_char('\'', &layout));
+    }
+
+    #[test]
+    fn test_matches_char_shift() {
+        let layout = create_test_layout();
+        let apostrophe_key = &layout.keys[0][0];
+
+        assert!(apostrophe_key.matches_char('"', &layout));
+    }
+
+    #[test]
+    fn test_matches_char_altgr_when_no_base() {
+        let layout = create_test_layout();
+        let apostrophe_key = &layout.keys[0][0];
+
+        // ´ only exists as altgr, so it should match
+        assert!(apostrophe_key.matches_char('´', &layout));
+    }
+
+    #[test]
+    fn test_matches_char_case_insensitive_base() {
+        let mut layout = create_test_layout();
+        layout.keys[0].push(KeyInfo {
+            base: "a".to_string(),
+            label: None,
+            shift: Some("A".to_string()),
+            altgr: None,
+            finger: "left_pinky".to_string(),
+        });
+
+        let a_key = &layout.keys[0][3];
+        assert!(a_key.matches_char('a', &layout));
+        assert!(a_key.matches_char('A', &layout));
+    }
+
+    #[test]
+    fn test_matches_char_space_never_matches() {
+        let layout = create_test_layout();
+        let key = &layout.keys[0][0];
+
+        assert!(!key.matches_char(' ', &layout));
+    }
 }
 
 mod imp {
@@ -630,41 +764,7 @@ mod imp {
             let current = current_key.borrow();
 
             let is_key_current = |key_info: &KeyInfo| -> bool {
-                let key_char = key_info.base.chars().next().unwrap_or(' ');
-                current.is_some_and(|c| {
-                    if c == ' ' {
-                        false
-                    } else {
-                        let c_lower = c.to_lowercase().next().unwrap();
-                        let base_lower = key_char.to_lowercase().next().unwrap();
-                        // Check base first (case-insensitive)
-                        if c_lower == base_lower {
-                            return true;
-                        }
-                        // Check shift (exact match)
-                        if key_info
-                            .shift
-                            .as_ref()
-                            .is_some_and(|s| s.chars().next().unwrap_or(' ') == c)
-                        {
-                            return true;
-                        }
-                        // Only check altgr if character doesn't exist as base in any key
-                        if key_info
-                            .altgr
-                            .as_ref()
-                            .is_some_and(|a| a.chars().next().unwrap_or(' ') == c)
-                        {
-                            // Check if this character exists as base in the layout
-                            let exists_as_base = layout_borrowed.keys.iter().flatten().any(|k| {
-                                let k_char = k.base.chars().next().unwrap_or(' ');
-                                c_lower == k_char.to_lowercase().next().unwrap()
-                            });
-                            return !exists_as_base;
-                        }
-                        false
-                    }
-                })
+                current.is_some_and(|c| key_info.matches_char(c, &layout_borrowed))
             };
 
             let should_show_key = |key_char: char| -> bool {
