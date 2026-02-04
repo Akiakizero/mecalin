@@ -1805,49 +1805,49 @@
         {
           "id": 1,
           "text": "'«'«'««««'''«",
-          "description": "Pressione as teclas ' e ! com o dedo mindinho da mão direita",
+          "description": "Pressione as teclas ' e « com o dedo mindinho da mão direita",
           "introduction": false,
           "repetitions": 2
         },
         {
           "id": 2,
           "text": "'«'«'«''''««'",
-          "description": "Pressione as teclas ' e ! com o dedo mindinho da mão direita",
+          "description": "Pressione as teclas ' e « com o dedo mindinho da mão direita",
           "introduction": false,
           "repetitions": 2
         },
         {
           "id": 3,
           "text": "««'««'««'''««",
-          "description": "Pressione as teclas ' e ! com o dedo mindinho da mão direita",
+          "description": "Pressione as teclas ' e « com o dedo mindinho da mão direita",
           "introduction": false,
           "repetitions": 2
         },
         {
           "id": 4,
           "text": "??»»»?»??» »?",
-          "description": "Pressione com o dedo mindinho da mão esquerda a tecla SHIFT e com o da mão direita '?' ou '¿'",
+          "description": "Pressione com o dedo mindinho da mão direita a tecla ' com SHIFT para obter '?' e a tecla '«' com SHIFT para obter '»'",
           "introduction": false,
           "repetitions": 2
         },
         {
           "id": 5,
           "text": "»? ?» »» ?? »?»",
-          "description": "Pressione com o dedo mindinho da mão esquerda a tecla SHIFT e com o da mão direita '?' ou '¿'",
+          "description": "Pressione com o dedo mindinho da mão direita a tecla ' com SHIFT para obter '?' e a tecla '«' com SHIFT para obter '»'",
           "introduction": false,
           "repetitions": 2
         },
         {
           "id": 6,
           "text": "««''?» »?'« «?»",
-          "description": "Pressione com o dedo mindinho da mão esquerda a tecla SHIFT e com o da mão direita '?' ou '¿'",
+          "description": "Pressione com o dedo mindinho da mão direita a tecla ' com SHIFT para obter '?' e a tecla '«' com SHIFT para obter '»'",
           "introduction": false,
           "repetitions": 2
         },
         {
           "id": 7,
           "text": "?»« ?'» ?«» »«'«?",
-          "description": "Pressione com o dedo mindinho da mão esquerda a tecla SHIFT e com o da mão direita '?' ou '¿'",
+          "description": "Pressione com o dedo mindinho da mão direita a tecla ' com SHIFT para obter '?' e a tecla '«' com SHIFT para obter '»'",
           "introduction": false,
           "repetitions": 2
         },
