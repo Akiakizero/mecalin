@@ -15,7 +15,7 @@
         {
           "id": 0,
           "text": "",
-          "description": "Aquí comeza a primeira lección. Fíxese nos erros para non repeti los. Nesta lección aprenderá as teclas a, s, d, k, l, ñ",
+          "description": "Aquí comeza a primeira lección. Fíxese nos erros para non repitilos. Nesta lección aprenderá as teclas a, s, d, k, l, ñ",
           "introduction": true
         },
         {
@@ -39,25 +39,25 @@
         {
           "id": 4,
           "text": "aaa ñññ aña ñañ",
-          "description": "Agora imos facer uns exercicios con estas 4 letras na orde correcta. Se hai algún erro na liña haberá que repetila. Non se impaciente se non sae ben á primeira. Lembre pulsar a barra espazadora entre palabras",
+          "description": "Agora imos facer uns exercicios con estas 4 letras na orde correcta. Se hai algún erro na liña haberá que repetila. Non se impaciente se non sae ben á primeira. Lembre de pulsar a barra espazadora entre palabras",
           "repetitions": 1
         },
         {
           "id": 5,
           "text": "sss lll sls lsl",
-          "description": "Agora imos facer uns exercicios con estas 4 letras na orde correcta. Se hai algún erro na liña haberá que repetila. Non se impaciente se non sae ben á primeira. Lembre pulsar a barra espazadora entre palabras",
+          "description": "Agora imos facer uns exercicios con estas 4 letras na orde correcta. Se hai algún erro na liña haberá que repetila. Non se impaciente se non sae ben á primeira. Lembre de pulsar a barra espazadora entre palabras",
           "repetitions": 1
         },
         {
           "id": 6,
           "text": "añsl ñals",
-          "description": "Agora imos facer uns exercicios con estas 4 letras na orde correcta. Se hai algún erro na liña haberá que repetila. Non se impaciente se non sae ben á primeira. Lembre pulsar a barra espazadora entre palabras",
+          "description": "Agora imos facer uns exercicios con estas 4 letras na orde correcta. Se hai algún erro na liña haberá que repetila. Non se impaciente se non sae ben á primeira. Lembre de pulsar a barra espazadora entre palabras",
           "repetitions": 1
         },
         {
           "id": 7,
           "text": "slña lsañ",
-          "description": "Agora imos facer uns exercicios con estas 4 letras na orde correcta. Se hai algún erro na liña haberá que repetila. Non se impaciente se non sae ben á primeira. Lembre pulsar a barra espazadora entre palabras",
+          "description": "Agora imos facer uns exercicios con estas 4 letras na orde correcta. Se hai algún erro na liña haberá que repetila. Non se impaciente se non sae ben á primeira. Lembre de pulsar a barra espazadora entre palabras",
           "repetitions": 1
         },
         {
@@ -111,13 +111,13 @@
         {
           "id": 16,
           "text": "asdklñ ñlkdsa",
-          "description": "Agora os exercicios hai que repeti los 2 veces sen erros para poder pasar ao seguinte",
+          "description": "Agora os exercicios hai que repitilos 2 veces sen erros para poder pasar ao seguinte",
           "repetitions": 2
         },
         {
           "id": 17,
           "text": "añsldk kdlsña",
-          "description": "Agora os exercicios hai que repeti los 2 veces sen erros para poder pasar ao seguinte",
+          "description": "Agora os exercicios hai que repitilos 2 veces sen erros para poder pasar ao seguinte",
           "repetitions": 2
         },
         {
@@ -341,13 +341,13 @@
         {
           "id": 3,
           "text": "wo",
-          "description": "Agora pulse a tecla 'w' co dedo anular da man esquerda y la 'o' co da man dereita",
+          "description": "Agora pulse a tecla 'w' co dedo anular da man esquerda e a 'o' co da man dereita",
           "repetitions": 1
         },
         {
           "id": 4,
           "text": "www ooo wow owo",
-          "description": "Agora pulse a tecla 'w' co dedo anular da man esquerda y la 'o' co da man dereita",
+          "description": "Agora pulse a tecla 'w' co dedo anular da man esquerda e a 'o' co da man dereita",
           "repetitions": 1
         },
         {
@@ -389,13 +389,13 @@
         {
           "id": 11,
           "text": "qwe ewq iop poi",
-          "description": "Non esqueza a posición dos polgares sobre la barra espazadora e o resto dos dedos sobre a liña base",
+          "description": "Non esqueza a posición dos polgares sobre a barra espazadora e o resto dos dedos sobre a liña base",
           "repetitions": 2
         },
         {
           "id": 12,
           "text": "qpwoei ieowpq",
-          "description": "Non esqueza a posición dos polgares sobre la barra espazadora e o resto dos dedos sobre a liña base",
+          "description": "Non esqueza a posición dos polgares sobre a barra espazadora e o resto dos dedos sobre a liña base",
           "repetitions": 2
         },
         {
@@ -413,13 +413,13 @@
         {
           "id": 15,
           "text": "qw ew io po pq ow ie",
-          "description": "Non esqueza que la barra espazadora se pulsa co dedo polgar da man contraria a la última tecla pulsada",
+          "description": "Non esqueza que a barra espazadora se pulsa co dedo polgar da man contraria á última tecla pulsada",
           "repetitions": 2
         },
         {
           "id": 16,
           "text": "ei wo qp op oi we wq",
-          "description": "Non esqueza que la barra espazadora se pulsa co dedo polgar da man contraria a la última tecla pulsada",
+          "description": "Non esqueza que a barra espazadora se pulsa co dedo polgar da man contraria á última tecla pulsada",
           "repetitions": 2
         },
         {
@@ -552,13 +552,13 @@
         {
           "id": 15,
           "text": "*",
-          "description": "Agora imos utilizar a tecla SHIFT ou maiúsculas. Pulse SHIFT co dedo maimiño izquierdo e a tecla '*' co dedo maimiño derecho",
+          "description": "Agora imos utilizar a tecla SHIFT ou maiúsculas. Pulse SHIFT co dedo maimiño esquerdo e a tecla '*' co dedo maimiño dereito",
           "repetitions": 1
         },
         {
           "id": 16,
           "text": "^",
-          "description": "Lembre que a teca SHIFT púlsase coa man contraria a a que va a pulsar a teca principao e cos dedos mínimos. Cos mesmos dedos e mans agora pulse a tecla '^' e a barra espazadora",
+          "description": "Lembre que a tecla SHIFT púlsase coa man contraria á que vai a pulsar a tecla principal e cos dedos mínimos. Cos mesmos dedos e mans agora pulse a tecla '^' e a barra espazadora",
           "repetitions": 1
         },
         {
@@ -817,13 +817,13 @@
         {
           "id": 3,
           "text": "x.",
-          "description": "Pulse a tecla 'x' co dedo anuar da man esquerda e a tecla '.' co da man dereita",
+          "description": "Pulse a tecla 'x' co dedo anular da man esquerda e a tecla '.' co da man dereita",
           "repetitions": 1
         },
         {
           "id": 4,
           "text": "xxx ... x.x .x.",
-          "description": "Pulse a tecla 'x' co dedo anuar da man esquerda e a tecla '.' co da man dereita",
+          "description": "Pulse a tecla 'x' co dedo anular da man esquerda e a tecla '.' co da man dereita",
           "repetitions": 2
         },
         {
@@ -883,13 +883,13 @@
         {
           "id": 14,
           "text": "cc,, -- zz",
-          "description": "¿Está colocando os dedos na súa sitio despois de cada pulsación?",
+          "description": "¿Está colocando os dedos no seu sitio despois de cada pulsación?",
           "repetitions": 2
         },
         {
           "id": 15,
           "text": "z x c , . -",
-          "description": "¿Está colocando os dedos na súa sitio despois de cada pulsación?",
+          "description": "¿Está colocando os dedos no seu sitio despois de cada pulsación?",
           "repetitions": 2
         },
         {
@@ -1004,13 +1004,13 @@
         {
           "id": 15,
           "text": ":_",
-          "description": "Sen soltar a teca SHIFT pulse a teca ':' co dedo índice e a tecla '_' co dedo maimiño",
+          "description": "Sen soltar a tecla SHIFT pulse a tecla ':' co dedo índice e a tecla '_' co dedo maimiño",
           "repetitions": 1
         },
         {
           "id": 16,
           "text": ";:_:_; __:;",
-          "description": "Sen soltar a teca SHIFT pulse a teca ':' co dedo índice e a tecla '_' co dedo maimiño",
+          "description": "Sen soltar a tecla SHIFT pulse a tecla ':' co dedo índice e a tecla '_' co dedo maimiño",
           "repetitions": 1
         },
         {
@@ -1141,13 +1141,13 @@
         },
         {
           "id": 38,
-          "text": "cuadrado circulo",
+          "text": "cadrado círculo",
           "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
         {
           "id": 39,
-          "text": "siempre factura",
+          "text": "sempre factura",
           "description": "Agora algunhas palabras coas tres liñas",
           "repetitions": 2
         },
@@ -1231,19 +1231,19 @@
         },
         {
           "id": 53,
-          "text": "será esdrújula",
+          "text": "será esdrúxula",
           "description": "Algunhas palabras con til. Pulse a tilde e despois a letra correspondente",
           "repetitions": 2
         },
         {
           "id": 54,
-          "text": "señoría aguijón",
+          "text": "señoría agullón",
           "description": "Algunhas palabras con til. Pulse a tilde e despois a letra correspondente",
           "repetitions": 2
         },
         {
           "id": 55,
-          "text": "lección más",
+          "text": "lección máis",
           "description": "Algunhas palabras con til. Pulse a tilde e despois a letra correspondente",
           "repetitions": 2
         },
@@ -1569,25 +1569,25 @@
         {
           "id": 51,
           "text": "7vufjrm4 m4jruf7v",
-          "description": "Non mire o teclado y manteñase en a posición correctas",
+          "description": "Non mire o teclado e manteñase na posición correctas",
           "repetitions": 2
         },
         {
           "id": 52,
           "text": "mvjfur74 74urjfmv",
-          "description": "Non mire o teclado y manteñase en a posición correctas",
+          "description": "Non mire o teclado e manteñase na posición correctas",
           "repetitions": 2
         },
         {
           "id": 53,
           "text": "6byghtn5 n5htyg6b",
-          "description": "Non mire o teclado y manteñase en a posición correctas",
+          "description": "Non mire o teclado e manteñase na posición correctas",
           "repetitions": 2
         },
         {
           "id": 54,
           "text": "nbhgyt65 56tyghbn",
-          "description": "Non mire o teclado y manteñase en a posición correctas",
+          "description": "Non mire o teclado e manteñase na posición correctas",
           "repetitions": 2
         },
         {

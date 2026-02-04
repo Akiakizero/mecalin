@@ -749,7 +749,7 @@
         },
         {
           "id": 48,
-          "text": "pelota tre",
+          "text": "palla tre",
           "description": "I pollici devono essere sulla barra spaziatrice",
           "repetitions": 2
         },
@@ -779,7 +779,7 @@
         },
         {
           "id": 53,
-          "text": "fresa querido",
+          "text": "fresa caro",
           "description": "A questo punto del corso dovresti già avere le abitudini corrette. Se non è così sarebbe consigliabile ripassare la lezione per principianti",
           "repetitions": 2
         },
@@ -1123,7 +1123,7 @@
         },
         {
           "id": 35,
-          "text": "velocita nuovi",
+          "text": "velocità nuovi",
           "description": "Ora alcune parole con tutte e tre le righe",
           "repetitions": 2
         },
@@ -1576,8 +1576,8 @@
     },
     {
       "id": 8,
-      "title": "Caratteri nella fila superiore",
-      "description": "Impara i caratteri della fila superiore",
+      "title": "Caratteri nella riga superiore",
+      "description": "Impara i caratteri della riga superiore",
       "steps": [
         {
           "id": 0,
@@ -1654,13 +1654,13 @@
         {
           "id": 12,
           "text": "!/&$(%)",
-          "description": "Le dita devono sempre tornare alla linea base",
+          "description": "Le dita devono sempre tornare alla riga base",
           "repetitions": 2
         },
         {
           "id": 13,
           "text": ")%($&/!",
-          "description": "Le dita devono sempre tornare alla linea base",
+          "description": "Le dita devono sempre tornare alla riga base",
           "repetitions": 2
         },
         {
@@ -1677,7 +1677,7 @@
         },
         {
           "id": 16,
-          "text": "asd#f$g% h/j&kl(ñ)",
+          "text": "asd#f$g% h/j&kl(ò)",
           "description": "Ora praticheremo anche con le lettere",
           "repetitions": 1
         },
@@ -1702,43 +1702,43 @@
         {
           "id": 20,
           "text": "q/a&z( w)sx e#$c%",
-          "description": "Ricorda che per premere i caratteri della linea dei numeri devi mantenere premuto il tasto SHIFT allo stesso tempo",
+          "description": "Ricorda che per premere i caratteri della riga dei numeri devi mantenere premuto il tasto SHIFT allo stesso tempo",
           "repetitions": 2
         },
         {
           "id": 21,
-          "text": "pñ´# o$l%./ i%k$,*",
-          "description": "Ricorda che per premere i caratteri della linea dei numeri devi mantenere premuto il tasto SHIFT allo stesso tempo",
+          "text": "pò´# o$l%./ i%k$,*",
+          "description": "Ricorda che per premere i caratteri della riga dei numeri devi mantenere premuto il tasto SHIFT allo stesso tempo",
           "repetitions": 2
         },
         {
           "id": 22,
           "text": "r)f(v* ujm# t$g%b/",
-          "description": "Ricorda che per premere i caratteri della linea dei numeri devi mantenere premuto il tasto SHIFT allo stesso tempo",
+          "description": "Ricorda che per premere i caratteri della riga dei numeri devi mantenere premuto il tasto SHIFT allo stesso tempo",
           "repetitions": 2
         },
         {
           "id": 23,
           "text": "y&h*n(m)",
-          "description": "Ricorda che per premere i caratteri della linea dei numeri devi mantenere premuto il tasto SHIFT allo stesso tempo",
+          "description": "Ricorda che per premere i caratteri della riga dei numeri devi mantenere premuto il tasto SHIFT allo stesso tempo",
           "repetitions": 2
         },
         {
           "id": 24,
           "text": "1)2(3=4&5/ 098#7$6%",
-          "description": "Successivamente praticheremo tutti i caratteri della linea superiore",
+          "description": "Successivamente praticheremo tutti i caratteri della riga superiore",
           "repetitions": 2
         },
         {
           "id": 25,
           "text": "09#8$7%6 )1(2=3&4/5",
-          "description": "Successivamente praticheremo tutti i caratteri della linea superiore",
+          "description": "Successivamente praticheremo tutti i caratteri della riga superiore",
           "repetitions": 2
         },
         {
           "id": 26,
           "text": "6)7(8=9&0/ 543#2$1%",
-          "description": "Successivamente praticheremo tutti i caratteri della linea superiore",
+          "description": "Successivamente praticheremo tutti i caratteri della riga superiore",
           "repetitions": 2
         },
         {
@@ -1749,7 +1749,7 @@
         },
         {
           "id": 28,
-          "text": "as# )ñ(l=k $f%g/h&j",
+          "text": "as# )ò(l=k $f%g/h&j",
           "description": "Non essere impaziente. La velocità la acquisirai attraverso la pratica. L'importante è sapere in ogni momento quale dito corrisponde a ciascun tasto",
           "repetitions": 2
         },
@@ -1781,49 +1781,49 @@
         {
           "id": 1,
           "text": "'ì'ì'ìììì'''ì",
-          "description": "Premi i tasti ' e ! con il dito mignolo della mano destra",
+          "description": "Premi i tasti ' e ì con il dito mignolo della mano destra",
           "introduction": false,
           "repetitions": 2
         },
         {
           "id": 2,
           "text": "'ì'ì'ì''''ìì'",
-          "description": "Premi i tasti ' e ! con il dito mignolo della mano destra",
+          "description": "Premi i tasti ' e ì con il dito mignolo della mano destra",
           "introduction": false,
           "repetitions": 2
         },
         {
           "id": 3,
           "text": "ìì'ìì'ìì'''ìì",
-          "description": "Premi i tasti ' e ! con il dito mignolo della mano destra",
+          "description": "Premi i tasti ' e ì con il dito mignolo della mano destra",
           "introduction": false,
           "repetitions": 2
         },
         {
           "id": 4,
           "text": "??^^^?^??^ ^?",
-          "description": "Premi con il dito mignolo della mano sinistra il tasto SHIFT e con quello della mano destra '?' o '¿'",
+          "description": "Premi con il dito mignolo della mano sinistra il tasto SHIFT e con quello della mano destra '?'",
           "introduction": false,
           "repetitions": 2
         },
         {
           "id": 5,
           "text": "^? ?^ ^^ ?? ^?^",
-          "description": "Premi con il dito mignolo della mano sinistra il tasto SHIFT e con quello della mano destra '?' o '¿'",
+          "description": "Premi con il dito mignolo della mano sinistra il tasto SHIFT e con quello della mano destra '?'",
           "introduction": false,
           "repetitions": 2
         },
         {
           "id": 6,
           "text": "ìì''?^ ^?'ì ì?^",
-          "description": "Premi con il dito mignolo della mano sinistra il tasto SHIFT e con quello della mano destra '?' o '¿'",
+          "description": "Premi con il dito mignolo della mano sinistra il tasto SHIFT e con quello della mano destra '?'",
           "introduction": false,
           "repetitions": 2
         },
         {
           "id": 7,
           "text": "?^ì ?'^ ?ì^ ^ì'ì?",
-          "description": "Premi con il dito mignolo della mano sinistra il tasto SHIFT e con quello della mano destra '?' o '¿'",
+          "description": "Premi con il dito mignolo della mano sinistra il tasto SHIFT e con quello della mano destra '?'",
           "introduction": false,
           "repetitions": 2
         },

@@ -33,37 +33,37 @@
         {
           "id": 3,
           "text": "sl",
-          "description": "Patrz na ekran, a nie na klawiaturę. Naciśnij klawisz 's' palcem serdecznym lewej ręki i klawisz 'l' prawej ręki",
+          "description": "Patrz na ekran, a nie na klawiaturę. Naciśnij klawisz 's' palcem serdecznym lewej ręki i klawisz 'l' palcem serdecznym prawej ręki",
           "repetitions": 1
         },
         {
           "id": 4,
           "text": "aaa ;;; a;a ;a;",
-          "description": "Teraz wykonamy kilka ćwiczeń z tymi 4 literami we właściwej kolejności. Jeśli w linii wystąpi błąd, trzeba ją powtórzyć. Nie niecierpliw się, jeśli nie wyjdzie za pierwszym razem. Pamiętaj o naciskaniu klawisza spacji między słowami",
+          "description": "Teraz wykonamy kilka ćwiczeń z tymi 4 literami we właściwej kolejności. Jeśli w linii wystąpi błąd, trzeba ją powtórzyć. Nie zniecierpliwiaj się, jeśli nie wyjdzie za pierwszym razem. Pamiętaj o naciskaniu klawisza spacji między słowami",
           "repetitions": 1
         },
         {
           "id": 5,
           "text": "sss lll sls lsl",
-          "description": "Teraz wykonamy kilka ćwiczeń z tymi 4 literami we właściwej kolejności. Jeśli w linii wystąpi błąd, trzeba ją powtórzyć. Nie niecierpliw się, jeśli nie wyjdzie za pierwszym razem. Pamiętaj o naciskaniu klawisza spacji między słowami",
+          "description": "Teraz wykonamy kilka ćwiczeń z tymi 4 literami we właściwej kolejności. Jeśli w linii wystąpi błąd, trzeba ją powtórzyć. Nie zniecierpliwiaj się, jeśli nie wyjdzie za pierwszym razem. Pamiętaj o naciskaniu klawisza spacji między słowami",
           "repetitions": 1
         },
         {
           "id": 6,
           "text": "a;sl ;als",
-          "description": "Teraz wykonamy kilka ćwiczeń z tymi 4 literami we właściwej kolejności. Jeśli w linii wystąpi błąd, trzeba ją powtórzyć. Nie niecierpliw się, jeśli nie wyjdzie za pierwszym razem. Pamiętaj o naciskaniu klawisza spacji między słowami",
+          "description": "Teraz wykonamy kilka ćwiczeń z tymi 4 literami we właściwej kolejności. Jeśli w linii wystąpi błąd, trzeba ją powtórzyć. Nie zniecierpliwiaj się, jeśli nie wyjdzie za pierwszym razem. Pamiętaj o naciskaniu klawisza spacji między słowami",
           "repetitions": 1
         },
         {
           "id": 7,
           "text": "sl;a lsa;",
-          "description": "Teraz wykonamy kilka ćwiczeń z tymi 4 literami we właściwej kolejności. Jeśli w linii wystąpi błąd, trzeba ją powtórzyć. Nie niecierpliw się, jeśli nie wyjdzie za pierwszym razem. Pamiętaj o naciskaniu klawisza spacji między słowami",
+          "description": "Teraz wykonamy kilka ćwiczeń z tymi 4 literami we właściwej kolejności. Jeśli w linii wystąpi błąd, trzeba ją powtórzyć. Nie zniecierpliwiaj się, jeśli nie wyjdzie za pierwszym razem. Pamiętaj o naciskaniu klawisza spacji między słowami",
           "repetitions": 1
         },
         {
           "id": 8,
           "text": "dk",
-          "description": "Teraz dodamy dwa klawisze dla palców środkowych; lewą ręką klawisz 'd', a prawą 'k'",
+          "description": "Teraz dodamy dwa klawisze dla palców środkowych; lewą ręką klawisz 'd', a prawą ręką klawisz 'k'",
           "repetitions": 1
         },
         {
@@ -123,7 +123,7 @@
         {
           "id": 18,
           "text": "dksla; ;alskd",
-          "description": "Nie niecierpliw się. Nie spiesz się",
+          "description": "Nie zniecierpliwiaj się. Nie spiesz się",
           "repetitions": 2
         },
         {
@@ -154,7 +154,7 @@
         {
           "id": 2,
           "text": "fj",
-          "description": "Naciśnij klawisz 'f' palcem wskazującym lewej ręki i klawisz 'j' prawej ręki",
+          "description": "Naciśnij klawisz 'f' palcem wskazującym lewej ręki i klawisz 'j' palcem wskazującym prawej ręki",
           "repetitions": 1
         },
         {
@@ -202,7 +202,7 @@
         {
           "id": 10,
           "text": "gh",
-          "description": "Dwa kolejne klawisze dla tych samych palców. Palcem wskazującym lewej ręki klawisz 'g', a prawej 'h'",
+          "description": "Dwa kolejne klawisze dla tych samych palców. Palcem wskazującym lewej ręki klawisz 'g', a palcem wskazującym prawej ręki klawisz 'h'",
           "repetitions": 1
         },
         {
@@ -341,13 +341,13 @@
         {
           "id": 3,
           "text": "wo",
-          "description": "Teraz naciśnij klawisz 'w' palcem serdecznym lewej ręki i 'o' prawej ręki",
+          "description": "Teraz naciśnij klawisz 'w' palcem serdecznym lewej ręki i 'o' palcem serdecznym prawej ręki",
           "repetitions": 1
         },
         {
           "id": 4,
           "text": "www ooo wow owo",
-          "description": "Teraz naciśnij klawisz 'w' palcem serdecznym lewej ręki i 'o' prawej ręki",
+          "description": "Teraz naciśnij klawisz 'w' palcem serdecznym lewej ręki i 'o' palcem serdecznym prawej ręki",
           "repetitions": 1
         },
         {
@@ -468,13 +468,13 @@
         {
           "id": 1,
           "text": "ru",
-          "description": "Naciśnij klawisz 'r' palcem wskazującym lewej ręki i klawisz 'u' prawej ręki",
+          "description": "Naciśnij klawisz 'r' palcem wskazującym lewej ręki i klawisz 'u' palcem wskazującym prawej ręki",
           "repetitions": 1
         },
         {
           "id": 2,
           "text": "rrr uuu rur uru",
-          "description": "Naciśnij klawisz 'r' palcem wskazującym lewej ręki i klawisz 'u' prawej ręki",
+          "description": "Naciśnij klawisz 'r' palcem wskazującym lewej ręki i klawisz 'u' palcem wskazującym prawej ręki",
           "repetitions": 2
         },
         {
@@ -697,13 +697,13 @@
         {
           "id": 3,
           "text": "x.",
-          "description": "Naciśnij klawisz 'x' palcem serdecznym lewej ręki i klawisz '.' prawej ręki",
+          "description": "Naciśnij klawisz 'x' palcem serdecznym lewej ręki i klawisz '.' palcem serdecznym prawej ręki",
           "repetitions": 1
         },
         {
           "id": 4,
           "text": "xxx ... x.x .x.",
-          "description": "Naciśnij klawisz 'x' palcem serdecznym lewej ręki i klawisz '.' prawej ręki",
+          "description": "Naciśnij klawisz 'x' palcem serdecznym lewej ręki i klawisz '.' palcem serdecznym prawej ręki",
           "repetitions": 2
         },
         {
@@ -715,13 +715,13 @@
         {
           "id": 6,
           "text": "c,",
-          "description": "Naciśnij klawisz 'c' palcem środkowym lewej ręki i klawisz ',' prawej ręki",
+          "description": "Naciśnij klawisz 'c' palcem środkowym lewej ręki i klawisz ',' palcem środkowym prawej ręki",
           "repetitions": 1
         },
         {
           "id": 7,
           "text": "ccc ,,, c,c ,c,",
-          "description": "Naciśnij klawisz 'c' palcem środkowym lewej ręki i klawisz ',' prawej ręki",
+          "description": "Naciśnij klawisz 'c' palcem środkowym lewej ręki i klawisz ',' palcem środkowym prawej ręki",
           "repetitions": 2
         },
         {
@@ -818,13 +818,13 @@
         {
           "id": 4,
           "text": "bn",
-          "description": "Teraz tymi samymi palcami naciśnij lewą ręką klawisz 'b', a prawą klawisz 'n'",
+          "description": "Teraz tymi samymi palcami naciśnij lewą ręką klawisz 'b', a prawą ręką klawisz 'n'",
           "repetitions": 1
         },
         {
           "id": 5,
           "text": "bbb nnn bnb nbn",
-          "description": "Teraz tymi samymi palcami naciśnij lewą ręką klawisz 'b', a prawą klawisz 'n'",
+          "description": "Teraz tymi samymi palcami naciśnij lewą ręką klawisz 'b', a prawą ręką klawisz 'n'",
           "repetitions": 2
         },
         {
@@ -944,25 +944,25 @@
         {
           "id": 25,
           "text": "bvcxza",
-          "description": "Nie niecierpliw się. Nie ma znaczenia, że robisz to wolno. Ważne jest, żebyś robił to dobrze i poprawnie. Prędkość przyjdzie sama",
+          "description": "Nie zniecierpliwiaj się. Nie ma znaczenia, że robisz to wolno. Ważne jest, żebyś robił to dobrze i poprawnie. Prędkość przyjdzie sama",
           "repetitions": 3
         },
         {
           "id": 26,
           "text": "nm,./;",
-          "description": "Nie niecierpliw się. Nie ma znaczenia, że robisz to wolno. Ważne jest, żebyś robił to dobrze i poprawnie. Prędkość przyjdzie sama",
+          "description": "Nie zniecierpliwiaj się. Nie ma znaczenia, że robisz to wolno. Ważne jest, żebyś robił to dobrze i poprawnie. Prędkość przyjdzie sama",
           "repetitions": 3
         },
         {
           "id": 27,
           "text": "azxcvbgfdsa",
-          "description": "Nie niecierpliw się. Nie ma znaczenia, że robisz to wolno. Ważne jest, żebyś robił to dobrze i poprawnie. Prędkość przyjdzie sama",
+          "description": "Nie zniecierpliwiaj się. Nie ma znaczenia, że robisz to wolno. Ważne jest, żebyś robił to dobrze i poprawnie. Prędkość przyjdzie sama",
           "repetitions": 3
         },
         {
           "id": 28,
           "text": "</.,mnhjkl;</",
-          "description": "Nie niecierpliw się. Nie ma znaczenia, że robisz to wolno. Ważne jest, żebyś robił to dobrze i poprawnie. Prędkość przyjdzie sama",
+          "description": "Nie zniecierpliwiaj się. Nie ma znaczenia, że robisz to wolno. Ważne jest, żebyś robił to dobrze i poprawnie. Prędkość przyjdzie sama",
           "repetitions": 3
         },
         {
@@ -1021,7 +1021,7 @@
         },
         {
           "id": 38,
-          "text": "kwadrat okruh",
+          "text": "kwadrat okrąg",
           "description": "Teraz kilka słów z trzech rzędów",
           "repetitions": 2
         },
@@ -1075,7 +1075,7 @@
         },
         {
           "id": 47,
-          "text": "glosne bardzo",
+          "text": "głośne bardzo",
           "description": "Teraz kilka słów z trzech rzędów",
           "repetitions": 2
         },
@@ -1468,13 +1468,13 @@
         {
           "id": 1,
           "text": "!= != !=",
-          "description": "Wciskając małym palcem prawej ręki SHIFT naciśnij lewym '!' i odwrotnie '='",
+          "description": "Wciskając małym palcem prawej ręki SHIFT naciśnij lewym małym palcem '!' i odwrotnie '='",
           "repetitions": 2
         },
         {
           "id": 2,
           "text": "=! =! =!",
-          "description": "Wciskając małym palcem prawej ręki SHIFT naciśnij lewym '!' i odwrotnie '='",
+          "description": "Wciskając małym palcem prawej ręki SHIFT naciśnij lewym małym palcem '!' i odwrotnie '='",
           "repetitions": 2
         },
         {

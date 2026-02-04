@@ -3,7 +3,7 @@
     {
       "id": 0,
       "title": "Bienvenido a Mecalin",
-      "description": "Bienvenido a Mecalin, ¡Tu tutor para aprender a teclear! Este curso te enseñará a teclear paso a paso. Empezarás por la fila principal de teclas e irás aprendiendo todas las teclas del teclado gradualmente. Toma tu tiempo, practica regularmente y te convertirás rápidamente en un experto tecleando",
+      "description": "Bienvenido a Mecalin, ¡Tu tutor para aprender a teclear! Este curso te enseñará a teclear paso a paso. Empezarás por la fila base de teclas e irás aprendiendo todas las teclas del teclado gradualmente. Toma tu tiempo, practica regularmente y te convertirás rápidamente en un experto tecleando",
       "steps": [],
       "introduction": true
     },
@@ -317,7 +317,7 @@
     },
     {
       "id": 3,
-      "title": "Primera parte fila dominante",
+      "title": "Primera parte de la fila dominante",
       "description": "Aprende las teclas de la fila dominante: Q, W, E, I, O, P",
       "steps": [
         {
@@ -829,7 +829,7 @@
         {
           "id": 5,
           "text": "zx.- -.xz",
-          "description": "Después de cada pulsación en la fila inferior los dedos deben volver a su tecla de la lína base",
+          "description": "Después de cada pulsación en la fila inferior los dedos deben volver a su tecla de la línea base",
           "repetitions": 2
         },
         {
@@ -1269,7 +1269,7 @@
         {
           "id": 1,
           "text": "12",
-          "description": "Con la mano izquierda vamos a pulsar los dos primeros número '1' y '2', pulsando con el dedo meñique el '1' y con el dedo anular el '2'",
+          "description": "Con la mano izquierda vamos a pulsar los dos primeros números '1' y '2', pulsando con el dedo meñique el '1' y con el dedo anular el '2'",
           "repetitions": 1
         },
         {
