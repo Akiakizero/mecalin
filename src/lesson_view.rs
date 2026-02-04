@@ -149,113 +149,118 @@ impl imp::LessonView {
 
         // Prevent cursor movement - always keep cursor at the end
         let text_input = self.typing_row.text_input();
-        let text_input_clone = text_input.clone();
-        text_input.connect_move_cursor(move |_, _, _, _| {
-            glib::idle_add_local_once({
-                let text = text_input_clone.clone();
+        text_input.connect_move_cursor(move |text_input, _, _, _| {
+            glib::idle_add_local_once(glib::clone!(
+                #[weak]
+                text_input,
                 move || {
-                    let buffer = text.buffer();
+                    let buffer = text_input.buffer();
                     let text_len = buffer.text().len() as u16;
-                    text.set_position(text_len as i32);
+                    text_input.set_position(text_len as i32);
                 }
-            });
+            ));
         });
 
         // Also reset cursor position on any notify::cursor-position
-        let text_input_clone2 = text_input.clone();
-        text_input.connect_notify_local(Some("cursor-position"), move |_, _| {
-            let buffer = text_input_clone2.buffer();
+        text_input.connect_notify_local(Some("cursor-position"), move |text_input, _| {
+            let buffer = text_input.buffer();
             let text_len = buffer.text().len() as u16;
-            let current_pos = text_input_clone2.position();
+            let current_pos = text_input.position();
             if current_pos != text_len as i32 {
-                text_input_clone2.set_position(text_len as i32);
+                text_input.set_position(text_len as i32);
             }
         });
 
         let keyboard_widget = self.keyboard_widget.borrow();
         let hand_widget = self.hand_widget.borrow();
         if let Some(keyboard) = keyboard_widget.as_ref() {
-            let keyboard_clone = keyboard.clone();
-            let hand_clone = hand_widget.as_ref().cloned();
-            let typing_row = self.typing_row.clone();
-            let lesson_view_clone = self.obj().downgrade();
-
             let buffer = self.typing_row.buffer();
-            buffer.connect_notify_local(Some("text"), move |buffer, _| {
-                let typed_text = buffer.text();
-                let target_text = typing_row.imp().target_label.text();
+            buffer.connect_notify_local(
+                Some("text"),
+                glib::clone!(
+                    #[strong]
+                    keyboard,
+                    #[strong(rename_to = hand)]
+                    hand_widget,
+                    #[strong(rename_to = typing_row)]
+                    self.typing_row,
+                    #[weak(rename_to = lesson_view)]
+                    self.obj(),
+                    move |buffer, _| {
+                        let typed_text = buffer.text();
+                        let target_text = typing_row.imp().target_label.text();
 
-                let typed_str = typed_text.as_str();
-                let target_str = target_text.as_str();
+                        let typed_str = typed_text.as_str();
+                        let target_str = target_text.as_str();
 
-                // Check if the new text would match target text
-                if !target_str.starts_with(typed_str) && !typed_str.is_empty() {
-                    // Show error animation
-                    typing_row.show_error();
+                        // Check if the new text would match target text
+                        if !target_str.starts_with(typed_str) && !typed_str.is_empty() {
+                            // Show error animation
+                            typing_row.show_error();
 
-                    // Remove the last character that caused the error
-                    let mut chars: Vec<char> = typed_str.chars().collect();
-                    chars.pop();
-                    let text_without_last = chars.iter().collect::<String>();
+                            // Remove the last character that caused the error
+                            let mut chars: Vec<char> = typed_str.chars().collect();
+                            chars.pop();
+                            let text_without_last = chars.iter().collect::<String>();
 
-                    // Find the last space position in the corrected text, or go to beginning
-                    let last_space_pos =
-                        text_without_last.rfind(' ').map(|pos| pos + 1).unwrap_or(0);
+                            // Find the last space position in the corrected text, or go to beginning
+                            let last_space_pos =
+                                text_without_last.rfind(' ').map(|pos| pos + 1).unwrap_or(0);
 
-                    // Mark as mistake only if not at the very beginning
-                    if let Some(lesson_view) = lesson_view_clone.upgrade() {
-                        let imp = lesson_view.imp();
-                        if last_space_pos > 0 {
-                            imp.has_mistake.set(true);
-                        } else {
-                            lesson_view.reset_repetition_count();
+                            // Mark as mistake only if not at the very beginning
+                            let imp = lesson_view.imp();
+                            if last_space_pos > 0 {
+                                imp.has_mistake.set(true);
+                            } else {
+                                lesson_view.reset_repetition_count();
+                            }
+
+                            // Reset to last space position
+                            let corrected_text = text_without_last[..last_space_pos].to_string();
+
+                            glib::idle_add_local_once(glib::clone!(
+                                #[strong]
+                                buffer,
+                                #[strong]
+                                typing_row,
+                                move || {
+                                    let corrected_len = corrected_text.len();
+                                    buffer.set_text(&corrected_text);
+                                    // Set cursor to end of corrected text
+                                    typing_row.text_input().set_position(corrected_len as i32);
+                                }
+                            ));
+                            return;
+                        }
+
+                        let cursor_pos = typed_str.chars().count() as i32;
+                        typing_row.set_cursor_position(cursor_pos);
+
+                        // Check if step is completed
+                        if typed_str == target_str && !target_str.is_empty() {
+                            // Step completed - check if we need more repetitions
+                            glib::idle_add_local_once(glib::clone!(
+                                #[weak]
+                                lesson_view,
+                                move || {
+                                    lesson_view.handle_step_completion();
+                                }
+                            ));
+                            return;
+                        }
+
+                        // Update keyboard highlighting for next character
+                        let next_char = target_str.chars().nth(cursor_pos as usize);
+                        keyboard.set_current_key(next_char);
+
+                        // Update hand widget to highlight the finger for next character
+                        if let Some(hand) = hand.as_ref() {
+                            let finger = next_char.and_then(|ch| keyboard.get_finger_for_char(ch));
+                            hand.set_current_finger(finger);
                         }
                     }
-
-                    // Reset to last space position
-                    let corrected_text = &text_without_last[..last_space_pos];
-
-                    glib::idle_add_local_once({
-                        let buffer = buffer.clone();
-                        let typing_row = typing_row.clone();
-                        let corrected_text = corrected_text.to_string();
-                        let corrected_len = corrected_text.len();
-                        move || {
-                            buffer.set_text(&corrected_text);
-                            // Set cursor to end of corrected text
-                            typing_row.text_input().set_position(corrected_len as i32);
-                        }
-                    });
-                    return;
-                }
-
-                let cursor_pos = typed_str.chars().count() as i32;
-                typing_row.set_cursor_position(cursor_pos);
-
-                // Check if step is completed
-                if typed_str == target_str && !target_str.is_empty() {
-                    // Step completed - check if we need more repetitions
-                    glib::idle_add_local_once({
-                        let lesson_view = lesson_view_clone.clone();
-                        move || {
-                            if let Some(lesson_view) = lesson_view.upgrade() {
-                                lesson_view.handle_step_completion();
-                            }
-                        }
-                    });
-                    return;
-                }
-
-                // Update keyboard highlighting for next character
-                let next_char = target_str.chars().nth(cursor_pos as usize);
-                keyboard_clone.set_current_key(next_char);
-
-                // Update hand widget to highlight the finger for next character
-                if let Some(hand) = &hand_clone {
-                    let finger = next_char.and_then(|ch| keyboard_clone.get_finger_for_char(ch));
-                    hand.set_current_finger(finger);
-                }
-            });
+                ),
+            );
         }
     }
 
