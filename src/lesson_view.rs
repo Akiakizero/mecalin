@@ -98,25 +98,6 @@ impl imp::LessonView {
             }
         });
 
-        // Track composition state for dead keys
-        let lesson_view_weak = self.obj().downgrade();
-        self.typing_row
-            .text_input()
-            .connect_preedit_changed(move |_, preedit| {
-                if let Some(lesson_view) = lesson_view_weak.upgrade() {
-                    let imp = lesson_view.imp();
-                    let is_composing = !preedit.is_empty();
-
-                    // If composition started, store the dead key
-                    if is_composing && preedit.len() == 1 {
-                        if let Some(_dead_key) = preedit.chars().next() {
-                            // Advance keyboard sequence to show next character
-                            imp.keyboard_widget.advance_sequence();
-                        }
-                    }
-                }
-            });
-
         // Connect to TypingRow signals
         self.typing_row.connect_closure(
             "mistake-made",
@@ -160,6 +141,18 @@ impl imp::LessonView {
                     let finger =
                         next_char.and_then(|ch| imp.keyboard_widget.get_finger_for_char(ch));
                     imp.hand_widget.set_current_finger(finger);
+                }
+            ),
+        );
+
+        self.typing_row.connect_closure(
+            "dead-key-started",
+            false,
+            glib::closure_local!(
+                #[strong(rename_to = lesson_view)]
+                self.obj(),
+                move |_: TypingRow| {
+                    lesson_view.imp().keyboard_widget.advance_sequence();
                 }
             ),
         );

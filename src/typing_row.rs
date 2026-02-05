@@ -48,6 +48,7 @@ mod imp {
                     glib::subclass::Signal::builder("next-char-changed")
                         .param_types([String::static_type()])
                         .build(),
+                    glib::subclass::Signal::builder("dead-key-started").build(),
                 ]
             })
         }
@@ -56,6 +57,7 @@ mod imp {
             self.parent_constructed();
             self.setup_cursor_lock();
             self.setup_text_validation();
+            self.setup_dead_key_detection();
         }
     }
 
@@ -175,6 +177,20 @@ impl imp::TypingRow {
         );
     }
 
+    fn setup_dead_key_detection(&self) {
+        self.text_input.connect_preedit_changed(glib::clone!(
+            #[strong(rename_to = typing_row)]
+            self.obj(),
+            move |_, preedit| {
+                let is_composing = !preedit.is_empty();
+                // If composition started with a single character, it's a dead key
+                if is_composing && preedit.len() == 1 {
+                    typing_row.emit_by_name::<()>("dead-key-started", &[]);
+                }
+            }
+        ));
+    }
+
     fn char_pos_to_byte_index(text: &str, char_pos: usize) -> usize {
         for (char_count, (byte_idx, _)) in text.char_indices().enumerate() {
             if char_count >= char_pos {
@@ -245,10 +261,6 @@ impl TypingRow {
 
     pub fn set_repetition_text(&self, text: &str) {
         self.imp().repetition_label.set_text(text);
-    }
-
-    pub fn text_input(&self) -> gtk::Text {
-        self.imp().text_input.get()
     }
 
     fn show_error(&self) {
