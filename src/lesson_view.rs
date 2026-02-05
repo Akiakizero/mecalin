@@ -41,7 +41,6 @@ mod imp {
         pub current_repetition: Cell<u32>,
         pub course: RefCell<Option<crate::course::Course>>,
         pub has_mistake: Cell<bool>,
-        pub composition_in_progress: Cell<bool>,
         pub pending_dead_key: RefCell<Option<char>>,
     }
 
@@ -108,7 +107,6 @@ impl imp::LessonView {
                 if let Some(lesson_view) = lesson_view_weak.upgrade() {
                     let imp = lesson_view.imp();
                     let is_composing = !preedit.is_empty();
-                    imp.composition_in_progress.set(is_composing);
 
                     // If composition started, store the dead key
                     if is_composing && preedit.len() == 1 {
