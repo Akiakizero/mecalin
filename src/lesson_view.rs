@@ -41,7 +41,6 @@ mod imp {
         pub current_repetition: Cell<u32>,
         pub course: RefCell<Option<crate::course::Course>>,
         pub has_mistake: Cell<bool>,
-        pub pending_dead_key: RefCell<Option<char>>,
     }
 
     #[glib::object_subclass]
@@ -110,15 +109,10 @@ impl imp::LessonView {
 
                     // If composition started, store the dead key
                     if is_composing && preedit.len() == 1 {
-                        if let Some(dead_key) = preedit.chars().next() {
-                            *imp.pending_dead_key.borrow_mut() = Some(dead_key);
-
+                        if let Some(_dead_key) = preedit.chars().next() {
                             // Advance keyboard sequence to show next character
                             imp.keyboard_widget.advance_sequence();
                         }
-                    } else if !is_composing {
-                        // Composition ended, clear pending dead key
-                        *imp.pending_dead_key.borrow_mut() = None;
                     }
                 }
             });
