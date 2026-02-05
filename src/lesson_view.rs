@@ -125,82 +125,46 @@ impl imp::LessonView {
                 }
             });
 
-        let buffer = self.typing_row.buffer();
-        buffer.connect_notify_local(
-            Some("text"),
-            glib::clone!(
+        // Connect to TypingRow signals
+        self.typing_row.connect_closure(
+            "mistake-made",
+            false,
+            glib::closure_local!(
                 #[strong(rename_to = lesson_view)]
                 self.obj(),
-                move |buffer, _| {
+                move |_: TypingRow, at_beginning: bool| {
                     let imp = lesson_view.imp();
-
-                    let typed_text = buffer.text();
-                    let target_text = imp.typing_row.imp().target_label.text();
-
-                    let typed_str = typed_text.as_str();
-                    let target_str = target_text.as_str();
-
-                    // Check if the new text would match target text
-                    if !target_str.starts_with(typed_str) && !typed_str.is_empty() {
-                        // Show error animation
-                        imp.typing_row.show_error();
-
-                        // Remove the last character that caused the error
-                        let mut chars: Vec<char> = typed_str.chars().collect();
-                        chars.pop();
-                        let text_without_last = chars.iter().collect::<String>();
-
-                        // Find the last space position in the corrected text, or go to beginning
-                        let last_space_pos =
-                            text_without_last.rfind(' ').map(|pos| pos + 1).unwrap_or(0);
-
-                        // Mark as mistake only if not at the very beginning
-                        if last_space_pos > 0 {
-                            imp.has_mistake.set(true);
-                        } else {
-                            lesson_view.reset_repetition_count();
-                        }
-
-                        // Reset to last space position
-                        let corrected_text = text_without_last[..last_space_pos].to_string();
-
-                        glib::idle_add_local_once(glib::clone!(
-                            #[strong]
-                            lesson_view,
-                            move || {
-                                let imp = lesson_view.imp();
-                                let corrected_len = corrected_text.len();
-                                imp.typing_row.buffer().set_text(&corrected_text);
-                                // Set cursor to end of corrected text
-                                imp.typing_row
-                                    .text_input()
-                                    .set_position(corrected_len as i32);
-                            }
-                        ));
-                        return;
+                    if !at_beginning {
+                        imp.has_mistake.set(true);
+                    } else {
+                        lesson_view.reset_repetition_count();
                     }
+                }
+            ),
+        );
 
-                    let cursor_pos = typed_str.chars().count() as i32;
-                    imp.typing_row.set_cursor_position(cursor_pos);
+        self.typing_row.connect_closure(
+            "step-completed",
+            false,
+            glib::closure_local!(
+                #[strong(rename_to = lesson_view)]
+                self.obj(),
+                move |_: TypingRow| {
+                    lesson_view.handle_step_completion();
+                }
+            ),
+        );
 
-                    // Check if step is completed
-                    if typed_str == target_str && !target_str.is_empty() {
-                        // Step completed - check if we need more repetitions
-                        glib::idle_add_local_once(glib::clone!(
-                            #[strong]
-                            lesson_view,
-                            move || {
-                                lesson_view.handle_step_completion();
-                            }
-                        ));
-                        return;
-                    }
-
-                    // Update keyboard highlighting for next character
-                    let next_char = target_str.chars().nth(cursor_pos as usize);
+        self.typing_row.connect_closure(
+            "next-char-changed",
+            false,
+            glib::closure_local!(
+                #[strong(rename_to = lesson_view)]
+                self.obj(),
+                move |_: TypingRow, next_char_str: String| {
+                    let imp = lesson_view.imp();
+                    let next_char = next_char_str.chars().next();
                     imp.keyboard_widget.set_current_key(next_char);
-
-                    // Update hand widget to highlight the finger for next character
                     let finger =
                         next_char.and_then(|ch| imp.keyboard_widget.get_finger_for_char(ch));
                     imp.hand_widget.set_current_finger(finger);
