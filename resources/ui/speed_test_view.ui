@@ -36,7 +36,6 @@
                   <item translatable="yes">15 seconds</item>
                   <item translatable="yes">30 seconds</item>
                   <item translatable="yes">1 minute</item>
-                  <item translatable="yes">2 minutes</item>
                 </items>
               </object>
             </property>
