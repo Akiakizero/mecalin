@@ -152,7 +152,14 @@ impl imp::LessonView {
                 #[strong(rename_to = lesson_view)]
                 self.obj(),
                 move |_: TypingRow| {
-                    lesson_view.imp().keyboard_widget.advance_sequence();
+                    let imp = lesson_view.imp();
+                    imp.keyboard_widget.advance_sequence();
+
+                    // Update hand widget for the next character in the sequence
+                    if let Some(current_key) = *imp.keyboard_widget.imp().current_key.borrow() {
+                        let finger = imp.keyboard_widget.get_finger_for_char(current_key);
+                        imp.hand_widget.set_current_finger(finger);
+                    }
                 }
             ),
         );
