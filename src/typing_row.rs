@@ -239,25 +239,19 @@ impl TypingRow {
         self.queue_draw();
     }
 
-    pub fn set_cursor_position(&self, position: i32) {
-        let imp = self.imp();
-        imp.cursor_position.set(position);
-        self.queue_draw();
-    }
-
-    pub fn text_input(&self) -> gtk::Text {
-        self.imp().text_input.get()
-    }
-
-    pub fn buffer(&self) -> gtk::EntryBuffer {
-        self.imp().text_input.buffer()
+    pub fn clear(&self) {
+        self.imp().text_input.buffer().set_text("");
     }
 
     pub fn set_repetition_text(&self, text: &str) {
         self.imp().repetition_label.set_text(text);
     }
 
-    pub fn show_error(&self) {
+    pub fn text_input(&self) -> gtk::Text {
+        self.imp().text_input.get()
+    }
+
+    fn show_error(&self) {
         self.add_css_class("typing-error");
 
         glib::timeout_add_local_once(std::time::Duration::from_millis(400), {
